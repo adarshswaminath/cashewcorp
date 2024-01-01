@@ -25,14 +25,14 @@ function Carousel() {
 
   return (
     <div>
-      <div className="carousel carousel-center bg-transparent max-w-md p-4 space-x-4 bg-neutral rounded-box overflow-hidden">
+      <div className="carousel carousel-center bg-transparent max-w-md p-4 space-x-4 bg-neutral rounded-box overflow-hidden ">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${activeIndex * 100}%)` }}
         >
           {slides.map((slide, index) => (
             <div key={index} className="w-full flex-shrink-0">
-              <img src={slide} alt={`Slide ${index + 1}`} className="w-full rounded-box" />
+              <img src={slide} alt={`Slide ${index + 1}`} className="w-full rounded-box opacity-80" />
             </div>
           ))}
         </div>
