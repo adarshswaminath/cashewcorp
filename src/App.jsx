@@ -1,8 +1,9 @@
-import Home from "./Pages/Home/Home"
+import React from 'react'
+import Home from './Pages/Home/Home'
 
 function App() {
   return (
-    <main className="font-sans">
+    <main>
       <Home/>
     </main>
   )
