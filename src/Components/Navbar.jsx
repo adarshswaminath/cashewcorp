@@ -17,13 +17,13 @@ function Navbar() {
       {navHeadings}
       </div>
       {/* mobile view */}
-      <div className='flex justify-between lg:hidden md:hidden'>
+      <div className='flex justify-between lg:hidden md:hidden '>
       <button className='p-2' onClick={() => setShow((prev) => !prev)}>
       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
       </button>
       {isShow ? 
         (
-          <div className='absolute top-12 p-3 flex flex-col items-start gap-3 text-center bg-white shadow-lg w-1/2 '>
+          <div className='absolute top-12 p-3 flex flex-col items-start gap-3 text-center bg-white shadow-lg w-1/2 z-50'>
             {navHeadings}
           </div>
         )
