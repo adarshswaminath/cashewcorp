@@ -3,7 +3,7 @@ import React from "react";
 
 function NavbarLogos() {
   return (
-    <div className="p-2 hidden lg:flex items-center justify-between">
+    <div className="p-2 hidden lg:flex md:flex items-center justify-between">
       <div className="flex items-center">
         <img
           src="https://cashewcorporation.com/wp-content/themes/kscdc/images/logo.png"
