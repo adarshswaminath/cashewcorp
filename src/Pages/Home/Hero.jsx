@@ -40,7 +40,7 @@ function Hero() {
           </div>
         </div>
       </div>
-      <div className="">
+      <div className="p-2">
         <HeroCards />
       </div>
     </div>
