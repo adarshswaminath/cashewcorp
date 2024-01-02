@@ -27,10 +27,10 @@ function Hero() {
       >
         <Navbar />
         <div className="text-center mx-auto flex flex-col items-center justify-center min-h-96">
-          <h2 className="text-5xl font-bold text-white max-w-3xl">
+          <h2 className="text-5xl font-bold text-gray-900 max-w-3xl">
             Cashews for Wealth,Health and for Prosperity
           </h2>
-          <p className="text-balance mt-4  max-w-3xl font-bold text-slate-100">
+          <p className="text-balance mt-4  max-w-3xl font-bold text-slate-900">
             Veniam Lorem commodo nulla dolore aliqua nostrud aliquip occaecat
             sint.Occaecat nulla commodo
           </p>
