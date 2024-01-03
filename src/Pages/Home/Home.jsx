@@ -3,6 +3,7 @@ import About from "./About"
 import Leaders from "./Leaders"
 import ChooseUs from "./ChooseUs"
 import Practise from "./Practise"
+import Service from "./Service"
 function Home() {
   return (
     <div>
@@ -11,6 +12,7 @@ function Home() {
         <Leaders/>
         <ChooseUs/>
         <Practise/>
+        <Service/>
     </div>
   )
 }

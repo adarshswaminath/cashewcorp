@@ -29,7 +29,7 @@ const PractiseCard = ({ image, title, caption }) => {
 function Practise() {
   return (
     <div className="p-3">
-      <h3 className="text-4xl font-bold uppercase m-4 text-center">
+      <h3 className="text-3xl font-bold m-4 text-center">
         Practise Advice
       </h3>
       <p className="text-center max-w-3xl mx-auto text-gray-500 font-bold">
