@@ -54,7 +54,7 @@ const YoutubeVideo = () => {
 
 function Service() {
   return (
-    <div className="p-4 md:p-8 lg:p-12">
+    <div className="p-4 md:p-8 lg:p-12 ">
       <h3 className="text-4xl font-bold mb-6 text-center">
         We are providing the best business service.
       </h3>

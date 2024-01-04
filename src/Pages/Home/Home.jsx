@@ -4,6 +4,9 @@ import Leaders from "./Leaders"
 import ChooseUs from "./ChooseUs"
 import Practise from "./Practise"
 import Service from "./Service"
+import Client from "./Client"
+import Footer from "../../Components/Footer"
+import CopyRight from "../../Components/CopyRight"
 function Home() {
   return (
     <div>
@@ -13,6 +16,9 @@ function Home() {
         <ChooseUs/>
         <Practise/>
         <Service/>
+        <Client/>
+        <Footer/>
+        <CopyRight/>
     </div>
   )
 }

@@ -33,7 +33,7 @@ function Leaders() {
       </p>
       <div className="grid grid-cols-4 lg:grid-cols-5 mt-2">
         {images.map((value,index) => (
-            <Avatar img={images[index]}/>
+            <Avatar key={index} img={images[index]}/>
         ))}
       </div>
     </div>
