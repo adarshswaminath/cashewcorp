@@ -14,7 +14,7 @@ function HeroCards() {
   return (
     <div className="lg:-mt-[10rem] grid grid-cols-1 gap-3 md:flex justify-evenly lg:grid-cols-3 place-items-center justify-items-center">
       {cardData.map((value) => (
-        <div key={value.title} className=" bg-white hover:bg-blue-500 hover:text-white transition ease-in-out duration-200 hover:scale-110  w-96 shadow-xl group">
+        <div key={value.title} className=" bg-white hover:bg-blue-500 hover:text-white transition ease-in-out duration-200 hover:scale-105  w-96 shadow-xl group">
         <div className="card-body">
         <h1 className="card-title text-4xl text-blue-500 group-hover:text-white">{value.icon}</h1>
           <h2 className="card-title">{value.title}</h2>
