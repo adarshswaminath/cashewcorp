@@ -7,6 +7,7 @@ import Service from "./Service"
 import Client from "./Client"
 import Footer from "../../Components/Footer"
 import CopyRight from "../../Components/CopyRight"
+import GetInTocuh from "./GetInTocuh"
 function Home() {
   return (
     <div>
@@ -17,6 +18,7 @@ function Home() {
         <Practise/>
         <Service/>
         <Client/>
+        <GetInTocuh/>
         <Footer/>
         <CopyRight/>
     </div>
