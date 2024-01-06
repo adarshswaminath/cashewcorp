@@ -7,36 +7,47 @@ const ConsultancyAgency = () => {
         </h2>
         <p className="text-gray-500">the quick fox jump over the lazy fox</p>
       </div>
-      <button className="btn bg-orange-400 hover:bg-orange-500 text-white">Contact Us</button>
+      <button className="btn bg-orange-400 hover:bg-orange-500 text-white">
+        Contact Us
+      </button>
     </div>
   );
 };
+
+const footerData = [
+  {
+    title: "Service",
+    body: ["Branding", "Design", "Marketing", "Advertisment"],
+  },
+  {
+    title: "Company",
+    body: ["About us", "Contact", "Jobs", "Press kit"],
+  },
+  {
+    title: "Legal",
+    body: ["Terms of use", "Privacy Policy", "Cookie Policy"],
+  },
+];
 
 function Footer() {
   return (
     <main>
       <ConsultancyAgency />
       <footer className="footer p-10 bg-emerald-900 text-neutral-content">
-        <nav>
-          <header className="footer-title">Services</header>
-          <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Design</a>
-          <a className="link link-hover">Marketing</a>
-          <a className="link link-hover">Advertisement</a>
-        </nav>
-        <nav>
-          <header className="footer-title">Company</header>
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
-        </nav>
-        <nav>
-          <header className="footer-title">Legal</header>
-          <a className="link link-hover">Terms of use</a>
-          <a className="link link-hover">Privacy policy</a>
-          <a className="link link-hover">Cookie policy</a>
-        </nav>
+        {footerData.map((value, index) => (
+          <nav key={index}>
+            <header className="footer-title">{value.title}</header>
+            {value.body.map((bodyIndex) => (
+              <a
+                key={bodyIndex}
+                href={bodyIndex.toLowerCase().split(" ").join("")}
+                className="link link-hover"
+              >
+                {bodyIndex}
+              </a>
+            ))}
+          </nav>
+        ))}
       </footer>
     </main>
   );
