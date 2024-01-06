@@ -39,9 +39,9 @@ function GetInTocuh() {
         Classical physics Newtonian mechanics.
       </p>
       <div className="grid grid-cols-1 lg:flex gap-2 place-items-center justify-items-center justify-center items-center">
-        {getInTouchData.map((value) => (
+        {getInTouchData.map((value,index) => (
             <GetInTocuhCard
-                key={value.icon}
+                key={index}
                 icon={value.icon}
                 firstMail={value.firstMail}
                 secondMail={value.secondMail}

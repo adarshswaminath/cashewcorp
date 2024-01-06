@@ -32,8 +32,8 @@ function ChooseUs() {
         Classical physics Newtonian mechanics
       </p>
       <div className="grid grid-cols-4 m-3 p-2">
-        {cardData.map((value) => (
-          <ChooseCard key={value.icon} icon={value.icon} title={value.title} caption={value.caption}/>
+        {cardData.map((value,index) => (
+          <ChooseCard key={index} icon={value.icon} title={value.title} caption={value.caption}/>
         ))}
       </div>
     </div>
