@@ -8,9 +8,11 @@ import Client from "./Client"
 import Footer from "../../Components/Footer"
 import CopyRight from "../../Components/CopyRight"
 import GetInTocuh from "./GetInTocuh"
+import TopBar from "../../Components/TopBar"
 function Home() {
   return (
     <div>
+      <TopBar/>
         <Hero/>
         <About/>
         <Leaders/>

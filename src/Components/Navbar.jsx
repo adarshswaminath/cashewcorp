@@ -65,11 +65,14 @@ function Navbar() {
             </ul>
           ) : null}
         </div>
+        <div className="">
         <img
           src="/images/logo.png"
           className="h-20 lg:h-28 hidden lg:block"
           alt="Logo Image"
         />
+        <p className="px-1 hidden lg:block uppercase font-bold text-3xl">THE KERALA  CASHEW DEVELOPMENT & CORPORATOIN</p>
+        </div>
       </div>
       <div className="lg:navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-black font-medium">
