@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../Components/Navbar";
 import HeroCards from "./HeroCards";
+import LeaderTopImages from "./LeaderTopImages";
 
 const images = [
   "/images/hero-1.jpg",
@@ -19,7 +20,7 @@ function Hero() {
   return (
     <div>
       <div
-        className="min-h-screen bg-cover bg-center bg-no-repeat"
+        className="h-90 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${images[imageIndex]})`,
         }}
@@ -41,6 +42,7 @@ function Hero() {
       </div>
       <div className="p-2">
         <HeroCards />
+        <LeaderTopImages/>
       </div>
     </div>
   );
