@@ -8,7 +8,6 @@ const images = [
   "/images/hero-2.jpg",
   "/images/hero-4.jpg",
 ];
-
 function Hero() {
   const [imageIndex, setImageIndex] = useState(1);
   useEffect(() => {
