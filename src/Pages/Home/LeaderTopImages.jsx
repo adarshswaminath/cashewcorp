@@ -27,7 +27,8 @@ const leaderData = [
 
 function LeaderTopImages() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8 lg:mt-12 p-2">
+    <div className="flex items-center justify-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8 lg:mt-12 p-2">
       {leaderData.map((leader, index) => (
         <div key={index} className="text-center flex flex-col items-center">
           <img
@@ -39,6 +40,7 @@ function LeaderTopImages() {
           <p className="text-blue-500">{leader.position}</p>
         </div>
       ))}
+    </div>
     </div>
   );
 }

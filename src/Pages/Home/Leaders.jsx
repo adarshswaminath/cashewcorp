@@ -31,7 +31,7 @@ function Leaders() {
         Problems trying to resolve the conflict between the two major realms of
         Classical physics Newtonian mechanics
       </p>
-      <div className="grid grid-cols-3 lgap-2 lg:grid-cols-5 mt-2">
+      <div className="grid grid-cols-3 lg:gap-2 lg:grid-cols-5 mt-2">
         {images.map((value,index) => (
             <Avatar key={index} img={images[index]}/>
         ))}
