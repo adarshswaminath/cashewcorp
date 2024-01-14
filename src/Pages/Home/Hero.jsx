@@ -20,13 +20,13 @@ function Hero() {
   return (
     <div>
       <div
-        className="h-90 bg-cover bg-center bg-no-repeat"
+        className="h-[28rem] bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${images[imageIndex]})`,
         }}
       >
         <Navbar />
-        <div className="text-center mx-auto flex flex-col items-center justify-center">
+        <div className="mt-8 text-center mx-auto flex flex-col items-center justify-center">
           <h2 className="text-5xl font-bold text-white max-w-3xl p-6 bg-white/10 bg:blur backdrop-blur">
             Cashews for Wealth,Health and for Prosperity
           </h2>
@@ -40,7 +40,7 @@ function Hero() {
           </div>
         </div>
       </div>
-      <div className="p-2">
+      <div className="p-2 mt-3">
         <HeroCards />
         <LeaderTopImages/>
       </div>

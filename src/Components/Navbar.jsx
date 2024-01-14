@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 
-
 function Navbar() {
-  
   const [isShow, setIsShow] = useState(false);
   return (
     <div className="navbar bg-transparent z-50">
@@ -62,6 +60,18 @@ function Navbar() {
               <li>
                 <a>Career</a>
               </li>
+              <li>
+                <a>RIT</a>
+              </li>
+              <li>
+                <a>Media Room</a>
+              </li>
+              <li>
+                <a>Contact</a>
+              </li>
+              <li>
+                <a>Whats New</a>
+              </li>
             </ul>
           ) : null}
         </div>
@@ -73,28 +83,42 @@ function Navbar() {
       </div>
       <div className="lg:navbar-end hidden lg:grid">
         <div className="flex gap-2 items-end justify-end">
-        <img src="/images/CDC.png" className="h-12 flex" alt="CDC" />
-        <img src="/images/gov.png" className="h-12 flex" alt="GOV" />
+          <img src="/images/CDC.png" className="h-12 flex" alt="CDC" />
+          <img src="/images/gov.png" className="h-12 flex" alt="GOV" />
         </div>
         <ul className="menu menu-horizontal px-1 text-black font-medium">
-          <li>
-            <a>Home</a>
-          </li>
-          <li>
-            <a>Product</a>
-          </li>
-          <li>
-            <a>Tender</a>
-          </li>
-          <li>
-            <a>Career</a>
-          </li>
+        <li>
+                <a>Home</a>
+              </li>
+              <li>
+                <a>Product</a>
+              </li>
+              <li>
+                <a>Tender</a>
+              </li>
+              <li>
+                <a>Career</a>
+              </li>
+              <li>
+                <a>RIT</a>
+              </li>
+              <li>
+                <a>Media Room</a>
+              </li>
+              <li>
+                <a>Contact</a>
+              </li>
+              <li>
+                <a>Whats New</a>
+              </li>
         </ul>
       </div>
       <div className="navbar-end lg:hidden">
-      <img src="/images/logo.png" className="h-20 lg:h-28 block lg:hidden" alt="Logo Image" />
-      
-        
+        <img
+          src="/images/logo.png"
+          className="h-20 lg:h-28 block lg:hidden"
+          alt="Logo Image"
+        />
       </div>
     </div>
   );
