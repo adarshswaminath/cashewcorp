@@ -3,7 +3,7 @@ import Home from './Pages/Home/Home'
 
 function App() {
   return (
-    <main>
+    <main className='bg-gray-100'>
       <Home/>
     </main>
   )
