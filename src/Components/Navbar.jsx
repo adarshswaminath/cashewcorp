@@ -73,8 +73,7 @@ function Navbar() {
       </div>
       <div className="lg:navbar-end hidden lg:grid">
         <div className="flex gap-2 items-end justify-end">
-        <img src="/images/CDC.png" className="h-12 flex" alt="" />
-        <img src="/images/gov.png" className="h-12 flex" alt="" />
+        <img src="/images/gov.png" className="h-12 flex" alt="Government Logo" />
         </div>
         <ul className="menu menu-horizontal px-1 text-black font-medium">
           <li>
