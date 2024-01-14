@@ -65,13 +65,10 @@ function Navbar() {
                 <Link to="/rit">RIT</Link>
               </li>
               <li>
-                <Link to="/media-room">Media Room</Link>
+                <Link to="/gallery">Gallery</Link>
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
-              </li>
-              <li>
-                <Link>Whats New</Link>
+                <a href="#contact">Contact</a>
               </li>
             </ul>
           ) : null}
@@ -88,30 +85,27 @@ function Navbar() {
           <img src="/images/gov.png" className="h-12 flex" alt="GOV" />
         </div>
         <ul className="menu menu-horizontal px-1 text-black font-medium">
-        <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/product">Product</Link>
-              </li>
-              <li>
-                <Link to="/tender">Tender</Link>
-              </li>
-              <li>
-                <Link to="/career">Career</Link>
-              </li>
-              <li>
-                <Link to="/rit">RIT</Link>
-              </li>
-              <li>
-                <Link to="/media-room">Media Room</Link>
-              </li>
-              <li>
-                <Link to="/contact">Contact</Link>
-              </li>
-              <li>
-                <Link>Whats New</Link>
-              </li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/product">Product</Link>
+          </li>
+          <li>
+            <Link to="/tender">Tender</Link>
+          </li>
+          <li>
+            <Link to="/career">Career</Link>
+          </li>
+          <li>
+            <Link to="/rit">RIT</Link>
+          </li>
+          <li>
+            <Link to="/gallery">Gallery</Link>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
         </ul>
       </div>
       <div className="navbar-end lg:hidden">
