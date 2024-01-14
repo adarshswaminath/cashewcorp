@@ -12,16 +12,20 @@ let cardData = [
 
 function HeroCards() {
   return (
-    <div className="lg:-mt-[4rem] grid grid-cols-1 gap-3 md:flex justify-evenly lg:grid-cols-3 place-items-center justify-items-center">
-      {cardData.map((value) => (
-        <div key={value.title} className=" bg-white hover:bg-blue-500 hover:text-white transition ease-in-out duration-200 hover:scale-105  w-96 shadow-xl group">
-        <div className="card-body">
-        <h1 className="card-title text-4xl text-blue-500 group-hover:text-white">{value.icon}</h1>
-          <h2 className="card-title">{value.title}</h2>
-          <p  className="text-gray-500 group-hover:text-white">{value.body}</p>
+    <div className="grid grid-cols-1 gap-3 md:flex justify-evenly lg:grid-cols-3 place-items-center justify-items-center">
+      <div className="mt-8 text-center mx-auto flex flex-col items-center justify-center">
+          <h2 className="text-5xl font-bold text-black max-w-3xl p-6 bg-white/10 bg:blur backdrop-blur">
+            Cashews for Wealth,Health and for Prosperity
+          </h2>
+          <p className="text-balance -mt-0 mb-3  max-w-3xl font-bold text-black bg-white/10 bg:blur backdrop-blur ">
+            Veniam Lorem commodo nulla dolore aliqua nostrud aliquip occaecat
+            sint.Occaecat nulla commodo
+          </p>
+          <div className="flex items-center gap-2 mt-4">
+            <button className="px-6 py-2 border bg-transparent bg-orange-500 hover:bg-transparent text-black hover:text-orange-500 border-orange-500 hover:border-orange-500 rounded-full">Get Started</button>
+            <button className="px-6 py-2 border bg-transparent hover:bg-blue-500 rounded-full border-blue-500 hover:border-blue-500 text-blue-500 hover:text-white">Learn More</button>
+          </div>
         </div>
-      </div>
-      ))}
     </div>
   );
 }

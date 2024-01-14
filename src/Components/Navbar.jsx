@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isShow, setIsShow] = useState(false);
@@ -49,28 +50,28 @@ function Navbar() {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-black font-medium"
             >
               <li>
-                <a>Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a>Product</a>
+                <Link to="/product">Product</Link>
               </li>
               <li>
-                <a>Tender</a>
+                <Link to="/tender">Tender</Link>
               </li>
               <li>
-                <a>Career</a>
+                <Link to="/career">Career</Link>
               </li>
               <li>
-                <a>RIT</a>
+                <Link to="/rit">RIT</Link>
               </li>
               <li>
-                <a>Media Room</a>
+                <Link to="/media-room">Media Room</Link>
               </li>
               <li>
-                <a>Contact</a>
+                <Link to="/contact">Contact</Link>
               </li>
               <li>
-                <a>Whats New</a>
+                <Link>Whats New</Link>
               </li>
             </ul>
           ) : null}
@@ -88,28 +89,28 @@ function Navbar() {
         </div>
         <ul className="menu menu-horizontal px-1 text-black font-medium">
         <li>
-                <a>Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a>Product</a>
+                <Link to="/product">Product</Link>
               </li>
               <li>
-                <a>Tender</a>
+                <Link to="/tender">Tender</Link>
               </li>
               <li>
-                <a>Career</a>
+                <Link to="/career">Career</Link>
               </li>
               <li>
-                <a>RIT</a>
+                <Link to="/rit">RIT</Link>
               </li>
               <li>
-                <a>Media Room</a>
+                <Link to="/media-room">Media Room</Link>
               </li>
               <li>
-                <a>Contact</a>
+                <Link to="/contact">Contact</Link>
               </li>
               <li>
-                <a>Whats New</a>
+                <Link>Whats New</Link>
               </li>
         </ul>
       </div>
