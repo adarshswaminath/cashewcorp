@@ -8,7 +8,7 @@ const imageData = [
     link: "https://keralacm.gov.in/",
   },
   {
-    image: "http://cashewindia.org/images/logo.jpg",
+    image: "/images/logo/cepcl.png",
     link: "http://cashewindia.org/",
   },
   {
@@ -21,7 +21,7 @@ const imageData = [
   },
   {
     image:
-      "https://www.apprenticeshipindia.gov.in/assets/images/skill-india-logo-copy_3x.png",
+      "/images/logo/skill-india.png",
     link: "https://www.apprenticeshipindia.gov.in",
   },
   {
@@ -30,14 +30,14 @@ const imageData = [
     link: "https://www.apprenticeshipindia.gov.in/",
   },
   {
-    image: "https://www.epfindia.gov.in/images/EPFO_Logo.png",
+    image: "/images/logo/EPFO.png",
     link: "https://www.epfindia.gov.in",
   },
 ];
 
 const Image = ({index,height,width}) => {
   return (
-    <a href={imageData[index].link} target="_blank" rel="noopener noreferrer" className="bg-white rounded-lg overflow-hidden shadow-lg flex items-center justify-center p-2">
+    <a href={imageData[index].link} target="_blank" rel="noopener noreferrer" className="rounded-lg overflow-hidden flex items-center justify-center p-2">
       <img
         className={`w-full ${height} ${width} object-cover object-center`}
         src={imageData[index].image}
@@ -53,18 +53,18 @@ function YouAreIn() {
       <h2 className="text-3xl lg:text-4xl font-bold text-center mb-6">
         You're in a good company
       </h2>
-      <p className="text-gray-700 text-center mb-8">
+      <p className="text-gray-700 text-center mb-8 ">
         Excepteur ad ad nulla excepteur duis commodo labore sunt anim dolor.
       </p>
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
-        <Image index={0} height="96" width="w-12"/>
-        <Image index={5} height="96" width="w-12"/>
-        <Image index={7} height="96" width="w-12"/>
-        <Image index={3} height="96" width="w-12"/>
-        <Image index={4} height="96" width="w-12"/>
-        <Image index={1} height="96" width="w-12"/>
-        <Image index={6} height="96" width="w-12"/>
-        <Image index={2} height="96" width="w-12"/>
+      <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+        <Image index={0} height="26" width="w-[185px]"/>
+        <Image index={5} height="65" width="w-[185px]"/>
+        <Image index={7} height="96" width="w-[185px]"/>
+        <Image index={3} height="96" width="w-[185px]"/>
+        <Image index={4} height="96" width="w-[185px]"/>
+        <Image index={1} height="96" width="w-[185px]"/>
+        <Image index={6} height="96" width="w-[185px]"/>
+        <Image index={2} height="96" width="w-[185px]"/>
 
 
 
