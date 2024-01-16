@@ -1,39 +1,59 @@
 import { MdOutlinePeopleAlt, MdOutlineAutoGraph } from "react-icons/md";
 import { IoMdTrophy } from "react-icons/io";
-import { BsFillSuitcaseLgFill } from "react-icons/bs";
+import {
+  BsFillSuitcaseLgFill,
+  BsTwitch,
+  BsTwitter,
+  BsTwitterX,
+} from "react-icons/bs";
 
 const cardData = [
-  { icon: <MdOutlinePeopleAlt />, title: "500+", caption: "Staffs" },
-  { icon: <MdOutlineAutoGraph />, title: "45K+", caption: "Happy Customers" },
-  { icon: <IoMdTrophy />, title: "12+", caption: "Award Winning" },
-  { icon: <BsFillSuitcaseLgFill />, title: "250 Cr+", caption: "profile" },
+  { image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", title: "John Cooper", caption: "Creative Director" },
+  { image: "https://images.pexels.com/photos/1081685/pexels-photo-1081685.jpeg?auto=compress&cs=tinysrgb&w=600", title: "Ronald Richard", caption: "Product Designer" },
+  { image: "https://images.pexels.com/photos/1687675/pexels-photo-1687675.jpeg?auto=compress&cs=tinysrgb&w=600", title: "Brooklyn", caption: "Visual Designer" },
+  { image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600", title: "Kristin", caption: "UX Designer" },
+  { image: "https://images.pexels.com/photos/1441151/pexels-photo-1441151.jpeg?auto=compress&cs=tinysrgb&w=600", title: "Lesslie", caption: "Customer Manager" },
+  { image: "https://images.pexels.com/photos/1370719/pexels-photo-1370719.jpeg?auto=compress&cs=tinysrgb&w=600", title: "Ralph", caption: "Business Director" },
+  { image: "https://images.pexels.com/photos/219550/pexels-photo-219550.jpeg?auto=compress&cs=tinysrgb&w=600", title: "Ralph Edwards", caption: "Creative Director" },
+  { image: "https://images.pexels.com/photos/1499327/pexels-photo-1499327.jpeg?auto=compress&cs=tinysrgb&w=600", title: "John Cooper", caption: "Creative Director" },
+
 ];
 
-const ChooseCard = ({ icon, title, caption }) => {
-    return (
-      <div className="p-5 rounded-lg flex flex-col items-center ">
-        <div className="text-blue-500 p-4">
-          <h2 className="text-3xl lg:text-4xl">{icon}</h2>
-        </div>
-        <h3 className="text-lg lg:text-xl font-bold text-center">{title}</h3>
-        <p className="text-xs lg:text-sm uppercase text-gray-600 text-center">{caption}</p>
+
+
+const ChooseCard = ({ image, title, caption }) => {
+  return (
+    <div className="relative flex flex-col items-center group">
+      <img
+        className="h-32 w-32 object-cover rounded-full shadow-lg"
+        src={image}
+        alt="Profile image"
+      />
+      <div className="relative -top-5 shadow-lg p-2 bg-white rounded-full transform transition ease-in-out delay-100 duration-300 group-hover:scale-125 group-hover:-translate-y-2">
+        <BsTwitterX />
       </div>
-    );
-  };
-  
+      <div className="relative text-center">
+        <p className="font-bold">{title}</p>
+        <p className="text-gray-500">{caption}</p>
+      </div>
+    </div>
+  );
+};
+
 function ChooseUs() {
   return (
     <div className="p-3">
-      <h3 className="text-4xl font-bold uppercase m-4 text-center">
-        why choose us
+      <h3 className="text-xl lg:text-2xl font-extrabold uppercase m-4 text-center">
+        The creative team behind the door
       </h3>
-      <p className="text-center max-w-3xl mx-auto text-gray-500 font-bold">
-        Problems trying to resolve the conflict between the two major realms of
-        Classical physics Newtonian mechanics
-      </p>
-      <div className="grid grid-cols-4 m-3 p-2">
-        {cardData.map((value,index) => (
-          <ChooseCard key={index} icon={value.icon} title={value.title} caption={value.caption}/>
+      <div className="grid grid-cols-3 lg:grid-cols-4 gap-2 mt-3 p-2">
+        {cardData.map((value, index) => (
+          <ChooseCard
+            key={index}
+            image={value.image}
+            title={value.title}
+            caption={value.caption}
+          />
         ))}
       </div>
     </div>
