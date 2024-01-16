@@ -15,9 +15,9 @@ function Home() {
         <About/>
         <ChooseUs/>
         <Practise/>
-        <Service/>
-        <Client/>
+        {/* <Service/> */}
         <Gallery/>
+        <Client/>
         <GetInTocuh/>
         <Footer/>
     </div>

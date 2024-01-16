@@ -2,7 +2,7 @@ import React from "react";
 
 function Client() {
   return (
-    <div className="mt-4">
+    <div className="mt-12">
       {/* backgriuynd image and search bar */}
       <div className="lg:relative">
         {/* search bar */}

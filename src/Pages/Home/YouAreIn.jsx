@@ -57,7 +57,7 @@ function YouAreIn() {
         Excepteur ad ad nulla excepteur duis commodo labore sunt anim dolor.
       </p>
       <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-        <Image index={0} height="" width="w-24"/>
+        {/* <Image index={0} height="" width="w-24"/>
         <Image index={5} height="" width="w-24"/>
         <Image index={7} height="" width="w-24"/>
         <Image index={3} height="" width="w-24"/>
@@ -65,7 +65,7 @@ function YouAreIn() {
         <Image index={1} height="" width="w-24"/>
         <Image index={6} height="" width="w-24"/>
         <Image index={2} height="" width="w-24"/>
-
+ */}
 
 
       </div>
