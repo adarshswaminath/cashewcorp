@@ -1,42 +1,46 @@
-const images = [
-    'https://i.pravatar.cc/150?img=8',
-    'https://i.pravatar.cc/150?img=11',
-    'https://i.pravatar.cc/150?img=3',
-    'https://i.pravatar.cc/150?img=1',
-    'https://i.pravatar.cc/150?img=13',
-]
-
-
-function Avatar({img}) {
-  return (
-    <div className=" flex flex-col items-center avatar">
-      <div className="w-28 rounded">
-        <img src={img} />
-      </div>
-      <div className="text-center">
-        <p className="font-bold">Name</p>
-        <p className="text-xs">Chairman</p>
-      </div>
-    </div>
-  );
-}
-
 function Leaders() {
   return (
     <div className="p-3">
-      <h3 className="text-4xl font-bold uppercase m-4 text-center">
-        our leaders
-      </h3>
-      <p className="text-center max-w-3xl mx-auto text-gray-500 font-bold">
-        Problems trying to resolve the conflict between the two major realms of
-        Classical physics Newtonian mechanics
+  <div className="grid lg:flex items-center justify-evenly">
+    {/* Mission Card 1 */}
+    <div className="p-4 bg-white w-full lg:max-w-sm h-96 flex flex-col items-start mb-6 lg:mb-0 lg:mr-4 rounded-lg">
+      <h2 className="text-2xl font-bold mt-6">Vission</h2>
+      <p className="text-balance mt-6 text-gray-600">
+      Commodo consequat voluptate labore mollit exercitation pariatur irure
+        excepteur. Dolor officia minim culpa veniam mollit proident culpa
+        pariatur velit cupidatat. Quis ut officia tempor id ea ex laboris
+        mollit.Laborum anim elit nostrud amet quis. Aute amet sint nulla dolore
+        proident elit exercitation. Quis exercitation proident occaecat ut
+        consectetur occaecat. Occaecat dolor irure mollit irure. Esse non nostrud
+        consectetur commodo sunt excepteur irure laboris ex. Dolor exercitation ad
+        consectetur Lorem incididunt ea nostrud mollit consequat.
       </p>
-      <div className="grid grid-cols-3 lg:gap-2 lg:grid-cols-5 mt-2">
-        {images.map((value,index) => (
-            <Avatar key={index} img={images[index]}/>
-        ))}
-      </div>
     </div>
+
+    {/* Company Image */}
+    <img
+      src="/images/company.jpeg"
+      alt="Company Image"
+      className="object-cover h-96 rounded-lg lg:w-96"
+    />
+
+    {/* Mission Card 2 */}
+    <div className="p-4 bg-white w-full lg:max-w-sm h-96 flex flex-col items-start rounded-lg">
+      <h2 className="text-2xl font-bold mt-6">Mission</h2>
+      <p className="text-balance mt-6 text-gray-600">
+        Commodo consequat voluptate labore mollit exercitation pariatur irure
+        excepteur. Dolor officia minim culpa veniam mollit proident culpa
+        pariatur velit cupidatat. Quis ut officia tempor id ea ex laboris
+        mollit.Laborum anim elit nostrud amet quis. Aute amet sint nulla dolore
+        proident elit exercitation. Quis exercitation proident occaecat ut
+        consectetur occaecat. Occaecat dolor irure mollit irure. Esse non nostrud
+        consectetur commodo sunt excepteur irure laboris ex. Dolor exercitation ad
+        consectetur Lorem incididunt ea nostrud mollit consequat.
+      </p>
+    </div>
+  </div>
+</div>
+
   );
 }
 
