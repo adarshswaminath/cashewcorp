@@ -8,7 +8,7 @@ const imageData = [
     link: "https://keralacm.gov.in/",
   },
   {
-    image: "/images/logo/cepcl.png",
+    image: "/images/cepcl.png",
     link: "http://cashewindia.org/",
   },
   {
@@ -21,7 +21,7 @@ const imageData = [
   },
   {
     image:
-      "/images/logo/skill-india.png",
+      "/images/skill-india.png",
     link: "https://www.apprenticeshipindia.gov.in",
   },
   {
@@ -30,7 +30,7 @@ const imageData = [
     link: "https://www.apprenticeshipindia.gov.in/",
   },
   {
-    image: "/images/logo/EPFO.png",
+    image: "/images/EPFO.png",
     link: "https://www.epfindia.gov.in",
   },
 ];
