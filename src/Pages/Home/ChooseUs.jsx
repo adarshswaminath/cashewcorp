@@ -6,6 +6,7 @@ import {
   BsTwitter,
   BsTwitterX,
 } from "react-icons/bs";
+import YouAreIn from "./YouAreIn";
 
 const cardData = [
   { image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", title: "John Cooper", caption: "Creative Director" },
@@ -56,6 +57,7 @@ function ChooseUs() {
           />
         ))}
       </div>
+      <YouAreIn/>
     </div>
   );
 }
