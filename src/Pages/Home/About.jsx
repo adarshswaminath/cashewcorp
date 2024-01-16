@@ -24,10 +24,10 @@ function About() {
         </button>
       </div>
       <div className="grid gap-4 grid-cols-2">
-        <div className="h-48 w-56 bg-white shadow-lg"></div>
-        <div className="lg:mt-4 h-48 w-56 bg-white shadow-lg"></div>
-        <div className="h-48 w-56 bg-white shadow-lg"></div>
-        <div className="lg:mt-4 h-48 w-56 bg-white shadow-lg"></div>
+        <div className="h-40 w-full aspect-square bg-white shadow-lg"></div>
+        <div className="h-40 w-full aspect-square lg:mt-4 bg-white shadow-lg"></div>
+        <div className="h-40 w-full aspect-square bg-white shadow-lg"></div>
+        <div className="h-40 w-full aspect-square lg:mt-4 bg-white shadow-lg"></div>
 
       </div>
     </div>
