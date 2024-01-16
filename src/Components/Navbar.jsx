@@ -68,7 +68,7 @@ function Navbar() {
                 <Link to="/gallery">Gallery</Link>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <Link to="/contact">Contact</Link>
               </li>
             </ul>
           ) : null}
@@ -104,7 +104,7 @@ function Navbar() {
             <Link to="/gallery">Gallery</Link>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+          <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </div>

@@ -6,6 +6,7 @@ import Tender from './Pages/Tender/Tender'
 import Career from './Pages/Career/Career'
 import Rit from './Pages/RIT/Rit'
 import Gallery from './Pages/Gallery/Gallery'
+import Contact from './Pages/Contact/Contact'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='/career' element={<Career/>}/>
           <Route path='/rit' element={<Rit/>}/>
           <Route path='/gallery' element={<Gallery/>}/>
+          <Route path='/contact' element={<Contact/>}/>
         </Routes>
       </BrowserRouter>
     </main>
