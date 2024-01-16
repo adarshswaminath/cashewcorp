@@ -21,7 +21,7 @@ function Leaders() {
     <img
       src="/images/company.jpeg"
       alt="Company Image"
-      className="object-cover h-96 rounded-lg lg:w-96"
+      className="object-cover h-96 rounded-lg lg:w-96 mb-6"
     />
 
     {/* Mission Card 2 */}
