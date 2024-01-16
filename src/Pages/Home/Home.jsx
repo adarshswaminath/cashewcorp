@@ -7,6 +7,7 @@ import Service from "./Service"
 import Client from "./Client"
 import Footer from "../../Components/Footer"
 import GetInTocuh from "./GetInTocuh"
+import Gallery from "./Gallery"
 function Home() {
   return (
     <div>
@@ -16,6 +17,7 @@ function Home() {
         <Practise/>
         <Service/>
         <Client/>
+        <Gallery/>
         <GetInTocuh/>
         <Footer/>
     </div>
