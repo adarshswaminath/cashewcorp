@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./style/navbar.css";
+import "./style/navbar.css"
 function Navbar() {
   const [isShow, setIsShow] = useState(false);
   return (
@@ -73,23 +73,13 @@ function Navbar() {
             </ul>
           ) : null}
         </div>
-        <div className="flex-col items-center">
-          <div className="flex items-center">
-            <img
-              src="/images/logo.png"
-              className="h-20 lg:h-36 hidden lg:block"
-              alt="Logo Image"
-            />
-            <div>
-              <h1 className="text-lg font-bold">
-                THE KERALA STATE CASHEW <br /> DEVELOPMENT CORPORATION LTD
-              </h1>
-              <p>(A Government of Kerala Undertaking)</p>
-            </div>
-          </div>
-        </div>
+        <img
+          src="/images/logo-1.png"
+          className="h-28  hidden lg:block"
+          alt="Logo Image"
+        />
       </div>
-
+      
       <div className="lg:navbar-end hidden lg:grid">
         <div className="flex gap-2 items-end justify-end">
           <img src="/images/CDC.png" className="h-12 flex" alt="CDC" />
@@ -115,7 +105,7 @@ function Navbar() {
             <Link to="/gallery">Gallery</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+          <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </div>
