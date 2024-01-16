@@ -32,7 +32,7 @@ function Contact() {
           Feel <span className="text-orange-500">Free to Contact</span> With Us
         </h1>
         {/* cards */}
-        <div className="grid gap-3 grid-cols-1 lg:grid-cols-3 mt-4">
+        <div className="grid gap-3 md:grid-cols-2 grid-cols-1 lg:grid-cols-3 mt-4">
           {/* card -1 */}
           <div className="bg-white p-12 shadow-lg">
             <div className="flex gap-3">
