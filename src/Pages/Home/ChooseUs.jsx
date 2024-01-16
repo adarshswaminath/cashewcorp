@@ -9,14 +9,18 @@ import {
 import YouAreIn from "./YouAreIn";
 
 const cardData = [
-  { image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", title: "John Cooper", caption: "Creative Director" },
-  { image: "https://images.pexels.com/photos/1081685/pexels-photo-1081685.jpeg?auto=compress&cs=tinysrgb&w=600", title: "Ronald Richard", caption: "Product Designer" },
-  { image: "https://images.pexels.com/photos/1687675/pexels-photo-1687675.jpeg?auto=compress&cs=tinysrgb&w=600", title: "Brooklyn", caption: "Visual Designer" },
-  { image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600", title: "Kristin", caption: "UX Designer" },
-  { image: "https://images.pexels.com/photos/1441151/pexels-photo-1441151.jpeg?auto=compress&cs=tinysrgb&w=600", title: "Lesslie", caption: "Customer Manager" },
-  { image: "https://images.pexels.com/photos/1370719/pexels-photo-1370719.jpeg?auto=compress&cs=tinysrgb&w=600", title: "Ralph", caption: "Business Director" },
-  { image: "https://images.pexels.com/photos/219550/pexels-photo-219550.jpeg?auto=compress&cs=tinysrgb&w=600", title: "Ralph Edwards", caption: "Creative Director" },
-  { image: "https://images.pexels.com/photos/1499327/pexels-photo-1499327.jpeg?auto=compress&cs=tinysrgb&w=600", title: "John Cooper", caption: "Creative Director" },
+  { image: "/images/directors/dir1.jpeg", title: "John Cooper", caption: "Creative Director" },
+  { image: "/images/directors/dir2.jpeg", title: "Ronald Richard", caption: "Product Designer" },
+  { image: "/images/directors/dir3.jpeg", title: "Brooklyn", caption: "Visual Designer" },
+  { image: "/images/directors/dir4.jpeg", title: "Kristin", caption: "UX Designer" },
+  { image: "/images/directors/dir5.jpeg", title: "Lesslie", caption: "Customer Manager" },
+  { image: "/images/directors/dir6.jpeg", title: "Ralph", caption: "Business Director" },
+  { image: "/images/directors/dir7.jpeg", title: "Ralph Edwards", caption: "Creative Director" },
+  { image: "/images/directors/dir8.jpeg", title: "John Cooper", caption: "Creative Director" },
+  { image: "/images/directors/dir9.jpeg", title: "John Cooper", caption: "Creative Director" },
+  { image: "/images/directors/dir10.jpeg", title: "John Cooper", caption: "Creative Director" },
+
+
 
 ];
 
@@ -45,7 +49,7 @@ function ChooseUs() {
   return (
     <div className="p-3">
       <h3 className="text-xl lg:text-2xl font-extrabold uppercase m-4 text-center">
-        The creative team behind the door
+        The Director Board
       </h3>
       <div className="grid grid-cols-3 lg:grid-cols-4 gap-2 mt-3 p-2">
         {cardData.map((value, index) => (
