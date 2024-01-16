@@ -2,7 +2,8 @@ import "./style/home.css";
 
 function About() {
   return (
-    <div className="grid gap-4 lg:flex items-center justify-around   m-6 about">
+    <div className="">
+      <div className="grid gap-4 lg:flex items-center justify-around   m-6 about">
       <div className="flex flex-col items-start">
         <span className="text-sm text-blue-500 mb-6">Our Experience</span>
         <h2 className="text-4xl max-w-md text-balance">
@@ -28,8 +29,41 @@ function About() {
         <div className="h-40 w-full aspect-square lg:mt-4 bg-white shadow-lg"></div>
         <div className="h-40 w-full aspect-square bg-white shadow-lg"></div>
         <div className="h-40 w-full aspect-square lg:mt-4 bg-white shadow-lg"></div>
-
       </div>
+    </div>
+    {/* section */}
+    <div className="p-3">
+      <div className="grid lg:flex gap-3 items-center justify-evenly">
+        {/* Vission Card 1 */}
+        <div className="p-4 bg-white w-full lg:max-w-sm flex flex-col items-start mb-6 lg:mb-0 lg:mr-4 rounded-lg shadow-md">
+          <h2 className="text-2xl font-bold mt-6">Vission</h2>
+          <p className="text-balance mt-6 text-gray-600">
+            Commodo consequat voluptate labore mollit exercitation pariatur
+            irure excepteur. Dolor officia minim culpa veniam mollit proident
+            culpa pariatur velit cupidatat. Quis ut officia tempor id ea ex
+            laboris mollit
+          </p>
+        </div>
+
+        {/* Company Image */}
+        <img
+          src="/images/company.jpeg"
+          alt="Company Image"
+          className="object-cover h-96 rounded-lg  mb-6"
+        />
+
+        {/* Mission Card 2 */}
+        <div className="p-4 bg-white w-full lg:max-w-sm flex flex-col items-start rounded-lg shadow-md">
+          <h2 className="text-2xl font-bold mt-6">Mission</h2>
+          <p className="text-balance mt-6 text-gray-600">
+            Commodo consequat voluptate labore mollit exercitation pariatur
+            irure excepteur. Dolor officia minim culpa veniam mollit proident
+            culpa pariatur velit cupidatat. Quis ut officia tempor id ea ex
+            laboris mollit.
+          </p>
+        </div>
+      </div>
+    </div>
     </div>
   );
 }

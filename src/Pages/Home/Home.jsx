@@ -12,7 +12,6 @@ function Home() {
     <div>
         <Hero/>
         <About/>
-        <Leaders/>
         <ChooseUs/>
         <Practise/>
         <Service/>
