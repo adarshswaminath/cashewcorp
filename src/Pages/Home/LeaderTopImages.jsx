@@ -16,7 +16,7 @@ const leaderData = [
   {
     name: "Name Of Person 3",
     position: "Chairman",
-    image: "/images/chairman.png",
+    image: "/images/chairman.jpeg",
   },
   {
     name: "Name Of Person 4",
@@ -33,7 +33,7 @@ function LeaderTopImages() {
         <div key={index} className="text-center flex flex-col items-center">
           <img
             src={leader.image}
-            className="object-conatin h-52 w-52 rounded-md mb-2"
+            className="object-conatin h-52 w-52 rounded-md mb-2 border border-black"
             alt={leader.name}
           />
           <p className="text-gray-900 font-bold">{leader.name}</p>

@@ -6,13 +6,13 @@ function Gallery() {
     <div className="text-center p-4">
       <h1 className="text-4xl font-bold my-8">Gallery</h1>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid lg:flex items-center justify-center gap-8">
         {/* Image Section */}
         <div className="flex flex-col items-center my-6">
           <img
             src="https://cashewcorporation.com/wp-content/uploads/2017/09/T8A0351-1024x683.jpg"
             alt="Gallery image"
-            className="mb-4 rounded-md w-full h-64 lg:h-auto"
+            className="mb-4 rounded-md w-full h-80 lg:w-80"
           />
           <Link to="/gallery">
             {" "}
@@ -26,13 +26,13 @@ function Gallery() {
         <div className="flex flex-col items-center my-6">
           <iframe
             width="100%"
-            height="480"
+            // height="480"
             src="https://www.youtube.com/embed/xAfJ_pCJObM?si=_YryQkjStOD0Ds0M"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
-            className="rounded-md"
+            className="rounded-md h-auto lg:w-80 lg:h-80"
           ></iframe>
           <Link to="/gallery">
             {" "}

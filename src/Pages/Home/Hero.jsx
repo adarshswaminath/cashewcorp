@@ -27,7 +27,7 @@ function Hero() {
       >
         <Navbar />
         <div className=" text-center mx-auto flex flex-col items-center justify-center">
-          <h2 className="text-5xl font-bold text-[#ff4d00] max-w-3xl ">
+          <h2 className="text-5xl font-bold text-white max-w-3xl ">
           welcome to THE KERALA STATE
 CASHEW DEVELOPMENT CORPORATION LTD
           </h2>
