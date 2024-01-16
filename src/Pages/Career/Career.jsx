@@ -45,7 +45,7 @@ function Career() {
             Magna in velit sint pariatur pariatur ullamco sint est commodo ex.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3 p-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 p-3">
           {Array.from({length:8}).map((_) => (
             <CareerCard />
           ))}
@@ -61,7 +61,7 @@ function Career() {
             Magna in velit sint pariatur pariatur ullamco sint est commodo ex.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3 p-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 p-3">
           {Array.from({length:8}).map((_) => (
             <CareerCard />
           ))}
