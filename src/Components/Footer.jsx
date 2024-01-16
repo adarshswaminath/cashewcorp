@@ -58,7 +58,8 @@ function FooterSocialMediaPannel() {
     { icon: <LuLinkedin />, link: "#" },
   ];
   return (
-    <div className="p-4 bg-white mt-3 text-black">
+    <div className="flex items-center justify-center">
+      <div className="p-4 bg-white mt-3 text-black lg:w-3/4 rounded-lg">
       <h2 className="text-center font-extrabold tracking-wide">Follow us</h2>
       <div className="flex justify-evenly gap-3 m-2">
         {socialMedis.map((icon) => (
@@ -71,6 +72,7 @@ function FooterSocialMediaPannel() {
           </a>
         ))}
       </div>
+    </div>
     </div>
   );
 }
@@ -95,7 +97,7 @@ function FooterCopyRight() {
 function Footer() {
   return (
     <div
-      className="relative bg-cover bg-center bg-no-repeat"
+      className="relative bg-cover bg-center bg-no-repeat "
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Black overlay */}
@@ -103,7 +105,7 @@ function Footer() {
 
       <div className="relative z-10 text-white p-4">
         {/* footer links */}
-        <div className="grid gap-3 grid-cols-2  lg:grid-cols-4">
+        <div className="grid gap-3 grid-cols-2  lg:grid-cols-4 place-items-center ">
           {footerData.map((data) => (
             <FooterLinks key={data.title} {...data} />
           ))}
