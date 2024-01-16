@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,700&family=Montserrat:wght@800&family=Nunito+Sans:ital,opsz@1,6..12&display=swap');
+nav {
+    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
+}
