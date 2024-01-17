@@ -14,7 +14,7 @@ const leaderData = [
       "https://minister-industries.kerala.gov.in/wp-content/uploads/2021/09/prajeev.jpg",
   },
   {
-    name: "Shri.S.Jayamohan",
+    name: "Shri. S.Jayamohan",
     position: "Chairman",
     image: "/images/chairman.png",
   },
