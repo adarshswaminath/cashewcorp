@@ -82,7 +82,7 @@ function Navbar() {
             </ul>
           ) : null}
         </div>
-        <div className="hidden lg:flex justify-end items-end absolute right-[15%] top-2 mb-2">
+        <div className="hidden lg:flex justify-end items-end absolute right-[13%] top-2 mb-2">
           <img src="/images/CDC.png" className="h-14 flex" alt="CDC" />
           <img src="/images/gov.png" className="h-14 flex" alt="GOV" />
         </div>
