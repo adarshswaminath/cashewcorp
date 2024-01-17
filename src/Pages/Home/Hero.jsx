@@ -6,7 +6,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 
 const images = [
-  "/images/hero-61.jpg",
+  "/images/hero-612.jpg",
   "/images/hero-7.jpg",
   "/images/hero-8.jpg",
   "/images/hero-9.jpg",
@@ -26,7 +26,7 @@ function Hero() {
   return (
     <div className="hero-container">
       <div
-        className="hero-background h-[100vh] bg-cover bg-current bg-no-repeat"
+        className="hero-background h-screen bg-cover bg-current bg-no-repeat"
         style={{
           backgroundImage: `url(${images[imageIndex]})`,
         }}
