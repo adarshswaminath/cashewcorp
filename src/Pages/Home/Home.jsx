@@ -9,9 +9,13 @@ import Footer from "../../Components/Footer"
 import GetInTocuh from "./GetInTocuh"
 import Gallery from "./Gallery"
 import YouAreIn from "./YouAreIn"
+import TranslateButton from "../../Components/TranslateButton"
 function Home() {
   return (
     <div>
+      <div className="fixed bottom-4 right-3 z-50">
+        <TranslateButton/>
+      </div>
         <Hero/>
         <About/>
         <ChooseUs/>

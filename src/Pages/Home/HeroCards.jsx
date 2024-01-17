@@ -3,6 +3,7 @@ import { FaBookOpen } from "react-icons/fa6";
 import {MdProductionQuantityLimits } from "react-icons/md"
 import { AiOutlineShop } from "react-icons/ai";
 
+
 let cardData = [
     {title: "50+ Products",body: "We focus on ergonomics and meeting you where you work ",icon:<MdProductionQuantityLimits/>},
     {title: "50+ Outlets",body: "Just type what's in your mind and we'll get you there",icon:<AiOutlineShop/>},

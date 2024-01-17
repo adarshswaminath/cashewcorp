@@ -8,7 +8,6 @@ import Rit from './Pages/RIT/Rit'
 import Gallery from './Pages/Gallery/Gallery'
 import Contact from './Pages/Contact/Contact'
 
-
 function App() {
 
   return (

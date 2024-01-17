@@ -1,12 +1,10 @@
 import { MdOutlinePeopleAlt, MdOutlineAutoGraph } from "react-icons/md";
 import { IoMdTrophy } from "react-icons/io";
 import {
-  BsFillSuitcaseLgFill,
-  BsTwitch,
-  BsTwitter,
-  BsTwitterX,
+  BsWhatsapp,
 } from "react-icons/bs";
 import YouAreIn from "./YouAreIn";
+import ScrollAnimation from "react-animate-on-scroll"
 
 const cardData = [
   { image: "/images/directors/dir2.jpeg", title: "Shri.S.Jayamohan", caption: "Chairman" },
@@ -29,12 +27,12 @@ const ChooseCard = ({ image, title, caption }) => {
   return (
     <div className="relative flex flex-col items-center group">
       <img
-        className="h-32 w-32 object-cover rounded-full shadow-lg"
+        className="h-44 w-40 object-cover rounded-lg shadow-lg"
         src={image}
         alt="Profile image"
       />
-      <div className="relative -top-5 shadow-lg p-2 bg-white rounded-full transform transition ease-in-out delay-100 duration-300 group-hover:scale-125 group-hover:-translate-y-2">
-        <BsTwitterX />
+      <div className="relative -top-6 right-16 shadow-lg p-2 bg-white rounded-full transform transition ease-in-out delay-100 duration-300 group-hover:scale-125 group-hover:-translate-y-2">
+        <BsWhatsapp />
       </div>
       <div className="relative text-center">
         <p className="font-bold">{title}</p>
@@ -46,12 +44,13 @@ const ChooseCard = ({ image, title, caption }) => {
 
 function ChooseUs() {
   return (
-    <div className="p-3">
+    <ScrollAnimation animateIn="fadeIn"delay={400}>
+      <div className="p-3">
       <h3 className="text-xl lg:text-2xl font-extrabold uppercase m-4 text-center">
-        The Director Board
+        Our Board Of Directors
       </h3>
       <div className="flex items-center justify-center">
-      <div className="grid grid-cols-3 lg:grid-cols-5 gap-16 mt-3 p-2">
+      <div className="grid grid-cols-2 lg:grid-cols-5 gap-16 mt-3 p-2">
         {cardData.map((value, index) => (
           <ChooseCard
             key={index}
@@ -64,6 +63,7 @@ function ChooseUs() {
       </div>
       {/* <YouAreIn/> */}
     </div>
+    </ScrollAnimation>
   );
 }
 
