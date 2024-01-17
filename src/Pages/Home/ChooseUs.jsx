@@ -7,9 +7,9 @@ import YouAreIn from "./YouAreIn";
 import ScrollAnimation from "react-animate-on-scroll"
 
 const cardData = [
-  { image: "/images/directors/dir2.jpeg", title: "Shri.S.Jayamohan", caption: "Chairman" },
-  { image: "/images/directors/dir1.jpeg", title: "Shri. Sunil John K", caption: "Managing Director" },
-  { image: "/images/directors/dir9.jpeg", title: "Shri.B. Pratheep Kumar", caption: "Director" },
+  { image: "/images/directors/chairman-1.png", title: "Shri. S.Jayamohan", caption: "Chairman" },
+  { image: "/images/directors/dir1.jpeg", title: "Shri. Sunil John .K", caption: "Managing Director" },
+  { image: "/images/directors/dir9.jpeg", title: "Shri. B. Pratheep Kumar", caption: "Director" },
   { image: "/images/directors/dir10.jpeg", title: "Shri. Siju Jacob", caption: "Director" },
   { image: "/images/directors/dir8.jpeg", title: "Dr. B S Suran", caption: "Director" },
   { image: "/images/directors/dir4.jpeg", title: "Shri. B Sujeendran", caption: "Director" },
@@ -24,7 +24,7 @@ const ChooseCard = ({ image, title, caption }) => {
   return (
     <div className="relative flex flex-col items-center group">
       <img
-        className="h-44 w-40 object-cover rounded-lg shadow-lg border border-blue-400"
+        className="h-48 w-40 object-cover rounded-lg shadow-lg border border-blue-400"
         src={image}
         alt="Profile image"
       />
@@ -32,8 +32,8 @@ const ChooseCard = ({ image, title, caption }) => {
         <BsWhatsapp />
       </div>
       <div className="relative text-center">
-        <p className="font-bold">{title}</p>
-        <p className="text-gray-500">{caption}</p>
+        <p className="font-bold text-red-400 uppercase">{title}</p>
+        <p className="text-black">{caption}</p>
       </div>
     </div>
   );
@@ -43,7 +43,7 @@ function ChooseUs() {
   return (
     <ScrollAnimation animateIn="fadeIn"delay={400}>
       <div className="p-3">
-      <h3 className="text-xl lg:text-2xl font-extrabold  m-4 text-center">
+      <h3 className="text-xl text-orange-500 lg:text-2xl font-extrabold  m-4 text-center">
         Our Board Of Directors
       </h3>
       <div className="flex items-center justify-center">

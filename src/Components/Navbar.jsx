@@ -5,7 +5,6 @@ function Navbar() {
   const [isShow, setIsShow] = useState(false);
   return (
     <nav className="navbar bg-transparent z-50">
-      
       <div className="navbar-start">
         <div className="dropdown" onClick={() => setIsShow((prev) => !prev)}>
           <button
@@ -75,7 +74,7 @@ function Navbar() {
           ) : null}
         </div>
         <div className="hidden lg:flex justify-end items-end absolute right-0 top-2 mb-2">
-                    <img src="/images/CDC.png" className="h-12 flex" alt="CDC" />
+          <img src="/images/CDC.png" className="h-12 flex" alt="CDC" />
           <img src="/images/gov.png" className="h-12 flex" alt="GOV" />
         </div>
         {/* desktop view */}
@@ -87,9 +86,11 @@ function Navbar() {
           />
           <div>
             <h1 className="uppercase font-bold text-black text-sm">
-            kerala state cashew developement corporation ltd
+              kerala state cashew developement corporation ltd
             </h1>
-            <p className="text-black text-center text-sm">A Governement of Kerala Undertaking</p>
+            <p className="text-black text-center text-sm">
+              A Governement of Kerala Undertaking
+            </p>
           </div>
         </div>
       </div>
@@ -99,7 +100,7 @@ function Navbar() {
           {/* <img src="/images/CDC.png" className="h-12 flex" alt="CDC" /> */}
           {/* <img src="/images/gov.png" className="h-12 flex" alt="GOV" /> */}
         </div>
-        <ul className="menu menu-horizontal px-1 text-black font-medium">
+        <ul className="flex space-x-5 px-1 text-black font-medium">
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -108,6 +109,26 @@ function Navbar() {
           </li>
           <li>
             <Link to="/tender">Tender</Link>
+          </li>
+            {/* ------- */}
+            <li>
+            <div className="dropdown">
+              <div tabIndex={0}>More</div>
+              <ul
+                tabIndex={0}
+                className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <a>Executives</a>
+                </li>
+                <li>
+                  <a>Franchisee</a>
+                </li>
+                <li>
+                  <a>What' New</a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li>
             <Link to="/career">Career</Link>
@@ -118,6 +139,7 @@ function Navbar() {
           <li>
             <Link to="/gallery">Gallery</Link>
           </li>
+          
           <li>
             <Link to="/contact">Contact</Link>
           </li>

@@ -1,31 +1,20 @@
 import React from "react";
+import { FaLink } from "react-icons/fa6";
 
 const linksArray = [
-  { name: "Kerala Government", link: "https://www.kerala.gov.in" },
-  {
-    name: "Local Self Government Department",
-    link: "https://lc.kerala.gov.in",
-  },
   { name: "India Government", link: "https://India.gov.in" },
+  { name: "ESIC India", link: "https://esic.gov.in/" },
+  { name: "EPF India", link: "https://epfindia.gov.in/site_en/index.php" },
+  { name: "Kerala Government", link: "https://kerala.gov.in" },
+  { name: "Local Self Government Department",link: "https://lc.kerala.gov.in",},
   { name: "Chief Minister Office Kerala", link: "https://cmo.kerala.gov.in" },
   { name: "Kerala Chief Minister", link: "https://keralacm.gov.in/" },
-  { name: "Cashew India", link: "http://www.cashewindia.org/" },
-  { name: "Kerala Industry", link: "https://www.keralaindustry.org/" },
-  {
-    name: "Kerala Industry Department",
-    link: "https://industry.kerala.gov.in/",
-  },
-  { name: "Cashew Capex", link: "https://www.cashewcapex.com/" },
-  {
-    name: "Economic Statistics Kerala",
-    link: "https://www.ecostat.kerala.gov.in/",
-  },
-  {
-    name: "Apprenticeship India",
-    link: "https://www.apprenticeshipindia.gov.in/",
-  },
-  { name: "ESIC India", link: "https://www.esic.gov.in/" },
-  { name: "EPF India", link: "https://www.epfindia.gov.in/site_en/index.php" },
+  { name: "Cashew India", link: "http://cashewindia.org/" },
+  { name: "Kerala Industry", link: "https://keralaindustry.org/" },
+  { name: "Kerala Industry Department",link: "https://industry.kerala.gov.in/" },
+  { name: "Cashew Capex", link: "https://cashewcapex.com/" },
+  { name: "Economic Statistics Kerala",link: "https://ecostat.kerala.gov.in/"},
+  { name: "Apprenticeship India",link: "https://apprenticeshipindia.gov.in/",},
   { name: "Kerala Cashew Board", link: "https://keralacashewboard.com/" },
 ];
 
@@ -34,11 +23,12 @@ const Card = ({ index }) => {
     <div className="shadow-lg bg-white flex items-center justify-center p-4 mb-4 rounded-md">
       <a
         href={linksArray[index].link}
-        className="font-bold text-center"
+        className="font-bold text-center flex items-center gap-3"
         target="_blank"
         rel="noopener noreferrer"
       >
-        {linksArray[index].name}
+        {new URL(linksArray[index].link).hostname }
+        <FaLink/>
       </a>
     </div>
   );

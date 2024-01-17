@@ -3,13 +3,13 @@ import React from "react";
 const leaderData = [
   {
     name: "Shri. Pinarayi Vijayan",
-    position: "Hon Chief Minister",
+    position: "Hon'ble Chief Minister",
     image:
       "https://lc.kerala.gov.in/sites/default/files/styles/photo200x240/public/2021-08/cm.jpg?itok=5N70jXna",
   },
   {
     name: "Shri. P.Rajeeve",
-    position: "Hon Industries Minister",
+    position: "Hon'ble Minister of Industries",
     image:
       "https://minister-industries.kerala.gov.in/wp-content/uploads/2021/09/prajeev.jpg",
   },
