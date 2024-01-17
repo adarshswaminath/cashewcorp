@@ -6,9 +6,7 @@ function About() {
       <div className="grid gap-4 lg:flex items-center justify-around   m-6 about">
         <div className="flex flex-col items-start">
           <span className="text-sm text-blue-500 mb-6">About Us</span>
-          <h2 className="text-4xl max-w-md text-balance">
-            About Us{" "}
-          </h2>
+          <h2 className="text-4xl max-w-md text-balance">About Us </h2>
           <p className="text-balance max-w-xl text-gray-400 mt-6 mb-6">
             The Kerala State Cashew Development Corporation Limited (KSCDC) was
             incorporated in July 1969 and started Commercial activities in the
@@ -35,13 +33,13 @@ function About() {
         </div>
         <div className="grid gap-4 grid-cols-2">
           <div className="h-40 w-full aspect-square bg-white shadow-lg flex items-center justify-center">
-          <h3 className="text-xl font-bold text-orange-500">News Updates</h3>
+            <h3 className="text-xl font-bold text-orange-500 text-center">News Updates</h3>
           </div>
           <div className="h-40 w-full aspect-square lg:mt-4 bg-white shadow-lg flex items-center justify-center">
-          <h3 className="text-xl font-bold text-orange-500">Tender</h3>
+            <h3 className="text-xl font-bold text-orange-500">Tender</h3>
           </div>
           <div className="h-40 w-full aspect-square bg-white shadow-lg flex items-center justify-center">
-          <h3 className="text-xl font-bold text-orange-500">News Updates</h3>
+            <h3 className="text-xl font-bold text-orange-500  text-center">News Updates</h3>
           </div>
           <div className="h-40 w-full aspect-square lg:mt-4 bg-white shadow-lg flex items-center justify-center">
             <h3 className="text-xl font-bold text-orange-500">Tender</h3>
@@ -50,35 +48,32 @@ function About() {
       </div>
       {/* section */}
       <div className="p-3">
-        <div className="grid lg:flex gap-3 items-center justify-evenly">
-          {/* Vission Card 1 */}
-          <div className="p-4 bg-white w-full lg:max-w-sm flex flex-col items-start mb-6 lg:mb-0 lg:mr-4 rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold mt-6">Vision</h2>
-            <p className="text-balance mt-6 text-gray-600">
-              The Vision of KSCDC is to be a World Class Organisation and a
-              Leader in the Cashew Industry by providing 300 days of employment
-              an year and achieve an Annual turnover of Rs.1000 Crore by year
-              2025.
-            </p>
-          </div>
-
+        <div className="grid gap-3">
           {/* Company Image */}
           <img
             src="/images/company.jpeg"
             alt="Company Image"
-            className="object-cover h-96 rounded-lg  mb-6"
+            className="object-cover w-full h-96 rounded-lg  mb-6"
           />
 
-          {/* Mission Card 2 */}
-          <div className="p-4 bg-white w-full lg:max-w-sm flex flex-col items-start rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold mt-6">Mission</h2>
-            <p className="text-balance mt-6 text-gray-600">
-              KSDC also aims at backward integration of its product line and has
-              promoted Cashew Plantations in association with the Kerala State
-              Agency for Cashew Cultivation and have cultivated Cashew
-              Plantation across 25 hectares in its facilities.
-            </p>
-          </div>
+<div className="grid lg:flex justify-center items-center gap-8">
+  {/* Mission Card */}
+  <div className="p-6 bg-white w-full lg:max-w-md flex flex-col items-start rounded-lg shadow-md border-l-4 border-orange-500 transform transition ease-in-out duration-300 hover:scale-105 hover:-translate-y-3">
+    <h2 className="text-3xl font-bold mb-4">Mission</h2>
+    <p className="text-gray-700 leading-relaxed">
+      KSDC aims at backward integration of its product line and has promoted Cashew Plantations in association with the Kerala State Agency for Cashew Cultivation. We have cultivated Cashew Plantation across 25 hectares in our facilities.
+    </p>
+  </div>
+
+  {/* Vision Card */}
+  <div className="p-6 bg-white w-full lg:max-w-md flex flex-col items-start rounded-lg shadow-md border-l-4 border-orange-500 transform transition ease-in-out duration-300 hover:scale-105 hover:-translate-y-3">
+    <h2 className="text-3xl font-bold mb-4">Vision</h2>
+    <p className="text-gray-700 leading-relaxed">
+      The Vision of KSCDC is to be a World Class Organisation and a Leader in the Cashew Industry by providing 300 days of employment per year and achieve an Annual turnover of Rs. 1000 Crore by the year 2025.
+    </p>
+  </div>
+</div>
+
         </div>
       </div>
     </div>

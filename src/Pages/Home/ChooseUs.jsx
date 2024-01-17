@@ -51,7 +51,7 @@ function ChooseUs() {
         The Director Board
       </h3>
       <div className="flex items-center justify-center">
-      <div className="grid grid-cols-3 lg:grid-cols-3 gap-16 mt-3 p-2">
+      <div className="grid grid-cols-3 lg:grid-cols-5 gap-16 mt-3 p-2">
         {cardData.map((value, index) => (
           <ChooseCard
             key={index}

@@ -16,7 +16,7 @@ const leaderData = [
   {
     name: "Name Of Person 3",
     position: "Chairman",
-    image: "/images/chairman.png",
+    image: "/images/chairman.jpeg",
   },
   {
     name: "Name Of Person 4",

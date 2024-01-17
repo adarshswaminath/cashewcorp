@@ -38,7 +38,7 @@ function GetInTocuh() {
         Problems trying to resolve the conflict between the two major realms of
         Classical physics Newtonian mechanics.
       </p>
-      <div className="grid grid-cols-1 lg:flex gap-2 place-items-center justify-items-center justify-center items-center">
+      <div className="grid grid-cols-1  lg:flex gap-2 place-items-center justify-items-center justify-center items-center">
         {getInTouchData.map((value,index) => (
             <GetInTocuhCard
                 key={index}

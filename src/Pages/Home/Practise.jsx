@@ -34,7 +34,7 @@ function Practise() {
       <h3 className="text-3xl font-bold m-4 text-center">
         Blog & News Update
       </h3>
-      <div className="grid grid-cols-2 gap-2 lg:grid-cols-3 place-items-center justify-items-center">
+      <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 place-items-center justify-items-center">
       {cardDetils.map((value) => (
         <PractiseCard 
         key={value.image} 

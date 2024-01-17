@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./style/navbar.css"
+import "./style/navbar.css";
 function Navbar() {
   const [isShow, setIsShow] = useState(false);
   return (
@@ -73,17 +73,30 @@ function Navbar() {
             </ul>
           ) : null}
         </div>
-        <img
-          src="/images/logo-1.png"
-          className="h-28  hidden lg:block"
-          alt="Logo Image"
-        />
+        <div className="hidden lg:flex justify-end items-end absolute right-0 top-2 mb-2">
+                    <img src="/images/CDC.png" className="h-12 flex" alt="CDC" />
+          <img src="/images/gov.png" className="h-12 flex" alt="GOV" />
+        </div>
+        {/* desktop view */}
+        <div className="hidden lg:flex items-center">
+          <img
+            src="/images/logo.png"
+            className="h-28  hidden lg:block"
+            alt="Logo Image"
+          />
+          <div>
+            <h1 className="uppercase font-bold text-black">
+              kerala state development corporation ltd
+            </h1>
+            <p className="text-black text-center">A Governement of Kerala Undertaking</p>
+          </div>
+        </div>
       </div>
-      
+
       <div className="lg:navbar-end hidden lg:grid">
         <div className="flex gap-2 items-end justify-end">
-          <img src="/images/CDC.png" className="h-12 flex" alt="CDC" />
-          <img src="/images/gov.png" className="h-12 flex" alt="GOV" />
+          {/* <img src="/images/CDC.png" className="h-12 flex" alt="CDC" /> */}
+          {/* <img src="/images/gov.png" className="h-12 flex" alt="GOV" /> */}
         </div>
         <ul className="menu menu-horizontal px-1 text-black font-medium">
           <li>
@@ -105,7 +118,7 @@ function Navbar() {
             <Link to="/gallery">Gallery</Link>
           </li>
           <li>
-          <Link to="/contact">Contact</Link>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </div>

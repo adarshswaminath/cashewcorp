@@ -20,20 +20,20 @@ function Hero() {
   return (
     <div>
       <div
-        className="h-[28rem] bg-cover bg-center bg-no-repeat"
+        className="lg:h-[30rem] h-screen bg-cover bg-current bg-no-repeat"
         style={{
           backgroundImage: `url(${images[imageIndex]})`,
         }}
       >
         <Navbar />
-        <div className=" text-center mx-auto flex flex-col items-center justify-center">
-          <h2 className="text-5xl font-bold text-white max-w-3xl ">
-          welcome to THE KERALA STATE
-CASHEW DEVELOPMENT CORPORATION LTD
+        <div className=" text-center h-screen lg:h-auto mx-auto flex flex-col items-center justify-center">
+          <h2 className="text-4xl font-bold text-gray-900 max-w-3xl ">
+          welcome To The Kerala State
+Cashew Development Corporation LTD
           </h2>
           <div className="flex items-center gap-2 mt-4">
-            <button className="px-6 py-2 border bg-transparent bg-orange-500 hover:bg-transparent text-white hover:text-orange-500 border-orange-500 hover:border-orange-500 rounded-full">Get Started</button>
-            <button className="px-6 py-2 border bg-transparent hover:bg-blue-500 rounded-full border-blue-500 hover:border-blue-500 text-blue-500 hover:text-white">Learn More</button>
+            <button className="px-6 py-2 border  bg-orange-500 hover:bg-transparent text-white hover:text-orange-500 border-orange-500 hover:border-orange-500 rounded-full">Get Started</button>
+            <button className="px-6 py-2 border  bg-blue-500 rounded-full border-blue-500 hover:border-blue-500 text-white hover:text-white">Learn More</button>
           </div>
         </div>
       </div>

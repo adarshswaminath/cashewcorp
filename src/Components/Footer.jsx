@@ -100,6 +100,7 @@ function Footer() {
       className="relative bg-cover bg-center bg-no-repeat "
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
+      
       {/* Black overlay */}
       <div className="absolute inset-0 bg-black opacity-75"></div>
 
@@ -112,6 +113,9 @@ function Footer() {
         </div>
         {/* social media pannel */}
         <FooterSocialMediaPannel />
+        <div className="flex items-center justify-center lg:justify-end m-2">
+          <img src="/images/footer.jpeg" className="h-32 w-32 rounded-lg" alt="Footer image" />
+        </div>
         {/* copy right section */}
         <FooterCopyRight/>
       </div>
