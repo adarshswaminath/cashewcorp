@@ -20,7 +20,7 @@ const linksArray = [
 
 const Card = ({ index }) => {
   return (
-    <div className="shadow-lg bg-white flex items-center justify-center p-4 mb-4 rounded-md">
+    <div className="shadow-lg bg-white bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-700 hover:to-orange-700 text-white font-bold py-3 px-6 transform transition-transform duration-300 hover:scale-105 hover:rotate-3 hover:shadow-lg flex items-center justify-center p-4 mb-4 rounded-md">
       <a
         href={linksArray[index].link}
         className="font-bold text-center flex items-center gap-3"
