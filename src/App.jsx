@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {BrowserRouter,Routes,Route} from "react-router-dom"
 import Home from './Pages/Home/Home'
 import Product from './Pages/Products/Product'
@@ -8,7 +8,9 @@ import Rit from './Pages/RIT/Rit'
 import Gallery from './Pages/Gallery/Gallery'
 import Contact from './Pages/Contact/Contact'
 
+
 function App() {
+
   return (
     <main className='bg-gray-100'>
       <BrowserRouter>

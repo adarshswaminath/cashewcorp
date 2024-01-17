@@ -5,6 +5,7 @@ function Navbar() {
   const [isShow, setIsShow] = useState(false);
   return (
     <nav className="navbar bg-transparent z-50">
+      
       <div className="navbar-start">
         <div className="dropdown" onClick={() => setIsShow((prev) => !prev)}>
           <button
