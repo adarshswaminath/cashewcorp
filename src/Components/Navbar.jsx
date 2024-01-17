@@ -113,14 +113,8 @@ function Navbar() {
           <li>
             <Link to="/">Home</Link>
           </li>
+          {/* ------- */}
           <li>
-            <Link to="/product">Product</Link>
-          </li>
-          <li>
-            <Link to="/tender">Tender</Link>
-          </li>
-            {/* ------- */}
-            <li>
             <div className="dropdown">
               <div tabIndex={0}>About</div>
               <ul
@@ -139,6 +133,13 @@ function Navbar() {
               </ul>
             </div>
           </li>
+          <li>
+            <Link to="/product">Product</Link>
+          </li>
+          <li>
+            <Link to="/tender">Tender</Link>
+          </li>
+            
           <li>
             <Link to="/career">Career</Link>
           </li>

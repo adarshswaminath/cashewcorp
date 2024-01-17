@@ -9,4 +9,12 @@
 body {
     font-family: 'Work Sans', sans-serif;
 }
-
+.hero-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-background {
+    transition: background-image 0.5s ease-in-out;
+  }
+  
