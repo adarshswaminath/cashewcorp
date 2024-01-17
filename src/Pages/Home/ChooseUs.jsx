@@ -9,16 +9,15 @@ import {
 import YouAreIn from "./YouAreIn";
 
 const cardData = [
-  { image: "/images/directors/dir1.jpeg", title: "John Cooper", caption: "Creative Director" },
-  { image: "/images/directors/dir2.jpeg", title: "Ronald Richard", caption: "Product Designer" },
-  { image: "/images/directors/dir3.jpeg", title: "Brooklyn", caption: "Visual Designer" },
-  { image: "/images/directors/dir4.jpeg", title: "Kristin", caption: "UX Designer" },
-  { image: "/images/directors/dir5.jpeg", title: "Lesslie", caption: "Customer Manager" },
-  { image: "/images/directors/dir6.jpeg", title: "Ralph", caption: "Business Director" },
-  { image: "/images/directors/dir7.jpeg", title: "Ralph Edwards", caption: "Creative Director" },
-  { image: "/images/directors/dir8.jpeg", title: "John Cooper", caption: "Creative Director" },
-  { image: "/images/directors/dir9.jpeg", title: "John Cooper", caption: "Creative Director" },
-  { image: "/images/directors/dir10.jpeg", title: "John Cooper", caption: "Creative Director" },
+  { image: "/images/directors/dir2.jpeg", title: "Shri.S.Jayamohan", caption: "Chairman" },
+  { image: "/images/directors/dir1.jpeg", title: "Shri. Sunil John K", caption: "Managing Director" },
+  { image: "/images/directors/dir9.jpeg", title: "Shri.B. Pratheep Kumar", caption: "Director" },
+  { image: "/images/directors/dir8.jpeg", title: "Dr. B S Suran", caption: "Director" },
+  { image: "/images/directors/dir4.jpeg", title: "Shri. B Sujeendran", caption: "Director" },
+  { image: "/images/directors/dir5.jpeg", title: "Shri. G. Babu", caption: "Director" },
+  { image: "/images/directors/dir6.jpeg", title: "Adv. Sooranadu S Sreekumar", caption: "Director" },
+  { image: "/images/directors/dir7.jpeg", title: "Shri. Saji D. Anand", caption: "Director" },
+  { image: "/images/directors/dir10.jpeg", title: "John Cooper", caption: "Director" },
 
 
 
@@ -51,7 +50,8 @@ function ChooseUs() {
       <h3 className="text-xl lg:text-2xl font-extrabold uppercase m-4 text-center">
         The Director Board
       </h3>
-      <div className="grid grid-cols-3 lg:grid-cols-4 gap-2 mt-3 p-2">
+      <div className="flex items-center justify-center">
+      <div className="grid grid-cols-3 lg:grid-cols-3 gap-16 mt-3 p-2">
         {cardData.map((value, index) => (
           <ChooseCard
             key={index}
@@ -61,7 +61,8 @@ function ChooseUs() {
           />
         ))}
       </div>
-      <YouAreIn/>
+      </div>
+      {/* <YouAreIn/> */}
     </div>
   );
 }

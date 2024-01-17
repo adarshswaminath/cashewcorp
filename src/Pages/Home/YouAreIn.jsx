@@ -51,7 +51,7 @@ function YouAreIn() {
   return (
     <div className="container mx-auto mt-12">
       <h2 className="text-3xl lg:text-4xl font-bold text-center mb-6">
-        You're in a good company
+        Usefull Links
       </h2>
       <p className="text-gray-700 text-center mb-8">
         Excepteur ad ad nulla excepteur duis commodo labore sunt anim dolor.
