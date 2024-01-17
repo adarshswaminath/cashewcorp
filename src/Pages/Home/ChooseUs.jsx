@@ -10,15 +10,12 @@ const cardData = [
   { image: "/images/directors/dir2.jpeg", title: "Shri.S.Jayamohan", caption: "Chairman" },
   { image: "/images/directors/dir1.jpeg", title: "Shri. Sunil John K", caption: "Managing Director" },
   { image: "/images/directors/dir9.jpeg", title: "Shri.B. Pratheep Kumar", caption: "Director" },
+  { image: "/images/directors/dir10.jpeg", title: "Shri. Siju Jacob", caption: "Director" },
   { image: "/images/directors/dir8.jpeg", title: "Dr. B S Suran", caption: "Director" },
   { image: "/images/directors/dir4.jpeg", title: "Shri. B Sujeendran", caption: "Director" },
   { image: "/images/directors/dir5.jpeg", title: "Shri. G. Babu", caption: "Director" },
-  { image: "/images/directors/dir6.jpeg", title: "Adv. Sooranadu S Sreekumar", caption: "Director" },
   { image: "/images/directors/dir7.jpeg", title: "Shri. Saji D. Anand", caption: "Director" },
-  { image: "/images/directors/dir10.jpeg", title: "John Cooper", caption: "Director" },
-
-
-
+  { image: "/images/directors/dir6.jpeg", title: "Adv. Sooranadu S Sreekumar", caption: "Director" },
 ];
 
 
