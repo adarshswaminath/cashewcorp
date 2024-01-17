@@ -5,6 +5,7 @@ import LeaderTopImages from "./LeaderTopImages";
 import ScrollAnimation from "react-animate-on-scroll";
 
 const images = [
+  "/images/hero-5.jpg",
   "/images/hero-1.jpg",
   "/images/hero-3.jpg",
   "/images/hero-2.jpg",
@@ -21,7 +22,7 @@ function Hero() {
   return (
     <div>
       <div
-        className="lg:h-[30rem] h-screen bg-cover bg-current bg-no-repeat"
+        className=" h-screen bg-cover bg-current bg-no-repeat"
         style={{
           backgroundImage: `url(${images[imageIndex]})`,
         }}

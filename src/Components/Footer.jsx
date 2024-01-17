@@ -113,8 +113,11 @@ function Footer() {
         </div>
         {/* social media pannel */}
         <FooterSocialMediaPannel />
-        <div className="flex items-center justify-center lg:justify-end m-2">
-          <img src="/images/footer.jpeg" className="h-32 w-32 rounded-lg" alt="Footer image" />
+        <div className="flex items-center mx-auto justify-center bg-white/10 bg:blur backdrop-blur w-full lg:w-1/2  m-2 rounded-lg">
+        <img src="https://www.safaccredited.org/images/ISO-22000.png" className="h-20 w-20 rounded-lg" alt="Footer image" />
+        <img src="https://iconape.com/wp-content/png_logo_vector/anab-logo.png" className="h-20 w-20 rounded-lg" alt="Footer image" />
+        <img src="/images/bsi.png" className="h-20 w-20 rounded-lg" alt="Footer image" />
+
         </div>
         {/* copy right section */}
         <FooterCopyRight/>

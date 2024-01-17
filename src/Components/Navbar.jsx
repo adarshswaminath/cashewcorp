@@ -63,7 +63,7 @@ function Navbar() {
                 <Link to="/career">Career</Link>
               </li>
               <li>
-                <Link to="/rit">RIT</Link>
+                <Link to="/RTI">RTI</Link>
               </li>
               <li>
                 <Link to="/gallery">Gallery</Link>
@@ -86,10 +86,10 @@ function Navbar() {
             alt="Logo Image"
           />
           <div>
-            <h1 className="uppercase font-bold text-black">
-              kerala state development corporation ltd
+            <h1 className="uppercase font-bold text-black text-sm">
+            kerala state cashew developement corporation ltd
             </h1>
-            <p className="text-black text-center">A Governement of Kerala Undertaking</p>
+            <p className="text-black text-center text-sm">A Governement of Kerala Undertaking</p>
           </div>
         </div>
       </div>
@@ -113,7 +113,7 @@ function Navbar() {
             <Link to="/career">Career</Link>
           </li>
           <li>
-            <Link to="/rit">RIT</Link>
+            <Link to="/RTI">RTI</Link>
           </li>
           <li>
             <Link to="/gallery">Gallery</Link>

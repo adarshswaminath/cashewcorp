@@ -27,7 +27,7 @@ const ChooseCard = ({ image, title, caption }) => {
   return (
     <div className="relative flex flex-col items-center group">
       <img
-        className="h-44 w-40 object-cover rounded-lg shadow-lg"
+        className="h-44 w-40 object-cover rounded-lg shadow-lg border border-blue-400"
         src={image}
         alt="Profile image"
       />
@@ -46,7 +46,7 @@ function ChooseUs() {
   return (
     <ScrollAnimation animateIn="fadeIn"delay={400}>
       <div className="p-3">
-      <h3 className="text-xl lg:text-2xl font-extrabold uppercase m-4 text-center">
+      <h3 className="text-xl lg:text-2xl font-extrabold  m-4 text-center">
         Our Board Of Directors
       </h3>
       <div className="flex items-center justify-center">

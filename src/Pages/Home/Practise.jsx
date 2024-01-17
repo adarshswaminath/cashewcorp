@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 let cardDetils = [
-    {image: "https://picsum.photos/id/10/300/300",title: "A single source of truth",caption: "Reprehenderit irure ea nisi nostrud aliqua excepteur officia aute."},
-    {image: "https://picsum.photos/id/12/300/300",title: "Fastest way to organize",caption:"Dolore proident reprehenderit ullamco aute qui sit."},
+    {image: "https://picsum.photos/id/10/300/300",title: "A single source of truth",caption: "ReprehendeRTI irure ea nisi nostrud aliqua excepteur officia aute."},
+    {image: "https://picsum.photos/id/12/300/300",title: "Fastest way to organize",caption:"Dolore proident reprehendeRTI ullamco aute qui sit."},
     {image: "https://picsum.photos/id/13/300/300",title: "Fastest way to take action",caption: "Voluptate et minim mollit Lorem nisi anim ea ut tempor adipisicing pariatur amet."},
 
 ]

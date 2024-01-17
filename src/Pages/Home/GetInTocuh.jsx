@@ -1,6 +1,7 @@
 import { BsSend } from "react-icons/bs";
 import { FaLocationPin, FaLocationPinLock } from "react-icons/fa6";
 import { MdPhone } from "react-icons/md";
+import ScrollAnimation from "react-animate-on-scroll"
 const getInTouchData = [
   { icon: <MdPhone />,firstMail: "georgia.young@example.com",secondMail: "georgia.young@ple.com" },
   { icon: <FaLocationPin />,firstMail: "georgia.young@example.com",secondMail: "georgia.young@ple.com" },
@@ -32,13 +33,15 @@ function GetInTocuhCard({icon,firstMail,secondMail}) {
 
 function GetInTocuh() {
   return (
-    <div className="p-4 md:p-8 lg:p-12 bg-gray-100">
+    <ScrollAnimation animateIn="fadeIn">
+      <div className="p-4 md:p-8 lg:p-12 bg-gray-100">
       <h3 className="text-4xl font-bold mb-6 text-center">Get In Touch.</h3>
       <p className="text-center max-w-3xl mx-auto text-gray-500 font-bold mb-10">
         Problems trying to resolve the conflict between the two major realms of
         Classical physics Newtonian mechanics.
       </p>
-      <div className="grid grid-cols-1  lg:flex gap-2 place-items-center justify-items-center justify-center items-center">
+     <ScrollAnimation animateIn="fadeIn" delay={200}>
+     <div className="grid grid-cols-1  lg:flex gap-2 place-items-center justify-items-center justify-center items-center">
         {getInTouchData.map((value,index) => (
             <GetInTocuhCard
                 key={index}
@@ -48,7 +51,9 @@ function GetInTocuh() {
             />
         ))}
       </div>
+     </ScrollAnimation>
     </div>
+    </ScrollAnimation>
   );
 }
 

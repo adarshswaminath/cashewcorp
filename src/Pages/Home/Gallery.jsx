@@ -9,6 +9,7 @@ function Gallery() {
       <div className="grid lg:flex items-center gap-4">
         {/* Image Section */}
         <div className="w-full  rounded-md shadow-md p-6">
+          <h2 className="text-left text-lg font-bold">Images</h2>
           <img
             src="https://cashewcorporation.com/wp-content/uploads/2017/09/T8A0351-1024x683.jpg"
             alt="Gallery image"
@@ -23,11 +24,12 @@ function Gallery() {
 
         {/* Video Section */}
         <div className="w-full  rounded-md shadow-md p-6">
+        <h2 className="text-left text-lg font-bold">Videos</h2>
           <div className="aspect-w-16 aspect-h-9 mb-4 rounded-md overflow-hidden">
             <iframe
               src="https://www.youtube.com/embed/xAfJ_pCJObM?si=_YryQkjStOD0Ds0M"
               title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="accelerometer; autoplay; clipboard-wRTIe; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
               className="w-full h-80"
             ></iframe>

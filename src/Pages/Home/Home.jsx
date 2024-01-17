@@ -10,6 +10,7 @@ import GetInTocuh from "./GetInTocuh"
 import Gallery from "./Gallery"
 import YouAreIn from "./YouAreIn"
 import TranslateButton from "../../Components/TranslateButton"
+import Product from "./Product"
 function Home() {
   return (
     <div>
@@ -19,7 +20,8 @@ function Home() {
         <Hero/>
         <About/>
         <ChooseUs/>
-        <Practise/>
+        <Product/>
+        <Practise/> {/* its blog*/}
         {/* <Service/> */}
         <Gallery/>
         <Client/>
