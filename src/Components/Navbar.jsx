@@ -70,6 +70,15 @@ function Navbar() {
               <li>
                 <Link to="/contact">Contact</Link>
               </li>
+              <li>
+                <Link to="/">Executives</Link>
+              </li>
+              <li>
+                <Link to="/">Franchisee</Link>
+              </li>
+              <li>
+                <Link to="/">What's New</Link>
+              </li>
             </ul>
           ) : null}
         </div>
