@@ -8,7 +8,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 const images = [
   "/images/hero-612.jpg",
   "/images/hero-71.jpg",
-  "/images/hero-8.jpg",
+  "/images/hero-81.jpg",
   "/images/hero-91.jpg",
 ];
 
