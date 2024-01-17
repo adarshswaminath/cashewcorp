@@ -9,7 +9,7 @@ const images = [
   "/images/hero-612.jpg",
   "/images/hero-7.jpg",
   "/images/hero-8.jpg",
-  "/images/hero-9.jpg",
+  "/images/hero-91.jpg",
 ];
 
 function Hero() {
