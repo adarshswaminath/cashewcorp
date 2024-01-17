@@ -19,7 +19,7 @@ const leaderData = [
     image: "/images/chairman.png",
   },
   {
-    name: " . K",
+    name: "Shri. Sunil John . K",
     position: "Managing Director",
     image: "/images/director.png",
   },
@@ -36,8 +36,8 @@ function LeaderTopImages() {
             className="object-conatin h-52 w-52 rounded-md mb-2 border border-black"
             alt={leader.name}
           />
-          <p className="text-gray-900 font-bold">{leader.name}</p>
-          <p className="text-blue-500">{leader.position}</p>
+          <p className="text-red-400 font-bold uppercase">{leader.name}</p>
+          <p className="text-black">{leader.position}</p>
         </div>
       ))}
     </div>
