@@ -2,14 +2,14 @@ import React from "react";
 
 const leaderData = [
   {
-    name: "Shri Pinarayi Vijayan",
-    position: "Chief Minister Of Kerala",
+    name: "Shri. Pinarayi Vijayan",
+    position: "Hon Chief Minister",
     image:
       "https://lc.kerala.gov.in/sites/default/files/styles/photo200x240/public/2021-08/cm.jpg?itok=5N70jXna",
   },
   {
-    name: "Shri. P. Rajeev",
-    position: "Industry Minister Of Kerala",
+    name: "Shri. P.Rajeeve",
+    position: "Hon Industries Minister",
     image:
       "https://minister-industries.kerala.gov.in/wp-content/uploads/2021/09/prajeev.jpg",
   },
@@ -19,8 +19,8 @@ const leaderData = [
     image: "/images/chairman.png",
   },
   {
-    name: "Shri. Sunil John K",
-    position: "Director",
+    name: " . K",
+    position: "Managing Director",
     image: "/images/director.png",
   },
 ];

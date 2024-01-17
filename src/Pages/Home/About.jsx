@@ -13,7 +13,7 @@ function About() {
               delay={100}
             >
               <span className="text-2xl text-blue-500 mb-6 border-l-2 px-2 font-bold border-blue-500">
-                Welcome to KCDC
+                Welcome to KSCDC
               </span>
             </ScrollAnimation>
             <h2 className="text-xl max-w-md text-balance">About Us </h2>

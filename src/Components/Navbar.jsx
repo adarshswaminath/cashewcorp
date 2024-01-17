@@ -82,7 +82,7 @@ function Navbar() {
         <div className="hidden lg:flex items-center">
           <img
             src="/images/logo.png"
-            className="h-32  hidden lg:block"
+            className="h-[133px]  hidden lg:block"
             alt="Logo Image"
           />
           <div>
