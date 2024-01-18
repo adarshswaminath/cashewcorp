@@ -94,10 +94,10 @@ function Navbar() {
             alt="Logo Image"
           />
           <div>
-            <h1 className="uppercase font-bold text-black text-pretty text-base">
-              kerala state cashew developement corporation ltd
+            <h1 className="uppercase font-bold text-black text-xl text-balance">
+              The kerala state<br/> cashew developement corporation ltd
             </h1>
-            <p className="text-black text-center text-sm">
+            <p className="text-black text-sm">
               A Governement of Kerala Undertaking
             </p>
           </div>
