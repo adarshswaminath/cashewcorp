@@ -47,7 +47,7 @@ const Product = () => {
             />
           ))}
         </div>
-        <div className="flex items-center justify-center mt-4">
+        <div className="flex items-center justify-center">
           <button
             className="px-5 py-2 mr-2"
             onClick={prevSlide}
