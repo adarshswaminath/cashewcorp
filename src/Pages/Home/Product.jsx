@@ -15,12 +15,14 @@ const Product = () => {
   return (
     <div className="flex flex-col items-center">
       <ScrollAnimate animateIn="fadeIn">
-        <h2 className="font-semibold text-3xl">Our Products</h2>
+        <h2 className="font-semibold text-3xl  text-orange-500">Our Products</h2>
       </ScrollAnimate>
       <ScrollAnimate animateIn="fadeIn" delay={200}>
         <div className="grid grid-cols-3 lg:grid-cols-6 gap-4">
           {productData.map((product, index) => (
-            <img key={index} src={product} alt={`Product ${index + 1}`} className="h-48 w-48 object-cover" />
+            <ScrollAnimate key={index} animateIn="fadeIn" delay={200 + index * 100}>
+              <img src={product} alt={`Product ${index + 1}`} className="h-48 w-48 object-cover" />
+            </ScrollAnimate>
           ))}
         </div>
         <div className="flex items-center justify-center mt-4">
