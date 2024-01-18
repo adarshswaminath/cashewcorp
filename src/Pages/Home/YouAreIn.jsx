@@ -39,7 +39,7 @@ function YouAreIn() {
 
   return (
     <div className="container mx-auto mt-12 mb-2">
-      <h2 className="text-3xl lg:text-4xl font-bold text-center mb-6">
+      <h2 className="text-3xl lg:text-4xl font-bold text-center mb-6 text-red-500">
         Useful Links
       </h2>
       <p className="text-gray-700 text-center mb-8">

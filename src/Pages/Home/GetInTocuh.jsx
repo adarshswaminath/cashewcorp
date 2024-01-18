@@ -35,7 +35,7 @@ function GetInTocuh() {
   return (
     <ScrollAnimation animateIn="fadeIn">
       <div className="p-4 md:p-8 lg:p-12 bg-gray-100">
-      <h3 className="text-4xl font-bold mb-6 text-center">Get In Touch.</h3>
+      <h3 className="text-4xl font-bold mb-6 text-center text-red-500">Get In Touch.</h3>
       <p className="text-center max-w-3xl mx-auto text-gray-500 font-bold mb-10">
         Problems trying to resolve the conflict between the two major realms of
         Classical physics Newtonian mechanics.

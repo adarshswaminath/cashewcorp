@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Gallery() {
   return (
     <div className="text-center p-4 ">
-      <h1 className="text-4xl font-bold my-8">Gallery</h1>
+      <h1 className="text-4xl text-red-500 font-bold my-8">Gallery</h1>
 
       <div className="grid lg:flex items-center gap-4">
         {/* Image Section */}

@@ -32,7 +32,7 @@ const Product = () => {
   return (
     <div className="flex flex-col items-center">
       <ScrollAnimate animateIn="fadeIn">
-        <h2 className="font-semibold text-3xl text-orange-500">Our Products</h2>
+        <h2 className="font-semibold text-3xl text-red-500">Our Products</h2>
       </ScrollAnimate>
       <ScrollAnimate animateIn="fadeIn" delay={200}>
         <div className="relative overflow-hidden h-48 w-48 lg:w-96 lg:h-96 mx-auto">

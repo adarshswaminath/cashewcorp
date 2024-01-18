@@ -12,7 +12,7 @@ function About() {
               animateOut="bounceOutLeft"
               delay={100}
             >
-              <span className="text-2xl text-blue-500 mb-6 border-l-2 px-2 font-bold border-blue-500">
+              <span className="text-2xl text-red-500 mb-6 border-l-2 px-2 font-bold border-red-500">
                 Welcome to KSCDC
               </span>
             </ScrollAnimation>
@@ -77,7 +77,7 @@ function About() {
               <ScrollAnimation animateIn="fadeIn" delay={400}>
                 <div className="grid lg:flex justify-center items-center gap-8">
                   {/* Mission Card */}
-                  <div className="p-6 bg-white w-full lg:max-w-md flex flex-col items-start rounded-lg shadow-md border-l-4 border-orange-500 transform transition ease-in-out duration-300 hover:scale-105 hover:-translate-y-3">
+                  <div className="p-6 bg-white w-full lg:max-w-md flex flex-col items-start rounded-lg shadow-md border-l-4 border-red-500 transform transition ease-in-out duration-300 hover:scale-105 hover:-translate-y-3">
                     <h2 className="text-3xl font-bold mb-4">Mission</h2>
                     <p className="text-gray-700 leading-relaxed">
                       KSDC aims at backward integration of its product line and
@@ -89,7 +89,7 @@ function About() {
                   </div>
 
                   {/* Vision Card */}
-                  <div className="p-6 bg-white w-full lg:max-w-md flex flex-col items-start rounded-lg shadow-md border-l-4 border-orange-500 transform transition ease-in-out duration-300 hover:scale-105 hover:-translate-y-3">
+                  <div className="p-6 bg-white w-full lg:max-w-md flex flex-col items-start rounded-lg shadow-md border-l-4 border-red-500 transform transition ease-in-out duration-300 hover:scale-105 hover:-translate-y-3">
                     <h2 className="text-3xl font-bold mb-4">Vision</h2>
                     <p className="text-gray-700 leading-relaxed">
                       The Vision of KSCDC is to be a World Class Organisation
