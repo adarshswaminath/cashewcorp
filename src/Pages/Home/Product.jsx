@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ScrollAnimate from 'react-animate-on-scroll';
 import { Link } from 'react-router-dom';
+import { FaArrowRight,FaArrowLeft } from "react-icons/fa";
 
 import product1 from '/images/products/product-7.png';
 import product2 from '/images/products/product-8.png';
@@ -48,16 +49,16 @@ const Product = () => {
         </div>
         <div className="flex items-center justify-center mt-4">
           <button
-            className="px-5 py-2 border border-black mr-2"
+            className="px-5 py-2 mr-2"
             onClick={prevSlide}
           >
-            Prev
+            <FaArrowLeft/>
           </button>
           <button
-            className="px-5 py-2 border border-black"
+            className="px-5 py-2 "
             onClick={nextSlide}
           >
-            Next
+           <FaArrowRight/>
           </button>
         </div>
         <div className="flex items-center justify-center mt-4">
