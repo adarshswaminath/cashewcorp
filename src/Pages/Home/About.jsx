@@ -1,3 +1,4 @@
+import ImageBackground from "./ImageBackground";
 import "./style/home.css";
 import ScrollAnimation from "react-animate-on-scroll";
 
@@ -67,12 +68,8 @@ function About() {
         <ScrollAnimation animateIn="fadeIn" delay={350}>
           <div className="p-3">
             <div className="grid gap-3">
-              {/* Company Image */}
-              <img
-                src="/images/company.jpeg"
-                alt="Company Image"
-                className="object-cover w-full h-96 rounded-lg  mb-6"
-              />
+              {/* Company  Image with background */}
+              <ImageBackground/>
 
               <ScrollAnimation animateIn="fadeIn" delay={400}>
                 <div className="grid lg:flex justify-center items-center gap-8">
