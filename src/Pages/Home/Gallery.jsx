@@ -16,7 +16,7 @@ function Gallery() {
             className="mb-4 rounded-md w-full h-80 object-cover"
           />
           <Link to="/gallery">
-            <button className="px-5 py-2 bg-orange-500 text-white rounded-md mt-4 hover:bg-orange-600 transition duration-300">
+            <button className="px-5 py-2 bg-red-500 text-white rounded-md mt-4 hover:bg-red-600 transition duration-300">
               Visit Images
             </button>
           </Link>
@@ -35,7 +35,7 @@ function Gallery() {
             ></iframe>
           </div>
           <Link to="/gallery">
-            <button className="px-5 py-2 bg-orange-500 text-white rounded-md mt-4 hover:bg-orange-600 transition duration-300">
+            <button className="px-5 py-2 bg-red-500 text-white rounded-md mt-4 hover:bg-red-600 transition duration-300">
               Visit Video
             </button>
           </Link>

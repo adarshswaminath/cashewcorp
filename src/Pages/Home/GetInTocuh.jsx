@@ -24,7 +24,7 @@ function GetInTocuhCard({icon,firstMail,secondMail}) {
         </p>
       </div>
       <h2 className="m-3 font-bold group-hover:text-white">Get Support</h2>
-      <button className="btn border-orange-500 text-orange-500 px-[68px] bg-white group-hover:text-white group-hover:bg-transparent group-hover:border-white">
+      <button className="btn border-red-500 text-red-500 px-[68px] bg-white group-hover:text-white group-hover:bg-transparent group-hover:border-white">
         Get Support
       </button>
     </div>

@@ -14,7 +14,7 @@ const RightPanel = () => {
       <div className="mt-8 flex flex-col gap-10 items-center lg:items-start">
         {/* first section */}
         <div className="flex items-center space-x-5">
-          <FaArrowsDownToPeople className="text-4xl text-orange-500" />
+          <FaArrowsDownToPeople className="text-4xl text-red-500" />
           <div className="flex flex-col items-start">
             <span className="font-bold">The quick for jump over the lazy dog</span>
             <span className="text-sm text-gray-600">
@@ -24,7 +24,7 @@ const RightPanel = () => {
         </div>
         {/* second section */}
         <div className="flex items-center space-x-5">
-          <MdAccessTimeFilled className="text-4xl text-orange-500" />
+          <MdAccessTimeFilled className="text-4xl text-red-500" />
           <div className="flex flex-col items-start">
             <span className="font-bold">The quick for jump over the lazy dog</span>
             <span className="text-sm text-gray-600">

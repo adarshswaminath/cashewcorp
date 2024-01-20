@@ -32,7 +32,7 @@ const Product = () => {
   return (
     <div className="flex flex-col items-center">
       <ScrollAnimate animateIn="fadeIn">
-        <h2 className="font-semibold text-3xl border-l-2 p-2 border-red text-orange-500">
+        <h2 className="font-semibold text-3xl border-l-2 p-2 border-red text-red-500">
           Our Products
         </h2>
       </ScrollAnimate>

@@ -2,7 +2,7 @@ import React from "react";
 
 function AboutSection() {
   return (
-    <div className="p-4 container mx-auto shadow-xl bg-white rounded-lg lg:p-8">
+    <div className="p-4  mx-auto shadow-xl bg-white rounded-lg lg:p-8">
       <h3 className="text-4xl font-bold uppercase mb-4">About Us</h3>
       <p className="text-justify text-gray-700">
         The Kerala State Cashew Development Corporation Limited (KSCDC) was

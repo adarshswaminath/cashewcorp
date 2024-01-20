@@ -15,7 +15,7 @@ function Client() {
             </h2>
             <div className="flex items-center relative">
               <input type="email" placeholder="Your Email" className="input" />
-              <button className="btn absolute right-0 bg-orange-400 hover:bg-orange-600 text-white">
+              <button className="btn absolute right-0 bg-red-400 hover:bg-red-600 text-white">
                 Search
               </button>
             </div>
