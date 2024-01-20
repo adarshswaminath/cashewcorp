@@ -1,11 +1,12 @@
 import React from "react";
+import "./style/topleader.css"
 
 const leaderData = [
   {
     name: "Shri. Pinarayi Vijayan",
     position: "Hon'ble Chief Minister",
     image:
-      "https://lc.kerala.gov.in/sites/default/files/styles/photo200x240/public/2021-08/cm.jpg?itok=5N70jXna",
+      "https://www.pngitem.com/pimgs/m/571-5714583_pinarayi-vijayan-and-kamal-haasan-hd-png-download.png",
   },
   {
     name: "Shri. P.Rajeeve",
@@ -27,20 +28,23 @@ const leaderData = [
 
 function LeaderTopImages() {
   return (
-    <div className="flex items-center justify-center -mt-6">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8 lg:mt-12 p-2">
-      {leaderData.map((leader, index) => (
-        <div key={index} className="text-center flex flex-col items-center">
-          <img
-            src={leader.image}
-            className="object-conatin h-52 w-52 rounded-md mb-2 border border-black"
-            alt={leader.name}
-          />
-          <p className="text-red-400 font-bold uppercase">{leader.name}</p>
-          <p className="text-black">{leader.position}</p>
-        </div>
-      ))}
-    </div>
+    <div className="box-wrapper grid lg:grid-cols-4 place-items-center justify-items-center w-full">
+         {leaderData.map((value,index) => (
+          <figure key={value.name} className="shape-box shape-box_half">
+          <img className="object-cover" src={value.image} alt={value.name}/>
+          <div className="brk-abs-overlay z-index-0 bg-black opacity-60"></div>
+          <figcaption>
+              <div className="show-cont">
+                  <h3 className="card-no">0{index+1}</h3>
+                  <h4 className="card-main-title text-balance">{value.name}</h4>
+                  <p>{value.position}</p>
+              </div>
+              <p className="card-content">Customer interactions, study and analysis of company branding through creative briefs. Creation of mock-up designs by using UI tools that simulate actions and pre-visualize the reactions.</p>
+              <a href="#" className="read-more-btn">Read More</a>
+          </figcaption>
+          <span className="after"></span>
+      </figure> 
+         ))}
     </div>
   );
 }
