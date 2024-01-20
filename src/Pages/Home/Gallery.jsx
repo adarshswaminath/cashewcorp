@@ -6,7 +6,7 @@ function Gallery() {
     <div className="text-center p-4 ">
       <h1 className="text-4xl text-red-500 font-bold my-8">Gallery</h1>
 
-      <div className="grid lg:flex items-center gap-4">
+      <div data-aos="zoom-out-up" className="grid lg:flex items-center gap-4">
         {/* Image Section */}
         <div className="w-full  rounded-md shadow-md p-6">
           <h2 className="text-center text-xl font-bold">Images</h2>

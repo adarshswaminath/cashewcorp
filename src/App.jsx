@@ -7,11 +7,17 @@ import Career from './Pages/Career/Career'
 import RTI from './Pages/RTI/RTI'
 import Gallery from './Pages/Gallery/Gallery'
 import Contact from './Pages/Contact/Contact'
+import Aos from 'aos'
+import "aos/dist/aos.css"
 
 function App() {
-
+  // initialize aos animation
+  useEffect(() => {
+    Aos.init();
+    Aos.refresh()
+  })
   return (
-    <main className='bg-gray-100'>
+    <main className='bg-gray-100 overflow-hidden'>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home/>}/>

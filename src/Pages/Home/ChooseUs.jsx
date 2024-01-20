@@ -24,7 +24,7 @@ const ChooseCard = ({ image, title, caption }) => {
   return (
     <div className="relative flex flex-col items-center group">
       <img
-        className="h-48 w-40 object-cover rounded-lg shadow-lg border border-blue-400"
+        className="h-48 w-40 object-cover rounded-lg shadow-lg border border-blue-400 hover:scale-125 transition duration-300 ease-in-out"
         src={image}
         alt="Profile image"
       />

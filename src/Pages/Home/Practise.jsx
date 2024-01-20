@@ -6,9 +6,9 @@ let cardDetils = [
 
 ]
 
-const PractiseCard = ({ image, title, caption }) => {
+const PractiseCard = ({ image, title, caption,aosanimation }) => {
     return (
-      <div className="w-80 overflow-hidden  flex flex-col items-start">
+      <div data-aos={aosanimation} data-aos-duration="500" className="w-80 overflow-hidden  flex flex-col items-start">
         <figure className="p-4">
           <img
             src={image}
@@ -29,15 +29,17 @@ const PractiseCard = ({ image, title, caption }) => {
   
 
 function Practise() {
+  const aosEffect = ["zoom-in","fade-up","zoom-in"]
   return (
     <div className="p-3">
-      <h3 className="text-3xl font-bold m-4 text-center text-red-500">
+      <h3 data-aos="fade-right" className="text-3xl font-bold m-4 text-center text-red-500">
         Blog & News Update
       </h3>
       <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 place-items-center justify-items-center">
-      {cardDetils.map((value) => (
+      {cardDetils.map((value,index) => (
         <PractiseCard 
         key={value.image} 
+        aosanimation={aosEffect[index]}
         image={value.image}
         title={value.title}
         caption={value.caption}
