@@ -12,7 +12,7 @@
   "dependencies": {
     "aos": "^3.0.0-beta.6",
     "daisyui": "^4.4.24",
-    "framer-motion": "^10.16.16",
+    "framer-motion": "^10.18.0",
     "react": "^18.2.0",
     "react-animate-on-scroll": "^2.1.7",
     "react-dom": "^18.2.0",

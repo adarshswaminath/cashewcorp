@@ -24,22 +24,26 @@ function Hero() {
   }, []);
 
   return (
-    <div className="hero-container">
-      <div
-        className="hero-background h-screen bg-cover bg-current bg-no-repeat"
-        style={{
-          backgroundImage: `url(${images[imageIndex]})`,
-        }}
-      >
-        {/* <Navbar /> */}
-      </div>
-      <div className="p-2 mt-3">
-        <HeroCards />
-        <ScrollAnimation animateIn="fadeIn">
-          <LeaderTopImages />
-        </ScrollAnimation>
-      </div>
+    <div className="hero-container relative">
+  <div
+    className="hero-background h-screen bg-cover bg-current bg-no-repeat relative"
+    style={{
+      backgroundImage: `url(${images[imageIndex]})`,
+    }}
+  >
+    <div className="lg:absolute bg-black bg-opacity-10 inset-0"></div>
+    <div className="lg:absolute w-full lg:p-3">
+      <Navbar />
     </div>
+  </div>
+  <div className="p-2 mt-3">
+    <HeroCards />
+    <ScrollAnimation animateIn="fadeIn">
+      <LeaderTopImages />
+    </ScrollAnimation>
+  </div>
+</div>
+
   );
 }
 
