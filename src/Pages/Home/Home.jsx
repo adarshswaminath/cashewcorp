@@ -11,16 +11,18 @@ import Gallery from "./Gallery"
 import YouAreIn from "./YouAreIn"
 import TranslateButton from "../../Components/TranslateButton"
 import Product from "./Product"
+import Navbar from "../../Components/Navbar"
 function Home() {
   return (
     <div>
       <div className="fixed bottom-4 right-3 z-50">
         <TranslateButton/>
       </div>
+      <Navbar/>
         <Hero/>
         <About/>
         <ChooseUs/>
-        <Product/>
+        {/* <Product/> */}
         <Practise/> {/* its blog*/}
         {/* <Service/> */}
         <Gallery/>

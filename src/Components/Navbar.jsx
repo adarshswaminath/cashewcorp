@@ -4,7 +4,7 @@ import "./style/navbar.css";
 function Navbar() {
   const [isShow, setIsShow] = useState(false);
   return (
-    <nav className="navbar bg-transparent z-50">
+    <nav className="navbar bg-white uppercase font-bold z-50">
       <div className="navbar-start">
         <div className="dropdown" onClick={() => setIsShow((prev) => !prev)}>
           <button
@@ -89,18 +89,18 @@ function Navbar() {
         {/* desktop view */}
         <div className="hidden lg:flex items-center">
           <img
-            src="/images/logo.png"
-            className="h-[133px]  hidden lg:block"
+            src="/images/logo-1.png"
+            className="h  hidden lg:block"
             alt="Logo Image"
           />
-          <div>
+          {/* <div>
             <h1 className="uppercase font-bold text-black text-xl text-balance">
               The kerala state<br/> cashew developement corporation ltd
             </h1>
             <p className="text-black text-sm">
               A Governement of Kerala Undertaking
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -109,7 +109,7 @@ function Navbar() {
           {/* <img src="/images/CDC.png" className="h-12 flex" alt="CDC" /> */}
           {/* <img src="/images/gov.png" className="h-12 flex" alt="GOV" /> */}
         </div>
-        <ul className="flex space-x-5 px-1 text-black font-medium">
+        <ul className="flex space-x-5 px-1 text-black font-medium mt-10">
           <li>
             <Link to="/">Home</Link>
           </li>

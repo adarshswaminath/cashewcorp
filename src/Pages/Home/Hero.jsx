@@ -31,7 +31,7 @@ function Hero() {
           backgroundImage: `url(${images[imageIndex]})`,
         }}
       >
-        <Navbar />
+        {/* <Navbar /> */}
       </div>
       <div className="p-2 mt-3">
         <HeroCards />
