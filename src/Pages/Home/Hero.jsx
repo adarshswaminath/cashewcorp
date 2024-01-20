@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../../Components/Navbar";
 import HeroCards from "./HeroCards";
 import LeaderTopImages from "./LeaderTopImages";
-import ScrollAnimation from "react-animate-on-scroll";
+
 
 
 const images = [
@@ -38,9 +38,9 @@ function Hero() {
   </div>
   <div className="p-2 mt-3">
     <HeroCards />
-    <ScrollAnimation animateIn="fadeIn">
+    <div>
       <LeaderTopImages />
-    </ScrollAnimation>
+    </div>
   </div>
 </div>
 

@@ -1,22 +1,18 @@
 import ImageBackground from "./ImageBackground";
 import "./style/home.css";
-import ScrollAnimation from "react-animate-on-scroll";
+
 
 function About() {
   return (
-    <ScrollAnimation animateIn="fadeIn" delay={300}>
+    <div>
       <div className="">
         <div className="grid gap-4 lg:flex items-center justify-evenly   m-6 about">
           <div className="flex flex-col items-start">
-            <ScrollAnimation
-              animateIn="bounceInRight"
-              animateOut="bounceOutLeft"
-              delay={100}
-            >
+            <div>
               <span className="text-2xl text-red-500 mb-6 border-l-2 px-2 font-bold border-red-500">
                 Welcome to KSCDC
               </span>
-            </ScrollAnimation>
+            </div>
             <h2 className="text-xl max-w-md text-balance">About Us </h2>
             <p className="text-balance max-w-4xl text-xl text-gray-700 mt-6 mb-6">
               The Kerala State Cashew Development Corporation Limited (KSCDC)
@@ -43,7 +39,7 @@ function About() {
               more about us
             </button>
           </div>
-          <ScrollAnimation animateIn="fadeIn" delay={340}>
+          <div>
           <div className="grid gap-4 grid-cols-2">
             <div className="h-56 w-full aspect-square bg-white shadow-lg flex items-center justify-center">
               <h3 className="text-xl font-bold text-red-500 text-center">
@@ -62,16 +58,16 @@ function About() {
               <h3 className="text-xl font-bold text-red-500">Tender</h3>
             </div>
           </div>
-          </ScrollAnimation>
+          </div>
         </div>
         {/* section */}
-        <ScrollAnimation animateIn="fadeIn" delay={350}>
+        <div>
           <div className="p-3">
             <div className="grid gap-3">
               {/* Company  Image with background */}
               <ImageBackground/>
 
-              <ScrollAnimation animateIn="fadeIn" delay={400}>
+              <div>
                 <div className="grid lg:flex justify-center items-center gap-8">
                   {/* Mission Card */}
                   <div className="p-6 bg-white w-full lg:max-w-md flex flex-col items-start rounded-lg shadow-md border-l-4 border-red-500 transform transition ease-in-out duration-300 hover:scale-105 hover:-translate-y-3">
@@ -96,12 +92,12 @@ function About() {
                     </p>
                   </div>
                 </div>
-              </ScrollAnimation>
+              </div>
             </div>
           </div>
-        </ScrollAnimation>
+        </div>
       </div>
-    </ScrollAnimation>
+    </div>
   );
 }
 

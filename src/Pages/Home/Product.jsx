@@ -1,5 +1,4 @@
 import React from "react";
-import ScrollAnimate from "react-animate-on-scroll";
 import { Link } from "react-router-dom";
 
 import product1 from "/images/products/product-7.png";
@@ -31,11 +30,11 @@ const productData = [
 const Product = () => {
   return (
     <div className="flex flex-col items-center">
-      <ScrollAnimate animateIn="fadeIn">
+      <div>
         <h2 className="font-semibold text-3xl border-l-2 p-2 border-red text-red-500">
           Our Products
         </h2>
-      </ScrollAnimate>
+      </div>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 overflow-y-hidden h-56">
           {productData.map((product, index) => (
             <div

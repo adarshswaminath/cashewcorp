@@ -4,7 +4,7 @@ import {
   BsWhatsapp,
 } from "react-icons/bs";
 import YouAreIn from "./YouAreIn";
-import ScrollAnimation from "react-animate-on-scroll"
+
 
 const cardData = [
   { image: "/images/directors/chairman-1.png", title: "Shri. S.Jayamohan", caption: "Chairman" },
@@ -41,7 +41,7 @@ const ChooseCard = ({ image, title, caption }) => {
 
 function ChooseUs() {
   return (
-    <ScrollAnimation animateIn="fadeIn"delay={400}>
+    <div>
       <div className="p-3">
       <h3 className="text-xl text-red-500 lg:text-2xl font-extrabold  m-4 text-center">
         Our Board Of Directors
@@ -60,7 +60,7 @@ function ChooseUs() {
       </div>
       {/* <YouAreIn/> */}
     </div>
-    </ScrollAnimation>
+    </div>
   );
 }
 
