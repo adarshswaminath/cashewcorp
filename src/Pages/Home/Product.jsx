@@ -47,7 +47,7 @@ const Product = () => {
               alt="Product"
             />
             <p className="bottom-0 text-xl font-bold text-black text-left">Product Name</p>
-            <Link to="/products" className="text-sm px-5 py-1.5 bg-red-500 text-white">
+            <Link to="/product" className="text-sm px-5 py-1.5 bg-red-500 text-white">
               Purchase
             </Link>
             </div>
