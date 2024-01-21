@@ -1,26 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import GalleryImage from "./GalleryImage";
 
 function Gallery() {
   return (
     <div className="text-center p-4 ">
       <h1 className="text-4xl text-red-500 font-bold my-8">Gallery</h1>
 
-      <div data-aos="zoom-out-up" className="grid lg:flex items-center gap-4">
+      <div data-aos="zoom-out-up" className="grid lg:flex items-center gap-4 ">
         {/* Image Section */}
-        <div className="w-full  rounded-md shadow-md p-6">
-          <h2 className="text-center text-xl font-bold">Images</h2>
-          <img
-            src="https://cashewcorporation.com/wp-content/uploads/2017/09/T8A0351-1024x683.jpg"
-            alt="Gallery image"
-            className="mb-4 rounded-md w-full h-80 object-cover"
-          />
-          <Link to="/gallery">
-            <button className="px-5 py-2 bg-red-500 text-white rounded-md mt-4 hover:bg-red-600 transition duration-300">
-              Visit Images
-            </button>
-          </Link>
-        </div>
+        <GalleryImage/>
 
         {/* Video Section */}
         <div className="w-full  rounded-md shadow-md p-6">
