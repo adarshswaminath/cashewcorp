@@ -8,7 +8,7 @@ import Client from "./Client"
 import Footer from "../../Components/Footer"
 import GetInTocuh from "./GetInTocuh"
 import Gallery from "./Gallery"
-import YouAreIn from "./YouAreIn"
+import UseFulLinks from "./UseFulLinks"
 import TranslateButton from "../../Components/TranslateButton"
 import Product from "./Product"
 import Navbar from "../../Components/Navbar"
@@ -28,7 +28,7 @@ function Home() {
         <Gallery/>
         <Client/>
         <GetInTocuh/>
-        <YouAreIn/>
+        <UseFulLinks/>
         <Footer/>
     </div>
   )

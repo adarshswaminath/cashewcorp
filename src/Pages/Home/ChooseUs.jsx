@@ -3,7 +3,7 @@ import { IoMdTrophy } from "react-icons/io";
 import {
   BsWhatsapp,
 } from "react-icons/bs";
-import YouAreIn from "./YouAreIn";
+import UseFulLinks from "./UseFulLinks";
 
 
 const cardData = [
@@ -58,7 +58,7 @@ function ChooseUs() {
         ))}
       </div>
       </div>
-      {/* <YouAreIn/> */}
+      {/* <UseFulLinks/> */}
     </div>
     </div>
   );

@@ -291,7 +291,7 @@
 [31m-  BsTwitterX,[m
 [32m+[m[32m  BsWhatsapp,[m
  } from "react-icons/bs";[m
- import YouAreIn from "./YouAreIn";[m
+ import UseFulLinks from "./UseFulLinks";[m
 [32m+[m[32mimport ScrollAnimation from "react-animate-on-scroll"[m
  [m
  const cardData = [[m
@@ -331,7 +331,7 @@
              key={index}[m
 [36m@@ -64,6 +63,7 @@[m [mfunction ChooseUs() {[m
        </div>[m
-       {/* <YouAreIn/> */}[m
+       {/* <UseFulLinks/> */}[m
      </div>[m
 [32m+[m[32m    </ScrollAnimation>[m
    );[m
