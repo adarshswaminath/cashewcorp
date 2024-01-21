@@ -28,7 +28,7 @@ function ProductModal({ selectedData, setShowModal }) {
     }
   };
   return (
-    <div className="fixed inset-0 overflow-y-auto flex items-center justify-center">
+    <div className="fixed inset-0 overflow-y-auto flex items-center justify-center z-50">
       <div className="fixed inset-0 bg-black opacity-50"></div>
       <div className="bg-white w-96 p-6 rounded-md shadow-lg z-10">
         <div className="flex justify-end">
