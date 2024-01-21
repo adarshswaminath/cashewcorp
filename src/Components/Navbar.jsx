@@ -25,7 +25,7 @@ function Navbar() {
       <Link to="/executives">Executives</Link>
       <Link to="/franchisee">Franchisee</Link>
       <Link
-        to="/whats-new"
+        to="/blog"
         className="bg-red-600 text-white rounded-lg hover:bg-red-400 btn"
       >
         What's New
@@ -208,6 +208,12 @@ function Navbar() {
               className="text-xl font-bold mt-3 hover:underline decoration-wavy decoration-red-400"
             >
               Contact
+            </Link>
+            <Link
+              to="/blog"
+              className="text-xl font-bold mt-3 hover:underline decoration-wavy decoration-red-400"
+            >
+              What's New
             </Link>
             <Link to="/product">
               <button className="flex items-center text-xl btn m-3 rounded-lg bg-red-500 hover:bg-red-400 text-white">
