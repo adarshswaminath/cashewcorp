@@ -13,6 +13,16 @@ function ProductList() {
     return matchesSearch && matchesCategory;
   });
   const [showModal,setShowModal] = useState(true)
+  const [selectedData,setSelectedData] = useState({
+    name:'',
+    image:'',
+    category: '',
+    description: '',
+    rating: 0,
+    price: 0
+
+  })
+  
   return (
     <div className='min-h-screen p-3'>
       <div className="mb-4 flex items-center justify-between">
@@ -38,10 +48,10 @@ function ProductList() {
       
       <div className="grid gap-4 grid-cols-2 lg:grid-cols-5 place-items-center justify-items-center">
         {filteredProducts.map((product) => (
-          <ProductCard setShowModal={setShowModal} key={product.id} {...product} />
+          <ProductCard setSelectedData={setSelectedData} setShowModal={setShowModal} key={product.id} {...product} />
         ))}
       </div>
-      {showModal && <ProductModal setShowModal={setShowModal}/>}
+      {showModal && <ProductModal selectedData={selectedData} setShowModal={setShowModal}/>}
     </div>
   );
 }
