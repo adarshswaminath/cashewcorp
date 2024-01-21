@@ -21,8 +21,10 @@ function Career() {
   return (
     <div className="min-h-screen">
       <Navbar />
+      <div className="p-3">
       <div className="banner">
         <h3 className="text-3xl font-bold text-white">Career</h3>
+      </div>
       </div>
       <div className="overflow-x-auto min-h-screen">
   <table className="table">

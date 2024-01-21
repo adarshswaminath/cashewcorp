@@ -39,7 +39,7 @@ const ChooseCard = ({ image, title, caption }) => {
   );
 };
 
-function ChooseUs() {
+function DirectorBoard() {
   return (
     <div>
       <div className="p-3">
@@ -64,4 +64,4 @@ function ChooseUs() {
   );
 }
 
-export default ChooseUs;
+export default DirectorBoard;

@@ -1,7 +1,7 @@
 import Hero from "./Hero"
 import About from "./About"
 import Leaders from "./Leaders"
-import ChooseUs from "./ChooseUs"
+import DirectorBoard from "./DirectorBoard"
 import Practise from "./Practise"
 import Service from "./Service"
 import Client from "./Client"
@@ -22,7 +22,7 @@ function Home() {
 
         <Hero/>
         <About/>
-        <ChooseUs/>
+        <DirectorBoard/>
         <Product/>
         <Practise/> {/* its blog*/}
         {/* <Service/> */}
