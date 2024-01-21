@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ProductCard from './Components/ProductCard';
 import { products } from './constant';
+import ProductModal from './Components/ProductModal';
 
 function ProductList() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -11,7 +12,7 @@ function ProductList() {
     const matchesCategory = !selectedCategory || product.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
-
+  const [showModal,setShowModal] = useState(true)
   return (
     <div className='min-h-screen p-3'>
       <div className="mb-4 flex items-center justify-between">
@@ -37,9 +38,10 @@ function ProductList() {
       
       <div className="grid gap-4 grid-cols-2 lg:grid-cols-5 place-items-center justify-items-center">
         {filteredProducts.map((product) => (
-          <ProductCard key={product.id} {...product} />
+          <ProductCard setShowModal={setShowModal} key={product.id} {...product} />
         ))}
       </div>
+      {showModal && <ProductModal setShowModal={setShowModal}/>}
     </div>
   );
 }
