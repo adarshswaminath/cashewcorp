@@ -1,3 +1,4 @@
+import Footer from "../../Components/Footer";
 import Navbar from "../../Components/Navbar";
 import TenderTable from "./TenderTable";
 
@@ -15,6 +16,7 @@ function Tender() {
           <TenderTable/>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
