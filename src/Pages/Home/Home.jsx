@@ -12,6 +12,7 @@ import UseFulLinks from "./UseFulLinks"
 import TranslateButton from "../../Components/TranslateButton"
 import Product from "./Product"
 import Navbar from "../../Components/Navbar"
+import PlayStore from "./PlayStore"
 function Home() {
   return (
     <div>
@@ -26,6 +27,7 @@ function Home() {
         <Practise/> {/* its blog*/}
         {/* <Service/> */}
         <Gallery/>
+        <PlayStore/>
         <Client/>
         <GetInTocuh/>
         <UseFulLinks/>
