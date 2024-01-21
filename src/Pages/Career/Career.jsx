@@ -1,72 +1,58 @@
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
-function CareerCard() {
-  return (
-    <div className="p-6 shadow-lg flex flex-col items-center">
-      <h2 className="text-2xl font-semibold text-indigo-800">Job Title</h2>
-      <div className="flex flex-col items-start space-y-2 mt-3">
-      <p>
-        <span className="font-bold">Dated:</span> 21/12/2023
-      </p>
-      <p>
-        <span className="font-bold">Roles:</span> Digital Marketing Expert
-      </p>
-      <p>
-        <span className="font-bold">Location:</span> Trivandrum
-      </p>
-      </div>
-    </div>
-  );
-}
+
+const careerData = [
+  {title:"ജീവനക്കാരുടെ സ്ഥലം മാറ്റത്തിനുള്ള ഓൺലൈൻ അപേക്ഷ",link: "#"},
+  {title:"Corrigendum - Post of Marketing Officer dated 05.06.2023",link: "#"},
+  {title:"Application for the Post of Marketing Officer",link: "#"},
+  {title:"Rank List for the Post Of Site Supervisor KSCDC",link: "#"},
+  {title:"Rank List for the Post Of Food Technologist KSCDC",link: "#"},
+  {title:"Corrigendum - Post of Site Supervisor dated 03.12.2022",link: "#"},
+  {title:"Application for the Post of Food Technologist/Site Supervisor On Fixed Term Contract Basis",link: "#"},
+  {title:"Corrigendum - Post of Food Technologist dated 16.11.2022",link: "#"},
+  {title:"Corrigendum - Post of Food Technologist dated 07.11.2022",link: "#"},
+  {title: "Corrigendum - Post of Food Technologist dated 27.10.2022",link:"#"}
+
+]
+
 function Career() {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <div className="p-3">
-        {/* career hero section */}
-        <div
-          className="object-cover rounded-xl bg-cover h-96 bg-no-repeat w-full flex items-center justify-center"
-          style={{
-            backgroundImage:
-              "url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg')",
-          }}
-        >
-          <h2 className="text-5xl text-white font-bold mt-24">Join The Team</h2>
-        </div>
+      <div className="banner">
+        <h3 className="text-3xl font-bold text-white">Career</h3>
       </div>
-      {/* section -1  */}
-      <div className="mt-6">
-        <div>
-          <h3 className="text-center text-3xl font-bold tracking-wider">
-            Hiring Calls
-          </h3>
-          <p className="text-center text-balance text-gray-500">
-            Magna in velit sint pariatur pariatur ullamco sint est commodo ex.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 p-3">
-          {Array.from({length:8}).map((_) => (
-            <CareerCard />
-          ))}
-        </div>
-      </div>
-      {/* sections  -2 */}
-      <div className="mt-6">
-        <div>
-          <h3 className="text-center text-3xl font-bold tracking-wider">
-            Previous Hiring Calls
-          </h3>
-          <p className="text-center text-balance text-gray-500">
-            Magna in velit sint pariatur pariatur ullamco sint est commodo ex.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 p-3">
-          {Array.from({length:8}).map((_) => (
-            <CareerCard />
-          ))}
-        </div>
-      </div>
+      <div className="overflow-x-auto min-h-screen">
+  <table className="table">
+    {/* head */}
+    <thead>
+      <tr>
+        <th></th>
+        <th>Job</th>
+        <th>Detils</th>
+      </tr>
+    </thead>
+    <tbody>
+      {/* row 1 */}
+      {careerData.map((value,index) => (
+        <tr key={index} className="bg-base-200">
+        <th>{index+1}</th>
+        <td className="font-bold">{value.title}</td>
+        <td>
+          <a href={value.link} className="p-2 rounded-full bg-red-500 text-white flex items-center gap-2 justify-center">
+            Details
+            <FaExternalLinkAlt/>
+          </a>
+        </td>
+      </tr>
+      ))}
+     
+    </tbody>
+  </table>
+</div>
+
       <Footer/>
     </div>
   );
