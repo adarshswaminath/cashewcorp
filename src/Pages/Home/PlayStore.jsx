@@ -15,14 +15,14 @@ function PlayStore() {
         </div>
         {/* btns */}
         <div className="">
-          <h2 data-aos="zoom-in" className="text-3xl lg:text-5xl text-white font-bold">
+          <h2 data-aos="zoom-in" className="text-3xl lg:text-5xl text-white font-bold text-center">
             Try Our KSCDC Mobile Apps
           </h2>
-          <p data-aos="zoom-in" className="max-w-xl  mt-4 text-white">
+          <p data-aos="zoom-in" className="max-w-xl text-center mt-4 text-white">
             Occaecat aute nisi non excepteur Lorem excepteur proident tempor et
             excepteur do deserunt.
           </p>
-          <div className="flex items-center">
+          <div className="flex items-center justify-center">
             <img
               data-aos="zoom-out"
               src="/images/google-play.png"
