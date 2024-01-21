@@ -30,7 +30,7 @@ const linksArray = [
 
 const Card = ({ link }) => {
   return (
-    <div className="bg-white shadow-lg  flex items-center justify-center p-4 mb-4 rounded-md">
+    <div className="bg-white hover:bg-red-500 hover:text-white shadow-lg  flex items-center justify-center p-4 mb-4 rounded-md">
       <a
         href={link}
         className="font-bold text-center flex items-center gap-3"
