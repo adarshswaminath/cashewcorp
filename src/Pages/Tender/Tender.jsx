@@ -6,7 +6,7 @@ function Tender() {
     <div>
       <Navbar />
       <div className="p-3 min-h-screen">
-        <div className="banner h-48">
+        <div className="banner">
           <h2 className="text-3xl font-bold text-white">LIVE TENDERS</h2>
         </div>
         {/* tender page body */}

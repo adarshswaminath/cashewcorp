@@ -19,5 +19,5 @@ body {
   }
   
   .banner {
-    @apply bg-gradient-to-r from-[#ED213A] to-[#93291E] flex flex-col items-center justify-center;
+    @apply h-48 bg-gradient-to-r from-[#ED213A] to-[#93291E] flex flex-col items-center justify-center;
   }

@@ -12,7 +12,9 @@ function Product() {
       <div className="fixed bottom-4 right-3 z-50">
         <TranslateButton/>
       </div>
+      <div className="p-3">
       <ProductBanner/>
+      </div>
       <ProductList/>
       <Footer/>
     </div>

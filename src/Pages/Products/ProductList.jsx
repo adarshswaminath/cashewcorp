@@ -12,7 +12,7 @@ function ProductList() {
     const matchesCategory = !selectedCategory || product.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
-  const [showModal,setShowModal] = useState(true)
+  const [showModal,setShowModal] = useState(false)
   const [selectedData,setSelectedData] = useState({
     name:'',
     image:'',
