@@ -15,7 +15,7 @@ function ProductCard({setSelectedData,setShowModal, image, name, price, rating,d
         setShowModal((prev) => !prev)
     }
   return (
-    <div className="w-full lg:w-60 max-w-sm bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105">
+    <div className="w-full lg:w-60 max-w-sm bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 ">
       <a href="#" className="block w-full h-48 overflow-hidden">
         <img className="object-cover w-full h-full" src={image} alt="product" />
       </a>

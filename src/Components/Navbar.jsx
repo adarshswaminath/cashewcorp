@@ -34,7 +34,7 @@ function Navbar() {
   );
 
   return (
-    <div className="h-28 border lg:rounded-[12px] bg-white text-black uppercase w-full flex items-center justify-evenly">
+    <div className="h-28 border lg:rounded-[12px] bg-white text-black uppercase w-full flex items-center justify-evenly z-50">
       {/* image logo */}
       <div className="logo">
         <img src="/images/logo-1.png" className="h-12 lg:h-20" alt="Logo" />
@@ -138,7 +138,7 @@ function Navbar() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.5 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden absolute top-0 left-0 w-full h-full bg-white text-black flex flex-col items-center justify-center"
+            className="lg:hidden absolute top-0 left-0 w-full h-full bg-white text-black flex flex-col items-center justify-center z-50"
           >
             <button
               onClick={toggleMenu}

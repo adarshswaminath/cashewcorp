@@ -51,7 +51,7 @@ function ProductList() {
           <ProductCard setSelectedData={setSelectedData} setShowModal={setShowModal} key={product.id} {...product} />
         ))}
       </div>
-      {showModal && <ProductModal selectedData={selectedData} setShowModal={setShowModal}/>}
+      {showModal ? <ProductModal selectedData={selectedData} setShowModal={setShowModal}/> : null}
     </div>
   );
 }
