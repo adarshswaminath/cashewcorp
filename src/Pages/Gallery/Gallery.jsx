@@ -1,71 +1,75 @@
-import React from 'react'
-import Navbar from '../../Components/Navbar'
+import React, { useState } from 'react';
+import Navbar from '../../Components/Navbar';
+import Footer from "../../Components/Footer";
+import ProductImages from './ProductImages';
+import AwardImages from './AwardImages';
+import AchievementsImages from './AchievementsImages';
+import FunctionImage from './FunctionImage';
+
 
 function Gallery() {
+  const [filter, setFilter] = useState('all');
+
+  const handleFilterChange = (newFilter) => {
+    setFilter(newFilter);
+  };
+
+  const renderImages = () => {
+    switch (filter) {
+      case 'product':
+        return <ProductImages />;
+      case 'functions':
+        return <FunctionImage />;
+      case 'awards':
+        return <AwardImages />;
+      case 'factories':
+        return <FactoryImage />;
+      case 'achievements':
+        return <AchievementsImages />;
+      default:
+        // Display all images when 'all' or an unknown filter is selected
+        return (
+          <>
+            <ProductImages />
+            <FunctionImage />
+            <AwardImages />
+            <FactoryImage />
+            <AchievementsImages />
+          </>
+        );
+    }
+  };
+
   return (
     <div>
-        <Navbar/>
-        <div className="p-3 min-h-screen flex flex-col items-center justify-center">
-        <section className="my-8 text-center">
-          <h1 className="text-4xl font-bold mb-4">Gallery</h1>
-          <p className="text-gray-700 mb-6">
-            Explore our diverse range of products designed to meet your needs.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Bulk Products Section */}
-            <div className="bg-white p-6 shadow-md rounded-md">
-              <h2 className="text-2xl font-bold mb-4">News & Updates</h2>
-              <p>
-                Our bulk products are sourced from high-quality suppliers,
-                ensuring reliability and affordability.
-              </p>
-            </div>
-
-            {/* Value Added Products Section */}
-            <div className="bg-white p-6 shadow-md rounded-md">
-              <h2 className="text-2xl font-bold mb-4">Image Gallery</h2>
-              <p>
-                Experience innovation with our value-added products that bring
-                extra convenience to your life.
-              </p>
-            </div>
-            <div className="bg-white p-6 shadow-md rounded-md">
-              <h2 className="text-2xl font-bold mb-4">Video Tenders</h2>
-              <p>
-                Experience innovation with our value-added products that bring
-                extra convenience to your life.
-              </p>
-            </div>
-            {/*  */}
-            <div className="bg-white p-6 shadow-md rounded-md">
-              <h2 className="text-2xl font-bold mb-4">Previous Quotation</h2>
-              <p>
-                Experience innovation with our value-added products that bring
-                extra convenience to your life.
-              </p>
-            </div>
-            {/*  */}
-            <div className="bg-white p-6 shadow-md rounded-md">
-              <h2 className="text-2xl font-bold mb-4">Video Release</h2>
-              <p>
-                Experience innovation with our value-added products that bring
-                extra convenience to your life.
-              </p>
-            </div>
-            {/*  */}
-            <div className="bg-white p-6 shadow-md rounded-md">
-              <h2 className="text-2xl font-bold mb-4">News Letter</h2>
-              <p>
-                Experience innovation with our value-added products that bring
-                extra convenience to your life.
-              </p>
-            </div>
-          </div>
-        </section>
+      <Navbar />
+      <div className="p-3 min-h-screen">
+        <div className="banner">
+          <h3 className='text-3xl font-bold text-white'>Gallery</h3>
+        </div>
+        <div className="grid grid-cols-3 lg:grid-cols-5 place-items-center justify-items-center gap-2 space-x-3 mt-4 mb-4">
+          <button className={`px-5 py-1 border hover:bg-red-500 hover:text-white ${filter === 'all' && 'bg-red-500 text-white'}`} onClick={() => handleFilterChange('all')}>All</button>
+          <button className={`px-5 py-1 border hover:bg-red-500 hover:text-white ${filter === 'functions' && 'bg-red-500 text-white'}`} onClick={() => handleFilterChange('functions')}>Functions</button>
+          <button className={`px-5 py-1 border hover:bg-red-500 hover:text-white ${filter === 'product' && 'bg-red-500 text-white'}`} onClick={() => handleFilterChange('product')}>Product</button>
+          <button className={`px-5 py-1 border hover:bg-red-500 hover:text-white ${filter === 'awards' && 'bg-red-500 text-white'}`} onClick={() => handleFilterChange('awards')}>Awards</button>
+          <button className={`px-5 py-1 border hover:bg-red-500 hover:text-white ${filter === 'factories' && 'bg-red-500 text-white'}`} onClick={() => handleFilterChange('factories')}>Factories</button>
+        </div>
+        <div className="flex flex-col items-center">
+          {renderImages()}
+        </div>
       </div>
+      <Footer />
+    </div>
+  );
+}
+
+export default Gallery;
+
+function FactoryImage(){
+  return(
+    <div>
+      <img src="/images/factory.jpeg" alt="Factory image" />
     </div>
   )
 }
 
-export default Gallery
