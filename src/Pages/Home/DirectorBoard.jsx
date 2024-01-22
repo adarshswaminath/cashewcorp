@@ -32,7 +32,7 @@ const ChooseCard = ({ image, title, caption }) => {
         <BsWhatsapp />
       </div>
       <div className="relative text-center">
-        <p className="font-bold text-red-400 uppercase">{title}</p>
+        <p className="font-bold text-red-600 uppercase">{title}</p>
         <p className="text-black">{caption}</p>
       </div>
     </div>
