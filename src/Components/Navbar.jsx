@@ -21,7 +21,7 @@ function Navbar() {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.3 }}
-      className="capitalize text-xs absolute hidden bg-white/10 bg:blur backdrop-blur text-black py-2 space-y-2 w-40 p-3 top-full left-0 group-hover:grid "
+      className="capitalize text-xs absolute hidden bg-white/10 bg:blur backdrop-blur text-black py-2 space-y-2 w-40 p-3 top-full left-0 group-hover:grid transition transform ease-in-out duration-300"
     >
       <Link className="hover:bg-white p-2 border-0 hover:border hover:border-red-500" to="/kscdc">KSCDC</Link>
       <Link className="hover:bg-white p-2 border-0 hover:border hover:border-red-500" to="/org">Organization</Link>
@@ -46,7 +46,7 @@ function Navbar() {
           <h3 className="font-bold max-w-md">
             The kerala state cashew development corporation ltd
           </h3>
-          <p className="text-xs">(A Government of Kerala Undertaking)</p>
+          <p className="text-xs text-gray-500 ">(A Government of Kerala Undertaking)</p>
         </div>
       </div>
       {/* navbar content */}
