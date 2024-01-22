@@ -38,7 +38,7 @@ const backgroundImage =
 
 function FooterLinks({ title, links }) {
   return (
-    <div className="flex flex-col items-start gap-3">
+    <div data-aos="fade-up" className="flex flex-col items-start gap-3">
       <h3 className="font-bold">{title}</h3>
       {links.map((link, index) => (
         <Link key={index} to="/" className="capitalize">
@@ -58,21 +58,22 @@ function FooterSocialMediaPannel() {
     { icon: <LuLinkedin />, link: "#" },
   ];
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center ">
       <div className="p-4 bg-white mt-3 text-black lg:w-3/4 rounded-lg">
-      <h2 className="text-center font-extrabold tracking-wide">Follow us</h2>
-      <div className="flex justify-evenly gap-3 m-2">
-        {socialMedis.map((icon) => (
-          <a
-            href={icon.link}
-            key={icon}
-            className="text-xl transform transition ease-in-out duration-300 hover:scale-150 hover:-translate-y-2"
-          >
-            {icon.icon}
-          </a>
-        ))}
+        <h2 className="text-center font-extrabold tracking-wide">Follow us</h2>
+        <div className="flex justify-evenly gap-3 m-2">
+          {socialMedis.map((icon) => (
+            <a
+              data-aos="flip-up"
+              href={icon.link}
+              key={icon}
+              className="text-xl transform transition ease-in-out duration-300 hover:scale-150 hover:-translate-y-2"
+            >
+              {icon.icon}
+            </a>
+          ))}
+        </div>
       </div>
-    </div>
     </div>
   );
 }
@@ -92,19 +93,20 @@ function FooterCopyRight() {
   );
 }
 
-
 // main component
 function Footer() {
   return (
     <div
-      className="relative bg-cover bg-center bg-no-repeat "
+      className="relative bg-cover bg-center bg-no-repeat min-h-screen"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      
       {/* Black overlay */}
       <div className="absolute inset-0 bg-black opacity-75"></div>
 
-      <div className="relative z-10 text-white p-4">
+      <div className="relative z-10 text-white p-4 mt-4">
+        <h2 data-aos="fade-right" className="text-center text-5xl font-bold">
+          KSCDC
+        </h2>
         {/* footer links */}
         <div className="grid gap-3 grid-cols-2  lg:grid-cols-4 place-items-center ">
           {footerData.map((data) => (
@@ -113,11 +115,30 @@ function Footer() {
         </div>
         {/* social media pannel */}
         <FooterSocialMediaPannel />
-        <div className="flex items-center mx-auto justify-center bg-white/10 bg:blur backdrop-blur w-full lg:w-1/2  m-2 rounded-lg">
-        <img src="https://www.safaccredited.org/images/ISO-22000.png" className="h-20 w-20 rounded-lg" alt="Footer image" />
-        <img src="https://iconape.com/wp-content/png_logo_vector/anab-logo.png" className="h-20 w-20 rounded-lg" alt="Footer image" />
-        <img src="/images/bsi.png" className="h-20 w-20 rounded-lg" alt="Footer image" />
-
+        <div className="flex items-center justify-center">
+          <div className="flex items-center mx-auto justify-center bg-white/10 bg:blur backdrop-blur w-full lg:w-1/2  m-2 rounded-lg">
+            <img
+              src="https://www.safaccredited.org/images/ISO-22000.png"
+              className="h-20 w-20 rounded-lg"
+              alt="Footer image"
+            />
+            <img
+              src="https://iconape.com/wp-content/png_logo_vector/anab-logo.png"
+              className="h-20 w-20 rounded-lg"
+              alt="Footer image"
+            />
+            <img
+              src="/images/bsi.png"
+              className="h-20 w-20 rounded-lg"
+              alt="Footer image"
+            />
+          </div>
+        </div>
+        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-between w-3/4">
+          <img data-aos="zoom-out-right" src="https://thuna.keralapolice.gov.in/6bfe007f1bb70c9613d783078256812f.png" className="object-contain h-32 w-32" alt="gov image" />
+          <img data-aos="zoom-out-left" src="/images/CDC.png" className="object-contain h-32 w-32" alt="gov image" />
+          </div>
         </div>
         {/* copy right section */}
         <FooterCopyRight/>
