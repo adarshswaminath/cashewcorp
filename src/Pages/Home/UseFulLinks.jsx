@@ -1,5 +1,6 @@
 import React from "react";
-import "./style/usefullinks.css"
+// import "./style/usefullinks.css"
+import "./style/usefullinks.css";
 import { FaLink } from "react-icons/fa6";
 
 const linksArray = [
@@ -30,10 +31,10 @@ const linksArray = [
 
 const Card = ({ link }) => {
   return (
-    <div className="bg-white hover:bg-red-500 hover:text-white shadow-lg  flex items-center justify-center p-4 mb-4 rounded-md">
+    <div className="cursor-pointer group bg-white hover:bg-red-500 hover:text-white shadow-lg  flex items-center justify-center p-4 mb-4 rounded-md">
       <a
         href={link}
-        className="font-bold text-center flex items-center gap-3"
+        className="font-bold text-center flex items-center gap-3 text-transparent group-hover:text-white bg-gradient-to-r from-red-500 to-black bg-clip-text"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -57,17 +58,15 @@ function UseFulLinks() {
       </p>
 
       <div className="grid gap-4 p-3 overflow-hidden place">
-        
-          <marquee>
+        <div className="marquee">
           <ul className="flex gap-3 ">
             {linksArray.map((value) => (
               <li className="">
-              <Card link={value.link} />
-            </li>
+                <Card link={value.link} />
+              </li>
             ))}
           </ul>
-          </marquee>
-  
+        </div>
       </div>
     </div>
   );
