@@ -1,19 +1,23 @@
 import ImageBackground from "./ImageBackground";
 import "./style/home.css";
 
-
 function About() {
   return (
-    <div >
+    <div>
       <div className="">
         <div className="grid gap-4 lg:flex items-center justify-evenly   m-6 about">
-          <div data-aos="fade-right" className="flex flex-col items-start">
+          <div
+            data-aos="fade-right"
+            data-aos-offset="600"
+            data-aos-easing="ease-in-sine"
+            className="flex flex-col items-start"
+          >
             <div>
               <span className="text-2xl text-red-500 mb-6 border-l-2 px-2 font-bold border-red-500">
                 Welcome to KSCDC
               </span>
             </div>
-            <h2 className="text-xl max-w-md text-balance">About Us </h2>
+            <h2 className="text-xl max-w-md text-balance text-blue-500">About Us </h2>
             <p className="text-balance max-w-4xl text-xl text-gray-700 mt-6 mb-6">
               The Kerala State Cashew Development Corporation Limited (KSCDC)
               was incorporated in July 1969 and started Commercial activities in
@@ -40,24 +44,43 @@ function About() {
             </button>
           </div>
           <div>
-          <div  className="grid gap-4 grid-cols-2">
-            <div data-aos="fade-right" className="h-56 w-full aspect-square bg-white shadow-lg flex items-center justify-center">
-              <h3 className="text-xl font-bold text-red-500 text-center">
-                News Updates
-              </h3>
+            <div className="grid gap-4 grid-cols-2">
+              <div
+                data-aos="fade-right"
+                data-aos-offset="600"
+            data-aos-easing="ease-in-sine"
+                className="h-56 w-full aspect-square bg-white shadow-lg flex items-center justify-center"
+              >
+                <h3 className="text-xl font-bold text-red-500 text-center">
+                  News Updates
+                </h3>
+              </div>
+              <div
+                data-aos="fade-left"
+                data-aos-offset="600"
+            data-aos-easing="ease-in-sine"
+                className="h-56 w-full aspect-square lg:mt-4 bg-white shadow-lg flex items-center justify-center"
+              >
+                <h3 className="text-xl font-bold text-red-500">Tender</h3>
+              </div>
+              <div
+                data-aos="fade-up"
+                data-aos-offset="600"
+            data-aos-easing="ease-in-sine"
+                className="h-56 w-full aspect-square bg-white shadow-lg flex items-center justify-center"
+              >
+                <h3 className="text-xl font-bold text-red-500  text-center">
+                  News Updates
+                </h3>
+              </div>
+              <div
+                data-aos="fade-up"
+                data-aos-delay="300"
+                className="h-56 w-full aspect-square lg:mt-4 bg-white shadow-lg flex items-center justify-center"
+              >
+                <h3 className="text-xl font-bold text-red-500">Tender</h3>
+              </div>
             </div>
-            <div data-aos="fade-left" className="h-56 w-full aspect-square lg:mt-4 bg-white shadow-lg flex items-center justify-center">
-              <h3 className="text-xl font-bold text-red-500">Tender</h3>
-            </div>
-            <div data-aos="fade-up" className="h-56 w-full aspect-square bg-white shadow-lg flex items-center justify-center">
-              <h3 className="text-xl font-bold text-red-500  text-center">
-                News Updates
-              </h3>
-            </div>
-            <div data-aos="fade-up"  data-aos-delay="300" className="h-56 w-full aspect-square lg:mt-4 bg-white shadow-lg flex items-center justify-center">
-              <h3 className="text-xl font-bold text-red-500">Tender</h3>
-            </div>
-          </div>
           </div>
         </div>
         {/* section */}
@@ -65,12 +88,15 @@ function About() {
           <div className="p-3">
             <div className="grid gap-3">
               {/* Company  Image with background */}
-              <ImageBackground/>
+              <ImageBackground />
 
               <div>
                 <div className="grid lg:flex justify-center items-center gap-8">
                   {/* Mission Card */}
-                  <div data-aos="fade-right" className="p-6 bg-white w-full lg:max-w-md flex flex-col items-start rounded-lg shadow-md border-l-4 border-red-500 transform transition ease-in-out duration-300 hover:scale-105 hover:-translate-y-3">
+                  <div
+                    data-aos="fade-right"
+                    className="p-6 bg-white w-full lg:max-w-md flex flex-col items-start rounded-lg shadow-md border-l-4 border-red-500 transform transition ease-in-out duration-300 hover:scale-105 hover:-translate-y-3"
+                  >
                     <h2 className="text-3xl font-bold mb-4">Mission</h2>
                     <p className="text-gray-700 leading-relaxed">
                       KSDC aims at backward integration of its product line and
@@ -82,7 +108,10 @@ function About() {
                   </div>
 
                   {/* Vision Card */}
-                  <div data-aos="fade-left" className="p-6 bg-white w-full lg:max-w-md flex flex-col items-start rounded-lg shadow-md border-l-4 border-red-500 transform transition ease-in-out duration-300 hover:scale-105 hover:-translate-y-3">
+                  <div
+                    data-aos="fade-left"
+                    className="p-6 bg-white w-full lg:max-w-md flex flex-col items-start rounded-lg shadow-md border-l-4 border-red-500 transform transition ease-in-out duration-300 hover:scale-105 hover:-translate-y-3"
+                  >
                     <h2 className="text-3xl font-bold mb-4">Vision</h2>
                     <p className="text-gray-700 leading-relaxed">
                       The Vision of KSCDC is to be a World Class Organisation
