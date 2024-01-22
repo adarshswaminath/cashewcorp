@@ -21,6 +21,7 @@ function Navbar() {
       transition={{ duration: 0.3 }}
       className="absolute hidden bg-white text-black py-2 space-y-2 w-40 p-3 top-full left-0 group-hover:grid "
     >
+      <Link to="/org">Organization</Link>
       <Link to="/kscdc">KSCDC</Link>
       <Link to="/executives">Executives</Link>
       <Link to="/franchisee">Franchisee</Link>
@@ -166,6 +167,12 @@ function Navbar() {
               className="text-xl font-bold mt-3 hover:underline decoration-wavy decoration-red-400"
             >
               Executives
+            </Link>
+            <Link
+              to="/org"
+              className="text-xl font-bold mt-3 hover:underline decoration-wavy decoration-red-400"
+            >
+              Organization
             </Link>
             <Link
               to="/franchisee"

@@ -13,6 +13,7 @@ import Kscdc from './Pages/AboutUs/KSCDC/Kscdc'
 import Franchisee from './Pages/AboutUs/Franchisee/Franchisee'
 import Exectives from './Pages/AboutUs/Executives/Exectives'
 import Blog from './Pages/Blog/Blog'
+import Organization from './Pages/Org/Organization'
 
 function App() {
   // initialize aos animation
@@ -35,6 +36,7 @@ function App() {
           <Route path='/franchisee' element={<Franchisee/>}/>
           <Route path='/blog' element={<Blog/>}/>
           <Route path='/executives' element={<Exectives/>}/>
+          <Route path='/org' element={<Organization/>}/>
         </Routes>
       </BrowserRouter>
     </main>
