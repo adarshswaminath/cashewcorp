@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { RxCross2 } from "react-icons/rx";
 import { FaShoppingCart } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link,useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import "./style/navbar.css";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation()
+  const path = location.pathname
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -19,15 +21,16 @@ function Navbar() {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.3 }}
-      className="absolute hidden bg-white text-black py-2 space-y-2 w-40 p-3 top-full left-0 group-hover:grid "
+      className="capitalize text-xs absolute hidden bg-white/10 bg:blur backdrop-blur text-black py-2 space-y-2 w-40 p-3 top-full left-0 group-hover:grid "
     >
-      <Link to="/org">Organization</Link>
-      <Link to="/kscdc">KSCDC</Link>
-      <Link to="/executives">Executives</Link>
-      <Link to="/franchisee">Franchisee</Link>
+      <Link className="hover:bg-white p-2 border-0 hover:border hover:border-red-500" to="/kscdc">KSCDC</Link>
+      <Link className="hover:bg-white p-2 border-0 hover:border hover:border-red-500" to="/org">Organization</Link>
+      <Link className="hover:bg-white p-2 border-0 hover:border hover:border-red-500" to="/director-board">Director Board</Link>
+      <Link className="hover:bg-white p-2 border-0 hover:border hover:border-red-500" to="/executives">Executives</Link>
+      <Link className="hover:bg-white p-2 border-0 hover:border hover:border-red-500" to="/franchisee">Franchisee</Link>
       <Link
         to="/blog"
-        className="bg-red-600 text-white rounded-lg hover:bg-red-400 btn"
+        className="bg-red-600 text-white rounded-lg hover:bg-red-400 border-red-500 btn"
       >
         What's New
       </Link>
@@ -35,23 +38,29 @@ function Navbar() {
   );
 
   return (
-    <div className="h-28 border lg:rounded-[12px] bg-white text-black uppercase w-full flex items-center justify-evenly z-50">
+    <div className="h-28 border lg:rounded-[12px] bg-white text-black uppercase w-full flex items-center justify-between z-50">
       {/* image logo */}
-      <div className="logo">
-        <img src="/images/logo-1.png" className="h-12 lg:h-20" alt="Logo" />
+      <div className="logo flex items-center">
+        <img src="/images/logo.png" className="h-12 lg:h-36" alt="Logo" />
+        <div>
+          <h3 className="font-bold max-w-md">
+            The kerala state cashew development corporation ltd
+          </h3>
+          <p className="text-xs">(A Government of Kerala Undertaking)</p>
+        </div>
       </div>
       {/* navbar content */}
       <div className="hidden lg:flex items-center space-x-5">
         <Link
           to="/"
-          className="hover:underline decoration-wavy decoration-red-400 font-bold"
+          className={`${path === "/" ? 'text-red-500' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
         >
           Home
         </Link>
         <div className="relative group">
           <Link
             to="/"
-            className="cursor-pointer flex items-center space-x-2 font-bold"
+            className="text-xs cursor-pointer flex items-center space-x-2 font-bold"
           >
             About Us
             {/* down sv */}
@@ -61,7 +70,7 @@ function Navbar() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6 group-hover:opacity-0"
+              className="w-4 h-4 group-hover:opacity-0"
             >
               <path
                 strokeLinecap="round"
@@ -74,37 +83,37 @@ function Navbar() {
         </div>
         <Link
           to="/product"
-          className="hover:underline decoration-wavy decoration-red-400 font-bold"
+          className={`${path === "/product" ? 'text-red-500' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
         >
           Product
         </Link>
         <Link
           to="/tender"
-          className="hover:underline decoration-wavy decoration-red-400 font-bold"
+          className={`${path === "/tender" ? 'text-red-500' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
         >
           Tender
         </Link>
         <Link
           to="/career"
-          className="hover:underline decoration-wavy decoration-red-400 font-bold"
+          className={`${path === "/career" ? 'text-red-500' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
         >
           Career
         </Link>
         <Link
           to="/rti"
-          className="hover:underline decoration-wavy decoration-red-400 font-bold"
+          className={`${path === "/rti" ? 'text-red-500' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
         >
           RTI
         </Link>
         <Link
           to="/gallery"
-          className="hover:underline decoration-wavy decoration-red-400 font-bold"
+          className={`${path === "/gallery" ? 'text-red-500' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
         >
           Gallery
         </Link>
         <Link
           to="/contact"
-          className="hover:underline decoration-wavy decoration-red-400 font-bold"
+          className={`${path === "/contact" ? 'text-red-500' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
         >
           Contact
         </Link>
@@ -119,17 +128,25 @@ function Navbar() {
         </button>
       </div>
       {/* shop Now Button */}
-      <div className="hidden lg:flex flex-col items-center">
-        <img src="/images/CDC.png" className="h-16" alt="CDC Logo" />
-        <Link
-          to="/product"
-          className="h-full  rounded flex items-center justify-center  top-0 right-2 relative"
-        >
-          <button className="flex items-center gap-2 font-bold bg-red-500 hover:bg-red-400 p-2 rounded-lg text-white">
-            Shop Now
-            <FaShoppingCart />
-          </button>
-        </Link>
+      <div className="ml-5 hidden lg:flex flex-col items-center">
+        <div className="relative">
+          <Link
+            to="/product"
+            className=" rounded flex items-center justify-center  top-0 right-2 relative"
+          >
+            <button className="flex items-center gap-2 font-bold bg-red-500 hover:bg-red-400 p-2 rounded-lg text-white">
+              Shop Now
+              <FaShoppingCart />
+            </button>
+          </Link>
+          <div className="">
+            <img
+              src="/images/CDC.png"
+              className="left-1 bg-white rounded-full absolute h-24"
+              alt="CDC Logo"
+            />
+          </div>
+        </div>
       </div>
       {/* mobile view */}
       <AnimatePresence>
