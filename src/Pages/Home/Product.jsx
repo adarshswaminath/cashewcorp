@@ -41,7 +41,7 @@ const Product = () => {
       <ul className="marquee-content">
         {Array.from({ length: 12 }).map((_, index) => (
           <li>
-            <div className="bg-white shadow-lg h-64 flex flex-col items-center">
+            <div className="bg-white shadow-lg h-80 flex flex-col items-center justify-center">
             <img
               src={`images/products/product-${index + 1}.png`}
               alt="Product"

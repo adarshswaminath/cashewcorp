@@ -17,7 +17,9 @@ function About() {
                 Welcome to KSCDC
               </span>
             </div>
-            <h2 className="text-xl max-w-md text-balance text-blue-500">About Us </h2>
+            <h2 className="text-xl max-w-md text-balance text-blue-500">
+              About Us{" "}
+            </h2>
             <p className="text-balance max-w-4xl text-xl text-gray-700 mt-6 mb-6">
               The Kerala State Cashew Development Corporation Limited (KSCDC)
               was incorporated in July 1969 and started Commercial activities in
@@ -47,8 +49,7 @@ function About() {
             <div className="grid gap-4 grid-cols-2">
               <div
                 data-aos="fade-right"
-                data-aos-offset="600"
-            data-aos-easing="ease-in-sine"
+               
                 className="h-56 w-full aspect-square bg-white shadow-lg flex items-center justify-center"
               >
                 <h3 className="text-xl font-bold text-red-500 text-center">
@@ -57,16 +58,14 @@ function About() {
               </div>
               <div
                 data-aos="fade-left"
-                data-aos-offset="600"
-            data-aos-easing="ease-in-sine"
+             
                 className="h-56 w-full aspect-square lg:mt-4 bg-white shadow-lg flex items-center justify-center"
               >
                 <h3 className="text-xl font-bold text-red-500">Tender</h3>
               </div>
               <div
                 data-aos="fade-up"
-                data-aos-offset="600"
-            data-aos-easing="ease-in-sine"
+         
                 className="h-56 w-full aspect-square bg-white shadow-lg flex items-center justify-center"
               >
                 <h3 className="text-xl font-bold text-red-500  text-center">
@@ -75,7 +74,7 @@ function About() {
               </div>
               <div
                 data-aos="fade-up"
-                data-aos-delay="300"
+          
                 className="h-56 w-full aspect-square lg:mt-4 bg-white shadow-lg flex items-center justify-center"
               >
                 <h3 className="text-xl font-bold text-red-500">Tender</h3>
