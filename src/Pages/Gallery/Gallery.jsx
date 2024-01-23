@@ -17,8 +17,7 @@ function Gallery() {
 
   const renderImages = () => {
     switch (filter) {
-      case 'product':
-        return <ProductImages />;
+  
       case 'functions':
         return <FunctionImage />;
       case 'awards':
@@ -31,9 +30,8 @@ function Gallery() {
         // Display all images when 'all' or an unknown filter is selected
         return (
           <>
-            <ProductImages />
-            <FunctionImage />
             <AwardImages />
+            <FunctionImage />
             <FactoryImage />
             <AchievementsImages />
           </>
@@ -43,13 +41,12 @@ function Gallery() {
 
   return (
     <div>
-      <Navbar />
+      <Navbar />        
       <div className=" min-h-screen">
         <Banner image="gallery.jpg"/>
         <div className="grid grid-cols-3  gap-3 lg:flex items-center justify-center space-x-3 mt-4 mb-4">
           <button className={`px-5 py-1 border hover:bg-red-500 hover:text-white ${filter === 'all' && 'bg-red-500 text-white'}`} onClick={() => handleFilterChange('all')}>All</button>
           <button className={`px-5 py-1 border hover:bg-red-500 hover:text-white ${filter === 'functions' && 'bg-red-500 text-white'}`} onClick={() => handleFilterChange('functions')}>Functions</button>
-          <button className={`px-5 py-1 border hover:bg-red-500 hover:text-white ${filter === 'product' && 'bg-red-500 text-white'}`} onClick={() => handleFilterChange('product')}>Product</button>
           <button className={`px-5 py-1 border hover:bg-red-500 hover:text-white ${filter === 'achievements' && 'bg-red-500 text-white'}`} onClick={() => handleFilterChange('achievements')}>Achievements</button>
           <button className={`px-5 py-1 border hover:bg-red-500 hover:text-white ${filter === 'awards' && 'bg-red-500 text-white'}`} onClick={() => handleFilterChange('awards')}>Awards</button>
           <button className={`px-5 py-1 border hover:bg-red-500 hover:text-white ${filter === 'factories' && 'bg-red-500 text-white'}`} onClick={() => handleFilterChange('factories')}>Factories</button>
