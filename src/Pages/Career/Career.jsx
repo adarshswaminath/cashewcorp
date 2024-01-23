@@ -24,6 +24,12 @@ function Career() {
       <Navbar />
      <Banner image="career.jpg"/>
      <h2 className="p-3 text-2xl font-bold">Career</h2>
+     <span className="flex items-center p-3">
+      <span className="h-3 w-3 rounded-full bg-green-500"></span>
+      Active &nbsp;
+      <span className="h-3 w-3 rounded-full bg-red-500"></span>
+      Expired
+     </span>
       <div className="overflow-x-auto min-h-screen">
   <table className="table">
     {/* head */}
@@ -39,7 +45,7 @@ function Career() {
       {careerData.map((value,index) => (
         <tr key={index} className="bg-base-200">
         <th>{index+1}</th>
-        <td className="font-bold flex items-center gap-2">{value.title} {value.status ? <span className="bg-green-500 text-white font-bold">Active</span> : <span className="bg-red-500 text-white font-bold">Expired</span> }</td>
+        <td className="font-bold flex items-center gap-2">{value.title} {value.status ? <span className="bg-green-500 h-3 w-3 rounded-full text-white font-bold"></span> : <span className="bg-red-500 h-3 w-3 rounded-full font-bold"></span> }</td>
         <td>
           <a href={value.link} className="p-2 rounded-full bg-red-500 text-white flex items-center gap-2 justify-center">
             Details
