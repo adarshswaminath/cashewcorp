@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from '../../Components/Navbar';
 import Footer from '../../Components/Footer';
 import { emailIdSection, factoriesData } from '.';
+import Banner from '../../Components/Banner';
 
 function Organization() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -14,11 +15,7 @@ function Organization() {
   return (
     <div className="min-h-screen bg-gray-100">
       <Navbar />
-      <div className="text-white p-5">
-        <div className="banner">
-          <h2 className="text-3xl font-bold">Organization</h2>
-        </div>
-      </div>
+      <Banner image="organization.jpg"/>
       {/* body  */}
       <div className="p-5 text-xl">
         <div className="mb-8">
