@@ -5,16 +5,16 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 
 
 const careerData = [
-  {title:"ജീവനക്കാരുടെ സ്ഥലം മാറ്റത്തിനുള്ള ഓൺലൈൻ അപേക്ഷ",link: "#"},
-  {title:"Corrigendum - Post of Marketing Officer dated 05.06.2023",link: "#"},
-  {title:"Application for the Post of Marketing Officer",link: "#"},
-  {title:"Rank List for the Post Of Site Supervisor KSCDC",link: "#"},
-  {title:"Rank List for the Post Of Food Technologist KSCDC",link: "#"},
-  {title:"Corrigendum - Post of Site Supervisor dated 03.12.2022",link: "#"},
-  {title:"Application for the Post of Food Technologist/Site Supervisor On Fixed Term Contract Basis",link: "#"},
-  {title:"Corrigendum - Post of Food Technologist dated 16.11.2022",link: "#"},
-  {title:"Corrigendum - Post of Food Technologist dated 07.11.2022",link: "#"},
-  {title: "Corrigendum - Post of Food Technologist dated 27.10.2022",link:"#"}
+  {title:"ജീവനക്കാരുടെ സ്ഥലം മാറ്റത്തിനുള്ള ഓൺലൈൻ അപേക്ഷ",link: "#",status: true},
+  {title:"Corrigendum - Post of Marketing Officer dated 05.06.2023",link: "#",status: true},
+  {title:"Application for the Post of Marketing Officer",link: "#",status: true},
+  {title:"Rank List for the Post Of Site Supervisor KSCDC",link: "#",status: true},
+  {title:"Rank List for the Post Of Food Technologist KSCDC",link: "#",status: true},
+  {title:"Corrigendum - Post of Site Supervisor dated 03.12.2022",link: "#",status: true},
+  {title:"Application for the Post of Food Technologist/Site Supervisor On Fixed Term Contract Basis",link: "#",status: true},
+  {title:"Corrigendum - Post of Food Technologist dated 16.11.2022",link: "#",status: false},
+  {title:"Corrigendum - Post of Food Technologist dated 07.11.2022",link: "#",status: false},
+  {title: "Corrigendum - Post of Food Technologist dated 27.10.2022",link:"#",status: false}
 
 ]
 
@@ -39,7 +39,7 @@ function Career() {
       {careerData.map((value,index) => (
         <tr key={index} className="bg-base-200">
         <th>{index+1}</th>
-        <td className="font-bold">{value.title}</td>
+        <td className="font-bold flex items-center gap-2">{value.title} {value.status ? <span className="bg-green-500 text-white font-bold">Active</span> : <span className="bg-red-500 text-white font-bold">Expired</span> }</td>
         <td>
           <a href={value.link} className="p-2 rounded-full bg-red-500 text-white flex items-center gap-2 justify-center">
             Details
