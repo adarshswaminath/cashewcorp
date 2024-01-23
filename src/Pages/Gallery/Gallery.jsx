@@ -4,7 +4,8 @@ import Footer from "../../Components/Footer";
 import ProductImages from './ProductImages';
 import AwardImages from './AwardImages';
 import AchievementsImages from './AchievementsImages';
-import FunctionImage from './FunctionImage';
+import FunctionImage from './FunctionImage'
+import Banner from "../../Components/Banner"
 
 
 function Gallery() {
@@ -43,10 +44,8 @@ function Gallery() {
   return (
     <div>
       <Navbar />
-      <div className="p-3 min-h-screen">
-        <div className="banner">
-          <h3 className='text-3xl font-bold text-white'>Gallery</h3>
-        </div>
+      <div className=" min-h-screen">
+        <Banner image="gallery.jpg"/>
         <div className="grid grid-cols-3  gap-3 lg:flex items-center justify-center space-x-3 mt-4 mb-4">
           <button className={`px-5 py-1 border hover:bg-red-500 hover:text-white ${filter === 'all' && 'bg-red-500 text-white'}`} onClick={() => handleFilterChange('all')}>All</button>
           <button className={`px-5 py-1 border hover:bg-red-500 hover:text-white ${filter === 'functions' && 'bg-red-500 text-white'}`} onClick={() => handleFilterChange('functions')}>Functions</button>

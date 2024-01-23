@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
+import Banner from "../../Components/Banner"
 
 function RTI() {
   return (
@@ -8,9 +9,7 @@ function RTI() {
       <Navbar />
 
       <div className="flex-grow p-6 bg-gray-100">
-        <div className="banner bg-blue-500 p-6 text-white">
-          <h1 className="text-3xl font-bold">Right To Information</h1>
-        </div>
+        <Banner image="rit.jpg"/>
 
         <div className="mt-6 p-6 bg-white rounded shadow-md">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">

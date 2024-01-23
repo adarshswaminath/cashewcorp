@@ -1,5 +1,6 @@
 import Navbar from "../../../Components/Navbar"
 import Footer from "../../../Components/Footer"
+import Banner from "../../../Components/Banner"
 import ExecutiveCard from "./ExecutiveCard"
 
 const seniorExecutives = [
@@ -80,11 +81,7 @@ function Exectives() {
   return (
     <div>
       <Navbar/>
-      <div className="p-3">
-        <div className="banner">
-          <h3 className="text-3xl font-bold text-white">Executives</h3>
-        </div>
-      </div>
+      <Banner image="executives.jpg"/>
       {/* senior executives */}
       <div className="p-2 ">
       <h2 className="text-2xl font-bold text-center">Senior Executives</h2>
