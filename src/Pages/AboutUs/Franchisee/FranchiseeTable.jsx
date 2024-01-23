@@ -1,57 +1,158 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { franchiseeData } from ".";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 function FranchiseeTable() {
-  const [searchDistrict, setSearchDistrict] = useState('');
+  const [selectedDistrict, setSelectedDistrict] = useState("");
+  const [searchDistrict, setSearchDistrict] = useState("");
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const filteredFranchisees = franchiseeData.filter(
-    (franchisee) =>
-      franchisee.district.toLowerCase().includes(searchDistrict.toLowerCase())
+  const allDistricts = [
+    ...new Set(franchiseeData.map((franchisee) => franchisee.district)),
+  ];
+
+  const filteredFranchisees = franchiseeData.filter((franchisee) =>
+    franchisee.district.toLowerCase().includes(searchDistrict.toLowerCase())
   );
 
-  return (
-    <div>
-      <div className="mb-4">
-        <label className="block text-sm font-medium text-gray-700">Search by District:</label>
-        <input
-          type="text"
-          value={searchDistrict}
-          onChange={(e) => setSearchDistrict(e.target.value)}
-          className="mt-1 p-2 border rounded-md outline-none"
-          placeholder="Enter Location ..."
-        />
-      </div>
+  // Grouping franchisees by district
+  const groupedFranchisees = filteredFranchisees.reduce((acc, franchisee) => {
+    const district = franchisee.district;
 
-      <div className="overflow-x-auto">
-        <table className="table">
-          {/* head */}
-          <thead>
-            <tr>
-              <th></th>
-              <th>Name</th>
-              <th>District</th>
-              <th>Address</th>
-              <th>Contact Name</th>
-              <th>Ph.No</th>
-            </tr>
-          </thead>
-          <tbody>
-            {/* rows */}
-            {filteredFranchisees.map((value) => (
-              <tr key={value.id} className="bg-base-200">
-                <th>{value.id}</th>
-                <td>{value.name}</td>
-                <td>{value.district}</td>
-                <td>{value.address}</td>
-                <td>{value.contact_name ? value.contact_name : "Null"}</td>
-                <td>{value.mob}</td>
+    if (!acc[district]) {
+      acc[district] = [];
+    }
+
+    acc[district].push(franchisee);
+
+    return acc;
+  }, {});
+
+  const handleImageClick = () => {
+    // For demonstration purposes, using a hardcoded image
+    const hardcodedImage = "/images/factory.jpeg";
+    setSelectedImage(hardcodedImage);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+    setIsModalOpen(false);
+  };
+
+  return (
+    <div className="container mx-auto p-4">
+    <div className="mb-8">
+      <label className="block text-sm font-medium text-gray-700">
+        Select Location:
+      </label>
+      <select
+        value={selectedDistrict}
+        onChange={(e) => {
+          setSelectedDistrict(e.target.value);
+          setSearchDistrict(e.target.value);
+        }}
+        className="mt-1 p-2 border rounded-md outline-none focus:border-blue-500"
+      >
+        <option value="">-- All Locations --</option>
+        {allDistricts.map((district) => (
+          <option key={district} value={district}>
+            {district}
+          </option>
+        ))}
+      </select>
+    </div>
+
+    <div className="overflow-x-auto">
+      <table className="table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Name</th>
+            <th>District</th>
+            <th>Address</th>
+            <th>Location</th>
+            <th>Contact Name</th>
+            <th>Ph.No</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {Object.keys(groupedFranchisees).map((district) => (
+            <React.Fragment key={district}>
+              <tr className="bg-gray-300">
+                <td colSpan="8" className="text-lg font-bold">{district}</td>
               </tr>
-            ))}
-          </tbody>
-        </table>
+              {groupedFranchisees[district].map((value, index) => (
+                <>
+                <tr key={value.id} className={index % 2 === 0 ? "bg-white" : "bg-gray-100"}>
+                  <td>{index + 1}</td>
+                  <td>{value.name}</td>
+                  <td>{value.district}</td>
+                  <td>{value.address}</td>
+                  <td>
+                    <a href="https://www.google.com" target="_blank" className="flex items-center gap-2">Open <FaExternalLinkAlt/></a>
+                  </td>
+                  <td>{value.contact_name ? value.contact_name : "Null"}</td>
+                  <td>{value.mob}</td>
+                  <td>
+                    <button
+                      onClick={handleImageClick}
+                      className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600"
+                    >
+                      View Image
+                    </button>
+                  </td>
+                </tr>
+                </>
+              ))}
+            </React.Fragment>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    {/* Modal for displaying the hardcoded image */}
+    {isModalOpen && (
+      <Modal closeModal={closeModal}>
+        <img
+          src={selectedImage}
+          alt="Selected Image"
+          className="w-full h-full object-cover"
+        />
+      </Modal>
+    )}
+  </div>
+  );
+}
+
+const Modal = ({ closeModal, children }) => {
+  return (
+    <div className="fixed inset-0 z-50 overflow-auto bg-black bg-opacity-50 flex items-center justify-center">
+      <div className="bg-white w-full max-w-md p-6 rounded-md shadow-lg">
+        <div className="flex justify-end">
+          <button
+            onClick={closeModal}
+            className="text-gray-700 hover:text-red-500 focus:outline-none"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <div className="mt-4">{children}</div>
       </div>
     </div>
   );
-}
+};
 
 export default FranchiseeTable;
