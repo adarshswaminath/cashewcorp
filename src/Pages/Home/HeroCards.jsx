@@ -24,7 +24,7 @@ function HeroCards() {
         <h1 className="card-title text-4xl text-blue-500 group-hover:text-white">{value.icon}</h1>
         <h1 className="card-title text-xl text-blue-500 group-hover:text-white"><FaExternalLinkAlt/></h1>
         </div>
-          <h2 className="card-title">{value.title}</h2>
+          <h2 className="text-gray-500 group-hover:text-white">{value.title}</h2>
           <p  className="text-gray-500 group-hover:text-white">{value.body}</p>
         </div>
       </div>
