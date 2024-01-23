@@ -14,6 +14,7 @@ import Franchisee from './Pages/AboutUs/Franchisee/Franchisee'
 import Exectives from './Pages/AboutUs/Executives/Exectives'
 import Blog from './Pages/Blog/Blog'
 import Organization from './Pages/Org/Organization'
+import DirectorBoardPage from './Pages/DirectorBoard/DirectorBoard'
 
 function App() {
   // initialize aos animation
@@ -37,6 +38,7 @@ function App() {
           <Route path='/blog' element={<Blog/>}/>
           <Route path='/executives' element={<Exectives/>}/>
           <Route path='/org' element={<Organization/>}/>
+          <Route path="/director-board" element={<DirectorBoardPage/>}/>
         </Routes>
       </BrowserRouter>
     </main>

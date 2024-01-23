@@ -204,6 +204,12 @@ function Navbar() {
               Product
             </Link>
             <Link
+              to="/director-board"
+              className="text-xl font-bold mt-3 hover:underline decoration-wavy decoration-red-400"
+            >
+              Director Board
+            </Link>
+            <Link
               to="/tender"
               className="text-xl font-bold mt-3 hover:underline decoration-wavy decoration-red-400"
             >
