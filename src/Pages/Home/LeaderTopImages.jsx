@@ -41,6 +41,7 @@ function LeaderTopImages() {
             image={value.image}
             position={value.position}
             content={value.content}
+            link="/"
           />
          ))}
     </div>
