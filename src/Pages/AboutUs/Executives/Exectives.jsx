@@ -2,6 +2,7 @@ import Navbar from "../../../Components/Navbar"
 import Footer from "../../../Components/Footer"
 import Banner from "../../../Components/Banner"
 import ExecutiveCard from "./ExecutiveCard"
+import ProfileCard from "../../../Components/ProfileCard"
 
 const seniorExecutives = [
   {
@@ -85,18 +86,26 @@ function Exectives() {
       {/* senior executives */}
       <div className="p-2 ">
       <h2 className="text-2xl font-bold text-center">Senior Executives</h2>
-      <div className="grid place-items-center  gap-3 grid-cols-2 lg:grid-cols-4">
+      <div className="grid place-items-center  gap-3 grid-cols-1 lg:grid-cols-4">
       {seniorExecutives.map((value) => (
-        <ExecutiveCard key={value.id} {...value}/>
+        <ProfileCard key={value.id} 
+        image={value.image} 
+        name={value.name} 
+        position={value.designation}
+        content={value.contact}/>
       ))}
       </div>
       </div>
       {/* junior executives */}
       <div className="p-2 ">
       <h2 className="text-2xl font-bold text-center">Junior Executives</h2>
-      <div className="grid place-items-center gap-3 grid-cols-2 lg:grid-cols-3">
+      <div className="grid place-items-center gap-3 grid-cols-1 lg:grid-cols-3">
       {juniorExecutives.map((value) => (
-        <ExecutiveCard key={value.id} {...value}/>
+        <ProfileCard key={value.id} 
+        image={value.image} 
+        name={value.name} 
+        position={value.designation}
+        content={value.contact}/>
       ))}
       </div>
       </div>
