@@ -2,12 +2,14 @@ import React from "react";
 
 function Banner({ image }) {
   return (
-    <div className="h-96 mb-6 overflow-hidden">
+    <div className="p-3">
+      <div className="h-96 mb-6 overflow-hidden">
       <img
         className="object-cover object-center w-full h-full "
         src={`/images/banner/${image}`}
         alt="Banner"
       />
+    </div>
     </div>
   );
 }
