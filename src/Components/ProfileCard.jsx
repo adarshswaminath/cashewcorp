@@ -11,10 +11,10 @@ function ProfileCard({ name, image, position, content, link }) {
               <img src={image} />
             </div>
             <div className="contentBx">
-              <h3>
+              <h3 className="text-red-500 font-bold">
                 {name}
                 <br />
-                <span>{position}</span>
+                <span className="text-black">{position}</span>
               </h3>
             </div>
           </div>
