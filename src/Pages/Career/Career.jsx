@@ -1,5 +1,6 @@
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
+import Banner from "../../Components/Banner"
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 
@@ -21,11 +22,8 @@ function Career() {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <div className="p-3">
-      <div className="banner">
-        <h3 className="text-3xl font-bold text-white">Career</h3>
-      </div>
-      </div>
+     <Banner image="career.jpg"/>
+     <h2 className="p-3 text-2xl font-bold">Career</h2>
       <div className="overflow-x-auto min-h-screen">
   <table className="table">
     {/* head */}

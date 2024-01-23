@@ -1,15 +1,14 @@
 import Footer from "../../Components/Footer";
 import Navbar from "../../Components/Navbar";
 import TenderTable from "./TenderTable";
+import Banner from "../../Components/Banner"
 
 function Tender() {
   return (
     <div>
       <Navbar />
-      <div className="p-3 min-h-screen">
-        <div className="banner">
-          <h2 className="text-3xl font-bold text-white">LIVE TENDERS</h2>
-        </div>
+      <div className=" min-h-screen">
+        <Banner image="tender.jpg"/>
         {/* tender page body */}
         <div className="p-2">
           {/* tender table */}
