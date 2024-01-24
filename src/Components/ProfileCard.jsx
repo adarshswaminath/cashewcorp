@@ -4,14 +4,14 @@ import "./style/profilecard.css";
 function ProfileCard({ name, image, position, content, link }) {
   return (
     <section>
-      <div className="container">
+      <div className="container group">
         <div className="card">
           <div className="content">
             <div className="imgBx">
               <img src={image} />
             </div>
             <div className="contentBx">
-              <h3 className="text-red-500 font-bold">
+              <h3 className="text-red-500 font-bold group-hover:opacity-0">
                 {name}
                 <br />
                 <span className="text-black">{position}</span>
