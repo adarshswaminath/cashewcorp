@@ -10,7 +10,7 @@ const getInTouchData = [
 
 function GetInTocuhCard({icon,firstMail,secondMail,anime}) {
   return (
-    <div data-aos={anime} className="p-6 flex flex-col items-center justify-center bg-white rounded-lg h-96 w-80 hover:scale-105 transition ease-in-out duration-200 hover:bg-gray-800 group">
+    <div data-aos={anime} className="p-6 flex flex-col items-center justify-center bg-white rounded-lg h-96 w-80 hover:scale-105 transition ease-in-out duration-200 hover:bg-sky-600 group">
       <h1 className="text-5xl lg:text-6xl text-sky-600 group-hover:text-white">
         {icon}
       </h1>
