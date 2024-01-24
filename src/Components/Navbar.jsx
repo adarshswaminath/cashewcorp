@@ -38,7 +38,7 @@ function Navbar() {
   );
 
   return (
-    <div className="h-28 border lg:rounded-[12px] bg-white text-black uppercase w-full flex items-center justify-between z-50">
+    <nav className="h-28 border lg:rounded-[12px] bg-white text-black uppercase w-full flex items-center justify-between z-50">
       {/* image logo */}
       <div className="logo flex items-center">
         <img src="/images/logo.png" className="h-12 lg:h-36" alt="Logo" />
@@ -260,7 +260,7 @@ function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </nav>
   );
 }
 

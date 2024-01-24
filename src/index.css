@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@600&family=Work+Sans&display=swap');
 
 
 @tailwind base;
@@ -6,8 +7,12 @@
 @tailwind utilities;
 
 
-body {
+/* body {
     font-family: 'Work Sans', sans-serif;
+} */
+body {
+  font-family: 'Work Sans', sans-serif;
+  /* font-family: 'Work Sans', sans-serif; */
 }
 .hero-container {
     position: relative;
