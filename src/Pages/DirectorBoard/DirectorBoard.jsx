@@ -8,7 +8,7 @@ function DirectorBoardPage() {
   return (
     <div>
         <Navbar/>
-        <Banner image="directorboard.jpg"/>
+        <Banner image="directorboard1.jpg"/>
         <DirectorBoard/>
         <Footer/>
     </div>
