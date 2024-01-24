@@ -15,7 +15,7 @@ import Exectives from './Pages/AboutUs/Executives/Exectives'
 import Blog from './Pages/Blog/Blog'
 import Organization from './Pages/Org/Organization'
 import DirectorBoardPage from './Pages/DirectorBoard/DirectorBoard'
-
+import AnimatedCursor from "react-animated-cursor"
 function App() {
   // initialize aos animation
   useEffect(() => {
@@ -24,6 +24,20 @@ function App() {
   })
   return (
     <main className='bg-gray-100 overflow-hidden'>
+      <AnimatedCursor 
+      innerSize={8}
+      outerSize={35}
+      innerScale={1}
+      outerScale={2}
+      outerAlpha={0}
+      hasBlendMode={true}
+      innerStyle={{
+        backgroundColor: 'var(--cursor-color)'
+      }}
+      outerStyle={{
+        border: '3px solid var(--cursor-color)'
+      }}
+      />
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home/>}/>
