@@ -98,10 +98,10 @@ function Footer() {
   return (
     <div
       className="relative bg-cover bg-center bg-no-repeat min-h-screen bg-gray-900"
-      // style={{ backgroundImage: `url(${backgroundImage})` }}
+      style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Black overlay */}
-      {/* <div className="absolute inset-0 bg-black opacity-75"></div> */}
+      <div className="absolute inset-0 bg-black opacity-75"></div>
 
       <div className="relative z-10 text-white p-4 mt-4">
         <h2 data-aos="fade-right" className="text-center text-5xl font-bold">
@@ -116,7 +116,7 @@ function Footer() {
         {/* social media pannel */}
         <FooterSocialMediaPannel />
         <div className="flex items-center justify-center">
-          <div className="flex items-center gap-4 mx-auto justify-center bg-white/10 bg:blur backdrop-blur w-full lg:w-1/2  m-2 rounded-lg">
+          <div className="flex items-center gap-4 mx-auto justify-center bg-white/10 p-2 bg:blur backdrop-blur w-full lg:w-1/2  m-2 rounded-lg">
             <img
               src="/images/footer1.png"
               className="h-20 w-20 rounded-lg"
@@ -141,8 +141,8 @@ function Footer() {
         </div>
         <div className="flex items-center justify-center">
         <div className="flex items-center justify-between w-3/4">
-          <img data-aos="zoom-out-right" src="https://thuna.keralapolice.gov.in/6bfe007f1bb70c9613d783078256812f.png" className="object-contain h-32 w-32" alt="gov image" />
-          <img data-aos="zoom-out-left" src="/images/CDC.png" className="object-contain h-32 w-32" alt="gov image" />
+          <img data-aos="zoom-out-right" src="https://thuna.keralapolice.gov.in/6bfe007f1bb70c9613d783078256812f.png" className="object-contain h-44 w-44" alt="gov image" />
+          <img data-aos="zoom-out-left" src="/images/CDC.png" className="object-contain h-44 w-44" alt="gov image" />
           </div>
         </div>
         {/* copy right section */}
