@@ -5,7 +5,7 @@ import GalleryImage from "./GalleryImage";
 function Gallery() {
   return (
     <div className="text-center p-4 ">
-      <h1 className="text-4xl text-red-500 font-bold my-8">Gallery</h1>
+      <h1 className="text-4xl text-[#FF1E1E] font-bold my-8">Gallery</h1>
 
       <div data-aos="zoom-out-up" className="grid lg:flex items-center gap-4 ">
         {/* Image Section */}
@@ -24,7 +24,7 @@ function Gallery() {
             ></iframe>
           </div>
           <Link to="/gallery">
-            <button className="px-5 py-2 bg-red-500 text-white rounded-md mt-4 hover:bg-red-600 transition duration-300">
+            <button className="px-5 py-2 bg-[#FF1E1E] text-white rounded-md mt-4 hover:bg-red-600 transition duration-300">
               Visit Video
             </button>
           </Link>

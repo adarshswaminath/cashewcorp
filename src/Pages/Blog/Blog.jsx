@@ -40,7 +40,7 @@ function Blog() {
         <th>{index+1}</th>
         <td className="font-bold">{value.title}</td>
         <td>
-          <a href={value.link} className="p-2 rounded-full bg-red-500 text-white flex items-center gap-2 justify-center">
+          <a href={value.link} className="p-2 rounded-full bg-[#FF1E1E] text-white flex items-center gap-2 justify-center">
             Details
             <FaExternalLinkAlt/>
           </a>

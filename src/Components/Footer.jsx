@@ -97,11 +97,11 @@ function FooterCopyRight() {
 function Footer() {
   return (
     <div
-      className="relative bg-cover bg-center bg-no-repeat min-h-screen"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
+      className="relative bg-cover bg-center bg-no-repeat min-h-screen bg-gray-900"
+      // style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Black overlay */}
-      <div className="absolute inset-0 bg-black opacity-75"></div>
+      {/* <div className="absolute inset-0 bg-black opacity-75"></div> */}
 
       <div className="relative z-10 text-white p-4 mt-4">
         <h2 data-aos="fade-right" className="text-center text-5xl font-bold">

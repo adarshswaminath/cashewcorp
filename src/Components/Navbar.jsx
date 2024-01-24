@@ -23,14 +23,14 @@ function Navbar() {
       transition={{ duration: 0.3 }}
       className="capitalize text-xs absolute hidden bg-white/10 bg:blur backdrop-blur text-black py-2 space-y-2 w-40 p-3 top-full left-0 group-hover:grid transition transform ease-in-out duration-300"
     >
-      <Link className="hover:bg-white p-2 border-0 hover:border hover:border-red-500" to="/kscdc">KSCDC</Link>
-      <Link className="hover:bg-white p-2 border-0 hover:border hover:border-red-500" to="/org">Organization</Link>
-      <Link className="hover:bg-white p-2 border-0 hover:border hover:border-red-500" to="/director-board">Director Board</Link>
-      <Link className="hover:bg-white p-2 border-0 hover:border hover:border-red-500" to="/executives">Executives</Link>
-      <Link className="hover:bg-white p-2 border-0 hover:border hover:border-red-500" to="/franchisee">Franchisee</Link>
+      <Link className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]" to="/kscdc">KSCDC</Link>
+      <Link className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]" to="/org">Organization</Link>
+      <Link className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]" to="/director-board">Director Board</Link>
+      <Link className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]" to="/executives">Executives</Link>
+      <Link className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]" to="/franchisee">Franchisee</Link>
       <Link
         to="/blog"
-        className="bg-red-600 text-white rounded-lg hover:bg-red-400 border-red-500 btn"
+        className="bg-red-600 text-white rounded-lg hover:bg-red-400 border-[#FF1E1E] btn"
       >
         What's New
       </Link>
@@ -53,7 +53,7 @@ function Navbar() {
       <div className="hidden lg:flex items-center space-x-5">
         <Link
           to="/"
-          className={`${path === "/" ? 'text-red-500' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
+          className={`${path === "/" ? 'text-[#FF1E1E]' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
         >
           Home
         </Link>
@@ -83,37 +83,37 @@ function Navbar() {
         </div>
         <Link
           to="/product"
-          className={`${path === "/product" ? 'text-red-500' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
+          className={`${path === "/product" ? 'text-[#FF1E1E]' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
         >
           Product
         </Link>
         <Link
           to="/tender"
-          className={`${path === "/tender" ? 'text-red-500' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
+          className={`${path === "/tender" ? 'text-[#FF1E1E]' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
         >
           Tender
         </Link>
         <Link
           to="/career"
-          className={`${path === "/career" ? 'text-red-500' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
+          className={`${path === "/career" ? 'text-[#FF1E1E]' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
         >
           Career
         </Link>
         <Link
           to="/rti"
-          className={`${path === "/rti" ? 'text-red-500' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
+          className={`${path === "/rti" ? 'text-[#FF1E1E]' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
         >
           RTI
         </Link>
         <Link
           to="/gallery"
-          className={`${path === "/gallery" ? 'text-red-500' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
+          className={`${path === "/gallery" ? 'text-[#FF1E1E]' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
         >
           Gallery
         </Link>
         <Link
           to="/contact"
-          className={`${path === "/contact" ? 'text-red-500' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
+          className={`${path === "/contact" ? 'text-[#FF1E1E]' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
         >
           Contact
         </Link>
@@ -134,7 +134,7 @@ function Navbar() {
             to="/product"
             className=" rounded flex items-center justify-center  top-0 right-2 relative"
           >
-            <button className="flex items-center gap-2 font-bold bg-red-500 hover:bg-red-400 p-2 rounded-lg text-white">
+            <button className="flex items-center gap-2 font-bold bg-[#FF1E1E] hover:bg-red-400 p-2 rounded-lg text-white">
               Shop Now
               <FaShoppingCart />
             </button>
@@ -246,14 +246,14 @@ function Navbar() {
               What's New
             </Link>
             <Link to="/product">
-              <button className="flex items-center text-xl btn m-3 rounded-lg bg-red-500 hover:bg-red-400 text-white">
+              <button className="flex items-center text-xl btn m-3 rounded-lg bg-[#FF1E1E] hover:bg-red-400 text-white">
                 Shop Now
                 <FaShoppingCart />
               </button>
             </Link>
             <button
               onClick={toggleMenu}
-              className="mt-3 rounded-full bg-red-500 text-white p-3"
+              className="mt-3 rounded-full bg-[#FF1E1E] text-white p-3"
             >
               <RxCross2 />
             </button>

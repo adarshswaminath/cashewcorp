@@ -35,7 +35,7 @@ const Product = () => {
   }, []);
   return (
     <div className="marquee w-full">
-      <h2 className="text-3xl font-bold m-4 text-center text-red-500">
+      <h2 className="text-3xl font-bold m-4 text-center text-[#FF1E1E]">
         Our Products
       </h2>
       <ul className="marquee-content">
@@ -47,7 +47,7 @@ const Product = () => {
               alt="Product"
             />
             <p className="bottom-0 text-xl font-bold text-black text-left">Product Name</p>
-            <Link to="/product" className="text-sm px-5 py-1.5 bg-red-500 text-white">
+            <Link to="/product" className="text-sm px-5 py-1.5 bg-[#FF1E1E] text-white">
               Purchase
             </Link>
             </div>

@@ -35,22 +35,22 @@ function ProductList() {
         />
         {/* btns */}
         <div className="flex items-center justify-center mt-4">
-        <div className="flex gap-3 items-center p-3 border border-red-500">
+        <div className="flex gap-3 items-center p-3 border border-[#FF1E1E]">
           <button
             onClick={() => setSelectedCategory('cat-1')}
-            className={`p-2  rounded ${selectedCategory === 'cat-1' ? 'bg-red-500 text-white' : 'bg-white'}`}
+            className={`p-2  rounded ${selectedCategory === 'cat-1' ? 'bg-[#FF1E1E] text-white' : 'bg-white'}`}
           >
             All
           </button>
           <button
             onClick={() => setSelectedCategory('cat-2')}
-            className={`p-2  rounded ${selectedCategory === 'cat-2' ? 'bg-red-500 text-white' : 'bg-white'}`}
+            className={`p-2  rounded ${selectedCategory === 'cat-2' ? 'bg-[#FF1E1E] text-white' : 'bg-white'}`}
           >
             Bulk Value Products
           </button>
           <button
             onClick={() => setSelectedCategory('cat-3')}
-            className={`p-2  rounded ${selectedCategory === 'cat-3' ? 'bg-red-500 text-white' : 'bg-white'}`}
+            className={`p-2  rounded ${selectedCategory === 'cat-3' ? 'bg-[#FF1E1E] text-white' : 'bg-white'}`}
           >
             Value Added Products
           </button>

@@ -31,10 +31,10 @@ const linksArray = [
 
 const Card = ({ link }) => {
   return (
-    <div className="cursor-pointer group bg-white hover:bg-red-500 hover:text-white shadow-lg  flex items-center justify-center p-4 mb-4 rounded-md">
+    <div className="cursor-pointer group bg-white hover:bg-[#FF1E1E] hover:text-white shadow-lg  flex items-center justify-center p-4 mb-4 rounded-md">
       <a
         href={link}
-        className="font-bold text-center flex items-center gap-3 text-transparent group-hover:text-white bg-gradient-to-r from-red-500 to-black bg-clip-text"
+        className="font-bold text-center flex items-center gap-3 text-transparent group-hover:text-white bg-gradient-to-r from-[#FF1E1E] to-black bg-clip-text"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -50,7 +50,7 @@ function UseFulLinks() {
 
   return (
     <div className="container mx-auto mt-12 mb-2">
-      <h2 className="text-sm lg:text-4xl font-bold text-center mb-6 text-red-500">
+      <h2 className="text-sm lg:text-4xl font-bold text-center mb-6 text-[#FF1E1E]">
         Useful Links
       </h2>
       <p className="text-gray-700 text-center mb-8">

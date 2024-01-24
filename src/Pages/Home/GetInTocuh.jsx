@@ -24,7 +24,7 @@ function GetInTocuhCard({icon,firstMail,secondMail,anime}) {
         </p>
       </div>
       <h2 className="m-3 font-bold group-hover:text-white">Get Support</h2>
-      <button className="btn border-red-500 text-red-500 px-[68px] bg-white group-hover:text-white group-hover:bg-transparent group-hover:border-white">
+      <button className="btn border-[#FF1E1E] text-[#FF1E1E] px-[68px] bg-white group-hover:text-white group-hover:bg-transparent group-hover:border-white">
         Get Support
       </button>
     </div>
@@ -36,7 +36,7 @@ function GetInTocuh() {
   return (
     <div>
       <div className="p-4 md:p-8 lg:p-12 bg-gray-100">
-      <h3 className="text-4xl font-bold mb-6 text-center text-red-500">Get In Touch.</h3>
+      <h3 className="text-4xl font-bold mb-6 text-center text-[#FF1E1E]">Get In Touch.</h3>
       <p className="text-center max-w-3xl mx-auto text-gray-500 font-bold mb-10">
         Problems trying to resolve the conflict between the two major realms of
         Classical physics Newtonian mechanics.

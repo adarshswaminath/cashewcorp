@@ -54,7 +54,7 @@ function ProductModal({ selectedData, setShowModal }) {
                 onClick={decrement}
                 disabled={isDisabled}
                 className={`p-2 ${
-                  isDisabled ? "bg-red-200" : "bg-red-500"
+                  isDisabled ? "bg-red-200" : "bg-[#FF1E1E]"
                 } text-white rounded-full`}
               >
                 <FaMinus />
@@ -62,14 +62,14 @@ function ProductModal({ selectedData, setShowModal }) {
               <span className="mx-4 text-xl font-bold">{count}x</span>
               <button
                 onClick={increase}
-                className="p-2 bg-red-500 text-white rounded-full"
+                className="p-2 bg-[#FF1E1E] text-white rounded-full"
               >
                 <FaPlus />
               </button>
             </div>
             <button
               onClick={handleBuyNow}
-              className="mt-6 text-white bg-red-500 hover:bg-red-400 p-2 w-full rounded-full"
+              className="mt-6 text-white bg-[#FF1E1E] hover:bg-red-400 p-2 w-full rounded-full"
             >
               Buy Now
             </button>

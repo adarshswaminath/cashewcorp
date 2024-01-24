@@ -75,7 +75,7 @@ function TenderTable() {
         </label>
         <div className="flex mt-2 items-center justify-center gap-3">
           <button
-            className={`btn ${selectedType === "all" ? "active bg-red-500 text-white" : ""}`}
+            className={`btn ${selectedType === "all" ? "active bg-[#FF1E1E] text-white" : ""}`}
             onClick={() => {
               setSelectedType("all");
               setSelectedSubType("all");
@@ -84,7 +84,7 @@ function TenderTable() {
             All
           </button>
           <button
-            className={`btn ${selectedType === "tender" ? "active bg-red-500 text-white" : ""}`}
+            className={`btn ${selectedType === "tender" ? "active bg-[#FF1E1E] text-white" : ""}`}
             onClick={() => {
               setSelectedType("tender");
               setSelectedSubType("all");
@@ -93,7 +93,7 @@ function TenderTable() {
             Tender
           </button>
           <button
-            className={`btn ${selectedType === "quotation" ? "active bg-red-500 text-white" : ""}`}
+            className={`btn ${selectedType === "quotation" ? "active bg-[#FF1E1E] text-white" : ""}`}
             onClick={() => {
               setSelectedType("quotation");
               setSelectedSubType("all");
@@ -102,7 +102,7 @@ function TenderTable() {
             Quotation
           </button>
           <button
-            className={`btn ${selectedType === "previous" ? "active bg-red-500 text-white" : ""}`}
+            className={`btn ${selectedType === "previous" ? "active bg-[#FF1E1E] text-white" : ""}`}
             onClick={() => setSelectedType("previous")}
           >
             Previous
@@ -143,7 +143,7 @@ function TenderTable() {
                 <td>
                   <a
                     href={value.link}
-                    className="p-2 bg-red-500 text-white rounded-full flex items-center gap-2 justify-center"
+                    className="p-2 bg-[#FF1E1E] text-white rounded-full flex items-center gap-2 justify-center"
                   >
                     open
                     <FaExternalLinkAlt />

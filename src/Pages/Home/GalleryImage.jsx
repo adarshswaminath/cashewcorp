@@ -11,7 +11,7 @@ function GalleryImage() {
 	            <img className="image object-cover" src="https://cashewcorporation.com/wp-content/uploads/2015/03/1.jpg" />
             </div>
           <Link to="/gallery">
-            <button className="px-5 py-2 bg-red-500 text-white rounded-md mt-4 hover:bg-red-600 transition duration-300">
+            <button className="px-5 py-2 bg-[#FF1E1E] text-white rounded-md mt-4 hover:bg-red-600 transition duration-300">
               Visit Images
             </button>
           </Link>

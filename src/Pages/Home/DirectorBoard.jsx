@@ -43,7 +43,7 @@ function DirectorBoard() {
   return (
     <div>
       <div className="p-3">
-      <h3 className="text-xl text-red-500 lg:text-2xl font-extrabold  m-4 text-center">
+      <h3 className="text-xl text-[#FF1E1E] lg:text-2xl font-extrabold  m-4 text-center">
         Our Board Of Directors
       </h3>
       <div className="flex items-center justify-center">
