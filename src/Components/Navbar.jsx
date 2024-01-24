@@ -59,7 +59,7 @@ function Navbar() {
         </Link>
         <div className="relative group">
           <Link
-            to="/"
+            to="/kscdc"
             className="text-xs cursor-pointer flex items-center space-x-2 font-bold"
           >
             About Us
@@ -174,7 +174,7 @@ function Navbar() {
               Home
             </Link>
             <Link
-              to="/about"
+              to="/kscdc"
               className="text-xl font-bold mt-3 hover:underline decoration-wavy decoration-red-400"
             >
               About us
