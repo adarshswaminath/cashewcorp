@@ -3,7 +3,7 @@ import "./style/profilecard.css";
 
 function ProfileCard({ name, image, position, content, link ,title}) {
   return (
-    <section data-aos-duration="600" data-aos="zoom-in-right">
+    <section data-aos-duration="100" data-aos="zoom-in-right">
       <div className="container group">
         <div className="card">
           <div className="content">

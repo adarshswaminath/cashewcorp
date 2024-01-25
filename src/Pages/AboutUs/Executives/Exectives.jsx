@@ -29,14 +29,14 @@ const seniorExecutives = [
   {
     id: 4,
     name: "Shri. Raja Sankara Pillai",
-    image: "/images/executives/sr-4.jpg",
+    image: "/images/executives/sr-4.png",
     designation: "Finance Manager & Company Secretary",
     contact: ["8281114649(O)","0474-2742271(Exn-49)(O)","9840383950(M)" ,"fm@cashewcorporation.com"]
   },
   {
     id: 5,
     name: "Shri.A.Gopakumar",
-    image: "/images/executives/sr-5.png",
+    image: "/images/executives/sr-5.jpg",
     designation: "Production Manager",
     contact: ["8281114637 (O)" ,"0474-2742271(Exn-46)(O)", "9947783524(M)","prm@cashewcorporation.com"]
   },
@@ -97,9 +97,9 @@ function Exectives() {
       </div>
       </div>
       {/* junior executives */}
-      <div className="p-2 ">
+      <div className="">
       <h2 className="text-2xl font-bold text-center">Junior Executives</h2>
-      <div className="grid place-items-center gap-3 grid-cols-1 lg:grid-cols-3">
+      <div className="grid place-items-center gap-3 grid-cols-1 lg:grid-cols-4">
       {juniorExecutives.map((value) => (
         <ProfileCard key={value.id} 
         image={value.image} 
