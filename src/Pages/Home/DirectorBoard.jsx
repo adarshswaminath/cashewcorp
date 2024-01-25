@@ -22,7 +22,7 @@ const cardData = [
 
 const ChooseCard = ({ image, title, caption }) => {
   return (
-    <div className="relative flex flex-col items-center group">
+    <div data-aos="flip-down" className="relative flex flex-col items-center group">
       <img
         className="h-48 w-40 object-cover rounded-lg shadow-lg border border-blue-400 hover:scale-125 transition duration-300 ease-in-out"
         src={image}
@@ -43,7 +43,7 @@ function DirectorBoard() {
   return (
     <div>
       <div className="p-3">
-      <h3 className="text-xl text-[#FF1E1E] lg:text-2xl font-extrabold  m-4 text-center">
+      <h3 data-aos="fade-right" className="text-xl text-[#FF1E1E] lg:text-2xl font-extrabold  m-4 text-center">
         Our Board Of Directors
       </h3>
       <div className="flex items-center justify-center">
