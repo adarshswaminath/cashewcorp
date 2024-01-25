@@ -38,7 +38,7 @@ function Navbar() {
   );
 
   return (
-    <nav className="h-28 border lg:rounded-[12px] bg-white text-black uppercase w-full flex items-center justify-between z-50">
+    <nav className="h-28 border lg:rounded-[12px] bg-white text-black uppercase w-full flex items-center justify-evenly z-50">
       {/* image logo */}
       <div className="logo flex items-center">
         <img src="/images/logo.png" className="h-12 lg:h-36" alt="Logo" />
@@ -46,21 +46,21 @@ function Navbar() {
           <h3 className="font-bold max-w-md">
             The kerala state cashew development corporation ltd
           </h3>
-          <p className="text-xs text-gray-500 ">(A Government of Kerala Undertaking)</p>
+          <p className="text-xs text-gray-800 ">(A Government of Kerala Undertaking)</p>
         </div>
       </div>
       {/* navbar content */}
-      <div className="hidden lg:flex items-center space-x-5">
+      <div className="hidden lg:flex space-x-2 items-center ">
         <Link
           to="/"
-          className={`${path === "/" ? 'text-[#FF1E1E]' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
+          className={`${path === "/" ? 'text-[#FF1E1E]' : ""} text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold`}
         >
           Home
         </Link>
         <div className="relative group">
           <Link
             to="/kscdc"
-            className="text-xs cursor-pointer flex items-center space-x-2 font-bold"
+            className=" text-xs cursor-pointer flex items-center space-x-2 font-bold"
           >
             About Us
             {/* down sv */}
@@ -83,37 +83,37 @@ function Navbar() {
         </div>
         <Link
           to="/product"
-          className={`${path === "/product" ? 'text-[#FF1E1E]' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
+          className={`${path === "/product" ? 'text-[#FF1E1E]' : ""} text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold`}
         >
           Product
         </Link>
         <Link
           to="/tender"
-          className={`${path === "/tender" ? 'text-[#FF1E1E]' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
+          className={`${path === "/tender" ? 'text-[#FF1E1E]' : ""} text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold`}
         >
           Tender
         </Link>
         <Link
           to="/career"
-          className={`${path === "/career" ? 'text-[#FF1E1E]' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
+          className={`${path === "/career" ? 'text-[#FF1E1E]' : ""} text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold`}
         >
           Career
         </Link>
         <Link
           to="/rti"
-          className={`${path === "/rti" ? 'text-[#FF1E1E]' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
+          className={`${path === "/rti" ? 'text-[#FF1E1E]' : ""} text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold`}
         >
           RTI
         </Link>
         <Link
           to="/gallery"
-          className={`${path === "/gallery" ? 'text-[#FF1E1E]' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
+          className={`${path === "/gallery" ? 'text-[#FF1E1E]' : ""} text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold`}
         >
           Gallery
         </Link>
         <Link
           to="/contact"
-          className={`${path === "/contact" ? 'text-[#FF1E1E]' : ""} text-xs hover:underline decoration-wavy decoration-red-400 font-bold`}
+          className={`${path === "/contact" ? 'text-[#FF1E1E]' : ""} text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold`}
         >
           Contact
         </Link>
@@ -169,79 +169,79 @@ function Navbar() {
 
             <Link
               to="/"
-              className="text-xl font-bold mt-3 hover:underline decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
             >
               Home
             </Link>
             <Link
               to="/kscdc"
-              className="text-xl font-bold mt-3 hover:underline decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
             >
               About us
             </Link>
             <Link
               to="/executives"
-              className="text-xl font-bold mt-3 hover:underline decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
             >
               Executives
             </Link>
             <Link
               to="/org"
-              className="text-xl font-bold mt-3 hover:underline decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
             >
               Organization
             </Link>
             <Link
               to="/franchisee"
-              className="text-xl font-bold mt-3 hover:underline decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
             >
               Franchisee
             </Link>
             <Link
               to="/product"
-              className="text-xl font-bold mt-3 hover:underline decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
             >
               Product
             </Link>
             <Link
               to="/director-board"
-              className="text-xl font-bold mt-3 hover:underline decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
             >
               Director Board
             </Link>
             <Link
               to="/tender"
-              className="text-xl font-bold mt-3 hover:underline decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
             >
               Tender
             </Link>
             <Link
               to="/career"
-              className="text-xl font-bold mt-3 hover:underline decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
             >
               Career
             </Link>
             <Link
               to="/rti"
-              className="text-xl font-bold mt-3 hover:underline decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
             >
               RTI
             </Link>
             <Link
               to="/gallery"
-              className="text-xl font-bold mt-3 hover:underline decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
             >
               Gallery
             </Link>
             <Link
               to="/contact"
-              className="text-xl font-bold mt-3 hover:underline decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
             >
               Contact
             </Link>
             <Link
               to="/blog"
-              className="text-xl font-bold mt-3 hover:underline decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
             >
               What's New
             </Link>
