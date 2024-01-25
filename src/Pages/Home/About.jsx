@@ -8,8 +8,6 @@ function About() {
         <div className="grid gap-4 lg:flex items-center justify-evenly   m-6 about">
           <div
             data-aos="fade-right"
-            data-aos-offset="600"
-            data-aos-easing="ease-in-sine"
             className="flex flex-col items-start"
           >
             <div>
