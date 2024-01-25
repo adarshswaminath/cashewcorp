@@ -141,7 +141,7 @@ function Footer() {
         </div>
         <div className="flex items-center justify-center">
         <div className="flex items-center justify-between w-3/4">
-          <img data-aos="zoom-out-right" src="https://thuna.keralapolice.gov.in/6bfe007f1bb70c9613d783078256812f.png" className="object-contain h-44 w-44" alt="gov image" />
+          <img data-aos="zoom-out-right" src="/images/logo-2.png" className="object-contain h-72 w-72" alt="gov image" />
           <img data-aos="zoom-out-left" src="/images/CDC.png" className="object-contain h-44 w-44" alt="gov image" />
           </div>
         </div>
