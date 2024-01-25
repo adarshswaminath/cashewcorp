@@ -157,7 +157,7 @@ const TenderTable = () => {
         <table className="table">
           {/* head */}
           <thead>
-            <tr className="text-black">
+            <tr className="text-black bg-red-400">
               <th></th>
               <th>Tender Title</th>
               <th>Date</th>

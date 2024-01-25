@@ -82,17 +82,17 @@ function Career() {
       <div className="overflow-x-auto min-h-screen">
         <table className="table">
           {/* head */}
-          <thead className="font-bold text-black">
+          <thead className="font-bold text-black bg-red-400">
             <tr>
               <th></th>
-              <th>Title</th>
+              <th>Job Title</th>
               <th>Date</th>
             </tr>
           </thead>
           <tbody>
             {/* row 1 */}
             {careerData.map((value, index) => (
-              <tr key={index} className="bg-base-200">
+              <tr key={index} className={`${index % 2 ===0 ? "bg-red-100" : "bg-red-50"}`}>
                 <th>{index + 1}</th>
                 <a href={value.link} target="_blank">
                 <td className="font-bold flex items-center gap-2">
