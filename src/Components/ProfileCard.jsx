@@ -36,7 +36,7 @@ function ProfileCard({ name, image, position, content, link ,title}) {
             <li className="bg-white">
               {link ? (
                 <a href={link}>
-                  <button className="btn hover:bg-indigo-500 bg-blue-500 text-white mt-2">
+                  <button className="btn  bg-blue-500 text-white mt-2 border hover:border-blue-500 hover:bg-white hover:text-blue-500">
                     Read More
                   </button>
                 </a>
