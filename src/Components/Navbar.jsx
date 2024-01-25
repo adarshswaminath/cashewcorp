@@ -27,6 +27,7 @@ function Navbar() {
       <Link className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]" to="/org">Organization</Link>
       <Link className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]" to="/director-board">Director Board</Link>
       <Link className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]" to="/executives">Executives</Link>
+      <Link className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]" to="/quality-policy">Quality Policy</Link>
       <Link className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]" to="/franchisee">Franchisee</Link>
       <Link
         to="/blog"
@@ -190,6 +191,12 @@ function Navbar() {
               className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
             >
               Organization
+            </Link>
+            <Link
+              to="/quality-policy"
+              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
+            >
+              Quality Policy
             </Link>
             <Link
               to="/franchisee"
