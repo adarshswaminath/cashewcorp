@@ -1,17 +1,4 @@
-import {
-  FaGithub,
-  FaCodepen,
-  FaFreeCodeCamp,
-  FaDev,
-  FaReact,
-  FaVuejs,
-  FaAngular,
-  FaNode,
-  FaWordpress,
-  FaAws,
-  FaDocker,
-  FaAndroid,
-} from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
 import "./style/product.css";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
@@ -47,8 +34,9 @@ const Product = () => {
               alt="Product"
             />
             <p className="bottom-0 text-xl font-bold text-black text-left">Product Name</p>
-            <Link to="/product" className="text-sm px-5 py-1.5 bg-[#FF1E1E] text-white">
-              Purchase
+            <Link to="/product" className="text-sm px-5 py-1.5 bg-[#FF1E1E] text-white font-bold flex items-center gap-2">
+              Buy Now
+              <FaShoppingCart/>
             </Link>
             </div>
           </li>
