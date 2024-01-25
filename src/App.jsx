@@ -24,7 +24,7 @@ function App() {
     Aos.refresh()
   })
   return (
-    <main className='bg-gray-100 overflow-hidden'>
+    <main className='bg-gray-100 overflow-hidden '>
       {/* <AnimatedCursor 
       innerSize={8}
       outerSize={35}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { franchiseeData } from ".";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaImage } from "react-icons/fa6";
 
 function FranchiseeTable() {
   const [selectedDistrict, setSelectedDistrict] = useState("");
@@ -64,10 +65,10 @@ function FranchiseeTable() {
       </select>
     </div>
 
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto h-screen">
       <table className="table">
-        <thead>
-          <tr>
+        <thead className="sticky top-0 z-50 bg-red-500/10 bg:blur backdrop-blur">
+          <tr className="text-gray-800">
             <th></th>
             <th>Name</th>
             <th>District</th>
@@ -81,12 +82,12 @@ function FranchiseeTable() {
         <tbody>
           {Object.keys(groupedFranchisees).map((district) => (
             <React.Fragment key={district}>
-              <tr className="bg-gray-300">
+              <tr className="bg-red-400">
                 <td colSpan="8" className="text-lg font-bold">{district}</td>
               </tr>
               {groupedFranchisees[district].map((value, index) => (
                 <>
-                <tr key={value.id} className={index % 2 === 0 ? "bg-white" : "bg-gray-100"}>
+                <tr key={value.id} className={index % 2 === 0 ? "bg-red-100" : "bg-red-200"}>
                   <td>{index + 1}</td>
                   <td>{value.name}</td>
                   <td>{value.district}</td>
@@ -99,9 +100,9 @@ function FranchiseeTable() {
                   <td>
                     <button
                       onClick={handleImageClick}
-                      className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600"
+                      className="bg-red-500 text-white p-2 rounded-md hover:bg-blue-600 text-2xl"
                     >
-                      View Image
+                      <FaImage/>
                     </button>
                   </td>
                 </tr>

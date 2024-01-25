@@ -8,7 +8,8 @@
 
 
 html {
-  --cursor-color: #333
+  --cursor-color: #333;
+  ::-webkit-scrollbar {display:none;}
 }
 
 html.dark-mode {
@@ -33,3 +34,4 @@ body {
   .banner {
     @apply h-48 bg-gradient-to-r from-[#ED213A] to-[#93291E] flex flex-col items-center justify-center;
   }
+
