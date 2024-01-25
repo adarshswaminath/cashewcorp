@@ -39,7 +39,7 @@ function About() {
               maximum employment to them ensuring their statutory benefits like
               minimum wages, bonus and etc. prevailing in the cashew industry.
             </p>
-            <button className="mt-4 px-5 py-2 bg-[#FF1E1E] font-bold text-white uppercase ">
+            <button className="mt-4 px-5 py-2 bg-[#FF1E1E] font-bold text-white uppercase transform -translate-y-0 hover:-translate-y-3 hover:scale-110 transition duration-300 ease-in-out hover:shadow-2xl">
               more about us
             </button>
           </div>
