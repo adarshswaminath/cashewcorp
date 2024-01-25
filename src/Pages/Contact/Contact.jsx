@@ -4,6 +4,7 @@ import "../Home/style/home.css";
 import Footer from "../../Components/Footer"
 import DefaultContact from "./DefaultContact";
 import ContactFactory from "./ContactFactory";
+import HeadQuaters from "./HeadQuaters";
 
 function ContactInfoBox() {
   return (
@@ -31,7 +32,8 @@ function Contact() {
          return <DefaultContact/>
       case "factory":
           return <ContactFactory/>
-    
+      case "headquaters":
+          return <HeadQuaters/>
       default:
         return <DefaultContact/>;
     }
@@ -43,8 +45,8 @@ function Contact() {
       <div className="flex flex-col items-center">
         <div className="grid grid-cols-3  gap-3 lg:flex items-center justify-center space-x-3 mt-4 mb-4">
           <button className={`px-5 py-1 border hover:bg-[#FF1E1E] hover:text-white ${currentPage === "default" ? 'bg-[#FF1E1E] text-white' : "bg-transparent" }`} onClick={() => setCurrentPage("default")}>Contact</button>
+          <button className={`px-5 py-1 border hover:bg-[#FF1E1E] hover:text-white ${currentPage === "headquaters" ? 'bg-[#FF1E1E] text-white' : "bg-transparent" }`} onClick={() => setCurrentPage("headquaters")}>Head Office</button>
           <button className={`px-5 py-1 border hover:bg-[#FF1E1E] hover:text-white ${currentPage === "factory" ? 'bg-[#FF1E1E] text-white' : "bg-transparent" }`} onClick={() => setCurrentPage("factory")}>Factories</button>
-          <button className={`px-5 py-1 border hover:bg-[#FF1E1E] hover:text-white ${currentPage === "headquaters" ? 'bg-[#FF1E1E] text-white' : "bg-transparent" }`} onClick={() => setCurrentPage("headquaters")}>Head Quaters</button>
         </div>
         <span className="text-gray-500">Contact Us</span>
         <h1 className="text-2xl lg:text-4xl text-balance max-w-md tracking-wider text-center font-bold">

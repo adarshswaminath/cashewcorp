@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import { factoriesData } from '../Org'
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 function ContactFactory() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -23,29 +24,38 @@ function ContactFactory() {
             type="text"
             id="search"
             placeholder="Search by location"
-            className="p-2 border rounded-md w-full"
+            className="p-2 border rounded-md w-full outline-none"
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
         <div className="overflow-x-auto">
-          <table className="w-full table-auto">
+          <table className="w-full ">
             {/* head */}
-            <thead>
+            <thead className='bg-red-500 text-white sticky'>
               <tr>
-                <th className="border p-2"></th>
+                <th className="border p-2">Sl.No</th>
                 <th className="border p-2">Location</th>
                 <th className="border p-2">Phone Number</th>
                 <th className="border p-2">Email</th>
+                <th className="border p-2">Image</th>
+
+                
               </tr>
             </thead>
             <tbody>
               {/* rows */}
-              {filteredFactories.map((value) => (
-                <tr key={value.factoryNo}>
+              {filteredFactories.map((value,index) => (
+                <tr className={`${index %2==0 ? "bg-red-300" : "bg-red-200"}`} key={value.factoryNo}>
                   <th className="border p-2">{value.factoryNo}</th>
-                  <td className="border p-2">{value.location}</td>
+                  <td className="border p-2">
+                    <a href="https://www.google.com" className='flex gap-3 items-center' target='_blank'>
+                    {value.location}
+                    <FaExternalLinkAlt className='text-base'/>
+                    </a>
+                  </td>
                   <td className="border p-2">{value.phoneNumber}</td>
                   <td className="border p-2">{value.email}</td>
+                  <td className="border p-2">Open</td>
                 </tr>
               ))}
             </tbody>
