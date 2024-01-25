@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import "./style/profilecard.css";
 
-function ProfileCard({ name, image, position, content, link }) {
+function ProfileCard({ name, image, position, content, link ,title}) {
   return (
-    <section>
+    <section data-aos-duration="600" data-aos="zoom-in-right">
       <div className="container group">
         <div className="card">
           <div className="content">
             <div className="imgBx">
-              <img src={image} />
+              <img src={image} alt={name} />
             </div>
             <div className="contentBx">
               <h3 className="text-[#FF1E1E] font-bold group-hover:opacity-0">
@@ -20,6 +20,7 @@ function ProfileCard({ name, image, position, content, link }) {
           </div>
           <ul className="sci ">
             <li className="bg-[#F4F5F6] max-w-64">
+              <p className="font-extrabold mb-2">{title}</p>
               {Array.isArray(content) ? (
                 <>
                   <p>{content[0]}</p>

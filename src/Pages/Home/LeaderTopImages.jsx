@@ -8,7 +8,8 @@ const leaderData = [
     position: "Hon'ble Chief Minister",
     content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum inlabore laudantium deserunt fugiat numquam.",
     image:
-      "https://www.pngitem.com/pimgs/m/571-5714583_pinarayi-vijayan-and-kamal-haasan-hd-png-download.png",
+      "/images/cm.jpeg",
+      title: "Hon. CM's Message"
   },
   {
     name: "Shri. P.Rajeeve",
@@ -16,18 +17,21 @@ const leaderData = [
     content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum inlabore laudantium deserunt fugiat numquam.",
     image:
       "https://minister-industries.kerala.gov.in/wp-content/uploads/2021/09/prajeev.jpg",
+    title: "Hon. Ministers Message"
   },
   {
     name: "Shri. S.Jayamohan",
     position: "Chairman",
     content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum inlabore laudantium deserunt fugiat numquam.",
     image: "/images/chairman.png",
+    title: "Chairman's Message"
   },
   {
     name: "Shri. Sunil John . K",
     position: "Managing Director",
     content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum inlabore laudantium deserunt fugiat numquam.",
     image: "/images/director.png",
+    title: "Managing Director Message"
   },
 ];
 
@@ -41,6 +45,7 @@ function LeaderTopImages() {
             image={value.image}
             position={value.position}
             content={value.content}
+            title={value.title}
             link="/"
           />
          ))}
