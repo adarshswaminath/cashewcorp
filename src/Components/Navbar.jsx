@@ -2,18 +2,35 @@ import React, { useState } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { RxCross2 } from "react-icons/rx";
 import { FaShoppingCart } from "react-icons/fa";
-import { Link,useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import "./style/navbar.css";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const location = useLocation()
-  const path = location.pathname
+  const location = useLocation();
+  const path = location.pathname;
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const subProduct = () => (
+    <div className="capitalize text-xs absolute hidden bg-white/10 bg:blur backdrop-blur text-black py-2 space-y-2 w-40 p-3 top-full left-0 group-hover:grid transition transform ease-in-out duration-300">
+      <Link
+        className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]"
+        to="/product"
+      >
+        CDC Brand
+      </Link>
+      <Link
+        className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]"
+        to="/product"
+      >
+        Online Shopping
+      </Link>
+    </div>
+  );
 
   const SubMenu = () => (
     <motion.div
@@ -23,12 +40,42 @@ function Navbar() {
       transition={{ duration: 0.3 }}
       className="capitalize text-xs absolute hidden bg-white/10 bg:blur backdrop-blur text-black py-2 space-y-2 w-40 p-3 top-full left-0 group-hover:grid transition transform ease-in-out duration-300"
     >
-      <Link className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]" to="/kscdc">KSCDC</Link>
-      <Link className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]" to="/org">Organization</Link>
-      <Link className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]" to="/director-board">Director Board</Link>
-      <Link className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]" to="/executives">Executives</Link>
-      <Link className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]" to="/quality-policy">Quality Policy</Link>
-      <Link className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]" to="/franchisee">Franchisee</Link>
+      <Link
+        className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]"
+        to="/kscdc"
+      >
+        KSCDC
+      </Link>
+      <Link
+        className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]"
+        to="/org"
+      >
+        Organization
+      </Link>
+      <Link
+        className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]"
+        to="/director-board"
+      >
+        Director Board
+      </Link>
+      <Link
+        className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]"
+        to="/executives"
+      >
+        Executives
+      </Link>
+      <Link
+        className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]"
+        to="/quality-policy"
+      >
+        Quality Policy
+      </Link>
+      <Link
+        className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]"
+        to="/franchisee"
+      >
+        Franchisee
+      </Link>
       <Link
         to="/blog"
         className="bg-red-600 text-white rounded-lg hover:bg-red-400 border-[#FF1E1E] btn"
@@ -47,14 +94,18 @@ function Navbar() {
           <h3 className="font-bold max-w-md">
             The kerala state cashew development corporation ltd
           </h3>
-          <p className="text-xs text-gray-800 ">(A Government of Kerala Undertaking)</p>
+          <p className="text-xs text-gray-800 ">
+            (A Government of Kerala Undertaking)
+          </p>
         </div>
       </div>
       {/* navbar content */}
       <div className="hidden lg:flex space-x-2 items-center ">
         <Link
           to="/"
-          className={`${path === "/" ? 'text-[#FF1E1E]' : ""} text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold`}
+          className={`${
+            path === "/" ? "text-[#FF1E1E]" : ""
+          } text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold`}
         >
           Home
         </Link>
@@ -82,39 +133,67 @@ function Navbar() {
           </Link>
           {SubMenu()}
         </div>
-        <Link
-          to="/product"
-          className={`${path === "/product" ? 'text-[#FF1E1E]' : ""} text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold`}
-        >
-          Product
-        </Link>
+        <div className="relative group">
+          <Link
+            className={`${
+              path === "/product" ? "text-[#FF1E1E]" : ""
+            } text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold flex items-center`}
+          >
+            Product
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-4 h-4 group-hover:opacity-0"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m19.5 8.25-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+          </Link>
+          {subProduct()}
+        </div>
         <Link
           to="/tender"
-          className={`${path === "/tender" ? 'text-[#FF1E1E]' : ""} text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold`}
+          className={`${
+            path === "/tender" ? "text-[#FF1E1E]" : ""
+          } text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold`}
         >
           Tender
         </Link>
         <Link
           to="/career"
-          className={`${path === "/career" ? 'text-[#FF1E1E]' : ""} text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold`}
+          className={`${
+            path === "/career" ? "text-[#FF1E1E]" : ""
+          } text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold`}
         >
           Career
         </Link>
         <Link
           to="/rti"
-          className={`${path === "/rti" ? 'text-[#FF1E1E]' : ""} text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold`}
+          className={`${
+            path === "/rti" ? "text-[#FF1E1E]" : ""
+          } text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold`}
         >
           RTI
         </Link>
         <Link
           to="/gallery"
-          className={`${path === "/gallery" ? 'text-[#FF1E1E]' : ""} text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold`}
+          className={`${
+            path === "/gallery" ? "text-[#FF1E1E]" : ""
+          } text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold`}
         >
           Gallery
         </Link>
         <Link
           to="/contact"
-          className={`${path === "/contact" ? 'text-[#FF1E1E]' : ""} text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold`}
+          className={`${
+            path === "/contact" ? "text-[#FF1E1E]" : ""
+          } text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold`}
         >
           Contact
         </Link>
