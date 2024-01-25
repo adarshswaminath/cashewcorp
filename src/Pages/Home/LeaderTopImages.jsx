@@ -17,7 +17,7 @@ const leaderData = [
     content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum inlabore laudantium deserunt fugiat numquam.",
     image:
       "https://minister-industries.kerala.gov.in/wp-content/uploads/2021/09/prajeev.jpg",
-    title: "Hon. Ministers Message"
+    title: "Hon. Minister's Message"
   },
   {
     name: "Shri. S.Jayamohan",
