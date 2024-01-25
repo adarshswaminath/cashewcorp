@@ -21,9 +21,8 @@ function PlayStore() {
           <h2 data-aos="zoom-in" className="text-3xl lg:text-5xl text-black font-bold text-center">
             Try Our KSCDC Mobile Apps
           </h2>
-          <p data-aos="zoom-in" className="max-w-xl text-center mt-4 text-black">
-            Occaecat aute nisi non excepteur Lorem excepteur proident tempor et
-            excepteur do deserunt.
+          <p data-aos="zoom-in" className="font-bold max-w-xl text-center mt-4 text-black capitalize">
+            KSCDC <span className="text-blue-500">CDC Brand</span> cashews app is available on playStore and AppStore
           </p>
           <div className="flex items-center justify-center">
             <img
