@@ -19,7 +19,7 @@ function ProfileCard({ name, image, position, content, link ,title}) {
             </div>
           </div>
           <ul className="sci ">
-            <li className="bg-[#F4F5F6] max-w-64">
+            <li className="bg-white max-w-64">
               <p className="font-extrabold mb-2">{title}</p>
               {Array.isArray(content) ? (
                 <>
@@ -33,7 +33,7 @@ function ProfileCard({ name, image, position, content, link ,title}) {
                 <p>{content}</p>
               )}
             </li>
-            <li className="bg-[#F4F5F6]">
+            <li className="bg-white">
               {link ? (
                 <a href={link}>
                   <button className="btn hover:bg-indigo-500 bg-blue-500 text-white mt-2">
