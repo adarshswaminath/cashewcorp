@@ -56,19 +56,21 @@ const ProductBoard = (value) => {
                 key={packet.weight}
                 onClick={() => {
                   setCurrentProduct(packet.selling_rate);
-                  setCurrentMRP(packet.mrp)
+                  setCurrentMRP(packet.mrp);
                 }}
                 className={`${
                   packet.selling_rate === currentProduct
                     ? "border-red-200 bg-red-400 text-white"
                     : ""
-                } border p-4 container rounded-lg flex flex-col items-center justify-center`}
+                } border p-2 container rounded-lg flex flex-col items-center justify-center`}
               >
                 <p className="text-xl font-bold">{packet.weight}</p>
                 <hr />
                 <div className="">
-                <p className="text-xl font-bold ">₹ {packet.selling_rate}</p>
-                <p className="text-base font-bold line-through">₹ {packet.mrp}</p>
+                  <p className="text-xl font-bold ">₹ {packet.selling_rate}</p>
+                  <p className="text-base font-bold line-through">
+                    ₹ {packet.mrp}
+                  </p>
                 </div>
               </button>
             ))}

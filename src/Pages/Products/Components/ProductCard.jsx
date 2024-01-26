@@ -1,22 +1,32 @@
 import React, { useState } from "react";
 import ProductModal from "./ProductModal";
 
-function ProductCard({setSelectedData,setShowModal, image, name, rating,description ,id}) {
-
-    function handleUserClick(){
-        setSelectedData((prev) => ({
-            ...prev,
-            id: id,
-        }))
-        setShowModal((prev) => !prev)
-    }
+function ProductCard({
+  setSelectedData,
+  setShowModal,
+  image,
+  name,
+  rating,
+  description,
+  id,
+}) {
+  function handleUserClick() {
+    setSelectedData((prev) => ({
+      ...prev,
+      id: id,
+    }));
+    setShowModal((prev) => !prev);
+  }
   return (
     <div className="w-full lg:w-60 max-w-sm   rounded-lg overflow-hidden transition-transform transform hover:scale-105 ">
       <a href="#" className="block w-full h-48 overflow-hidden">
         <img className="object-cover w-full h-48" src={image} alt="product" />
       </a>
       <div className="px-6 py-4">
-        <a href="#" className="block text-xl font-semibold text-gray-900 hover:underline">
+        <a
+          href="#"
+          className="block text-xl font-semibold text-gray-900 hover:underline"
+        >
           {name}
         </a>
         <div className="flex items-center mt-2">
@@ -32,7 +42,7 @@ function ProductCard({setSelectedData,setShowModal, image, name, rating,descript
 
         <div className="mt-4 flex items-center justify-end">
           <button
-          onClick={handleUserClick}
+            onClick={handleUserClick}
             className="text-white bg-red-600 hover:bg-red-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 transition duration-300 ease-in-out"
           >
             Buy Now
