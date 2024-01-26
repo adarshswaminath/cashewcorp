@@ -12,7 +12,7 @@ function Gallery() {
         <GalleryImage/>
 
         {/* Video Section */}
-        <div className="w-full  rounded-md shadow-md p-6">
+        <div className="w-full rounded-md shadow-md p-6">
         <h2 className="text-center text-xl font-bold mb-2">Videos</h2>
           <div className="aspect-w-16 aspect-h-9 mb-4 rounded-md overflow-hidden">
             <iframe
