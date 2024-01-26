@@ -60,9 +60,9 @@ function Navbar() {
       </Link>
       <Link
         className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]"
-        to="/Executives"
+        to="/management"
       >
-        Executives
+        Management
       </Link>
       <Link
         className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]"
@@ -260,10 +260,10 @@ function Navbar() {
               About us
             </Link>
             <Link
-              to="/Executives"
+              to="/management"
               className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
             >
-              Executives
+              Management
             </Link>
             <Link
               to="/org"

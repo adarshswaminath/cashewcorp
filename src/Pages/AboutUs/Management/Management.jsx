@@ -1,7 +1,7 @@
 import Navbar from "../../../Components/Navbar"
 import Footer from "../../../Components/Footer"
 import Banner from "../../../Components/Banner"
-import ExecutiveCard from "./ExecutiveCard"
+import ExecutiveCard from "./ManagementCard"
 import ProfileCard from "../../../Components/ProfileCard"
 
 const seniorExecutives = [
@@ -78,7 +78,7 @@ const juniorExecutives = [
     contact: ["0474-2742271(Exn-26)(O)","9400427533(M)"]
   }
 ]
-function Exectives() {
+function Management() {
   return (
     <div>
       <Navbar/>
@@ -101,4 +101,4 @@ function Exectives() {
   )
 }
 
-export default Exectives
+export default Management
