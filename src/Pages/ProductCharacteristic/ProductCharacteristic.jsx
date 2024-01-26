@@ -3,7 +3,7 @@ import Navbar from '../../Components/Navbar'
 import Footer from '../../Components/Footer'
 import Banner from '../../Components/Banner'
 
-const QualityPolicy = () => {
+const ProductCharacteristic = () => {
   return (
     <div>
         <Navbar/>
@@ -15,4 +15,4 @@ const QualityPolicy = () => {
   )
 }
 
-export default QualityPolicy
+export default ProductCharacteristic

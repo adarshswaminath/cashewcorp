@@ -66,9 +66,9 @@ function Navbar() {
       </Link>
       <Link
         className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]"
-        to="/quality-policy"
+        to="/product-characteristic"
       >
-        Quality Policy
+        Product Characteristics
       </Link>
       <Link
         className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]"
@@ -272,10 +272,10 @@ function Navbar() {
               Organization
             </Link>
             <Link
-              to="/quality-policy"
+              to="/product-characteristic"
               className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
             >
-              Quality Policy
+              Product Characteristic
             </Link>
             <Link
               to="/franchisee"

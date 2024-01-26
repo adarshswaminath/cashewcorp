@@ -16,7 +16,7 @@ import Blog from './Pages/Blog/Blog'
 import Organization from './Pages/Org/Organization'
 import DirectorBoardPage from './Pages/DirectorBoard/DirectorBoard'
 import AnimatedCursor from "react-animated-cursor"
-import QualityPolicy from './Pages/QualityPolicy/QualityPolicy'
+import ProductCharacteristic from './Pages/ProductCharacteristic/ProductCharacteristic'
 function App() {
   // initialize aos animation
   useEffect(() => {
@@ -54,7 +54,7 @@ function App() {
           <Route path='/executives' element={<Exectives/>}/>
           <Route path='/org' element={<Organization/>}/>
           <Route path="/director-board" element={<DirectorBoardPage/>}/>
-          <Route path="/quality-policy" element={<QualityPolicy/>}/>
+          <Route path="/product-characteristic" element={<ProductCharacteristic/>}/>
         </Routes>
       </BrowserRouter>
     </main>
