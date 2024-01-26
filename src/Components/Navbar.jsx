@@ -21,7 +21,7 @@ function Navbar() {
         className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]"
         to="/product"
       >
-        CDC Brand
+        CDC Brand Products
       </Link>
       <Link
         className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]"
