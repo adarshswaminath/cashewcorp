@@ -320,7 +320,7 @@
 [32m+[m[32m    <ScrollAnimation animateIn="fadeIn"delay={400}>[m
 [32m+[m[32m      <div className="p-3">[m
        <h3 className="text-xl lg:text-2xl font-extrabold uppercase m-4 text-center">[m
-[31m-        The Director Board[m
+[31m-        The Board Of Directors[m
 [32m+[m[32m        Our Board Of Directors[m
        </h3>[m
        <div className="flex items-center justify-center">[m

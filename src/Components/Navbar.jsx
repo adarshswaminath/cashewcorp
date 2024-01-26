@@ -56,11 +56,11 @@ function Navbar() {
         className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]"
         to="/director-board"
       >
-        Director Board
+        Board Of Directors
       </Link>
       <Link
         className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]"
-        to="/executives"
+        to="/Executives"
       >
         Executives
       </Link>
@@ -260,7 +260,7 @@ function Navbar() {
               About us
             </Link>
             <Link
-              to="/executives"
+              to="/Executives"
               className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
             >
               Executives
@@ -293,7 +293,7 @@ function Navbar() {
               to="/director-board"
               className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
             >
-              Director Board
+              Board Of Directors
             </Link>
             <Link
               to="/tender"

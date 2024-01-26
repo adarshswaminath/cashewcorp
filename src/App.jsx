@@ -51,7 +51,7 @@ function App() {
           <Route path="/kscdc" element={<Kscdc/>}/>
           <Route path='/franchisee' element={<Franchisee/>}/>
           <Route path='/blog' element={<Blog/>}/>
-          <Route path='/executives' element={<Exectives/>}/>
+          <Route path='/management' element={<Exectives/>}/>
           <Route path='/org' element={<Organization/>}/>
           <Route path="/director-board" element={<DirectorBoardPage/>}/>
           <Route path="/product-characteristic" element={<ProductCharacteristic/>}/>

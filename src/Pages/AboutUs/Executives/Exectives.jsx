@@ -85,22 +85,9 @@ function Exectives() {
       <Banner image="executives.jpg"/>
       {/* senior executives */}
       <div className="p-2 ">
-      <h2 className="text-2xl font-bold text-center">Senior Executives</h2>
+      <h2 className="text-2xl font-bold text-center">Our Management</h2>
       <div className="grid place-items-center  gap-3 grid-cols-1 lg:grid-cols-4">
       {seniorExecutives.map((value) => (
-        <ProfileCard key={value.id} 
-        image={value.image} 
-        name={value.name} 
-        position={value.designation}
-        content={value.contact}/>
-      ))}
-      </div>
-      </div>
-      {/* junior executives */}
-      <div className="">
-      <h2 className="text-2xl font-bold text-center">Junior Executives</h2>
-      <div className="grid place-items-center gap-3 grid-cols-1 lg:grid-cols-4">
-      {juniorExecutives.map((value) => (
         <ProfileCard key={value.id} 
         image={value.image} 
         name={value.name} 
