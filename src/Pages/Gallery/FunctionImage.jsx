@@ -27,7 +27,7 @@ const FunctionImage = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 gap-2 lg:grid-cols-5">
+    <div className="grid grid-cols-1 gap-2 lg:grid-cols-5 p-3">
       {Array.from(new Set(functionaImages.map((img) => img.type))).map((type) => (
         <div key={type} className="relative" data-aos="fade-up">
           <img
