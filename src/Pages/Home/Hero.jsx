@@ -6,10 +6,7 @@ import LeaderTopImages from "./LeaderTopImages";
 
 
 const images = [
-  "/images/hero-1.png",
-  "/images/hero-2.png",
-  "/images/hero-3.png",
-  "/images/hero-4.png",
+  "/images/hero-5.png",
 ];
 
 function Hero() {
@@ -25,25 +22,24 @@ function Hero() {
 
   return (
     <div className="hero-container relative">
-  <div
-    className="hero-background h-screen w-full bg-cover bg-current bg-no-repeat relative"
-    style={{
-      backgroundImage: `url(${images[imageIndex]})`,
-    }}
-  >
-    <div className="lg:absolute bg-black bg-opacity-10 inset-0"></div>
     <div className="lg:absolute w-full lg:p-3">
       <Navbar />
     </div>
-  </div>
-  <div className="p-2 mt-3">
-    <HeroCards />
-    <div>
-      <LeaderTopImages />
+    
+    <img
+      className="w-full h-screen object-cover"
+      src={images[0]}
+      alt="Banner"
+    />
+    
+    <div className="p-2 mt-3">
+      <HeroCards />
+      <div>
+        <LeaderTopImages />
+      </div>
     </div>
   </div>
-</div>
-
+  
   );
 }
 
