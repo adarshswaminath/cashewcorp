@@ -18,13 +18,13 @@ function Navbar() {
   const subProduct = () => (
     <div className="capitalize text-xs absolute hidden bg-white/10 bg:blur backdrop-blur text-black py-2 space-y-2 w-40 p-3 top-full left-0 group-hover:grid transition transform ease-in-out duration-300">
       <Link
-        className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]"
+        className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E] text-base"
         to="/product"
       >
         CDC Brand Products
       </Link>
       <Link
-        className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]"
+        className="bg-red-600 text-white rounded-lg hover:bg-red-400 border-[#FF1E1E] btn"
         to="/product"
       >
         Online Shopping
