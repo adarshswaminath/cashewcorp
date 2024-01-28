@@ -30,12 +30,12 @@ function Hero() {
     <div className="lg:absolute w-full lg:p-3">
       <Navbar />
     </div>
-    
     <img
       className="w-full h-screen object-cover"
       src={images[imageIndex]}
       alt="Banner"
     />
+    
     
     <div className="p-2 mt-3">
       <HeroCards />
