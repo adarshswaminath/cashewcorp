@@ -6,7 +6,12 @@ import LeaderTopImages from "./LeaderTopImages";
 
 
 const images = [
-  "/images/hero-5.png",
+  "/images/hero/hero-1.png",
+  "/images/hero/hero-2.png",
+  "/images/hero/hero-3.png",
+  "/images/hero/hero-4.png",
+  "/images/hero/hero-5.png",
+
 ];
 
 function Hero() {
@@ -28,7 +33,7 @@ function Hero() {
     
     <img
       className="w-full h-screen object-cover"
-      src={images[0]}
+      src={images[imageIndex]}
       alt="Banner"
     />
     
