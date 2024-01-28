@@ -214,7 +214,7 @@ const gradeEData = {
     [
       "SSP",
       "Scorched Small Pieces",
-      "Kernels may be scorched/slightly darkened due to over-heating while roasting or drying in drier/borma.", 
+      "Kernels may be scorched/slightly darkened due to over-heating while roasting or drying in drier/borma.",
       "Pieces smaller than SP but not passing through a 6 mesh 20 SWG Sieve/2.80 mm I.S. Sieve",
       "5",
       "Nil",
@@ -225,25 +225,40 @@ const gradeEData = {
     "Remarks: Kernels shall be completely free from infestation, insect damage, mould, rancidity, adhering testa and objectionable extraneous matter. Scraped and partially shriveled kernels also permitted provided such scraping/shriveling does not affect the characteristic shape of the kernel.",
 };
 
-const gradeFData ={
-    title: 'Scorched Pieces Second & Dessert Pieces',
-    headers: [
-      'Grade Designation',
-      'Trade Name',
-      'Colour/Characteristic',
-      'Count/454gms Size description',
-      'Maximum Moisture %',
-      'Broken Max %',
-      'NLSG NLG Max %'
+const gradeFData = {
+  title: "Scorched Pieces Second & Dessert Pieces",
+  headers: [
+    "Grade Designation",
+    "Trade Name",
+    "Colour/Characteristic",
+    "Count/454gms Size description",
+    "Maximum Moisture %",
+    "Broken Max %",
+    "NLSG NLG Max %",
+  ],
+  rows: [
+    [
+      "SPS",
+      "Scorched Pieces Second",
+      "Kernels may be over scorched, immature, shriveled (Pirival), speckled (Karaniram), discoloured and light blue.",
+      " Kernels broken into pieces but not passing through a 4 mesh 16 SWG sieve/4.75 mm I.S. Sieve.",
+      "5",
+      "Nil",
+      "7.5 (DP & DSP together)",
     ],
-    rows: [
-      ['SPS', 'Scorched Pieces Second', 'Kernels may be over scorched, immature, shriveled (Pirival), speckled (Karaniram), discoloured and light blue.',' Kernels broken into pieces but not passing through a 4 mesh 16 SWG sieve/4.75 mm I.S. Sieve.', '5', 'Nil', '7.5 (DP & DSP together)'],
-      ['DP', 'Dessert Pieces', 'Kernels may be deep scorched, deep brown, deep blue, speckled, discoloured & black spotted.',' Kernels broken into pieces but not passing through a 4 mesh 16 SWG sieve/4.75 mm I.S. Sieve.', '5', 'Nil', '7.5 (DSP)'],
+    [
+      "DP",
+      "Dessert Pieces",
+      "Kernels may be deep scorched, deep brown, deep blue, speckled, discoloured & black spotted.",
+      " Kernels broken into pieces but not passing through a 4 mesh 16 SWG sieve/4.75 mm I.S. Sieve.",
+      "5",
+      "Nil",
+      "7.5 (DSP)",
     ],
-    remark: "Remarks: Kernels shall be completely free from infestation, insect damage, mould, rancidity, adhering testa and objectionable extraneous matter.\n\nNLSG denotes: Next Lower Size Grade, NLG denotes: Next Lower Grade"
-  
-}
-
+  ],
+  remark:
+    "Remarks: Kernels shall be completely free from infestation, insect damage, mould, rancidity, adhering testa and objectionable extraneous matter.\n\nNLSG denotes: Next Lower Size Grade, NLG denotes: Next Lower Grade",
+};
 
 export {
   gradeAData,
@@ -252,5 +267,5 @@ export {
   gradeDContData,
   gradeDData,
   gradeEData,
-  gradeFData
+  gradeFData,
 };

@@ -18,7 +18,7 @@ const ProductCharacteristic = () => {
     <div>
       <Navbar />
       <div className="">
-        <Banner image={`qua.jpg`} />
+        <Banner image={`cashew.jpg`} />
       </div>
       {/* body part */}
       <div className="p-3">
