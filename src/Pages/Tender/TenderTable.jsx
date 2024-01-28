@@ -2,7 +2,11 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import { useState } from "react";
 
 const tenderData = [
-  { name: "Re-Tender for Medical Insurance Policy", link: "#", date: "30/01/2024" },
+  {
+    name: "Re-Tender for Medical Insurance Policy",
+    link: "#",
+    date: "30/01/2024",
+  },
   {
     name: "Tender no. 19 - “Re-Tender for Cashew Kernels ” - Guinea Bissau Origin Tender Id: 2024_KSCDC_639483_2 (with revised BOQ)",
     link: "#",
@@ -43,7 +47,7 @@ const tenderData = [
     name: "Quotation for Cashew Skin",
     link: "#",
     type: "previous",
-    subType: "quotations",
+    subType: "e-tender",
     date: "15/05/2024",
   }, // subType for "previous" quotations
   {
@@ -68,7 +72,6 @@ const tenderData = [
     date: "01/07/2024",
   }, // subType for "previous" tenders
 ];
-
 
 const TenderTable = () => {
   const [filter, setFilter] = useState("all"); // Initial filter value
@@ -153,6 +156,16 @@ const TenderTable = () => {
           </div>
         )}
       </div>
+      <div className="flex items-center justify-center gap-3 m-3">
+        <>
+          <span className="badge badge-xs bg-green-500"></span>
+          <span>Tender</span>
+        </>
+        <>
+          <span className="badge badge-xs bg-red-500"></span>
+          <span>E-Tender</span>
+        </>
+      </div>
       <div className="overflow-x-auto">
         <table className="table">
           {/* head */}
@@ -166,16 +179,18 @@ const TenderTable = () => {
           <tbody>
             {/* row  */}
             {filteredData.map((value, index) => (
-              <tr className={`${index % 2 ===0 ? "bg-red-100" : "bg-red-50"}`} key={index}>
+              <tr
+                className={`${index % 2 === 0 ? "bg-red-100" : "bg-red-50"}`}
+                key={index}
+              >
                 <th>{index + 1}</th>
-                <td className="font-bold">
+                <td className="font-bold flex items-center space-x-5">
                   <a href={value.link} target="_blank">
                     {value.name}
                   </a>
+                  <span className={`${value.subType === "tenders" ? "bg-green-500 " : "bg-red-500 " }badge badge-xs`}></span>
                 </td>
-                <td>
-                  {value.date}
-                </td>
+                <td>{value.date}</td>
               </tr>
             ))}
           </tbody>
