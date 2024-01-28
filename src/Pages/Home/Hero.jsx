@@ -11,7 +11,6 @@ const images = [
   "/images/hero/hero-3.png",
   "/images/hero/hero-4.png",
   "/images/hero/hero-5.png",
-  // "/images/hero/hero-9.png",
 ];
 
 function Hero() {
@@ -30,7 +29,7 @@ function Hero() {
   <div
     className="hero-background h-screen w-full bg-cover bg-current bg-no-repeat relative"
     style={{
-      backgroundImage: `url(${images[4]})`,
+      backgroundImage: `url(${images[imageIndex]})`,
     }}
   >
     <div className="lg:absolute bg-black bg-opacity-10 inset-0"></div>
