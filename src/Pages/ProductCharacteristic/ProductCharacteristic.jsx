@@ -23,7 +23,7 @@ const ProductCharacteristic = () => {
       {/* body part */}
       <div className="p-3">
         <h1 className="text-2xl font-bold">General Characteristics:</h1>
-        <p className="text-xl mt-3">
+        <p className="text-xl mt-4 mb-4">
           Cashew Kernels shall have been obtained through roasting, shelling and
           peeling cashew nuts. (Anacardium occidentale L.)
         </p>

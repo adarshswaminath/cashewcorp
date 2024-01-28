@@ -94,7 +94,7 @@ function Navbar() {
           <h3 className="font-bold max-w-md">
             The kerala state cashew development corporation ltd
           </h3>
-          <p className="text-xs text-gray-800 ">
+          <p className="text-xs text-gray-800 font-semibold">
             (A Government of Kerala Undertaking)
           </p>
         </div>
