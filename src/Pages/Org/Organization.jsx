@@ -77,7 +77,7 @@ function Organization() {
             </li>
           </ul>
         </div>
-        <div className="mb-8">
+        {/* <div className="mb-8">
           <h2 className="text-xl font-bold mb-2">E-mail ids of sections:</h2>
           <div className="grid grid-cols-1 place-items-center lg:grid-cols-2 gap-4">
             {emailIdSection.map((value) => (
@@ -93,7 +93,7 @@ function Organization() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
       {/* body closes */}
       <Footer />
