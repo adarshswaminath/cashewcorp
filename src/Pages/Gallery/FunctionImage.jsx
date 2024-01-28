@@ -27,17 +27,27 @@ const FunctionImage = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 gap-2 lg:grid-cols-5 p-3">
+    <div className="grid grid-cols-1 gap-4 lg:grid-cols-5 p-3">
       {Array.from(new Set(functionaImages.map((img) => img.type))).map((type) => (
-        <div key={type} className="relative" data-aos="fade-up">
+        <div key={type} type="button" onClick={() => toggleModal(type)} className="relative" data-aos="fade-up">
+        <div className="relative">
           <img
             className="cursor-pointer"
             src={functionaImages.find((img) => img.type === type).images}
             alt={`${type} Thumbnail`}
-            onClick={() => toggleModal(type)}
           />
-          <p className="absolute bottom-2 left-2 text-white font-bold">{type}</p>
+          <div className="absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-100 transition-opacity duration-300">
+            <div className="flex items-center justify-center w-full h-full bg-black bg-opacity-80">
+              <p className="text-white font-bold">Open Images</p>
+            </div>
+          </div>
         </div>
+        <p className="absolute bottom-8 lg:bottom-14 left-2 text-white font-bold">{type}</p>
+        <div>
+          <p>Aute pariatur duis elit dolor adipisicing reprehenderit.</p>
+        </div>
+      </div>
+      
       ))}
 
       {modalVisible && (
