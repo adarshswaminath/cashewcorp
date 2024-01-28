@@ -1,8 +1,8 @@
-import Navbar from "../../../Components/Navbar"
-import Footer from "../../../Components/Footer"
-import Banner from "../../../Components/Banner"
-import ExecutiveCard from "./ManagementCard"
-import ProfileCard from "../../../Components/ProfileCard"
+import Navbar from "../../../Components/Navbar";
+import Footer from "../../../Components/Footer";
+import Banner from "../../../Components/Banner";
+import ExecutiveCard from "./ManagementCard";
+import ProfileCard from "../../../Components/ProfileCard";
 
 const seniorExecutives = [
   {
@@ -10,95 +10,142 @@ const seniorExecutives = [
     name: "Shri. K. Sunil John",
     image: "/images/executives/sr-1.jpg",
     designation: "Materials Manager",
-    contact: ["8281114645(O)","0474-2742271(Exn-35)(O)","9495992008(M)","mm@cashewcorporation.com"]
+    contact: [
+      "8281114645(O)",
+      "0474-2742271(Exn-35)(O)",
+      "9495992008(M)",
+      "mm@cashewcorporation.com",
+    ],
   },
   {
     id: 2,
     name: "Shri. V. Shaji",
     image: "/images/executives/sr-2.jpg",
     designation: "Commercial Manager",
-    contact: ["0474-2742271(Exn-47)(O)","9847511950(M)","cm@cashewcorporation.com"]
+    contact: [
+      "0474-2742271(Exn-47)(O)",
+      "9847511950(M)",
+      "cm@cashewcorporation.com",
+    ],
   },
   {
     id: 3,
     name: "Shri. S. Ajith",
     image: "/images/executives/sr-3.jpg",
     designation: "Personnel Manager",
-    contact: ["8281114648 (O)","0474-2742271(Exn-48)(O)","9400449587(M)","pm@cashewcorporation.com"]
+    contact: [
+      "8281114648 (O)",
+      "0474-2742271(Exn-48)(O)",
+      "9400449587(M)",
+      "pm@cashewcorporation.com",
+    ],
   },
   {
     id: 4,
     name: "Shri. Raja Sankara Pillai",
     image: "/images/executives/sr-4.png",
     designation: "Finance Manager & Company Secretary",
-    contact: ["8281114649(O)","0474-2742271(Exn-49)(O)","9840383950(M)" ,"fm@cashewcorporation.com"]
+    contact: [
+      "8281114649(O)",
+      "0474-2742271(Exn-49)(O)",
+      "9840383950(M)",
+      "fm@cashewcorporation.com",
+    ],
   },
   {
     id: 5,
     name: "Shri.A.Gopakumar",
     image: "/images/executives/sr-5.jpg",
     designation: "Production Manager",
-    contact: ["8281114637 (O)" ,"0474-2742271(Exn-46)(O)", "9947783524(M)","prm@cashewcorporation.com"]
+    contact: [
+      "8281114637 (O)",
+      "0474-2742271(Exn-46)(O)",
+      "9947783524(M)",
+      "prm@cashewcorporation.com",
+    ],
   },
-]
+];
 const juniorExecutives = [
   {
     id: 1,
     name: "Shri.Muneer Ahammed.A",
     image: "/images/executives/jr-1.jpg",
     designation: "Asst Manager(Systems)",
-    contact: ["8281114641 (O)", "0474-2761410(O)", "0474-2742271(Exn-40)(O)", "9745226500(M)","computercell@cashewcorporation.com"]
+    contact: [
+      "8281114641 (O)",
+      "0474-2761410(O)",
+      "0474-2742271(Exn-40)(O)",
+      "9745226500(M)",
+      "computercell@cashewcorporation.com",
+    ],
   },
   {
     id: 2,
     name: "Smt.P.S.Jayanthi",
     image: "/images/executives/jr-2.jpg",
     designation: "Asst.Commercial Manager",
-    contact: ["8281114639(O)", "0474-2742271(Exn-28)(O)", "9349453555(M)","cs1@cashewcorporation.com"]
+    contact: [
+      "8281114639(O)",
+      "0474-2742271(Exn-28)(O)",
+      "9349453555(M)",
+      "cs1@cashewcorporation.com",
+    ],
   },
   {
     id: 3,
     name: "Smt. Yesoda",
     image: "/images/executives/jr-3.jpg",
     designation: "Asst.Manager",
-    contact: ["0474-2742271(Exn-36)(O)", "9847112984(M)","8281114642","ps@cashewcorporation.com"]
+    contact: [
+      "0474-2742271(Exn-36)(O)",
+      "9847112984(M)",
+      "8281114642",
+      "ps@cashewcorporation.com",
+    ],
   },
   {
     id: 4,
     name: "Shri.R.Rajeev",
     image: "/images/executives/jr-4.jpg",
     designation: "Asst Manager",
-    contact: []
+    contact: [],
   },
   {
     id: 5,
     name: "Smt.Bindhu S",
     image: "/images/executives/jr-5.jpg",
     designation: "Asst Manager(Finance) ",
-    contact: ["0474-2742271(Exn-26)(O)","9400427533(M)"]
-  }
-]
+    contact: ["0474-2742271(Exn-26)(O)", "9400427533(M)"],
+  },
+];
 function Management() {
   return (
     <div>
-      <Navbar/>
-      <Banner image="executives.jpg"/>
+      <Navbar />
+      <Banner image="executives.jpg" />
       {/* senior executives */}
       <div className="p-2 ">
-      <h2 className="text-2xl font-bold text-center">Our Management</h2>
-      <div className="grid place-items-center  gap-3 grid-cols-1 lg:grid-cols-3">
-      {seniorExecutives.map((value) => (
-        <ProfileCard key={value.id} 
-        image={value.image} 
-        name={value.name} 
-        position={value.designation}
-        content={value.contact}/>
-      ))}
+        <h2 className="text-2xl font-bold text-center">Our Management</h2>
+        <p className="m-3 p-2 text-center max-w-4xl mx-auto text-lg">
+          The Kerala State Cashew Development Corporation Ltd. (KSCDC) is fully
+          owned and managed by the Government of Kerala. The Core Management
+          Team of the company is as follows
+        </p>
+        <div className="grid place-items-center  gap-3 grid-cols-1 lg:grid-cols-3">
+          {seniorExecutives.map((value) => (
+            <ProfileCard
+              key={value.id}
+              image={value.image}
+              name={value.name}
+              position={value.designation}
+              content={value.contact}
+            />
+          ))}
+        </div>
       </div>
-      </div>
-      <Footer/>
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default Management
+export default Management;
