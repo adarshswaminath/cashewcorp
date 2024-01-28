@@ -8,6 +8,7 @@ import LeaderTopImages from "./LeaderTopImages";
 const images = [
   "/images/hero/hero-1.png",
   "/images/hero/hero-2.png",
+  "/images/hero/hero-3.png",
   "/images/hero/hero-9.png",
 
 
@@ -31,7 +32,7 @@ function Hero() {
   <div
     className="hero-background h-screen w-full bg-cover bg-current bg-no-repeat relative"
     style={{
-      backgroundImage: `url(${images[1]})`,
+      backgroundImage: `url(${images[2]})`,
     }}
   >
     <div className="lg:absolute bg-black bg-opacity-10 inset-0"></div>
