@@ -9,7 +9,7 @@ function Franchisee() {
       <Navbar />
       <Banner image="franchisee.jpg"/>
       <div className="p-3">
-        <h3 className="text-center text-3xl font-bold text-red-500">Our Franchisees</h3>
+        <h3 className="text-center text-4xl font-bold text-red-500">Our Franchisees</h3>
         <FranchiseeTable />
       </div>
       <Footer />

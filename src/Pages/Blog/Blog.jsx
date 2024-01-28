@@ -26,11 +26,11 @@ function Blog() {
         <div className="overflow-x-auto min-h-screen">
   <table className="table">
     {/* head */}
-    <thead>
+    <thead className='font-bold text-black text-base'>
       <tr>
         <th></th>
-        <th>Job</th>
-        <th>Detils</th>
+        <th>Table Title</th>
+        <th>Date</th>
       </tr>
     </thead>
     <tbody>
@@ -40,10 +40,7 @@ function Blog() {
         <th>{index+1}</th>
         <td className="font-bold">{value.title}</td>
         <td>
-          <a href={value.link} className="p-2 rounded-full bg-[#FF1E1E] text-white flex items-center gap-2 justify-center">
-            Details
-            <FaExternalLinkAlt/>
-          </a>
+          <span>{`${index+1}/01/2024`}</span>
         </td>
       </tr>
       ))}
