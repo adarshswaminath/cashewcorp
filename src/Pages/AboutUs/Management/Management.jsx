@@ -1,8 +1,7 @@
 import Navbar from "../../../Components/Navbar";
 import Footer from "../../../Components/Footer";
 import Banner from "../../../Components/Banner";
-import ExecutiveCard from "./ManagementCard";
-import ProfileCard from "../../../Components/ProfileCard";
+import ManagementProfileCard from "./ManagementProfileCard";
 
 const seniorExecutives = [
   {
@@ -14,7 +13,7 @@ const seniorExecutives = [
       "8281114645(O)",
       "0474-2742271(Exn-35)(O)",
       "9495992008(M)",
-      "mm@cashewcorporation.com",
+      "md@cashewcorporation.com",
     ],
   },
   {
@@ -65,81 +64,46 @@ const seniorExecutives = [
     ],
   },
 ];
-const juniorExecutives = [
-  {
-    id: 1,
-    name: "Shri.Muneer Ahammed.A",
-    image: "/images/executives/jr-1.jpg",
-    designation: "Asst Manager(Systems)",
-    contact: [
-      "8281114641 (O)",
-      "0474-2761410(O)",
-      "0474-2742271(Exn-40)(O)",
-      "9745226500(M)",
-      "computercell@cashewcorporation.com",
-    ],
-  },
-  {
-    id: 2,
-    name: "Smt.P.S.Jayanthi",
-    image: "/images/executives/jr-2.jpg",
-    designation: "Asst.Commercial Manager",
-    contact: [
-      "8281114639(O)",
-      "0474-2742271(Exn-28)(O)",
-      "9349453555(M)",
-      "cs1@cashewcorporation.com",
-    ],
-  },
-  {
-    id: 3,
-    name: "Smt. Yesoda",
-    image: "/images/executives/jr-3.jpg",
-    designation: "Asst.Manager",
-    contact: [
-      "0474-2742271(Exn-36)(O)",
-      "9847112984(M)",
-      "8281114642",
-      "ps@cashewcorporation.com",
-    ],
-  },
-  {
-    id: 4,
-    name: "Shri.R.Rajeev",
-    image: "/images/executives/jr-4.jpg",
-    designation: "Asst Manager",
-    contact: [],
-  },
-  {
-    id: 5,
-    name: "Smt.Bindhu S",
-    image: "/images/executives/jr-5.jpg",
-    designation: "Asst Manager(Finance) ",
-    contact: ["0474-2742271(Exn-26)(O)", "9400427533(M)"],
-  },
-];
+
+const managingDirector = seniorExecutives.filter(
+  (md) => md.contact[3] === "md@cashewcorporation.com"
+);
+console.log(managingDirector[0].name);
 function Management() {
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
       <Navbar />
       <Banner image="executives.jpg" />
       {/* senior executives */}
-      <div className="p-2 ">
-        <h2 className="text-2xl font-bold text-center">Our Management</h2>
-        <p className="m-3 p-2 text-center max-w-4xl mx-auto text-lg">
-          The Kerala State Cashew Development Corporation Ltd. (KSCDC) is fully
-          owned and managed by the Government of Kerala. The Core Management
-          Team of the company is as follows
-        </p>
-        <div className="grid place-items-center  gap-3 grid-cols-1 lg:grid-cols-3">
-          {seniorExecutives.map((value) => (
-            <ProfileCard
-              key={value.id}
-              image={value.image}
-              name={value.name}
-              position={value.designation}
-              content={value.contact}
-            />
+      <div className="flex-grow bg-gray-100">
+        <div className="p-8">
+          <h2 className="text-3xl font-bold text-center mb-6">
+            Our Management
+          </h2>
+          <p className="text-center max-w-4xl mx-auto text-lg">
+            The Kerala State Cashew Development Corporation Ltd. (KSCDC) is
+            fully owned and managed by the Government of Kerala. The Core
+            Management Team of the company is as follows.
+          </p>
+        </div>
+        {/* md special section open */}
+      <div className="relative flex flex-col items-center mt-24">
+        <div className="bg-red-500 h-64 w-full"></div>
+        <div className="bg-red-500 rounded-lg p-2 absolute -top-28" data-aos="fade-up">
+          {managingDirector.map((value,index) => (
+            <div key={index} className="flex flex-col items-center text-white">
+              <img src={value.image} className="h-44 p-2" alt="chairman_images" />
+              <h2 className="text-2xl font-bold text-white ">{value.name}</h2>
+              <p>Managing Director</p>
+              <a href={`mailto: ${value.contact[3]}`} className="underline">{value.contact[3]}</a>
+            </div>
+          ))}
+        </div>
+      </div>
+        {/* md special section close */}
+        <div className="p-8  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mt-12">
+          {seniorExecutives.map((management) => (
+            <ManagementProfileCard key={management.id} {...management} />
           ))}
         </div>
       </div>
