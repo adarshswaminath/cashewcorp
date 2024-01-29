@@ -1,7 +1,6 @@
-import React from "react";
-import "./style/topleader.css"
-import ProfileCard from "../../Components/ProfileCard";
-
+import React from 'react'
+import Navbar from '../../Components/Navbar'
+import Footer from '../../Components/Footer'
 const leaderData = [
   {
     name: "Shri. Pinarayi Vijayan",
@@ -39,24 +38,33 @@ const leaderData = [
   },
 ];
 
-function LeaderTopImages() {
-  return (
-    <div className="mt-4 box-wrapper grid gap-3 lg:grid-cols-4 place-items-center justify-items-center w-full">
-         {leaderData.map((value,index) => (
-          <ProfileCard
-            key={index}
-            name={value.name}
-            image={value.image}
-            position={value.position}
-            content={value.content}
-            title={value.title}
-            link="/message"
-          />
-         ))}
-    </div>
-  );
-}
+const Message = () => {
+    return (
+      <main>
+        <Navbar />
+        <div className="mt-4 min-h-screen flex items-center justify-center bg-gray-100">
+          <div className="grid  gap-4 ">
+            {leaderData.map((leader, index) => (
+              <div key={index} className={`bg-white rounded-lg shadow p-6 max-w-3xl ${index %2 ==0 ? "flex" : "flex flex-row-reverse"} items-center gap-4`}>
+                <img
+                  src={leader.image}
+                  alt={leader.name}
+                  className="w-60 h-60 object-cover mb-4 rounded-md"
+                />
+               <div>
+               <h2 className="text-3xl font-bold mb-2">{leader.name}</h2>
+                <p className="text-gray-600 mb-2">{leader.position}</p>
+                <p className="text-gray-600 mb-4">{leader.content}</p>
+                <p className="text-gray-700">{leader.message}</p>
+               </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <Footer />
+      </main>
+    );
+  };
+  
 
-
-
-export default LeaderTopImages;
+export default Message

@@ -17,6 +17,7 @@ import DirectorBoardPage from './Pages/DirectorBoard/DirectorBoard'
 import AnimatedCursor from "react-animated-cursor"
 import ProductCharacteristic from './Pages/ProductCharacteristic/ProductCharacteristic'
 import Management from './Pages/AboutUs/Management/Management'
+import Message from './Pages/Messages/Message'
 function App() {
   // initialize aos animation
   useEffect(() => {
@@ -51,6 +52,7 @@ function App() {
           <Route path="/kscdc" element={<Kscdc/>}/>
           <Route path='/franchisee' element={<Franchisee/>}/>
           <Route path='/blog' element={<Blog/>}/>
+          <Route path='/message' element={<Message/>}/>
           <Route path='/management' element={<Management/>}/>
           <Route path='/org' element={<Organization/>}/>
           <Route path="/director-board" element={<DirectorBoardPage/>}/>
