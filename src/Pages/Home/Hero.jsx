@@ -27,7 +27,7 @@ function Hero() {
   return (
     <div className="hero-container relative">
   <div
-    className="hero-background h-screen w-full bg-cover bg-center bg-current bg-no-repeat relative"
+    className="hero-background h-screen w-full bg-center bg-cover bg-current bg-no-repeat relative"
     style={{
       backgroundImage: `url(${images[imageIndex]})`,
     }}
