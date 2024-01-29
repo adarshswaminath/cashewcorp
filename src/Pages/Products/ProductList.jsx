@@ -20,7 +20,7 @@ function ProductList() {
 
   return (
     <div className="min-h-screen p-3">
-      <div className="flex justify-center mb-4 gap-2">
+      <div className="text-center mb-4 gap-2">
       <button onClick={() => handleFilterChange(null)} 
         className={`btn hover:bg-red-300 ${filterType === null && "bg-red-500 text-white btn-active"}`}>
           View All
