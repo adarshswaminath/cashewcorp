@@ -19,12 +19,11 @@ function ProductCard({
   }
   return (
     <div className="w-full lg:w-60 max-w-sm   rounded-lg overflow-hidden transition-transform transform hover:scale-105 ">
-      <a href="#" className="block w-full h-48 overflow-hidden">
+      <a  className="block w-full h-48 overflow-hidden">
         <img className="object-cover w-full h-48" src={image} alt="product" />
       </a>
       <div className="px-6 py-4">
         <a
-          href="#"
           className="block text-xl font-semibold text-gray-900 hover:underline"
         >
           {name}
