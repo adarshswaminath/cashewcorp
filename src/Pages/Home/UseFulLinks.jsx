@@ -31,7 +31,7 @@ const linksArray = [
 
 const Card = ({ link }) => {
   return (
-    <div className="cursor-pointer group bg-white hover:bg-[#FF1E1E] hover:text-white shadow-lg  flex items-center justify-center p-4 mb-4 rounded-md">
+    <div className="hover:bg-[#FF1E1E] cursor-pointer group bg-white  hover:text-white shadow-lg  flex items-center justify-center p-4 mb-4 rounded-md">
       <a
         href={link}
         className="font-bold text-center flex items-center gap-3 text-transparent group-hover:text-white bg-gradient-to-r from-[#FF1E1E] to-black bg-clip-text"
