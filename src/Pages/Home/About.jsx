@@ -1,48 +1,43 @@
 import ImageBackground from "./ImageBackground";
 import "./style/home.css";
 
+import { enAboutData } from "./Language/en";
+import { mlAboutData } from "./Language/ml";
+import useLanguageData from "../../Hook/useLanguageData";
 function About() {
+  const data = useLanguageData(enAboutData,mlAboutData)
   return (
     <div>
       <div className="">
         <div className="grid gap-4 lg:flex items-center justify-evenly   m-6 about">
-          <div
+          {data.map((about) => (
+            <div
+            key={about.title}
             data-aos="fade-right"
             className="flex flex-col items-start"
           >
             <div>
               <span className="text-2xl text-[#FF1E1E] mb-6 border-l-2 px-2 font-bold border-[#FF1E1E]">
-                Welcome to KSCDC
+                {about.title}
               </span>
             </div>
             <h2 className="text-xl max-w-md text-balance text-blue-500">
-              About Us{" "}
+              {about.subtitle}{" "}
             </h2>
             <p className="text-balance max-w-4xl text-xl text-gray-700 mt-6 mb-6">
-              The Kerala State Cashew Development Corporation Limited (KSCDC)
-              was incorporated in July 1969 and started Commercial activities in
-              the year 1971 as a company fully owned by the Government of
-              Kerala. From the modest beginning in 1969 Corporation has now
-              grown into a large organization playing a pivotal role in Cashew
-              industry.
+             {about.para_one}
             </p>
             <p className="text-balance max-w-4xl text-xl text-gray-700 mb-6">
-              Elit minim exercitation elit aliquip KSCDC, an ISO 22000-2005
-              company, is running 30 cashew factories across Kerala State with
-              an annual production capacity of 30,000 Metric Tonnes. More than
-              15000 workers and 500 staff members are working in these
-              factories. KSCDC now have a turnover of Rs. 250 crore.
+              {about.para_two}
             </p>
             <p className="text-balance max-w-4xl text-xl text-gray-700 mb-6">
-              KSCDC acts as a model employer in the field of cashew industry
-              mainly to protect the interest of its workers and to provide
-              maximum employment to them ensuring their statutory benefits like
-              minimum wages, bonus and etc. prevailing in the cashew industry.
+              {about.para_three}
             </p>
             <button className="mt-4 px-5 py-2 bg-[#FF1E1E] font-bold text-white uppercase transform -translate-y-0 hover:-translate-y-3 hover:scale-110 transition duration-300 ease-in-out hover:shadow-2xl">
               more about us
             </button>
           </div>
+          ))}
           <div>
             <div className="grid gap-4 grid-cols-2">
               <div
