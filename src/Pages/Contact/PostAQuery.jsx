@@ -1,9 +1,18 @@
 import React from "react";
 import { FaPhoneAlt, FaEnvelope, FaBuilding } from "react-icons/fa";
 import { BiLogoTelegram } from "react-icons/bi";
+import Banner from "../../Components/Banner"
 
 const PostAQuery = () => {
   return (
+   <div>
+      <div className="h-96">
+      <img
+        className="object-cover object-center w-full lg:h-full"
+        src={`/images/banner/post.png`}
+        alt="Banner"
+      />
+      </div>
     <div className="p-8 flex items-center justify-center">
       <div className="grid lg:flex w-full">
         <div className="w-full lg:w-2/5 bg-[#FF1E1E] text-white flex flex-col items-center text-center p-4">
@@ -73,6 +82,7 @@ const PostAQuery = () => {
         </form>
       </div>
     </div>
+   </div>
   );
 };
 
