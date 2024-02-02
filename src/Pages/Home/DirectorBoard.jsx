@@ -7,15 +7,15 @@ import UseFulLinks from "./UseFulLinks";
 
 
 const cardData = [
-  { image: "/images/directors/chairman-1.png", title: "Shri. S.Jayamohan", caption: "Chairman" },
-  { image: "/images/directors/dir1.jpeg", title: "Shri. Sunil John .K", caption: "Managing Director" },
-  { image: "/images/directors/dir9.jpeg", title: "Shri. B. Pratheep Kumar", caption: "Director" },
-  { image: "/images/directors/dir10.jpeg", title: "Shri. Siju Jacob", caption: "Director" },
-  { image: "/images/directors/dir8.jpeg", title: "Dr. B S Suran", caption: "Director" },
-  { image: "/images/directors/dir4.jpeg", title: "Shri. B Sujeendran", caption: "Director" },
-  { image: "/images/directors/dir5.jpeg", title: "Shri. G. Babu", caption: "Director" },
-  { image: "/images/directors/dir7.jpeg", title: "Shri. Saji D. Anand", caption: "Director" },
-  { image: "/images/directors/dir6.jpeg", title: "Adv. Sooranadu S Sreekumar", caption: "Director" },
+  { image: "/images/directors/chairman.png", title: "Shri. S.Jayamohan", caption: "Chairman" },
+  { image: "/images/directors/dir-1.png", title: "Shri. Sunil John .K", caption: "Managing Director" },
+  { image: "/images/directors/dir-9.jpeg", title: "Shri. B. Pratheep Kumar", caption: "Director" },
+  { image: "/images/directors/dir-10.jpeg", title: "Shri. Siju Jacob", caption: "Director" },
+  { image: "/images/directors/dir-8.jpeg", title: "Dr. B S Suran", caption: "Director" },
+  { image: "/images/directors/dir-4.jpeg", title: "Shri. B Sujeendran", caption: "Director" },
+  { image: "/images/directors/dir-5.jpeg", title: "Shri. G. Babu", caption: "Director" },
+  { image: "/images/directors/dir-7.jpeg", title: "Shri. Saji D. Anand", caption: "Director" },
+  { image: "/images/directors/dir-6.jpeg", title: "Adv. Sooranadu S Sreekumar", caption: "Director" },
 ];
 
 

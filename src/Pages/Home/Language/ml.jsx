@@ -49,7 +49,7 @@ const mlleaderData = [
     message:
       "Ex elit quis non qui tempor amet nisi laboris do cupidatat. Ea et excepteur consequat Lorem dolore occaecat velit in irure sunt do. Elit ea voluptate in et occaecat culpa officia et adipisicing excepteur mollit enim.",
     image:
-      "https://minister-industries.kerala.gov.in/wp-content/uploads/2021/09/prajeev.jpg",
+    "/images/rajeev.jpeg",
     title: "Hon. Minister's Message",
   },
   {
