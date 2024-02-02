@@ -13,16 +13,21 @@ import TranslateButton from "../../Components/TranslateButton"
 import Product from "./Product"
 import Navbar from "../../Components/Navbar"
 import PlayStore from "./PlayStore"
-import { useState } from "react"
+import { useLanguage } from "../../contexts/LanguageContext"
+
+
 function Home() {
-  const [language,setLanguage] = useState(true)
+  const {language,setLanguage} = useLanguage()
+  const toggleLanguage = () => {
+    setLanguage((prev) => !prev)
+  }
   return (
     <div>
-      <button onClick={() => setLanguage((prev) => !prev)} className="fixed bottom-4 right-3 z-50">
+      <button onClick={toggleLanguage} className="fixed bottom-4 right-3 z-50">
         <TranslateButton/>
       </button>
 
-        <Hero language={language}/>
+        <Hero />
         <About/>
         <DirectorBoard/>
         <Product/>

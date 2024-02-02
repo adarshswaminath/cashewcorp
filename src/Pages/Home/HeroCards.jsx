@@ -1,5 +1,6 @@
 import React from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { useLanguage } from "../../contexts/LanguageContext"
 import { Link } from "react-router-dom";
 
 import { enHeroCards } from "./Language/en";
@@ -7,7 +8,8 @@ import { mlHeroCards } from "./Language/ml";
 
 
 
-function HeroCards({language}) {
+function HeroCards() {
+  const {language} = useLanguage()
   let data = language ? enHeroCards : mlHeroCards
   return (
     <div  className="grid grid-cols-1 gap-3 md:flex justify-evenly lg:grid-cols-3 place-items-center justify-items-center">
