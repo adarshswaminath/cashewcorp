@@ -3,9 +3,13 @@ import "./style/home.css";
 
 import { enAboutData } from "./Language/en";
 import { mlAboutData } from "./Language/ml";
+import { enMissionAndVision } from "./Language/en";
+import { mlMissionAndVision } from "./Language/ml";
 import useLanguageData from "../../Hook/useLanguageData";
+
 function About() {
   const data = useLanguageData(enAboutData,mlAboutData)
+  const missionData = useLanguageData(enMissionAndVision,mlMissionAndVision)
   return (
     <div>
       <div className="">
@@ -85,33 +89,18 @@ function About() {
               <div>
                 <div className="grid lg:flex justify-center items-center gap-8">
                   {/* Mission Card */}
-                  <div
-                    data-aos="fade-right"
-                    className="p-6 bg-white w-full lg:max-w-md flex flex-col items-start rounded-lg shadow-md border-l-4 border-[#FF1E1E] transform transition ease-in-out duration-300 hover:scale-105 hover:-translate-y-3"
+                  {missionData.map((value) => (
+                    <div
+                    key={value.id}
+                    data-aos={value.id %2 ==0 ? "fade-right" : "fade-left"}
+                    className="p-6 h-72 bg-white w-full lg:max-w-md flex flex-col items-start rounded-lg shadow-md border-l-4 border-[#FF1E1E] transform transition ease-in-out duration-300 hover:scale-105 hover:-translate-y-3"
                   >
-                    <h2 className="text-3xl font-bold mb-4">Mission</h2>
+                    <h2 className="text-3xl font-bold mb-4">{value.title}</h2>
                     <p className="text-gray-700 leading-relaxed">
-                      KSDC aims at backward integration of its product line and
-                      has promoted Cashew Plantations in association with the
-                      Kerala State Agency for Cashew Cultivation. We have
-                      cultivated Cashew Plantation across 25 hectares in our
-                      facilities.
+                      {value.body}
                     </p>
                   </div>
-
-                  {/* Vision Card */}
-                  <div
-                    data-aos="fade-left"
-                    className="p-6 bg-white w-full lg:max-w-md flex flex-col items-start rounded-lg shadow-md border-l-4 border-[#FF1E1E] transform transition ease-in-out duration-300 hover:scale-105 hover:-translate-y-3"
-                  >
-                    <h2 className="text-3xl font-bold mb-4">Vision</h2>
-                    <p className="text-gray-700 leading-relaxed">
-                      The Vision of KSCDC is to be a World Class Organisation
-                      and a Leader in the Cashew Industry by providing 300 days
-                      of employment per year and achieve an Annual turnover of
-                      Rs. 1000 Crore by the year 2025.
-                    </p>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>

@@ -76,5 +76,18 @@ const enAboutData = [
     para_three: "KSDC also aims at backward integration of its product line and has promoted Cashew Plantations in association with the Kerala State Agency for Cashew Cultivation and have cultivated Cashew Plantation across 25 hectares in its facilities."
   }
 ]
+// mission and vission
+const enMissionAndVision = [
+  {
+    id: 1,
+    title: "Mission",
+    body: "KSCDC acts as a model employer in the field of cashew industry mainly to protect the interest of its workers and to provide maximum employment to them ensuring their statutory benefits like minimum wages, bonus and etc. prevailing in the cashew industry."
+  },
+  {
+    id: 2,
+    title: "Vision",
+    body: "The Vision of KSCDC is to be a World Class Organisation and a Leader in the Cashew Industry by providing 300 days of employment an year and achieve an Annual turnover of Rs.1000 Crore by year 2025."
+  }
+]
 
-export {enHeroCards,enleaderData,enAboutData}
+export {enHeroCards,enleaderData,enAboutData,enMissionAndVision}
