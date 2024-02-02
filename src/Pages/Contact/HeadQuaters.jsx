@@ -16,7 +16,7 @@ function HeadQuaters() {
                 className="mb-4 p-4 bg-white shadow-lg w-full"
               >
                 <p className="font-bold">{value.title}</p>
-                <a className="text-[#FF1E1E]" href={`mailto:${value.email}`}>
+                <a className="text-red-500" href={`mailto:${value.email}`}>
                   {value.email}
                 </a>
               </div>

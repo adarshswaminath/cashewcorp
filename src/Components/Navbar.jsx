@@ -18,13 +18,13 @@ function Navbar() {
   const subProduct = () => (
     <div className="capitalize text-xs absolute hidden bg-white/10 bg:blur backdrop-blur text-black py-2 space-y-2 w-40 p-3 top-full left-0 group-hover:grid transition transform ease-in-out duration-300">
       <Link
-        className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E] text-base"
+        className="hover:bg-white p-2 border-0 hover:border hover:border-red-500 text-base"
         to="/product"
       >
         CDC Brand Products
       </Link>
       <Link
-        className="bg-red-600 text-white rounded-lg hover:bg-red-400 border-[#FF1E1E] btn"
+        className="bg-red-600 text-white rounded-lg hover:bg-red-400 border-red-500 btn"
         to="/product"
       >
         Online Shopping
@@ -41,44 +41,44 @@ function Navbar() {
       className="capitalize text-xs absolute hidden bg-white/10 bg:blur backdrop-blur text-black py-2 space-y-2 w-40 p-3 top-full left-0 group-hover:grid transition transform ease-in-out duration-300"
     >
       <Link
-        className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]"
+        className="hover:bg-white p-2 border-0 hover:border hover:border-red-500"
         to="/kscdc"
       >
         KSCDC
       </Link>
       <Link
-        className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]"
+        className="hover:bg-white p-2 border-0 hover:border hover:border-red-500"
         to="/org"
       >
         Organization
       </Link>
       <Link
-        className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]"
+        className="hover:bg-white p-2 border-0 hover:border hover:border-red-500"
         to="/director-board"
       >
         Board Of Directors
       </Link>
       <Link
-        className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]"
+        className="hover:bg-white p-2 border-0 hover:border hover:border-red-500"
         to="/management"
       >
         Management
       </Link>
       <Link
-        className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]"
+        className="hover:bg-white p-2 border-0 hover:border hover:border-red-500"
         to="/product-characteristic"
       >
         Product Characteristics
       </Link>
       <Link
-        className="hover:bg-white p-2 border-0 hover:border hover:border-[#FF1E1E]"
+        className="hover:bg-white p-2 border-0 hover:border hover:border-red-500"
         to="/franchisee"
       >
         Franchisee
       </Link>
       <Link
         to="/blog"
-        className="bg-red-600 text-white rounded-lg hover:bg-red-400 border-[#FF1E1E] btn"
+        className="bg-red-600 text-white rounded-lg hover:bg-red-400 border-red-500 btn"
       >
         What's New
       </Link>
@@ -104,8 +104,8 @@ function Navbar() {
         <Link
           to="/"
           className={`${
-            path === "/" ? "text-[#FF1E1E]" : ""
-          } text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold`}
+            path === "/" ? "text-red-500" : ""
+          } text-xs hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
         >
           Home
         </Link>
@@ -136,8 +136,8 @@ function Navbar() {
         <div className="relative group">
           <Link
             className={`${
-              path === "/product" ? "text-[#FF1E1E]" : ""
-            } text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold flex items-center`}
+              path === "/product" ? "text-red-500" : ""
+            } text-xs hover:text-red-500 decoration-wavy decoration-red-400 font-bold flex items-center`}
           >
             Product
             <svg
@@ -160,40 +160,40 @@ function Navbar() {
         <Link
           to="/tender"
           className={`${
-            path === "/tender" ? "text-[#FF1E1E]" : ""
-          } text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold`}
+            path === "/tender" ? "text-red-500" : ""
+          } text-xs hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
         >
           Tender
         </Link>
         <Link
           to="/career"
           className={`${
-            path === "/career" ? "text-[#FF1E1E]" : ""
-          } text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold`}
+            path === "/career" ? "text-red-500" : ""
+          } text-xs hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
         >
           Career
         </Link>
         <Link
           to="/rti"
           className={`${
-            path === "/rti" ? "text-[#FF1E1E]" : ""
-          } text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold`}
+            path === "/rti" ? "text-red-500" : ""
+          } text-xs hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
         >
           RTI
         </Link>
         <Link
           to="/gallery"
           className={`${
-            path === "/gallery" ? "text-[#FF1E1E]" : ""
-          } text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold`}
+            path === "/gallery" ? "text-red-500" : ""
+          } text-xs hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
         >
           Gallery
         </Link>
         <Link
           to="/contact"
           className={`${
-            path === "/contact" ? "text-[#FF1E1E]" : ""
-          } text-xs hover:text-[#FF1E1E] decoration-wavy decoration-red-400 font-bold`}
+            path === "/contact" ? "text-red-500" : ""
+          } text-xs hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
         >
           Contact
         </Link>
@@ -214,7 +214,7 @@ function Navbar() {
             to="/product"
             className=" rounded flex items-center justify-center  top-0 right-2 relative"
           >
-            <button className="flex items-center gap-2 font-bold bg-[#FF1E1E] hover:bg-red-400 p-2 rounded-lg text-white">
+            <button className="flex items-center gap-2 font-bold bg-red-500 hover:bg-red-400 p-2 rounded-lg text-white">
               Shop Now
               <FaShoppingCart />
             </button>
@@ -249,97 +249,97 @@ function Navbar() {
 
             <Link
               to="/"
-              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
             >
               Home
             </Link>
             <Link
               to="/kscdc"
-              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
             >
               About us
             </Link>
             <Link
               to="/management"
-              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
             >
               Management
             </Link>
             <Link
               to="/org"
-              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
             >
               Organization
             </Link>
             <Link
               to="/product-characteristic"
-              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
             >
               Product Characteristic
             </Link>
             <Link
               to="/franchisee"
-              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
             >
               Franchisee
             </Link>
             <Link
               to="/product"
-              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
             >
               Product
             </Link>
             <Link
               to="/director-board"
-              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
             >
               Board Of Directors
             </Link>
             <Link
               to="/tender"
-              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
             >
               Tender
             </Link>
             <Link
               to="/career"
-              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
             >
               Career
             </Link>
             <Link
               to="/rti"
-              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
             >
               RTI
             </Link>
             <Link
               to="/gallery"
-              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
             >
               Gallery
             </Link>
             <Link
               to="/contact"
-              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
             >
               Contact
             </Link>
             <Link
               to="/blog"
-              className="text-xl font-bold mt-3 hover:text-[#FF1E1E] decoration-wavy decoration-red-400"
+              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
             >
               What's New
             </Link>
             <Link to="/product">
-              <button className="flex items-center text-xl btn m-3 rounded-lg bg-[#FF1E1E] hover:bg-red-400 text-white">
+              <button className="flex items-center text-xl btn m-3 rounded-lg bg-red-500 hover:bg-red-400 text-white">
                 Shop Now
                 <FaShoppingCart />
               </button>
             </Link>
             <button
               onClick={toggleMenu}
-              className="mt-3 rounded-full bg-[#FF1E1E] text-white p-3"
+              className="mt-3 rounded-full bg-red-500 text-white p-3"
             >
               <RxCross2 />
             </button>

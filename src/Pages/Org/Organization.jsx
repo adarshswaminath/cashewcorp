@@ -28,19 +28,19 @@ function Organization() {
             <div>
               <ul className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
                 <li className="p-3 bg-white rounded-md shadow-md">
-                  <span className="text-[#FF1E1E] font-bold">Production</span>
+                  <span className="text-red-500 font-bold">Production</span>
                 </li>
                 <li className="p-3 bg-white rounded-md shadow-md">
-                  <span className="text-[#FF1E1E] font-bold">Personnel</span>
+                  <span className="text-red-500 font-bold">Personnel</span>
                 </li>
                 <li className="p-3 bg-white rounded-md shadow-md">
-                  <span className="text-[#FF1E1E] font-bold">Commerce</span>
+                  <span className="text-red-500 font-bold">Commerce</span>
                 </li>
                 <li className="p-3 bg-white rounded-md shadow-md">
-                  <span className="text-[#FF1E1E] font-bold">Materials</span>
+                  <span className="text-red-500 font-bold">Materials</span>
                 </li>
                 <li className="p-3 bg-white rounded-md shadow-md">
-                  <span className="text-[#FF1E1E] font-bold">Finance</span>
+                  <span className="text-red-500 font-bold">Finance</span>
                 </li>
               </ul>
             </div>
@@ -56,7 +56,7 @@ function Organization() {
           <ul className="list-disc pl-5">
             <li>
               <a
-                className="text-[#FF1E1E]"
+                className="text-red-500"
                 href="mailto:ho@cashewcorporation.com"
               >
                 ho@cashewcorporation.com
@@ -64,14 +64,14 @@ function Organization() {
             </li>
             <li>
               <a
-                className="text-[#FF1E1E]"
+                className="text-red-500"
                 href="mailto:mdkscdc@cashewcorporation.com"
               >
                 mdkscdc@cashewcorporation.com
               </a>
             </li>
             <li>
-              <a className="text-[#FF1E1E]" href="mailto:kscdc@kerala.gov.in">
+              <a className="text-red-500" href="mailto:kscdc@kerala.gov.in">
                 kscdc@kerala.gov.in
               </a>
             </li>
@@ -87,7 +87,7 @@ function Organization() {
                 className="mb-4 p-4 bg-white shadow-lg w-full"
               >
                 <p className="font-bold">{value.title}</p>
-                <a className="text-[#FF1E1E]" href={`mailto:${value.email}`}>
+                <a className="text-red-500" href={`mailto:${value.email}`}>
                   {value.email}
                 </a>
               </div>

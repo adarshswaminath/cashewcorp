@@ -29,10 +29,10 @@ function Contact() {
       <Navbar />
       <div className="flex flex-col items-center">
         <div className="grid grid-cols-3  gap-3 lg:flex items-center justify-center space-x-3 mt-4 mb-4">
-          <button className={`px-5 py-1 border hover:bg-[#FF1E1E] hover:text-white ${currentPage === "default" ? 'bg-[#FF1E1E] text-white' : "bg-transparent" }`} onClick={() => setCurrentPage("default")}>Locate KSCDC</button>
-          <button className={`px-5 py-1 border hover:bg-[#FF1E1E] hover:text-white ${currentPage === "contactus" ? 'bg-[#FF1E1E] text-white' : "bg-transparent" }`} onClick={() => setCurrentPage("contactus")}>Contact us</button>
-          <button className={`px-5 py-1 border hover:bg-[#FF1E1E] hover:text-white ${currentPage === "headquaters" ? 'bg-[#FF1E1E] text-white' : "bg-transparent" }`} onClick={() => setCurrentPage("headquaters")}>H/O Factory</button>
-          <button className={`px-5 py-1 border hover:bg-[#FF1E1E] hover:text-white ${currentPage === "postaquery" ? 'bg-[#FF1E1E] text-white' : "bg-transparent" }`} onClick={() => setCurrentPage("postaquery")}>Post A Query</button>
+          <button className={`px-5 py-1 border hover:bg-red-500 hover:text-white ${currentPage === "default" ? 'bg-red-500 text-white' : "bg-transparent" }`} onClick={() => setCurrentPage("default")}>Locate KSCDC</button>
+          <button className={`px-5 py-1 border hover:bg-red-500 hover:text-white ${currentPage === "contactus" ? 'bg-red-500 text-white' : "bg-transparent" }`} onClick={() => setCurrentPage("contactus")}>Contact us</button>
+          <button className={`px-5 py-1 border hover:bg-red-500 hover:text-white ${currentPage === "headquaters" ? 'bg-red-500 text-white' : "bg-transparent" }`} onClick={() => setCurrentPage("headquaters")}>H/O Factory</button>
+          <button className={`px-5 py-1 border hover:bg-red-500 hover:text-white ${currentPage === "postaquery" ? 'bg-red-500 text-white' : "bg-transparent" }`} onClick={() => setCurrentPage("postaquery")}>Post A Query</button>
         </div>
        </div>
        {/* contact Sections */}

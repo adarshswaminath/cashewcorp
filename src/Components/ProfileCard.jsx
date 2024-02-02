@@ -11,7 +11,7 @@ function ProfileCard({ name, image, position, content, link ,title}) {
               <img src={image} alt={name} />
             </div>
             <div className="contentBx">
-              <h3 className="text-[#FF1E1E] font-bold group-hover:opacity-0">
+              <h3 className="text-red-500 font-bold group-hover:opacity-0">
                 {name}
                 <br />
                 <span className="text-black">{position}</span>

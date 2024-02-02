@@ -76,7 +76,7 @@ function Career() {
       <span className="flex items-center p-3">
         <span className="h-3 w-3 rounded-full bg-green-500"></span>
         Active &nbsp;
-        <span className="h-3 w-3 rounded-full bg-[#FF1E1E]"></span>
+        <span className="h-3 w-3 rounded-full bg-red-500"></span>
         Expired
       </span>
       <div className="overflow-x-auto min-h-screen">
@@ -100,7 +100,7 @@ function Career() {
                   {value.status ? (
                     <span className="bg-green-500 h-3 w-3 rounded-full text-white font-bold"></span>
                   ) : (
-                    <span className="bg-[#FF1E1E] h-3 w-3 rounded-full font-bold"></span>
+                    <span className="bg-red-500 h-3 w-3 rounded-full font-bold"></span>
                   )}
                 </td>
                 </a>
