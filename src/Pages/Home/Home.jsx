@@ -13,14 +13,16 @@ import TranslateButton from "../../Components/TranslateButton"
 import Product from "./Product"
 import Navbar from "../../Components/Navbar"
 import PlayStore from "./PlayStore"
+import { useState } from "react"
 function Home() {
+  const [language,setLanguage] = useState(true)
   return (
     <div>
-      <div className="fixed bottom-4 right-3 z-50">
+      <button onClick={() => setLanguage((prev) => !prev)} className="fixed bottom-4 right-3 z-50">
         <TranslateButton/>
-      </div>
+      </button>
 
-        <Hero/>
+        <Hero language={language}/>
         <About/>
         <DirectorBoard/>
         <Product/>

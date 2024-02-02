@@ -13,7 +13,7 @@ const images = [
   "/images/hero/hero-5.png",
 ];
 
-function Hero() {
+function Hero({language}) {
   const [imageIndex, setImageIndex] = useState(1);
 
   useEffect(() => {
@@ -38,7 +38,7 @@ function Hero() {
     </div>
   </div>
   <div className="p-2 mt-3">
-    <HeroCards />
+    <HeroCards language={language} />
     <div>
       <LeaderTopImages />
     </div>
