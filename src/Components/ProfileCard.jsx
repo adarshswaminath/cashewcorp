@@ -8,7 +8,7 @@ function ProfileCard({ name, image, position, content, link ,title}) {
         <div className="card">
           <div className="content">
             <div className="imgBx">
-              <img src={image} alt={name} />
+              <img src={image} className="rounded-b-full" alt={name} />
             </div>
             <div className="contentBx">
               <h3 className="text-red-500 font-bold group-hover:opacity-0">
