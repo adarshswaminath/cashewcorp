@@ -2,7 +2,7 @@
 
 .marquee {
   overflow: hidden;
-  position: relative;
+  /* position: ; */
 }
 
 .marquee ul {
@@ -14,9 +14,11 @@
   animation-play-state: paused;
 }
 
+
 .marquee li {
-  min-width: 200px; /* Adjust the width of each card as needed */
+  min-width: 200px;
 }
+
 
 @keyframes scroll {
   0% {
