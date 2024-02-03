@@ -7,7 +7,7 @@ import UseFulLinks from "./UseFulLinks";
 
 
 const cardData = [
-  { image: "/images/directors/chairman.png", title: "Shri. S.Jayamohan", caption: "Chairman" },
+  { image: "/images/directors/man.png", title: "Shri. S.Jayamohan", caption: "Chairman" },
   { image: "/images/directors/dir-1.png", title: "Shri. Sunil John .K", caption: "Managing Director" },
   { image: "/images/directors/dir-9.jpeg", title: "Shri. B. Pratheep Kumar", caption: "Director" },
   { image: "/images/directors/dir-10.jpeg", title: "Shri. Siju Jacob", caption: "Director" },
@@ -24,7 +24,7 @@ const ChooseCard = ({ image, title, caption }) => {
   return (
     <div data-aos="flip-down" className="relative flex flex-col items-center group">
       <img
-        className="h-48 w-40 object-cover rounded-lg shadow-lg border border-blue-400 hover:scale-125 transition duration-300 ease-in-out"
+        className="h-48 w-40  object-cover bg-white rounded-lg  shadow-xl border hover:scale-125 transition duration-300 ease-in-out"
         src={image}
         alt="Profile image"
       />

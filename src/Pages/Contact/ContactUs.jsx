@@ -1,14 +1,52 @@
 import React from 'react';
+import Banner from "../../Components/Banner"
 
 
 function ContactUs() {
   return (
     <div className="bg-gray-100">
-     
-        <img src="/images/map.svg" alt="svg image" className='w-full h-96 mb-4' />
-    
-        <div className="mt-4">
+     <Banner image={"feedback.jpg"}/>
+        
+        <div className="mt-4 flex">
         <ContactBox/>
+         {/* form */}
+         <form className="w-full lg:w-3/5 bg-white flex flex-col items-center p-4">
+          <h2 className="font-bold">Send a Message</h2>
+          <div className="grid lg:flex gap-2 w-full">
+            <input
+              type="text"
+              placeholder="Name"
+              className="input bg-gray-200 w-full"
+            />
+            <input
+              type="tel"
+              placeholder="Phone No"
+              className="input bg-gray-200 w-full"
+            />
+          </div>
+          <textarea
+            placeholder="Address"
+            className="textarea bg-gray-200 w-full mt-2"
+            id=""
+            cols="20"
+            rows="2"
+          ></textarea>
+          <input
+            type="email"
+            placeholder="Email"
+            className="input mt-2 bg-gray-200 w-full"
+          />
+          <textarea
+            placeholder="Message"
+            className="textarea bg-gray-200 w-full mt-2"
+            id=""
+            cols="20"
+            rows="8"
+          ></textarea>
+          <button className="bg-red-500 btn mt-2 hover:bg-red-400 text-white">
+            Submit Feedback
+          </button>
+        </form>
         </div>
       <iframe
             title="Kerala State Cashew Development Corporation Location"
