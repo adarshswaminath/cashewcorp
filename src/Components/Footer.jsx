@@ -134,13 +134,13 @@ function Footer() {
             />
             <img
               src="/images/footer4.png"
-              className="h-20 w-20 rounded-lg"
+              className="h-28 w-28 rounded-lg"
               alt="Footer image"
             />
             <div className="flex flex-col items-center">
             <img
               src="/images/footer5.png"
-              className="h-20 w-20 rounded-lg"
+              className="h-[75px] w-[75px] rounded-lg"
               alt="Footer image"
             />
             <p className="text-xs font-bold">Time In Delivery</p>
