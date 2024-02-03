@@ -7,11 +7,11 @@ function ContactUs() {
     <div className="bg-gray-100">
      <Banner image={"feedback.jpg"}/>
         
-        <div className="mt-4 flex">
+        <div className="mt-4 grid gap-x-4 lg:flex p-3">
         <ContactBox/>
          {/* form */}
          <form className="w-full lg:w-3/5 bg-white flex flex-col items-center p-4">
-          <h2 className="font-bold">Send a Message</h2>
+          <h2 className="font-bold">Send Your Feedback</h2>
           <div className="grid lg:flex gap-2 w-full">
             <input
               type="text"
@@ -37,7 +37,7 @@ function ContactUs() {
             className="input mt-2 bg-gray-200 w-full"
           />
           <textarea
-            placeholder="Message"
+            placeholder="Your Feedback Please"
             className="textarea bg-gray-200 w-full mt-2"
             id=""
             cols="20"
@@ -96,20 +96,20 @@ const ContactBox = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div>
-          <p className="font-semibold">Head Office:</p>
+          <p className="font-semibold text-sm">Head Office:</p>
           <p>Mundakkal, Kollam</p>
         </div>
         <div>
-          <p className="font-semibold">Cashew Planation</p>
+          <p className="font-semibold text-sm">Cashew Planation</p>
           <p>Kottiyam</p>
         </div>
         <div>
-          <p className="font-semibold">Factory Offices:</p>
+          <p className="font-semibold text-sm">Factory Offices:</p>
           <p>All Over Kerala</p>
         </div>
 
         <div>
-          <p className="font-semibold">Value Addition Unit:</p>
+          <p className="font-semibold text-sm">Value Addition Unit:</p>
           <p>Ayathil</p>
         </div>
       </div>
