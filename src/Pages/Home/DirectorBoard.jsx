@@ -7,24 +7,26 @@ import UseFulLinks from "./UseFulLinks";
 
 
 const cardData = [
-  { image: "/images/directors/man.png", title: "Shri. S.Jayamohan", caption: "Chairman" },
+  { image: "/images/directors/chairman.png", title: "Shri. S.Jayamohan", caption: "Chairman" },
   { image: "/images/directors/dir-1.png", title: "Shri. Sunil John .K", caption: "Managing Director" },
-  { image: "/images/directors/dir-9.jpeg", title: "Shri. B. Pratheep Kumar", caption: "Director" },
-  { image: "/images/directors/dir-10.jpeg", title: "Shri. Siju Jacob", caption: "Director" },
-  { image: "/images/directors/dir-8.jpeg", title: "Dr. B S Suran", caption: "Director" },
-  { image: "/images/directors/dir-4.jpeg", title: "Shri. B Sujeendran", caption: "Director" },
-  { image: "/images/directors/dir-5.jpeg", title: "Shri. G. Babu", caption: "Director" },
-  { image: "/images/directors/dir-7.jpeg", title: "Shri. Saji D. Anand", caption: "Director" },
-  { image: "/images/directors/dir-6.jpeg", title: "Adv. Sooranadu S Sreekumar", caption: "Director" },
+  { image: "/images/directors/dir-9.png", title: "Shri. B. Pratheep Kumar", caption: "Director" },
+  { image: "/images/directors/dir-10.png", title: "Shri. Siju Jacob", caption: "Director" },
+  { image: "/images/directors/dir-8.png", title: "Dr. B S Suran", caption: "Director" },
+  { image: "/images/directors/dir-4.png", title: "Shri. B Sujeendran", caption: "Director" },
+  { image: "/images/directors/dir-5.png", title: "Shri. G. Babu", caption: "Director" },
+  { image: "/images/directors/dir-7.png", title: "Shri. Saji D. Anand", caption: "Director" },
+  { image: "/images/directors/dir-6.png", title: "Adv. Sooranadu S Sreekumar", caption: "Director" },
 ];
 
 
 
 const ChooseCard = ({ image, title, caption }) => {
   return (
-    <div data-aos="flip-down" className="relative flex flex-col items-center group">
+    <div 
+    // data-aos="flip-down"
+     className="relative flex flex-col items-center group bg-white">
       <img
-        className="h-48 w-40  object-cover bg-white rounded-lg  shadow-xl border hover:scale-125 transition duration-300 ease-in-out"
+        className="h-48 w-40  object-cover  rounded-b-full   hover:scale-125 transition duration-300 ease-in-out"
         src={image}
         alt="Profile image"
       />
@@ -47,7 +49,7 @@ function DirectorBoard() {
         Our Board Of Directors
       </h3>
       <div className="flex items-center justify-center">
-      <div className="grid grid-cols-2 lg:grid-cols-5 gap-16 mt-3 p-2">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-16 mt-3 p-2">
         {cardData.map((value, index) => (
           <ChooseCard
             key={index}
