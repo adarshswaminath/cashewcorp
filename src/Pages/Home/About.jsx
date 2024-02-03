@@ -6,6 +6,7 @@ import { mlAboutData } from "./Language/ml";
 import { enMissionAndVision } from "./Language/en";
 import { mlMissionAndVision } from "./Language/ml";
 import useLanguageData from "../../Hook/useLanguageData";
+import { Link } from "react-router-dom";
 
 function About() {
   const data = useLanguageData(enAboutData,mlAboutData)
@@ -38,9 +39,11 @@ function About() {
             <p className="leading-relaxed  w-[700px]  text-xl text-gray-700 mb-6">
               {about.para_three}
             </p>
-            <button className="mt-4 px-5 py-2 bg-red-500 font-bold text-white uppercase transform -translate-y-0 hover:-translate-y-3 hover:scale-110 transition duration-300 ease-in-out hover:shadow-2xl">
+           <Link to={"/kscdc"}>
+           <button className="mt-4 px-5 py-2 bg-red-500 font-bold text-white uppercase transform -translate-y-0 hover:-translate-y-3 hover:scale-110 transition duration-300 ease-in-out hover:shadow-2xl">
               more about us
             </button>
+           </Link>
           </div>
           ))}
           </div>

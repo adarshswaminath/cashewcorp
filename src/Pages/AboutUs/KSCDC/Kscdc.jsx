@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import DirectorBoard from "../../Home/DirectorBoard";
 import Navbar from "../../../Components/Navbar";
 import Footer from "../../../Components/Footer";
 import Banner from "../../../Components/Banner";
 
 function Kscdc() {
+  useEffect(() =>{
+    window.scrollTo(0,0)
+  },[])
   return (
     <div>
       <Navbar />
