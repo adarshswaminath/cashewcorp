@@ -13,7 +13,8 @@ function About() {
   return (
     <div>
       <div className="">
-        <div className="grid gap-4 lg:flex items-center justify-evenly   m-6 about">
+        <div className="grid gap-4 lg:flex items-center gap-x-20 justify-between  m-6 about">
+          <div className="">
           {data.map((about) => (
             <div
             key={about.title}
@@ -25,16 +26,16 @@ function About() {
                 {about.title}
               </span>
             </div>
-            <h2 className="text-xl max-w-md text-balance text-blue-500">
+            <h2 className=" text-xl max-w-md text-balance text-blue-500">
               {about.subtitle}{" "}
             </h2>
-            <p className="text-balance max-w-4xl text-xl text-gray-700 mt-6 mb-6">
+            <p className="leading-relaxed   w-[700px] text-xl text-gray-700 mt-6 mb-6">
              {about.para_one}
             </p>
-            <p className="text-balance max-w-4xl text-xl text-gray-700 mb-6">
+            <p className="leading-relaxed  w-[700px]  text-xl text-gray-700 mb-6">
               {about.para_two}
             </p>
-            <p className="text-balance max-w-4xl text-xl text-gray-700 mb-6">
+            <p className="leading-relaxed  w-[700px]  text-xl text-gray-700 mb-6">
               {about.para_three}
             </p>
             <button className="mt-4 px-5 py-2 bg-red-500 font-bold text-white uppercase transform -translate-y-0 hover:-translate-y-3 hover:scale-110 transition duration-300 ease-in-out hover:shadow-2xl">
@@ -42,6 +43,7 @@ function About() {
             </button>
           </div>
           ))}
+          </div>
           <div>
             <div className="grid gap-4 grid-cols-2">
               <div
