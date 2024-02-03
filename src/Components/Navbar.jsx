@@ -4,13 +4,18 @@ import { RxCross2 } from "react-icons/rx";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { mlNavHeading } from "../Pages/Home/Language/ml";
+import { enNavHeading } from "../Pages/Home/Language/en";
+import useLanguageData from "../Hook/useLanguageData";
+
 import "./style/navbar.css";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const path = location.pathname;
-
+  const heading = useLanguageData(enNavHeading,mlNavHeading)
+  console.table(heading)
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -90,14 +95,16 @@ function Navbar() {
       {/* image logo */}
       <div className="logo flex items-center">
         <img src="/images/logo.png" className="h-12 lg:h-36" alt="Logo" />
-        <div>
-          <h3 className="font-bold max-w-md">
-            The kerala state cashew development corporation ltd
+        {heading.map((navdata) => (
+          <div>
+          <h3 className="font-bold max-w-sm">
+            {navdata.title}
           </h3>
           <p className="text-xs text-gray-800 font-semibold">
-            (A Government of Kerala Undertaking)
+            ({navdata.caption})
           </p>
         </div>
+        ))}
       </div>
       {/* navbar content */}
       <div className="hidden lg:flex space-x-2 items-center ">

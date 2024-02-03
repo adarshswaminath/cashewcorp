@@ -3,6 +3,14 @@ import { FaBookOpen } from "react-icons/fa6";
 import { MdProductionQuantityLimits } from "react-icons/md";
 import { AiOutlineShop } from "react-icons/ai";
 
+// logo text
+const mlNavHeading = [
+  {
+    title: "കേരള സംസ്ഥാന കശുവണ്ടി വികസന കോർപ്പറേഷൻ ലിമിറ്റഡ്",
+    caption: "കേരള സർക്കാർ സ്ഥാപനം",
+  },
+];
+
 const mlHeroCards = [
   {
     id: 1,
@@ -48,8 +56,7 @@ const mlleaderData = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum inlabore laudantium deserunt fugiat numquam.",
     message:
       "Ex elit quis non qui tempor amet nisi laboris do cupidatat. Ea et excepteur consequat Lorem dolore occaecat velit in irure sunt do. Elit ea voluptate in et occaecat culpa officia et adipisicing excepteur mollit enim.",
-    image:
-    "/images/rajeev.jpeg",
+    image: "/images/rajeev.jpeg",
     title: "Hon. Minister's Message",
   },
   {
@@ -102,4 +109,10 @@ const mlMissionAndVision = [
   },
 ];
 
-export { mlHeroCards, mlleaderData, mlAboutData, mlMissionAndVision };
+export {
+  mlHeroCards,
+  mlleaderData,
+  mlAboutData,
+  mlMissionAndVision,
+  mlNavHeading,
+};
