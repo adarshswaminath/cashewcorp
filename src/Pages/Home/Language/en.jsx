@@ -15,7 +15,7 @@ const enNavHeading = [
 const enHeroCards = [
   {
     id: 1,
-    title: "60+ Products",
+    title: "70+ Products",
     body: "KSCDC's premium products are available in domestic and international markets with various grades and weights",
     icon: <MdProductionQuantityLimits />,
     link: "/product",

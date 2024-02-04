@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { factoriesData } from "../Org";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import Banner from '../../Components/Banner';
 
 const accordion = [
   {
@@ -24,7 +25,9 @@ const accordion = [
 
 const ContactFactory = () => {
   return(
-    <div className='p-3'>
+  <div>
+    <Banner image={"office.jpg"}/>
+    <div className='p-5'>
       {accordion.map((data) => (
         <Accordion
           key={data.id}
@@ -33,6 +36,7 @@ const ContactFactory = () => {
         />
       ))}
     </div>
+  </div>
   )
 };
 
@@ -46,13 +50,13 @@ const ContactFactory = () => {
   };
 
   return (
-    <div className="border border-red-100 rounded-lg hover:bg-red-300  mb-2">
+    <div className="border  rounded-lg bg-[#0757A9]   mb-2">
       <div
         className="flex justify-between items-center p-4 cursor-pointer"
         onClick={toggleAccordion}
       >
-        <h3 className="text-lg font-semibold">{title}</h3>
-        <span className={`transform ${isOpen ? 'rotate-180' : 'rotate-0'} transition-transform`}>
+        <h3 className="text-lg font-semibold text-white">{title}</h3>
+        <span className={`transform text-white ${isOpen ? 'rotate-180' : 'rotate-0'} transition-transform`}>
           &#9660;
         </span>
       </div>

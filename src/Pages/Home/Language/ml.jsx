@@ -14,7 +14,7 @@ const mlNavHeading = [
 const mlHeroCards = [
   {
     id: 1,
-    title: "66+ ഉൽപ്പന്നങ്ങൾ",
+    title: "70+ ഉൽപ്പന്നങ്ങൾ",
     body: "കാഷ്യൂ കോർപ്പറേഷന്റെ പ്രീമിയം ഉൽപ്പനങ്ങൾ വിവിധ ഗ്രേഡുകളിലും, തൂക്കത്തിലും   ആഭ്യന്തര അന്താരാഷ്ട്ര വിപണികളിൽ ലഭ്യമാണ്",
     icon: <MdProductionQuantityLimits />,
     link: "/product",

@@ -12,6 +12,7 @@ function ContactUs() {
          {/* form */}
          <form className="w-full lg:w-3/5 bg-white flex flex-col items-center p-4">
           <h2 className="font-bold">Send Your Feedback</h2>
+          <p className='text-center mt-4 mb-6'>Thank you for visiting our website. If you have any queries, feedback or suggestions, feel free to get in touch with us</p>
           <div className="grid lg:flex gap-2 w-full">
             <input
               type="text"
@@ -44,7 +45,7 @@ function ContactUs() {
             rows="8"
           ></textarea>
           <button className="bg-red-500 btn mt-2 hover:bg-red-400 text-white">
-            Submit Feedback
+            Submit
           </button>
         </form>
         </div>
@@ -67,7 +68,7 @@ const ContactBox = () => {
   return(
     <div className="container mx-auto  w-full lg:w-1/2">
     <div
-      className="bg-white p-8 rounded-lg shadow-lg mb-8"
+      className="bg-[#02ACED] text-white p-8 rounded-lg shadow-lg mb-8"
       data-aos="fade-up"
       data-aos-duration="800"
     >
