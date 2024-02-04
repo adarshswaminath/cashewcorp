@@ -30,13 +30,13 @@ function About() {
             <h2 className=" text-xl max-w-md text-balance text-blue-500">
               {about.subtitle}{" "}
             </h2>
-            <p className="leading-relaxed   w-[700px] text-xl text-gray-700 mt-6 mb-6">
+            <p className="leading-relaxed   lg:w-[700px] text-xl text-gray-700 mt-6 mb-6">
              {about.para_one}
             </p>
-            <p className="leading-relaxed  w-[700px]  text-xl text-gray-700 mb-6">
+            <p className="leading-relaxed  lg:w-[700px]  text-xl text-gray-700 mb-6">
               {about.para_two}
             </p>
-            <p className="leading-relaxed  w-[700px]  text-xl text-gray-700 mb-6">
+            <p className="leading-relaxed  lg:w-[700px]  text-xl text-gray-700 mb-6">
               {about.para_three}
             </p>
            <Link to={"/kscdc"}>
