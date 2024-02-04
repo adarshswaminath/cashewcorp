@@ -38,7 +38,7 @@ const ContactFactory = () => {
 
 
 // accordion 
-function Accordion({title,content}){
+ function Accordion({title,content}){
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {
