@@ -23,7 +23,7 @@ const cardData = [
 const ChooseCard = ({ image, title, caption }) => {
   return (
     <div 
-    // data-aos="flip-down"
+    data-aos="flip-down"
      className="relative flex flex-col items-center group bg-white">
       <img
         className="h-48 w-40  object-cover  rounded-b-full   hover:scale-125 transition duration-300 ease-in-out"
