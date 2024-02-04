@@ -57,6 +57,13 @@ function Kscdc() {
         <div data-aos="zoom-in-down">
           <img src="/images/company.jpeg" alt="Company Image" />
         </div>
+        <div className="mt-4 flex flex-col items-start justify-center ">
+          <h3 className="text-2xl font-bold">Kollam ‘The Cashew Capital’</h3>
+          <p className="text-balance tracking-wide">Situated in the southern coast of India. This ancient port town has hundred years of
+heritage to its credit. Remnants of that glorious past are seen even to this day. The
+major chunk of revenue brought into this town is by export of cashew kernels. With
+it, the KSCDC has put Kollam on the trade map on the Globe.</p>
+        </div>
         <div>
           <div className="mt-8 grid lg:flex justify-center items-center gap-8">
             {/* Mission Card */}
