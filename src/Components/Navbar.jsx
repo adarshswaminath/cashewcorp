@@ -15,7 +15,6 @@ function Navbar() {
   const location = useLocation();
   const path = location.pathname;
   const heading = useLanguageData(enNavHeading,mlNavHeading)
-  console.table(heading)
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
