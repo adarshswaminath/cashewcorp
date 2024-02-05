@@ -8,8 +8,8 @@ const categories = [
   { main: null, label: "View All", sub: null },
   { main: "plain", label: "Plain Cashews", sub: ["All", "premium", "popular","extra-premium"] },
   { main: "roastedandsalted", label: "Roasted and Salted", sub: ["All", "premium", "popular"] },
-  { main: "ValueAddedProducts", label: "Value Added Products", sub: ["All", "flavoured-cashew", "cashew-vita","spread-delights"] },
-  { main: "GiftBoxPackets", label: "Gift Box Packets", sub: ["All"] },
+  { main: "valueAddedProducts", label: "Value Added Products", sub: ["All", "flavoured-cashew",'premium', "cashew-vita","spread-delights"] },
+  { main: "giftboxpackets", label: "Gift Box Packets", sub: ["All",'gift-box','jute-bag'] },
 ];
 
 // Reusable component for filter buttons

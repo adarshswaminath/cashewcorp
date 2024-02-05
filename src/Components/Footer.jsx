@@ -97,7 +97,7 @@ function FooterCopyRight() {
 function Footer() {
   return (
     <div
-      className="relative bg-cover bg-center bg-no-repeat min-h-screen bg-gray-900"
+      className="relative bg-cover bg-center bg-no-repeat min-h-screen bg-gray-900 z-50"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Black overlay */}

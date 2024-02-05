@@ -10,25 +10,57 @@ function ProductCard({
   description,
   id,
 }) {
-  function handleUserClick() {
+  // State to track whether the image has been loaded
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  // Handler for the user click on the product card
+  const handleUserClick = () => {
     setSelectedData((prev) => ({
       ...prev,
       id: id,
     }));
     setShowModal((prev) => !prev);
-  }
+  };
+
+  // Handler for image load event
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
+  };
+
   return (
-    <div type="button" onClick={handleUserClick} className="w-full lg:w-60 max-w-sm   rounded-lg overflow-hidden transition-transform transform hover:scale-105 cursor-pointer">
-      <a  className="block w-full h-48 overflow-hidden">
-        <img className="object-cover w-full h-48" src={image} alt="product" />
+    <div
+      type="button"
+      onClick={handleUserClick}
+      className="w-full lg:w-60 max-w-sm rounded-lg overflow-hidden transition-transform transform hover:scale-105 cursor-pointer"
+    >
+      {/* Product Image */}
+      <a className="block w-full h-48 overflow-hidden">
+        {!isImageLoaded && (
+          // Placeholder for image loading animation
+          <div
+            className="w-full h-full bg-gray-300 animate-pulse"
+            style={{ aspectRatio: "1/1" }}
+          ></div>
+        )}
+        {/* Actual product image */}
+        <img
+          className={`object-cover w-full h-48 ${isImageLoaded ? "" : "hidden"}`}
+          src={image}
+          alt="product"
+          onLoad={handleImageLoad}
+        />
       </a>
+
+      {/* Product Details */}
       <div className="px-6 py-4">
-        <a
-          className="block text-xl font-semibold text-gray-900 hover:underline"
-        >
+        {/* Product Name */}
+        <a className="block text-xl font-semibold text-gray-900 hover:underline">
           {name}
         </a>
-        <p>{description.slice(0,36)}...</p>
+        {/* Product Description */}
+        <p>{description.slice(0, 36)}...</p>
+
+        {/* Product Rating */}
         <div className="flex items-center mt-2">
           <div className="flex items-center space-x-1">
             {Array.from({ length: rating }).map((_, index) => (
@@ -40,6 +72,7 @@ function ProductCard({
           </span>
         </div>
 
+        {/* Buy Now Button */}
         <div className="mt-4 flex items-center justify-end">
           <button
             onClick={handleUserClick}
@@ -53,6 +86,7 @@ function ProductCard({
   );
 }
 
+// Stars component renders a star icon for product rating
 function Stars() {
   return (
     <svg
