@@ -139,7 +139,7 @@ const ProductBoard = ({ data }) => {
               onClick={handlePurchaseClick}
               className="btn w-full mt-3 bg-red-500 text-white hover:bg-red-400"
             >
-              Find Franchisee
+              Find Offline Store Location For Purchaising
             </button>
           </Link>
         ) : (
