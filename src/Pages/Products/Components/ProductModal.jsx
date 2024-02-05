@@ -58,7 +58,7 @@ const ProductBoard = ({ data }) => {
         <img
           src={productImage}
           alt="Product Image"
-          className="rounded-md shadow-md"
+          className="h-96 w-96 object-contain rounded-md shadow-md"
         />
         {/* Other images */}
         <div className="flex mt-2">

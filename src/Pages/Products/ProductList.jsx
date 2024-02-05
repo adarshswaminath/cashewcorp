@@ -3,56 +3,83 @@ import ProductCard from "./Components/ProductCard";
 import { productData } from "./constant";
 import ProductModal from "./Components/ProductModal";
 
+// Define main categories and their subcategories with labels
+const categories = [
+  { main: null, label: "View All", sub: null },
+  { main: "plain", label: "Plain Cashews", sub: ["All", "premium", "popular","extra-premium"] },
+  { main: "roastedandsalted", label: "Roasted and Salted", sub: ["All", "premium", "popular"] },
+  { main: "ValueAddedProducts", label: "Value Added Products", sub: ["All", "flavoured-cashew", "cashew-vita","spread-delights"] },
+  { main: "GiftBoxPackets", label: "Gift Box Packets", sub: ["All"] },
+];
+
+// Reusable component for filter buttons
+function FilterButton({ label, isActive, onClick }) {
+  return (
+    <button
+      onClick={onClick}
+      className={`btn capitalize hover:bg-red-300 ${isActive ? "bg-red-500 text-white btn-active" : ""}`}
+    >
+      {label}
+    </button>
+  );
+}
+
 function ProductList() {
   const [showModal, setShowModal] = useState(false);
-  const [selectedData, setSelectedData] = useState({
-    id: 0,
-  });
+  const [selectedData, setSelectedData] = useState({ id: 0 });
   const [filterType, setFilterType] = useState(null);
+  const [subCategory, setSubCategory] = useState(null);
 
-  const filteredProductData = filterType
-    ? productData.filter((product) => product.type === filterType)
-    : productData;
+  // Filter products based on selected category and subcategory
+  const filteredProductData = productData.filter((product) => {
+    return (
+      (!filterType || product.type === filterType) &&
+      (!subCategory || (subCategory === "All" ? product.type === filterType : product.grade === subCategory))
+    );
+  });
 
+  // Handle main category change
   const handleFilterChange = (type) => {
     setFilterType(type);
+    setSubCategory(null); // Reset subcategory when changing the main category
+  };
+
+  // Handle subcategory change
+  const handleSubCategoryChange = (subcategory) => {
+    setSubCategory(subcategory);
   };
 
   return (
     <div className="min-h-screen p-3">
       <div className="text-center mb-4 space-x-4">
-      <button onClick={() => handleFilterChange(null)} 
-        className={`btn hover:bg-red-300 ${filterType === null && "bg-red-500 text-white btn-active"}`}>
-          View All
-        </button>
-        <button
-          onClick={() => handleFilterChange("RoastedAndSalt")}
-          className={` btn hover:bg-red-300 ${
-            filterType === "RoastedAndSalt" && "btn-active bg-red-500 text-white" 
-          }`}
-        >
-          Roasted and Salted
-        </button>
-        <button
-          onClick={() => handleFilterChange("ValueAddedProducts")}
-          className={`btn hover:bg-red-300 ${
-            filterType === "ValueAddedProducts"
-              && "btn-active bg-red-500 text-white"
-
-          }`}
-        >
-          Value Added Products
-        </button>
-        <button
-          onClick={() => handleFilterChange("GiftBoxPackets")}
-          className={`btn hover:bg-red-300 ${
-            filterType === "GiftBoxPackets" && "btn-active bg-red-500 text-white"
-          }`}
-        >
-          Gift Box Packets
-        </button>
+        {/* Render main category filter buttons with labels */}
+        {categories.map((category) => (
+          <FilterButton
+            key={category.main}
+            label={category.label}
+            isActive={filterType === category.main}
+            onClick={() => handleFilterChange(category.main)}
+          />
+        ))}
       </div>
 
+      {/* Render subcategory filter buttons if a main category is selected */}
+      {filterType && (
+        <div className="text-center mb-4 space-x-4">
+          {categories
+            .find((category) => category.main === filterType)
+            .sub.map((subcategory) => (
+              <FilterButton
+                key={subcategory}
+                label={subcategory}
+                isActive={subCategory === subcategory}
+                onClick={() => handleSubCategoryChange(subcategory)}
+              />
+            ))}
+        </div>
+      )}
+
+      {/* Render product cards */}
       <div className="grid gap-4 grid-cols-2 lg:grid-cols-5 place-items-center justify-items-center">
         {filteredProductData.map((product) => (
           <ProductCard
@@ -64,9 +91,8 @@ function ProductList() {
         ))}
       </div>
 
-      {showModal ? (
-        <ProductModal selectedData={selectedData} setShowModal={setShowModal} />
-      ) : null}
+      {/* Render product modal if showModal is true */}
+      {showModal ? <ProductModal selectedData={selectedData} setShowModal={setShowModal} /> : null}
     </div>
   );
 }

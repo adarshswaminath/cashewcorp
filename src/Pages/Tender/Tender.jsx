@@ -10,7 +10,7 @@ function Tender() {
       <div className=" min-h-screen">
         <Banner image="tender.jpg"/>
         {/* tender page body */}
-        <div className="p-2">
+        <div className="p-5">
           {/* tender table */}
           <TenderTable/>
         </div>

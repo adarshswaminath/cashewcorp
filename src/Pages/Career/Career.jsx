@@ -188,13 +188,14 @@ function Career() {
       <Navbar />
       <Banner image="career.jpg" />
       <h2 className="p-3 text-2xl font-bold">Career</h2>
-      <span className="flex items-center p-3">
+     <div className="p-5">
+     <span className="flex items-center p-3">
         <span className="h-3 w-3 rounded-full bg-green-500"></span>
         Active &nbsp;
         <span className="h-3 w-3 rounded-full bg-red-500"></span>
         Expired
       </span>
-      <div className="overflow-x-auto min-h-screen">
+      <div className="overflow-x-auto min-h-screen ">
         <table className="table">
           {/* head */}
           <thead className="font-bold text-black bg-red-400">
@@ -247,6 +248,7 @@ function Career() {
         </button>
       </div>
       </div>
+     </div>
 
      
 

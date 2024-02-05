@@ -18,7 +18,7 @@ function ProductCard({
     setShowModal((prev) => !prev);
   }
   return (
-    <div className="w-full lg:w-60 max-w-sm   rounded-lg overflow-hidden transition-transform transform hover:scale-105 ">
+    <div type="button" onClick={handleUserClick} className="w-full lg:w-60 max-w-sm   rounded-lg overflow-hidden transition-transform transform hover:scale-105 cursor-pointer">
       <a  className="block w-full h-48 overflow-hidden">
         <img className="object-cover w-full h-48" src={image} alt="product" />
       </a>
@@ -28,6 +28,7 @@ function ProductCard({
         >
           {name}
         </a>
+        <p>{description.slice(0,36)}...</p>
         <div className="flex items-center mt-2">
           <div className="flex items-center space-x-1">
             {Array.from({ length: rating }).map((_, index) => (
