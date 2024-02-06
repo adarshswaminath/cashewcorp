@@ -16,7 +16,7 @@ function Kscdc() {
       <div className="p-6">
         <section data-aos="fade-up" className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">ABOUT KSCDC</h2>
-          <p  className="text-gray-700 leading-7">
+          <p  className="text-gray-700 leading-7 text-justify">
             The Kerala State Cashew Development Corporation Limited (KSCDC) was
             incorporated in July 1969 and started commercial activities in the
             year 1971 as a company fully owned by the Government of Kerala. From
@@ -24,7 +24,7 @@ function Kscdc() {
             large organization playing a pivotal role in the cashew industry.
           </p>
 
-          <p className="text-gray-700 leading-7 mt-4">
+          <p className="text-gray-700 leading-7 mt-4 text-justify">
             KSCDC, an ISO 22000-2005 company, is running 30 cashew factories
             across Kerala State with an annual production capacity of 30,000
             Metric Tonnes. More than 15,000 workers and 500 staff members are
@@ -32,14 +32,14 @@ function Kscdc() {
             crores.
           </p>
 
-          <p className="text-gray-700 leading-7 mt-4">
+          <p className="text-gray-700 leading-7 mt-4 text-justify">
             KSCDC acts as a model employer in the field of the cashew industry
             mainly to protect the interest of its workers and to provide maximum
             employment to them, ensuring their statutory benefits like minimum
             wages, bonus, etc., prevailing in the cashew industry.
           </p>
 
-          <p className="text-gray-700 leading-7 mt-4">
+          <p className="text-gray-700 leading-7 mt-4 text-justify">
             With an objective to promote Cashew-based Value Added Products,
             KSCDC has over these years developed a variety of Value Added
             Products from Cashew Apple and Cashew Kernels. These products are
@@ -47,7 +47,7 @@ function Kscdc() {
             international market.
           </p>
 
-          <p className="text-gray-700 leading-7 mt-4">
+          <p className="text-gray-700 leading-7 mt-4 text-justify">
             KSDC also aims at backward integration of its product line and has
             promoted Cashew Plantations in association with the Kerala State
             Agency for Cashew Cultivation and has cultivated Cashew Plantation
@@ -59,7 +59,7 @@ function Kscdc() {
         </div>
         <div className="mt-4 flex flex-col items-start justify-center ">
           <h3 className="text-2xl font-bold">Kollam ‘The Cashew Capital’</h3>
-          <p className="text-balance tracking-wide">Situated in the southern coast of India. This ancient port town has hundred years of
+          <p className="text-balance tracking-wide text-justify">Situated in the southern coast of India. This ancient port town has hundred years of
 heritage to its credit. Remnants of that glorious past are seen even to this day. The
 major chunk of revenue brought into this town is by export of cashew kernels. With
 it, the KSCDC has put Kollam on the trade map on the Globe.</p>
