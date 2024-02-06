@@ -72,7 +72,9 @@ const RTI = () => {
       {data.map((value,index) => (
         <tr className={`transition duration-300 hover:scale-105 ${index %2 ==0 ? "bg-red-300" :"bg-red-200"}`}>
         <th>{index+1}</th>
-        <td>{data[index]}</td>
+        <td><a href="http://www.cashewcorporation.com/ml/wp-content/uploads/2017/06/04.04.2017-Suo-Moto-Disclosure-1.pdf" target="_blank">
+          {data[index]}
+          </a></td>
       </tr>
       ))}
       {/* row 2 */}
