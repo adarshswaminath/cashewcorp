@@ -46,10 +46,10 @@ const upImage = () => {
         </div>
 
         <div className="relative top-1/2 flex justify-between p-3">
-          <button onClick={downImage} className="text-6xl p-3 bg-black/45 text-white/100 rounded-full shadow-lg ">
+          <button onClick={downImage} className="text-2xl p-3 text-white/100 rounded-full shadow-lg ">
             <FaAngleLeft />
           </button>
-          <button onClick={upImage} className="text-6xl p-3 bg-black/45 text-white/100 rounded-full shadow-lg ">
+          <button onClick={upImage} className="text-2xl p-3  text-white/100 rounded-full shadow-lg ">
             <FaAngleRight />
           </button>
         </div>
