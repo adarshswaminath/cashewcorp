@@ -26,15 +26,16 @@ const Product = () => {
         Our Products
       </h2>
       <ul className="marquee-content">
-        {Array.from({ length: 2 }).map((_, index) => (
+        {Array.from({ length: 12 }).map((_, index) => (
           <li>
             <div className="bg-white shadow-lg h-80 flex flex-col items-center justify-center">
             <img
-              src={`/images/home/${index+1}.png`}
+            className=""
+              src={`/images/home/product-${index+1}.png`}
               alt="Product"
             />
             {/* <p className="bottom-0 text-xl font-bold text-black text-left">Product Name</p> */}
-            <Link to="/product" className="text-sm px-5 py-1.5 bg-red-500 text-white font-bold flex items-center gap-2">
+            <Link to="/product" className="text-sm px-5 py-1.5 bg-red-500 text-white font-bold flex items-center gap-2 ">
               Buy Now
               <FaShoppingCart/>
             </Link>
