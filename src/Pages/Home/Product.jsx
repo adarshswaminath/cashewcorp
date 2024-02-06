@@ -2,6 +2,9 @@ import { FaShoppingCart } from "react-icons/fa";
 import "./style/product.css";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import { enHomeProduct } from "./Language/en";
+import { mlHomeProduct } from "./Language/ml";
+import useLanguageData from "../../Hook/useLanguageData";
 
 const Product = () => {
   useEffect(() => {
@@ -20,10 +23,11 @@ const Product = () => {
       marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
     }
   }, []);
+ const data = useLanguageData(enHomeProduct,mlHomeProduct)
   return (
     <div className="marquee w-full">
       <h2 className="text-3xl font-bold m-4 text-center text-red-500">
-        Our Products
+        {data[0].title}
       </h2>
       <ul className="marquee-content">
         {Array.from({ length: 12 }).map((_, index) => (

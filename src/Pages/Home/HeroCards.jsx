@@ -11,7 +11,7 @@ function HeroCards() {
   const data = useLanguageData(enHeroCards, mlHeroCards);
 
   return (
-    <div className="grid grid-cols-1 gap-3 md:flex justify-evenly lg:grid-cols-3 place-items-center justify-items-center">
+    <div className="p-2 grid grid-cols-1 gap-3 md:flex justify-evenly lg:grid-cols-3 place-items-center justify-items-center ">
       {data.map((value) => (
         <Link to={value.link} key={value.title}>
           <div
@@ -27,7 +27,7 @@ function HeroCards() {
               </div>
               <h2 className="text-indigo-600 text-lg font-bold group-hover:text-white">{value.title}</h2>
               <p
-                className="text-gray-500 group-hover:text-white"
+                className="text-justify text-gray-500 group-hover:text-white "
                 // Check if body contains "1969" using regular expression
                 dangerouslySetInnerHTML={{
                   __html: value.body.replace(

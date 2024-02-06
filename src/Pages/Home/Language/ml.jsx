@@ -126,6 +126,13 @@ const mlBoardOfDirectors = [
 }
 
 ]
+const mlHomeProduct = [
+  {title: "ഞങ്ങളുടെ ഉല്പന്നങ്ങൾ"}
+]
+
+const mlHomeBlog = [
+  {title: "ബ്ലോഗ് & വാർത്താ അപ്ഡേറ്റ്"}
+]
 
 export {
   mlHeroCards,
@@ -133,5 +140,7 @@ export {
   mlAboutData,
   mlMissionAndVision,
   mlNavHeading,
-  mlBoardOfDirectors
+  mlBoardOfDirectors,
+  mlHomeProduct,
+  mlHomeBlog
 };

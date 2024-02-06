@@ -5,6 +5,9 @@ let cardDetils = [
     {image: "https://picsum.photos/id/13/300/300",title: "Fastest way to take action",caption: "Voluptate et minim mollit Lorem nisi anim ea ut tempor adipisicing pariatur amet."},
 
 ]
+import { enHomeBlog } from "./Language/en";
+import { mlHomeBlog } from "./Language/ml";
+import useLanguageData from "../../Hook/useLanguageData";
 
 const PractiseCard = ({ image, title, caption,aosanimation }) => {
     return (
@@ -29,11 +32,12 @@ const PractiseCard = ({ image, title, caption,aosanimation }) => {
   
 
 function Practise() {
+  const data = useLanguageData(enHomeBlog,mlHomeBlog)
   const aosEffect = ["zoom-in","fade-up","zoom-in"]
   return (
     <div className="p-3">
       <h3 data-aos="fade-right" className="text-3xl font-bold m-4 text-center text-red-500">
-        Blog & News Update
+        {data[0].title}
       </h3>
       <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 place-items-center justify-items-center">
       {cardDetils.map((value,index) => (

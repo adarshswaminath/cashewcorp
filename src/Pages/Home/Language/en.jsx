@@ -125,11 +125,22 @@ const enBoardOfDirectors = [
 
 ]
 
+
+const enHomeProduct = [
+  {title: "Our Products"}
+]
+
+const enHomeBlog = [
+  {title: "Blog & News Update"}
+]
+
 export {
   enHeroCards,
   enleaderData,
   enAboutData,
   enMissionAndVision,
   enNavHeading,
-  enBoardOfDirectors
+  enBoardOfDirectors,
+  enHomeProduct,
+  enHomeBlog
 };

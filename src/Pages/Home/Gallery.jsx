@@ -1,11 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import GalleryImage from "./GalleryImage";
+import { useLanguage } from '../../contexts/LanguageContext'
+
 
 function Gallery() {
+  const {language} = useLanguage()
   return (
     <div className="text-center p-4 ">
-      <h1 className="text-4xl text-red-500 font-bold my-8">Gallery</h1>
+      <h1 className="text-4xl text-red-500 font-bold my-8">
+        {language ? "Gallery" : "ഗാലറി"}
+      </h1>
 
       <div data-aos="zoom-out-up" className="grid lg:flex items-center gap-4 ">
         {/* Image Section */}
@@ -13,7 +18,8 @@ function Gallery() {
 
         {/* Video Section */}
         <div className="w-full rounded-md shadow-md p-6">
-        <h2 className="text-center text-xl font-bold mb-2">Videos</h2>
+        <h2 className="text-center text-xl font-bold mb-2">
+          {language ? "Videos" : "വീഡിയോകൾ"}</h2>
           <div className="aspect-w-16 aspect-h-9 mb-4 rounded-md overflow-hidden">
             <iframe
               src="https://www.youtube.com/embed/xAfJ_pCJObM?si=_YryQkjStOD0Ds0M"
@@ -25,7 +31,8 @@ function Gallery() {
           </div>
           <Link to="/gallery">
             <button className="px-5 py-2 bg-red-500 text-white rounded-md mt-4 hover:bg-red-600 transition duration-300">
-              Visit Video
+          {language ? "Visit Videos" : "വീഡിയോകൾ സന്ദർശിക്കുക"}
+              
             </button>
           </Link>
         </div>

@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom"
 import "./style/gallery.css"
+import { useLanguage } from "../../contexts/LanguageContext"
 
 function GalleryImage() {
+  const {language} = useLanguage()
   return (
     <div className="w-full  rounded-md shadow-md p-6">
-          <h2 className="text-center text-xl font-bold mb-2">Images</h2>
+          <h2 className="text-center text-xl font-bold mb-2">
+            {language ? "Images" : "ചിത്രങ്ങൾ"}
+          </h2>
           <div className="box ">
           <img className="image object-cover" src="https://cashewcorporation.com/wp-content/uploads/2021/10/WhatsApp-Image-2021-10-05-at-3.16.12-PM-1024x768.jpeg" />
 	            <img className="image object-cover" src="https://cashewcorporation.com/wp-content/uploads/2017/09/T8A0351-1024x683.jpg" />
@@ -12,7 +16,8 @@ function GalleryImage() {
             </div>
           <Link to="/gallery">
             <button className="px-5 py-2 bg-red-500 text-white rounded-md mt-4 hover:bg-red-600 transition duration-300">
-              Visit Images
+            {language ? "Visit Images" : "ചിത്രങ്ങൾ സന്ദർശിക്കുക"}
+
             </button>
           </Link>
         </div>
