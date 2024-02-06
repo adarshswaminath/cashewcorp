@@ -3,9 +3,9 @@ import React from 'react';
 function ManagementProfileCard({id, name, image, designation, contact }) {
   return (
     <div 
-    // data-aos={`${ id%2 ===0 ? "fade-left" : "fade-right" }`}
-     className="w-full rounded-lg overflow-hidden m-4 flex items-center border p-4 hover:border-red-500 hover:bg-red-300 transform ease-in-out transition hover:-translate-y-3 hover:scale-100 duration-300 delay-100 group">
-      <img src={image} className="h-52 w-48 rounded-b-full" alt="manager_image_profile" />
+    data-aos={`${ id%2 ===0 ? "fade-left" : "fade-right" }`}
+     className="w-full rounded-full border-indigo-600 overflow-hidden m-4 flex items-center justify-evenly border p-4 hover:border-red-500 hover:bg-red-300 transform ease-in-out transition hover:-translate-y-3 hover:scale-100 duration-300 delay-300 group">
+      <img src={image} className="group-hover:hidden h-52 w-48 rounded-full" alt="manager_image_profile" />
       <div className="p-4">
         <h1 className="text-xl font-bold text-red-500 group-hover:text-white">{name}</h1>
         <h3 className="text-sm text-gray-600">HOD ({designation})</h3>
@@ -15,6 +15,7 @@ function ManagementProfileCard({id, name, image, designation, contact }) {
           ))}
         </ul>
       </div>
+      <img src={image} data-aos="fade-up" className="hidden group-hover:block h-52 w-48 rounded-full transition-all duration-300 ease-in-out delay-500" alt="manager_image_profile" />
     </div>
   );
 }

@@ -9,13 +9,13 @@ const DirectorsData = [
     image: "/images/directors/chairman.png",
     title: "Shri. S.Jayamohan",
     caption: "Chairman",
-    email: "cmcashewcorporation@gmail.com"
+    email: "chairman@cashewcorporation.com"
   },
   {
     image: "/images/directors/dir-1.png",
     title: "Shri. Sunil John .K",
     caption: "Managing Director",
-    email: "cmcashewcorporation@gmail.com"
+    email: "md@cashewcorporation.com"
 
   },
   {

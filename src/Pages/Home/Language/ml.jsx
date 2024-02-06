@@ -111,7 +111,7 @@ const mlMissionAndVision = [
 
 
 const mlBoardOfDirectors = [
-  {title: "ഡയറക്ടർ ബോർഡ് അംഗങ്ങൾ",
+  {title: "ഭരണസമിതി അംഗങ്ങൾ",
   director: [
       { image: "/images/directors/chairman.png", title: "ശ്രീ. എസ്. ജയമോഹൻ", caption: "ചെയർമാൻ" },
       { image: "/images/directors/dir-1.png", title: "ശ്രീ. സുനിൽ ജോൺ .കെ", caption: "മാനേജിംഗ് ഡയറക്ടർ" },

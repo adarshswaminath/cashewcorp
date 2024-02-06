@@ -19,7 +19,7 @@ function Accordion({title,content}){
           </span>
         </div>
         {isOpen && (
-          <div className="p-4 bg-gray-100">
+          <div className="p-4 bg-gray-100 flex justify-center">
             {content}
           </div>
         )}

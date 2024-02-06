@@ -195,42 +195,35 @@ function Organization() {
       <div className="p-5 lg:flex gap-10 items-start justify-start w-full">
         <div className="w-full">
           <h1 className="text-3xl font-bold">Organization</h1>
-          <p className="mt-3">
+          <p className="mt-3 font-bold">
             The Kerala State Cashew Development Corporation Ltd. Cashew House,
             Mundakkal, Kollam, Kerala, India - 691001 Grams: Kasuvandi
           </p>
           {/* ------------------- */}
           <h2 className="text-xl font-bold mt-3">Functions and Duties</h2>
-          <p className="mt-3 w-full">
+          <p className="mt-3 w-full text-justify">
             Kerala State Cashew Development Corporation Ltd (KSCDC Ltd) is a
             registered company under Indian Companies Act and was incorporated
             in July 1969. It started Commercial activities in the year 1971 as a
             company fully owned by the Govt. of Kerala.
           </p>
-          <p className="mt-3 w-full">
+          <p className="mt-3 w-full text-justify">
             It is governed by board of Directors consisting of Chairman,
             Managing Director non official Directors and official Directors. The
             board is headed by the Chairman and the chief executive is the
             Managing Director, who is appointed by the Govt.
           </p>
-          <p className="mt-3 w-full">
+          <p className="mt-3 w-full text-justify">
             All policy matters of the corporation are decided by the board that
             to under the instruction by the Govt. For assisting the Managing
             Director there are six departments headed by HOD as designated
             below. Apart from this there is a company secretary.
           </p>
-          <pre className="mt-6 grid gap-y-1">
-            <span>1. Materials Department : HOD (Materials Manager)</span>
-            <span>2. Commerce Department : HOD (Commercial Manager)</span>
-            <span>3. Finance Department : HOD (Finance Manager)</span>
-            <span>4. Personnel Department : HOD (Personnel Manager)</span>
-            <span>5. Production Department : HOD (Production Manager)</span>
-            <span>6. Internal Auditing : HOD (Internal Audit Officer)</span>
-          </pre>
         </div>
+    
         {/* second section */}
         <div className="w-full">
-          <p className="mt-3">
+          <p className="lg:mt-8 mt-3 text-justify">
             From the modest beginning in 1969, corporation has now grown into a
             large organization playing pivotal role in cashew industry. At
             present KSCDC have running 30 factories all over Kerala and nearly
@@ -238,22 +231,22 @@ function Organization() {
           </p>
           {/* ------------------- */}
 
-          <p className="mt-3 w-full">
+          <p className="mt-3 text-justify">
             KSCDC factories are managed by Asst. Factory Managers and assisted
             by factory clerks. For the inspection of cashew factories there are
             officers designated as Inspectors.
           </p>
-          <p className="mt-3 w-full">
+          <p className="mt-3 text-justify">
             The KSCDC was set by the State Govt. with a view to grooming it as a
             model employer in the field of cashew industry, benefiting thousands
             of workers.
           </p>
-          <p className="mt-3 w-full">
+          <p className="mt-3 text-justify">
             KSCDC Ltd is enlarged in the processing of RCN (Raw Cashew Nuts) and
             marketing cashew kernels domestically and abroad. It also
             manufactures value added cashew products.
           </p>
-          <p className="mt-3 w-full">
+          <p className="mt-3 text-justify">
             KSCDC function as a model employer in the industry giving all the
             statutory benefits to the workers. This has positively impacted the
             work conditions of the other 3,00,000 workers in private sector as
@@ -263,8 +256,19 @@ function Organization() {
           </p>
         </div>
       </div>
+      <div className="flex items-center justify-center">
+          <pre className="mt-6 grid ">
+            <span className="p-2 bg-indigo-500 text-white">Materials Department  : HOD (Materials Manager)</span>
+            <span className="p-2 bg-indigo-300 text-white">Commerce Department   : HOD (Commercial Manager)</span>
+            <span className="p-2 bg-indigo-500 text-white">Finance Department    : HOD (Finance Manager)</span>
+            <span className="p-2 bg-indigo-300 text-white">Personnel Department  : HOD (Personnel Manager)</span>
+            <span className="p-2 bg-indigo-500 text-white">Production Department : HOD (Production Manager)</span>
+            <span className="p-2 bg-indigo-300 text-white">Internal Auditing     : HOD (Internal Audit Officer)</span>
+          </pre>
+          </div>
       <div></div>
       <div className="p-5 w-full lg:w-2/3  mx-auto justify-center">
+        <Accordion title={'Organizational Structure'} content={<img src="/images/architecture.png"/>} />
         <Accordion
           title={"Cashew Processing"}
           content={`Traditional Drum Roasting: Raw Cashew Nuts processing start with roasting. We

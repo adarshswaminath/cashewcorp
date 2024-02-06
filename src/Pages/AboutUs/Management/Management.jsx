@@ -6,7 +6,7 @@ import ManagementProfileCard from "./ManagementProfileCard";
 const seniorExecutives = [
   {
     id: 1,
-    name: "Shri. K. Sunil John",
+    name: "Shri. Sunil John .K",
     image: "/images/executives/sr-1.jpg",
     designation: "Materials Manager",
     contact: [
