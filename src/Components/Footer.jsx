@@ -22,7 +22,7 @@ let footerData = [
     ],
   },
   {
-    title: "Company",
+    title: "Quick Links",
     values: [
       { path: '/kscdc', label: "KSCDC" },
       { path: '/org',label: "Organization" },

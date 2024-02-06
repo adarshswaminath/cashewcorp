@@ -31,13 +31,13 @@ function About() {
               {about.subtitle}{" "}
             </h2>
            <div className="text-pretty lg:w-[800px] ">
-           <p className="  text-xl text-gray-700 mt-6 mb-6">
+           <p className="text-base leading-6 text-justify m-0 mb-4">
              {about.para_one}
             </p>
-            <p className="  text-xl text-gray-700 mb-6">
+            <p className=" text-base leading-6 text-justify m-0 mb-4">
               {about.para_two}
             </p>
-            <p className="  text-xl text-gray-700 mb-6">
+            <p className=" text-base leading-6 text-justify m-0 mb-4">
               {about.para_three}
             </p>
            </div>
