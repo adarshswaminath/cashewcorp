@@ -39,19 +39,55 @@ const RTI = () => {
     },
   ];
 
+
+  const data = ["INFORMATION OFFICERS AND APPELLATE AUTHORITY",
+  "MODE OF PAYMENT OF FEES UNDER RIGHT TO INFORMATION ACT, 2005",
+  "SUO MOTO DISCLOSURE",
+  "RIGHT TO INFORMATION ACT, 2005",
+  "ORGANIZATIONAL STRUCTURE",
+  "OUR FACTORIES – NAME OF MANAGERS AND PHONE NUMBERS",
+  "STAFF RULES",
+  "CERTIFIED STANDING ORDER",
+  "IRC SETTLEMENT – COPY",
+  "PAY SCALE",
+  "MINIMUM WAGE NOTIFICATION – 2011"
+  ]
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <div className="flex-grow p-6 bg-gray-100">
         <Banner image="rit.jpg" />
       </div>
-      <div className="mt-6 flex flex-col gap-4 items-center mb-2">
+      <h3 className="p-5 text-3xl font-bold">Right To Information</h3>
+      <div className="overflow-x-auto p-5 ">
+  <table className="table">
+    {/* head */}
+    <thead>
+      
+     
+    </thead>
+  <div className="p-3">
+  <tbody className="flex flex-col  justify-center">
+      {/* row 1 */}
+      {data.map((value,index) => (
+        <tr className={`transition duration-300 hover:scale-105 ${index %2 ==0 ? "bg-red-300" :"bg-red-200"}`}>
+        <th>{index+1}</th>
+        <td>{data[index]}</td>
+      </tr>
+      ))}
+      {/* row 2 */}
+  
+    </tbody>
+  </div>
+  </table>
+</div>
+      {/* <div className="mt-6 flex flex-col gap-4 items-center mb-2">
         {contacts.map((contact, index) => (
           <div key={index} className="">
             <ContactCard {...contact} />
           </div>
         ))}
-      </div>
+      </div> */}
       <Footer />
     </div>
   );
