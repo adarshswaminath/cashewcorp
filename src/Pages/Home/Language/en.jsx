@@ -16,14 +16,14 @@ const enHeroCards = [
   {
     id: 1,
     title: "70+ Products",
-    body: "KSCDC's premium products are available in domestic and international markets with various grades and weights",
+    body: "KSCDC's premium products are available in domestic and international markets with exciting grades and weights",
     icon: <MdProductionQuantityLimits />,
     link: "/product",
   },
   {
     id: 2,
     title: "120+ Outlets",
-    body: "KSCDC operates 18+ factory outlets in our factories and 100+ franchise distribution outlets all over Kerala",
+    body: "KSCDC operates 18+ factory outlets in our factories and operates 100+ franchise distribution outlets all over Kerala",
     icon: <AiOutlineShop />,
     link: "/franchisee",
   },
@@ -32,7 +32,7 @@ const enHeroCards = [
   {
     id: 3,
     title: "Govt. of Kerala",
-    body: `KSCDC started in July1969 is a public sector undertaking fully owned by the Government of Kerala, playing a pivotal role in the cashew industry.`,
+    body: `KSCDC started in July 1969 is a public sector undertaking fully owned by the Government of Kerala, playing a pivotal role in the cashew industry.`,
     icon: <FaBookOpen />,
     link: "/kscdc",
   },
