@@ -84,8 +84,9 @@ const ProductBoard = ({ data }) => {
           </button>
         </div>
       </div>
+<div>
 
-      <div>
+<div className="">
         {/* Product Name */}
         <h1 className="text-3xl font-bold">{name}</h1>
 
@@ -178,12 +179,20 @@ const ProductBoard = ({ data }) => {
                 onChange={(e) => setNewReview(e.target.value)}
                 className="w-full p-2 border rounded-md"
               />
+              <div className="flex">
               <button
                 onClick={postReview}
                 className="btn mt-2 bg-red-500 text-white hover:bg--400"
               >
                 Submit Review
               </button>
+              <button
+                onClick={() => setShowReviewForm(false)}
+                className="btn mt-2 bg-red-500 text-white hover:bg--400"
+              >
+                Cancel
+              </button>
+              </div>
             </div>
           )}
 
@@ -203,6 +212,7 @@ const ProductBoard = ({ data }) => {
           </ul>
         </div>
       </div>
+</div>
     </div>
   );
 };
