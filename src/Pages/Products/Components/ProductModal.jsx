@@ -5,7 +5,28 @@ import { Link } from "react-router-dom";
 import { IoMdClose } from "react-icons/io";
 
 // ProductBoard component displays product details, prices, and allows selecting different packet weights
-const ProductBoard = ({ data }) => {
+const ProductBoard = ({ data,closeModal }) => {
+  const StarIcon = ({ filled, onClick }) => {
+    return (
+      <svg
+        onClick={onClick}
+        className={`w-6 h-6 cursor-pointer ${
+          filled ? "text-yellow-500" : "text-gray-300"
+        }`}
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <polygon
+          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+        />
+      </svg>
+    );
+  };
   // Destructuring product data
   const {
     image,
@@ -28,16 +49,17 @@ const ProductBoard = ({ data }) => {
   // State for reviews
   const [reviews, setReviews] = useState([
     // Initialize with some sample reviews
-    { text: "Great product!", rating: 5 },
-    { text: "Good quality cashews.", rating: 4 },
+    { user: "Ramesh R",text: "Great product!", rating: 5 },
+    { user: "Gowrisankar",text: "Good quality cashews.", rating: 4 },
   ]);
   const [newReview, setNewReview] = useState("");
   const [showReviewForm, setShowReviewForm] = useState(false);
-
+  const [username,setUserName] = useState('')
+  const [UserRating, setUserRating] = useState(0);
   // Function to handle posting a new review
   const postReview = () => {
     if (newReview.trim() !== "") {
-      setReviews([...reviews, { text: newReview, rating }]);
+      setReviews([...reviews, {user:username, text: newReview, rating:UserRating }]);
       setNewReview("");
       setShowReviewForm(false);
     }
@@ -51,6 +73,9 @@ const ProductBoard = ({ data }) => {
       // window.
     }
   }
+  const handleStarClick = (value) => {
+    setUserRating(value);
+  };
   return (
     <div className="lg:flex p-4 border rounded-md shadow-md bg-white">
       {/* Product Image */}
@@ -87,8 +112,16 @@ const ProductBoard = ({ data }) => {
 
       <div>
         {/* Product Name */}
-        <h1 className="text-3xl font-bold">{name}</h1>
+      <div className="flex justify-between items-center">
+      <h1 className="text-3xl font-bold">{name}</h1>
+        <button
+            onClick={closeModal}
+            className="text-gray-800  hover:text-gray-900 text-3xl"
+          >
+            <IoMdClose />
+          </button>
 
+      </div>
         {/* Current Product Price */}
         <div className="flex items-center gap-2 mt-2">
           <h3 className="text-2xl font-bold text-red-500">₹{currentProduct}</h3>
@@ -171,6 +204,21 @@ const ProductBoard = ({ data }) => {
           {/* Review Form */}
           {showReviewForm && (
             <div className="mt-4">
+              <input 
+                placeholder="Enter Username...."
+                type="text" 
+                onChange={(e) => setUserName(e.target.value)}
+                className="p-2 w-full rounded-md mb-2 border"/>
+                <div className="flex items-center">
+                  <p>Rate this Product: </p>
+                {[1,2,3,4,5].map((value) => (
+                  <p><StarIcon 
+                    key={value}
+                    filled={value <= rating}
+                    onClick={() => handleStarClick(value)}
+                  /></p>
+                ))}
+                </div>
               <textarea
                 rows="4"
                 placeholder="Write a review..."
@@ -196,15 +244,18 @@ const ProductBoard = ({ data }) => {
           )}
 
           {/* Display Reviews */}
-          <ul className="list-disc pl-4 mt-4">
+          <ul className="list-disc pl-4 mt-4 h-64 overflow-y-scroll max-w-xl">
             {reviews.map((review, index) => (
               <li key={index} className="mb-2">
-                <p className="text-lg font-bold">{review.text}</p>
+                <p className="font-bold">{review.user}</p>
+                <p className="text-base text-justify max-w-xl">{review.text}</p>
+                <div className="flex items-center">
                 <p className="text-sm text-gray-600">Rating:</p>
                 <div className="flex items-center">
                   {Array.from({ length: review.rating }).map((_, index) => (
                     <Stars key={index} />
                   ))}
+                </div>
                 </div>
               </li>
             ))}
@@ -227,13 +278,7 @@ function ProductModal({ selectedData, setShowModal }) {
       <div className="fixed inset-0 bg-black opacity-50"></div>
       <div className="bg-white min-h-screen w-full p-6 rounded-md shadow-lg z-10">
         <div className="flex justify-end lg:mt-0 mt-60">
-          {/* Close Button */}
-          <button
-            onClick={closeModal}
-            className="text-gray-800  hover:text-gray-900 text-3xl"
-          >
-            <IoMdClose />
-          </button>
+          
         </div>
 
         {/* Modal Body */}
@@ -241,7 +286,7 @@ function ProductModal({ selectedData, setShowModal }) {
           {/* Render ProductBoard for the selected product */}
           {productData.map((value) =>
             value.id === selectedData.id ? (
-              <ProductBoard key={value.id} data={value} />
+              <ProductBoard closeModal={closeModal} key={value.id} data={value} />
             ) : null
           )}
         </div>
