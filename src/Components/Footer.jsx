@@ -158,7 +158,7 @@ function Footer() {
                 className="h-[75px] w-[75px] rounded-lg"
                 alt="Footer image"
               />
-              <p className="text-xs font-bold">Time In Delivery</p>
+              <p className="text-xs font-bold">On Time Delivery</p>
             </div>
           </div>
         </div>

@@ -8,7 +8,7 @@ const images = [
   "/images/hero/hero-1.png",
   "/images/hero/hero-2.png",
   "/images/hero/hero-3.png",
-  // "/images/hero/hero-4.png",
+  "/images/hero/hero-4.png",
   "/images/hero/hero-5.png",
 ];
 
