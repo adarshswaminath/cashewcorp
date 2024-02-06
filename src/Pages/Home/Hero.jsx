@@ -58,6 +58,7 @@ const upImage = () => {
           <span onClick={() => setImageIndex(1)} className={`${imageIndex === 1 ? "bg-blue-500" : ""} px-1 border border-blue-500 py-1 rounded-full`}></span>
           <span onClick={() => setImageIndex(2)} className={`${imageIndex === 2 ? "bg-blue-500" : ""} px-1 border border-blue-500 py-1 rounded-full`}></span>
           <span onClick={() => setImageIndex(3)} className={`${imageIndex === 3 ? "bg-blue-500" : ""} px-1 border border-blue-500 py-1 rounded-full`}></span>
+          <span onClick={() => setImageIndex(4)} className={`${imageIndex === 4 ? "bg-blue-500" : ""} px-1 border border-blue-500 py-1 rounded-full`}></span>
 
         </div>
       </div>
