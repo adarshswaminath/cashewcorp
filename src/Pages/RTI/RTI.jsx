@@ -58,7 +58,7 @@ const RTI = () => {
       <div className="flex-grow p-6 bg-gray-100">
         <Banner image="rit.jpg" />
       </div>
-      <h3 className="p-5 text-3xl font-bold">Right To Information</h3>
+      <h3 className="p-5 text-3xl font-bold text-center">Right To Information</h3>
       <div className="overflow-x-auto p-5 ">
   <table className="table">
     {/* head */}
