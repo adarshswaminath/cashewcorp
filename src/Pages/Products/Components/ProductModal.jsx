@@ -209,7 +209,7 @@ const ProductBoard = ({ data,closeModal }) => {
                 type="text" 
                 onChange={(e) => setUserName(e.target.value)}
                 className="p-2 w-full rounded-md mb-2 border"/>
-                <div className="flex items-center">
+                <div className="mt-2 mb-2 flex items-center">
                   <p>Rate this Product: </p>
                 {[1,2,3,4,5].map((value) => (
                   <p><StarIcon 
