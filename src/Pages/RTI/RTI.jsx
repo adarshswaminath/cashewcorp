@@ -5,10 +5,11 @@ import Banner from "../../Components/Banner";
 
 const ContactCard = ({ title, name, address, mobile }) => (
   <div  className="flex group">
-    <div className="w-96 bg-white group-hover:bg-indigo-500 group-hover:rounded-xl group-hover:text-white transition duration-300 transform group-hover:scale-105 p-6">
+    <div className="w-96 hidden lg:flex bg-white group-hover:bg-indigo-500 group-hover:rounded-xl group-hover:text-white transition duration-300 transform group-hover:scale-105 p-6">
       <h3 className="font-bold text-xl">{title}</h3>
     </div>
     <div className="w-96 bg-gray-200 p-6 flex flex-col items-start">
+    <h3 className="font-bold text-xl flex lg:hidden mb-2">{title}</h3>
       <span>{name}</span>
       <span>{address}</span>
       <span>{mobile}</span>
