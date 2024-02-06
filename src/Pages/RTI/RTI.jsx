@@ -1,62 +1,59 @@
 import React from "react";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
-import Banner from "../../Components/Banner"
+import Banner from "../../Components/Banner";
 
-function RTI() {
+const ContactCard = ({ title, name, address, mobile }) => (
+  <div  className="flex group">
+    <div className="w-96 bg-white group-hover:bg-indigo-500 group-hover:rounded-xl group-hover:text-white transition duration-300 transform group-hover:scale-105 p-6">
+      <h3 className="font-bold text-xl">{title}</h3>
+    </div>
+    <div className="w-96 bg-gray-200 p-6 flex flex-col items-start">
+      <span>{name}</span>
+      <span>{address}</span>
+      <span>{mobile}</span>
+    </div>
+  </div>
+);
+
+const RTI = () => {
+  const contacts = [
+    {
+      title: "State Public information officer",
+      name: "Shri. Ajith S (Personal Manager)",
+      address: "The Kerala State Cashew Development Corporation Ltd, Cashew House, Post Box No.13, Kollam-691001, India",
+      mobile: "(Mob:8281114648)",
+    },
+    {
+      title: "Assistant Public information officer",
+      name: "Shri. Rajesh Prathap (Superintendent)",
+      address: "The Kerala State Cashew Development Corporation Ltd, Cashew House, Post Box No.13, Kollam-691001, India",
+      mobile: "(Mob:9495553535)",
+    },
+    {
+      title: "Appellate authority",
+      name: "Shri. Sunil John K (Managing Director)",
+      address: "The Kerala State Cashew Development Corporation Ltd, Cashew House, Post Box No.13, Kollam-691001, India",
+      mobile: "(Mob: 9847071750)",
+    },
+  ];
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-
       <div className="flex-grow p-6 bg-gray-100">
-        <Banner image="rit.jpg"/>
-
-        <div className="mt-6 p-6 bg-white rounded shadow-md">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-            MODE OF PAYMENT OF FEES UNDER RIGHT TO INFORMATION ACT, 2005
-          </h2>
-          <p className="text-gray-700 leading-7">
-            Gazette Notification dated 22.12.2007 and 03.06.2008 by which the
-            procedure for remittance of fee for providing information in the
-            case of Public Authorities other than Government Departments is
-            amended vide Government Order No. GO (P) No. 540/2007/GAD dated
-            18th December, 2007 as detailed below:
-          </p>
-          <p className="text-gray-700 leading-7 mt-4">
-            “provided that in the case of public authorities other than the
-            Government Departments, the fee shall be remitted to the account of
-            such public authority as provided in clauses (c) and (d) of rule
-            3”.
-          </p>
-          <p className="text-gray-700 leading-7 mt-4">
-            Clauses c & d are specified as follows:
-          </p>
-          <ul className="list-disc pl-6 text-gray-700 leading-7 mt-2">
-            <li>
-              by cash remittance against proper receipt in the Office of the
-              Public Information Officer/Assistant Public Information Officer
-              as the case may be, or
-            </li>
-            <li>
-              by Demand Draft/banker's cheque/pay order payable to the Public
-              Information Officer/Assistant Public Information Officer.
-            </li>
-          </ul>
-          <p className="text-gray-700 leading-7 mt-4">
-            In view of the above Government Order, it is hereby informed that
-            applications under Right to Information Act will only be accepted
-            with application fee as per clause (c) and (d) of Rule (3) of the
-            Right to Information (Fee and Cost) Rules 2006 and court fee stamp,
-            postal orders, and treasury challan will not be accepted as
-            application fees for the applications under the Right to Information
-            Act, 2005.
-          </p>
-        </div>
+        <Banner image="rit.jpg" />
       </div>
-
+      <div className="mt-6 flex flex-col gap-4 items-center mb-2">
+        {contacts.map((contact, index) => (
+          <div key={index} className="">
+            <ContactCard {...contact} />
+          </div>
+        ))}
+      </div>
       <Footer />
     </div>
   );
-}
+};
 
 export default RTI;
