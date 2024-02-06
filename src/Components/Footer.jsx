@@ -171,6 +171,12 @@ function Footer() {
               alt="gov image"
             />
             <img
+              data-aos="fade-up"
+              src="/images/fssai.png"
+              className="object-contain h-44 w-44 rounded-xl"
+              alt="gov image"
+            />
+            <img
               data-aos="zoom-out-left"
               src="/images/CDC.png"
               className="object-contain h-44 w-44"

@@ -109,10 +109,29 @@ const mlMissionAndVision = [
   },
 ];
 
+
+const mlBoardOfDirectors = [
+  {title: "ഡയറക്ടർ ബോർഡ് അംഗങ്ങൾ",
+  director: [
+      { image: "/images/directors/chairman.png", title: "ശ്രീ. എസ്. ജയമോഹൻ", caption: "ചെയർമാൻ" },
+      { image: "/images/directors/dir-1.png", title: "ശ്രീ. സുനിൽ ജോൺ .കെ", caption: "മാനേജിംഗ് ഡയറക്ടർ" },
+      { image: "/images/directors/dir-9.png", title: "ശ്രീ. ബി. പ്രതീപ് കുമാർ", caption: "ഭരണസമിതി അംഗം" },
+      { image: "/images/directors/dir-10.png", title: "ശ്രീ. സിജു ജേക്കബ്", caption: "ഭരണസമിതി അംഗം" },
+      { image: "/images/directors/dir-8.png", title: "ഡോ. ബി.എസ്. സുരൻ", caption: "ഭരണസമിതി അംഗം" },
+      { image: "/images/directors/dir-4.png", title: "ശ്രീ. ബി. സുജീന്ദ്രൻ", caption: "ഭരണസമിതി അംഗം" },
+      { image: "/images/directors/dir-5.png", title: "ശ്രീ. ജി. ബാബു", caption: "ഭരണസമിതി അംഗം" },
+      { image: "/images/directors/dir-7.png", title: "ശ്രീ. സജി ഡി. ആനന്ദ്", caption: "ഭരണസമിതി അംഗം" },
+      { image: "/images/directors/dir-6.png", title: "അഡ്വ. ശൂരനാട് എസ്. ശ്രീകുമാർ", caption: "ഭരണസമിതി അംഗം" },
+  ]
+}
+
+]
+
 export {
   mlHeroCards,
   mlleaderData,
   mlAboutData,
   mlMissionAndVision,
   mlNavHeading,
+  mlBoardOfDirectors
 };

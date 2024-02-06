@@ -46,7 +46,7 @@
 
 .container .card .content .contentBx h3 {
 	text-transform: uppercase;
-	letter-spacing: 2px;
+	/* letter-spacing: 2px; */
 	font-size: 18px;
 	text-align: center;
 	margin: 20px 0 10px;

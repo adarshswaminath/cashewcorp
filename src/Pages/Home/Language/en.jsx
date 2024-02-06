@@ -108,10 +108,28 @@ const enMissionAndVision = [
   },
 ];
 
+const enBoardOfDirectors = [
+  {title: "Board Of Organization",
+  director: [
+      { image: "/images/directors/chairman.png", title: "Shri. S.Jayamohan", caption: "Chairman" },
+      { image: "/images/directors/dir-1.png", title: "Shri. Sunil John .K", caption: "Managing Director" },
+      { image: "/images/directors/dir-9.png", title: "Shri. B. Pratheep Kumar", caption: "Director" },
+      { image: "/images/directors/dir-10.png", title: "Shri. Siju Jacob", caption: "Director" },
+      { image: "/images/directors/dir-8.png", title: "Dr. B S Suran", caption: "Director" },
+      { image: "/images/directors/dir-4.png", title: "Shri. B Sujeendran", caption: "Director" },
+      { image: "/images/directors/dir-5.png", title: "Shri. G. Babu", caption: "Director" },
+      { image: "/images/directors/dir-7.png", title: "Shri. Saji D. Anand", caption: "Director" },
+      { image: "/images/directors/dir-6.png", title: "Adv. Sooranadu S Sreekumar", caption: "Director" },
+  ]
+}
+
+]
+
 export {
   enHeroCards,
   enleaderData,
   enAboutData,
   enMissionAndVision,
   enNavHeading,
+  enBoardOfDirectors
 };

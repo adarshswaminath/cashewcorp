@@ -1,11 +1,9 @@
-import { MdOutlinePeopleAlt, MdOutlineAutoGraph } from "react-icons/md";
-import { IoMdTrophy } from "react-icons/io";
 import {
   BsWhatsapp,
 } from "react-icons/bs";
-import UseFulLinks from "./UseFulLinks";
-
-
+import { mlBoardOfDirectors } from "./Language/ml";
+import { enBoardOfDirectors } from "./Language/en";
+import useLanguageData from "../../Hook/useLanguageData";
 const cardData = [
   { image: "/images/directors/chairman.png", title: "Shri. S.Jayamohan", caption: "Chairman" },
   { image: "/images/directors/dir-1.png", title: "Shri. Sunil John .K", caption: "Managing Director" },
@@ -42,15 +40,17 @@ const ChooseCard = ({ image, title, caption }) => {
 };
 
 function DirectorBoard() {
+  const data = useLanguageData(enBoardOfDirectors,mlBoardOfDirectors)
+  console.table(data[0].director)
   return (
     <div>
       <div className="p-3">
       <h3 data-aos="fade-right" className="text-xl text-red-500 lg:text-2xl font-extrabold  m-4 text-center">
-        Our Board Of Directors
+        {data[0].title}
       </h3>
       <div className="flex items-center justify-center">
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-16 mt-3 p-2">
-        {cardData.map((value, index) => (
+        {data[0].director.map((value, index) => (
           <ChooseCard
             key={index}
             image={value.image}
