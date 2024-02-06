@@ -64,11 +64,11 @@ function ContactUs() {
 export default ContactUs;
 
 
-const ContactBox = () => {
+export const ContactBox = () => {
   return(
-    <div className="container mx-auto  w-full lg:w-1/2">
+    <div className="container mx-auto w-full lg:w-1/2">
     <div
-      className="bg-[#02ACED] text-white p-8 rounded-lg shadow-lg mb-8"
+      className="bg-[#02ACED] text-white p-12 rounded-lg shadow-lg "
       data-aos="fade-up"
       data-aos-duration="800"
     >
@@ -97,21 +97,21 @@ const ContactBox = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div>
-          <p className="font-semibold text-sm">Head Office:</p>
-          <p>Mundakkal, Kollam</p>
+          <p className="font-semibold text-xs">Head Office:</p>
+          <p className='text-sm'>@Mundakkal,Kollam</p>
         </div>
         <div>
-          <p className="font-semibold text-sm">Cashew Planation</p>
-          <p>Kottiyam</p>
+          <p className="font-semibold text-xs">Cashew Nursery</p>
+          <p className='text-sm'>@Kottiyam</p>
         </div>
         <div>
-          <p className="font-semibold text-sm">Factory Offices:</p>
-          <p>All Over Kerala</p>
+          <p className="font-semibold text-xs">Factory Offices:</p>
+          <p className='text-sm'>@All Over Kerala</p>
         </div>
 
         <div>
-          <p className="font-semibold text-sm">Value Addition Unit:</p>
-          <p>Ayathil</p>
+          <p className="font-semibold text-xs">Value Addition Unit:</p>
+          <p className='text-sm'>@Ayathil</p>
         </div>
       </div>
     </div>

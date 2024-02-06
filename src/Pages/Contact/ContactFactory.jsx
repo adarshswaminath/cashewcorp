@@ -3,22 +3,28 @@ import React, { useState } from 'react';
 import { factoriesData } from "../Org";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import Banner from '../../Components/Banner';
+import { ContactBox } from './ContactUs';
 
 const accordion = [
   {
     id: 1,
-    title: "Factory Contact Details",
-    content: <FactoryContactTable/>
+    title: "Head Office Mundakkal Kollam",
+    content: <ContactBox/>
   },
   {
     id: 2,
-    title: "Title of the second",
-    content: "Something should"
+    title: "30 Factory Office All Over Kerala",
+    content: <FactoryContactTable/>
   },
   {
     id: 3,
-    title: "Title of the third",
-    content: "Something should"
+    title: "Value Addition Unit Ayathil",
+    content: ""
+  },
+  {
+    id: 4,
+    title: "Cashew Plantation Kottiyam",
+    content: ""
   },
 ]
 
