@@ -7,7 +7,7 @@ import { AiOutlineShop } from "react-icons/ai";
 const enNavHeading = [
   {
     title: "THE KERALA STATE CASHEW DEVELOPEMENT CORPORATION LTD",
-    caption: "A Government of Kerala Undertakin",
+    caption: "A Government of Kerala Undertaking",
   },
 ];
 
