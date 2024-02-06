@@ -7,7 +7,7 @@ import { AiOutlineShop } from "react-icons/ai";
 const mlNavHeading = [
   {
     title: "കേരള സംസ്ഥാന കശുവണ്ടി വികസന കോർപ്പറേഷൻ ലിമിറ്റഡ്",
-    caption: "കേരള സർക്കാർ സ്ഥാപനം",
+    caption: "ഒരു കേരള സർക്കാർ സ്ഥാപനം",
   },
 ];
 
