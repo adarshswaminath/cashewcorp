@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const FunctionImage = () => {
   const functionaImages = [
@@ -38,7 +39,10 @@ const FunctionImage = () => {
           />
           <div className="absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-100 transition-opacity duration-300">
             <div className="flex items-center justify-center w-full h-full bg-black bg-opacity-80">
-              <p className="text-white font-bold">Open Images</p>
+              <p className="text-white font-bold flex items-center gap-2">
+                Open Images
+                <span><FaExternalLinkAlt/></span>
+              </p>
             </div>
           </div>
         </div>
