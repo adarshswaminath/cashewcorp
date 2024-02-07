@@ -68,7 +68,7 @@ export const ContactBox = () => {
   return(
     <div className="container mx-auto w-full lg:w-1/2">
     <div
-      className="bg-[#02ACED] text-white p-12 rounded-lg shadow-lg "
+      className="bg-[#0757A9] text-white p-12 rounded-lg shadow-lg "
       data-aos="fade-up"
       data-aos-duration="800"
     >

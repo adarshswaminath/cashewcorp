@@ -27,7 +27,7 @@ function HeroCards() {
               </div>
               <h2 className="text-indigo-600 text-lg font-bold group-hover:text-white">{value.title}</h2>
               <p
-                className="text-justify text-gray-500 group-hover:text-white "
+                className="text text-gray-500 group-hover:text-white "
                 // Check if body contains "1969" using regular expression
                 dangerouslySetInnerHTML={{
                   __html: value.body.replace(

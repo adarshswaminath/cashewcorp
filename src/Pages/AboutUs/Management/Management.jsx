@@ -89,12 +89,12 @@ function Management() {
         {/* md special section open */}
       <div className="relative flex flex-col items-center mt-24">
         <div className="bg-red-400 h-44 w-full"></div>
-        <div className=" rounded-lg p-2 absolute -top-28" 
+        <div className=" rounded-lg p-2 absolute -top-32" 
         // data-aos="fade-up"
         >
           {managingDirector.map((value,index) => (
             <div key={index} className="flex flex-col items-center text-white">
-              <img src={value.image} className="h-44 p-2 rounded-b-full" alt="chairman_images" />
+              <img src={value.image} className="h-44  rounded-b-full border-4 border-gray-100" alt="chairman_images" />
               <h2 className="text-2xl font-bold text-white ">{value.name}</h2>
               <p>Managing Director</p>
               <a href={`mailto: ${value.contact[3]}`} className="underline">{value.contact[3]}</a>

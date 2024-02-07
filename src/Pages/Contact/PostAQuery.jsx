@@ -15,7 +15,7 @@ const PostAQuery = () => {
       </div>
       <div className="p-8 flex items-center justify-center">
         <div className="grid lg:flex w-full">
-          <div className="w-full lg:w-2/5 bg-[#02ACED] text-white flex flex-col items-center text-center p-4">
+          <div className="w-full lg:w-2/5 bg-[#0757A9] text-white flex flex-col items-center text-center p-4">
             <h2 className="text-4xl font-bold ">Contact Details</h2>
             <hr className="border border-white w-full" />
             <p className="text-2xl mt-2 mb-3 font-bold">

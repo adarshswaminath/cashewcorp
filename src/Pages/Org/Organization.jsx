@@ -61,7 +61,7 @@ const DeptTable = () => {
       <table className="table">
         {/* head */}
         <thead>
-          <tr>
+          <tr className="text-black font-bold">
             <th></th>
             <th>Name of the Department/Section</th>
             <th>Dept./Sec. - Sub</th>
@@ -123,7 +123,7 @@ const DeptTable = () => {
             <th>8</th>
             <td></td>
             <td></td>
-            <td>si@cashewcorporation.com</td>
+            <td>esi@cashewcorporation.com</td>
           </tr>
           {/* row 9 */}
           <tr>
