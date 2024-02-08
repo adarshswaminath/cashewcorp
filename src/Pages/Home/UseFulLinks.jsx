@@ -1,6 +1,7 @@
 import React from "react";
 import "./style/usefullinks.css";
 import { FaLink } from "react-icons/fa6";
+import {useLanguage} from "../../contexts/LanguageContext"
 
 const linksArray = [
   { name: "India Government", link: "https://India.gov.in" },
@@ -28,6 +29,7 @@ const linksArray = [
   { name: "Kerala Cashew Board", link: "https://keralacashewboard.com/" },
 ];
 const Card = ({ link }) => {
+
   const hostname = new URL(link).hostname;
 
   return (
@@ -46,13 +48,16 @@ const Card = ({ link }) => {
 };
 
 function UseFulLinks() {
+  const { language } = useLanguage()
   return (
     <div className="container mx-auto mt-12 mb-2">
       <h2 className="text-sm lg:text-4xl font-bold text-center mb-6 text-red-500">
         Useful Links
       </h2>
       <p className="text-gray-700 text-center mb-8">
-        Excepteur ad ad nulla excepteur duis commodo labore sunt anim dolor.
+      {language ? "A collection of useful links to frequently used application pages by KSCDC" :
+      "കെ.എസ്.സി.ഡി.സി പതിവായി ഉപയോഗിക്കുന്ന ആപ്ലിക്കേഷൻ പേജുകളിലേക്കുള്ള ഉപയോഗപ്രദമായ ലിങ്കുകളുടെ ഒരു ശേഖരം"
+      }
       </p>
 
       <div className="grid gap-4 p-3">

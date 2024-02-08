@@ -100,7 +100,10 @@ function EnNavbar() {
           THE KERALA STATE CASHEW DEVELOPEMENT CORPORATION LTD
           </h3>
           <p className="text-xs text-gray-800 font-semibold">
-          (A Government of Kerala Undertaking)
+          A Government of Kerala Undertaking
+          </p>
+          <p className="text-xs text-gray-800 font-extrabold">
+          (AN ISO 22000-2005 CERTIFIED COMPANY)
           </p>
         </div>
         ))}

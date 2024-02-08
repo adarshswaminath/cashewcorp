@@ -100,7 +100,10 @@ function MlNavbar() {
           കേരള സംസ്ഥാന കശുവണ്ടി വികസന കോർപ്പറേഷൻ ലിമിറ്റഡ്
           </h3>
           <p className="text-xs text-gray-800 font-semibold">
-            (ഒരു കേരള സർക്കാർ സ്ഥാപനം)
+            ഒരു കേരള സർക്കാർ സ്ഥാപനം
+          </p>
+          <p className="text-xs text-gray-800 font-extrabold">
+          (AN ISO 22000-2005 CERTIFIED COMPANY)
           </p>
         </div>
         ))}

@@ -2,10 +2,19 @@ import { BsSend } from "react-icons/bs";
 import { FaLocationPin, FaLocationPinLock } from "react-icons/fa6";
 import { MdPhone } from "react-icons/md";
 
+
+const CompanyAddress = () => {
+  return(
+    <address>
+       "THE KERALA STATE CASHEW DEVELOPMENT CORPORATION LTD CASHEW HOUSE, MUNDAKKAL, KOLLAM - 691001, KERALA,INDIA CIN: U15493KL1969SGC002234"
+    </address>
+  )
+}
+
 const getInTouchData = [
-  { icon: <MdPhone />,firstMail: "georgia.young@example.com",secondMail: "georgia.young@ple.com" },
-  { icon: <FaLocationPin />,firstMail: "georgia.young@example.com",secondMail: "georgia.young@ple.com" },
-  { icon: <BsSend />,firstMail: "georgia.young@example.com",secondMail: "georgia.young@ple.com" },
+  { icon: <MdPhone />,firstMail: " +91 474 2742271, 2742172, 2742273, 2742954" },
+  { icon: <FaLocationPin />,firstMail: <CompanyAddress/> },
+  { icon: <BsSend />,firstMail: "ho@cashewcorporation.com",secondMail: "kscdc@kerala.gov.in" },
 ];
 
 function GetInTocuhCard({icon,firstMail,secondMail,anime}) {
@@ -15,7 +24,7 @@ function GetInTocuhCard({icon,firstMail,secondMail,anime}) {
         {icon}
       </h1>
       <div className="text-center text-gray-600 group-hover:text-white m-3">
-        <p>
+        <p className="text-sm">
           <a href="#">{firstMail}</a>
         </p>
         <p>
