@@ -32,7 +32,7 @@ const enHeroCards = [
   {
     id: 3,
     title: "Govt. of Kerala",
-    body: `KSCDC started in 1969 is a public sector undertaking fully owned by the Government of Kerala, playing a pivotal role in the cashew industry.`,
+    body: `KSCDC started in 1969 is a public sector undertaking fully owned by the Government of Kerala, playing a pivotal role in the cashew industry`,
     icon: <FaBookOpen />,
     link: "/kscdc",
   },
