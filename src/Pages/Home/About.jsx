@@ -7,8 +7,10 @@ import { enMissionAndVision } from "./Language/en";
 import { mlMissionAndVision } from "./Language/ml";
 import useLanguageData from "../../Hook/useLanguageData";
 import { Link } from "react-router-dom";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 function About() {
+  const {language} = useLanguage()
   const data = useLanguageData(enAboutData,mlAboutData)
   const missionData = useLanguageData(enMissionAndVision,mlMissionAndVision)
   return (
@@ -103,7 +105,7 @@ function About() {
                     className="p-6 h-72 bg-white w-full lg:max-w-md flex flex-col items-start rounded-lg shadow-md border-l-4 border-red-500 transform transition ease-in-out duration-300 hover:scale-105 hover:-translate-y-3"
                   >
                     <h2 className="text-3xl font-bold mb-4">{value.title}</h2>
-                    <p className="text-gray-700 leading-relaxed text-justify">
+                    <p className={`text-gray-700 leading-relaxed ${language && "text-justify"}`}>
                       {value.body}
                     </p>
                   </div>
