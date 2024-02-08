@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 let cardDetils = [
     {image: "/images/blog/blog-1.png",title: "Kollam ‘The Cashew Capital’",caption: "Situated in the southern coast of India.This ancient port town has hundred years of heritage to its credit.",link: "/kscdc"},
     {image: "/images/blog/blog-2.png",title: "Kerala Budget 2024",caption:"Kerala government has allocated 53.36 crore rupees for the cashew sector in the Kerala budget presented 2024",link: "/blog"},
-    {image: "/images/blog/blog-3.png",title: "Launching of premium products",caption: "In order to activate value added products in the domastic and international market KSCDC launched ",link: "/product"},
+    {image: "/images/blog/blog-3.png",title: "KSCDC Launched 24 premium products",caption: "In order to activate value added products in the domastic and international market KSCDC launched ",link: "/product"},
 
 ]
 import { enHomeBlog } from "./Language/en";
