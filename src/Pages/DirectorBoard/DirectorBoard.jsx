@@ -15,56 +15,63 @@ const DirectorsData = [
     image: "/images/directors/dir-1.png",
     title: "Shri. Sunil John .K",
     caption: "Managing Director",
-    email: "md@cashewcorporation.com"
-
+    email: "md@cashewcorporation.com",    
+    phone: "+919847071750",
   },
   {
     image: "/images/directors/dir-9.png",
     title: "Shri. B. Pratheep Kumar",
     caption: "Director",
-    email: "cmcashewcorporation@gmail.com"
+    email: "cmcashewcorporation@gmail.com",
+    phone: "+919847071750",
 
   },
   {
     image: "/images/directors/dir-10.png",
     title: "Shri. Siju Jacob",
     caption: "Director",
-    email: "cmcashewcorporation@gmail.com"
+    email: "cmcashewcorporation@gmail.com",
+    phone: "+919847071750",
 
   },
   {
     image: "/images/directors/dir-8.png",
     title: "Dr. B S Suran",
     caption: "Director",
-    email: "cmcashewcorporation@gmail.com"
+    email: "cmcashewcorporation@gmail.com",
+    phone: "+919847071750",
 
   },
   {
     image: "/images/directors/dir-4.png",
     title: "Shri. B Sujeendran",
     caption: "Director",
-    email: "cmcashewcorporation@gmail.com"
+    email: "cmcashewcorporation@gmail.com",
+    phone: "+919847071750",
 
   },
   {
     image: "/images/directors/dir-5.png",
     title: "Shri. G. Babu",
     caption: "Director",
-    email: "cmcashewcorporation@gmail.com"
+    email: "cmcashewcorporation@gmail.com",
+    phone: "+919847071750",
 
   },
   {
     image: "/images/directors/dir-7.png",
     title: "Shri. Saji D. Anand",
     caption: "Director",
-    email: "cmcashewcorporation@gmail.com"
+    email: "cmcashewcorporation@gmail.com",
+    phone: "+919847071750",
 
   },
   {
     image: "/images/directors/dir-6.png",
     title: "Adv. Sooranadu S Sreekumar",
     caption: "Director",
-    email: "cmcashewcorporation@gmail.com"
+    email: "cmcashewcorporation@gmail.com",
+    phone: "+919847071750",
 
   },
 ];
