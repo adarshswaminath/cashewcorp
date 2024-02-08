@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaPlus,FaMinus } from "react-icons/fa6";
 // accordion 
 function Accordion({title,content}){
     const [isOpen, setIsOpen] = useState(false);
@@ -19,8 +20,8 @@ function Accordion({title,content}){
           onClick={toggleAccordion}
         >
           <h3 className="text-lg font-semibold text-white">{title}</h3>
-          <span className={`transform text-white ${isOpen ? 'rotate-180' : 'rotate-0'} transition-transform`}>
-            &#9660;
+          <span className={`transform text-white transition-transform`}>
+            {isOpen ? <FaMinus/> : <FaPlus/>}
           </span>
         </div>
         {isOpen && (
