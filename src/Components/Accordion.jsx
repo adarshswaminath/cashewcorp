@@ -1,11 +1,16 @@
 import { useState } from "react";
+import { FaExternalLinkAlt } from "react-icons/fa";
 // accordion 
 function Accordion({title,content}){
     const [isOpen, setIsOpen] = useState(false);
-  
     const toggleAccordion = () => {
       setIsOpen(!isOpen);
     };
+
+    const isUrl = (content) => {
+      const urlRegex = /^(http|https):\/\/[^ "]+$/
+      return urlRegex.test(content)
+    }
   
     return (
       <div className="border border-red-100 rounded-lg bg-[#0757A9] text-black  mb-2">
@@ -20,7 +25,13 @@ function Accordion({title,content}){
         </div>
         {isOpen && (
           <div className="p-4 bg-gray-100 flex justify-center">
-            {content}
+            {isUrl(content) ? (
+              <div>
+                <a href={content} className="flex items-center gap-3 hover:underline" target="_blank" rel="noopener noreferrer">
+                Open <FaExternalLinkAlt/>
+                </a>
+              </div>
+            ) : content}
           </div>
         )}
       </div>
