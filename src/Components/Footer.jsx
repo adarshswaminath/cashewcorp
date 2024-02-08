@@ -188,6 +188,12 @@ function Footer() {
         </div>
         {/* copy right section */}
         <FooterCopyRight />
+        <hr className="border-gray-400 m-2" />
+        <div className="flex justify-center">
+          <h1 className="font-bold text-xs text-gray-400">Designed And Developed By 
+             <a href="https://www.igoraza.com/" target="_blank" className="text-white underline"> IGOROZA</a>
+          </h1>
+        </div>
       </div>
     </div>
   );
