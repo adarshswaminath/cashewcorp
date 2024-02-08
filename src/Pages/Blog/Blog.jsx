@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../../Components/Navbar'
 import Footer from '../../Components/Footer'
 import Banner from '../../Components/Banner'
@@ -18,6 +18,9 @@ const careerData = [
 ]
 
 function Blog() {
+  useEffect(() =>{
+    window.scrollTo(0,0)
+  },[])
   return (
     <div>
         <Navbar/>

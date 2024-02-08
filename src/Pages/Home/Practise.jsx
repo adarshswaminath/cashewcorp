@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 let cardDetils = [
-    {image: "https://picsum.photos/id/10/300/300",title: "A single source of truth",caption: "ReprehendeRTI irure ea nisi nostrud aliqua excepteur officia aute."},
-    {image: "https://picsum.photos/id/12/300/300",title: "Fastest way to organize",caption:"Dolore proident reprehendeRTI ullamco aute qui sit."},
-    {image: "https://picsum.photos/id/13/300/300",title: "Fastest way to take action",caption: "Voluptate et minim mollit Lorem nisi anim ea ut tempor adipisicing pariatur amet."},
+    {image: "/images/blog/blog-1.png",title: "Kollam ‘The Cashew Capital’",caption: "Situated in the southern coast of India.This ancient port town has hundred years of heritage to its credit.  (Read More)",link: "/kscdc"},
+    {image: "/images/blog/blog-2.png",title: "Kerala Budget 2024",caption:"Kerala government has allocated 53.36 crore rupees for the cashew sector in the Kerala budget presented 2024 to resolve the crisis of the traditional industry of cashew sector ( Read More)",link: "/blog"},
+    {image: "/images/blog/blog-3.png",title: "Launching of premium products",caption: "In order to activate value added products in the domastic and international market KSCDC launched 24 new value added products  (Read more) ",link: "/product"},
 
 ]
 import { enHomeBlog } from "./Language/en";
 import { mlHomeBlog } from "./Language/ml";
 import useLanguageData from "../../Hook/useLanguageData";
 
-const PractiseCard = ({ image, title, caption,aosanimation }) => {
+const PractiseCard = ({ image, title, caption,aosanimation,link }) => {
     return (
       <div data-aos={aosanimation} data-aos-duration="500" className="w-80 overflow-hidden  flex flex-col items-start">
         <figure className="p-4">
@@ -21,8 +21,8 @@ const PractiseCard = ({ image, title, caption,aosanimation }) => {
         </figure>
         <div className="p-4">
           <h2 className="text-xl font-bold mb-2">{title}</h2>
-          <p className="text-gray-600">{caption}</p>
-          <Link to="/blog">
+          <p className="text-gray-600 ">{caption}</p>
+          <Link to={link}>
           <button className="mt-4 px-5 py-1 border border-black">Read More</button>
           </Link>
         </div>
@@ -47,6 +47,7 @@ function Practise() {
         image={value.image}
         title={value.title}
         caption={value.caption}
+        link={value.link}
         />
       ))}
       </div>
