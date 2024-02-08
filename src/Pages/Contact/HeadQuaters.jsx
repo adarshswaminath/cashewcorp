@@ -1,7 +1,6 @@
 import React from 'react'
 import { emailIdSection } from '../Org'
-import Navbar from '../../Components/Navbar'
-import Footer from '../../Components/Footer'
+
 
 function HeadQuaters() {
   return (
