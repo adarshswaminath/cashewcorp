@@ -8,7 +8,7 @@ const categories = [
   { main: null, label: "View All", sub: null },
   { main: "plain", label: "Plain Cashews", sub: ["All", "premium", "popular","extra-premium"] },
   { main: "roastedandsalted", label: "Roasted and Salted", sub: ["All", "premium", "popular"] },
-  { main: "valueAddedProducts", label: "Value Added Products", sub: ["All", "flavoured-cashew",'premium', "cashew-vita","spread-delights"] },
+  { main: "valueAddedProducts", label: "Value Added ", sub: ["All", "flavoured-cashew",'premium', "cashew-vita","spread-delights"] },
   { main: "giftboxpackets", label: "Gift Box Packets", sub: ["All",'gift-box','jute-bag'] },
 ];
 
@@ -17,9 +17,13 @@ function FilterButton({ label, isActive, onClick }) {
   return (
     <button
       onClick={onClick}
-      className={`btn capitalize hover:bg-red-300 ${isActive ? "bg-red-500 text-white btn-active" : ""}`}
+      className={`btn capitalize hover:bg-red-300 outline-none ${isActive ? "bg-red-500 text-white btn-active" : ""}`}
     >
-      {label}
+      {(label == "Gift Box Packets" || label == "jute-bag" || label == "gift-box") ? (
+        <span>{label}</span>
+      ) : (
+        <span>{label} Products</span>
+      ) } 
     </button>
   );
 }
@@ -51,7 +55,7 @@ function ProductList() {
 
   return (
     <div className="min-h-screen p-3">
-      <div className="text-center mb-4 space-x-4">
+      <div className="text-center mb-4 mt-4 space-x-4">
         {/* Render main category filter buttons with labels */}
         {categories.map((category) => (
           <FilterButton
@@ -65,7 +69,7 @@ function ProductList() {
 
       {/* Render subcategory filter buttons if a main category is selected */}
       {filterType && (
-        <div className="text-center mb-4 space-x-4">
+        <div className="text-center mb-4 mt-4 space-x-4">
           {categories
             .find((category) => category.main === filterType)
             .sub.map((subcategory) => (
@@ -80,7 +84,7 @@ function ProductList() {
       )}
 
       {/* Render product cards */}
-      <div className="grid gap-4 grid-cols-2 lg:grid-cols-5 place-items-center justify-items-center">
+      <div className="grid gap-4 grid-cols-2 lg:grid-cols-4 place-items-center justify-items-center">
         {filteredProductData.map((product) => (
           <ProductCard
             setSelectedData={setSelectedData}
