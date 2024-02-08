@@ -46,7 +46,7 @@ const Data = [
 function DownloadMedia() {
   return (
     <div>
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto p-2">
         <table className="table">
           {/* head */}
           <thead className="bg-red-500 font-bold text-white">

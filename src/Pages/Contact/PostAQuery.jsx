@@ -51,14 +51,11 @@ const PostAQuery = () => {
                 placeholder="Name"
                 className="input bg-gray-200 w-full"
               />
-              <select className="select  w-full max-w-xs bg-gray-200">
-                <option disabled selected>
-                  Who shot first?
-                </option>
-                <option>Buyer</option>
-                <option>Vendor</option>
-                <option>Seller</option>
-              </select>
+              <input
+                type="text"
+                placeholder="Vendor / Buyer / Seller / Supplier"
+                className="input bg-gray-200 w-full"
+              />
             </div>
             <input
               type="tel"

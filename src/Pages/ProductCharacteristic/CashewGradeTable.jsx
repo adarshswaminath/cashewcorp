@@ -2,7 +2,7 @@ import React from 'react';
 
 const CashewGradeTable = ({ gradeData }) => {
   return (
-    <div className="mx-auto mt-4">
+    <div className="mx-auto mt-4 ">
       <h2 className="text-xl font-bold mb-4">{gradeData.title}</h2>
       <div className="overflow-x-auto">
         <table className="w-full table-auto border border-collapse">

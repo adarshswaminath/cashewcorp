@@ -28,7 +28,7 @@ const ProductCharacteristic = () => {
           peeling cashew nuts. (Anacardium occidentale L.)
         </p>
         <h2 className="font-semibold mt-2 text-xl">SPECIAL CHARACTERISTICS:</h2>
-       <div className="lg:p-12 flex flex-col justify-center ">
+       <div className="lg:px-12 py-3 overflow-scroll  flex flex-col justify-center ">
        <CashewGradeTable gradeData={gradeAData} />
         <CashewGradeTable gradeData={gradeBData} />
         <CashewGradeTable gradeData={gradeCData} />
