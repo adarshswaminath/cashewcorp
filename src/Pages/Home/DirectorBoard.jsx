@@ -5,7 +5,7 @@ import { mlBoardOfDirectors } from "./Language/ml";
 import { enBoardOfDirectors } from "./Language/en";
 import useLanguageData from "../../Hook/useLanguageData";
 const cardData = [
-  { image: "/images/directors/chairman.png", title: "Shri. S.Jayamohan", caption: "Chairman" },
+  { image: "/images/directors/chairman.png", title: "Shri. S. Jayamohan", caption: "Chairman" },
   { image: "/images/directors/dir-1.png", title: "Shri. Sunil John .K", caption: "Managing Director" },
   { image: "/images/directors/dir-9.png", title: "Shri. B. Pratheep Kumar", caption: "Director" },
   { image: "/images/directors/dir-10.png", title: "Shri. Siju Jacob", caption: "Director" },
@@ -31,8 +31,8 @@ const ChooseCard = ({ image, title, caption }) => {
       <div className="relative -top-6 right-16 shadow-lg p-2 bg-white rounded-full transform transition ease-in-out delay-100 duration-300 group-hover:scale-125 group-hover:-translate-y-2">
         <BsWhatsapp />
       </div>
-      <div className="relative text-center">
-        <p className="font-bold text-red-600 uppercase">{title}</p>
+      <div className="relative text-center m-2">
+        <p className=" font-bold text-red-600 uppercase">{title}</p>
         <p className="text-black">{caption}</p>
       </div>
     </div>

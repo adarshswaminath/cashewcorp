@@ -21,7 +21,7 @@ const leaderData = [
     title: "Hon. Minister's Message"
   },
   {
-    name: "Shri. S.Jayamohan",
+    name: "Shri. S. Jayamohan",
     position: "Chairman",
     content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum inlabore laudantium deserunt fugiat numquam.",
     message: "Incididunt id velit consequat irure voluptate sunt velit minim magna reprehenderit eu. Voluptate eu enim laborum culpa cupidatat irure pariatur irure tempor adipisicing excepteur eu velit minim. Cupidatat velit cillum amet velit cupidatat quis dolor amet. Minim cillum officia dolor duis duis Lorem laboris incididunt nulla labore eiusmod.",

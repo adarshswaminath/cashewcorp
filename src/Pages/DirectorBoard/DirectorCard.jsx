@@ -10,7 +10,7 @@ function DirectorCard({ image, title, caption, email }) {
           {title}
         </h3>
         <p className="font-bold">{caption}</p>
-        {title === "Shri. S.Jayamohan" || title === "Shri. Sunil John .K" ? (
+        {title === "Shri. S. Jayamohan" || title === "Shri. Sunil John .K" ? (
           <div>
             <a
               href={`mailto: ${email}`}

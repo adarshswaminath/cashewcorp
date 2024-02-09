@@ -7,7 +7,7 @@ import DirectorCard from "./DirectorCard";
 const DirectorsData = [
   {
     image: "/images/directors/chairman.png",
-    title: "Shri. S.Jayamohan",
+    title: "Shri. S. Jayamohan",
     caption: "Chairman",
     email: "chairman@cashewcorporation.com"
   },
