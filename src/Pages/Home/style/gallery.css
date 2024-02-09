@@ -1,31 +1,44 @@
-.box{
+.box {
 	position: relative;
-	/* width: 500px; */
 	max-width: 100%;
 	height: 21rem;
-}
-
-.image {
+  }
+  
+  .image {
 	position: absolute;
 	width: 100%;
-    height: 320px;
+	height: 100%;
+	object-fit: cover;
 	opacity: 0;
-	animation: change-img-anim 15s infinite;
-}
-
-.image:nth-of-type(1) {
-	animation-delay: 10s;
-}
-.image:nth-of-type(2) {
-	animation-delay: 5s;
-}
-.image:nth-of-type(3) {
-	animation-delay: 7s;
-}
-
-@keyframes change-img-anim {
-	0%{ opacity: 0;}
-	10%{ opacity: 1;}
-	90%{ opacity: 1;}
-	100%{ opacity: 0;}
-}
+	animation: change-img-anim 12s infinite;
+  }
+  
+  @keyframes change-img-anim {
+	0%, 100% {
+	  opacity: 0;
+	}
+	8.33%, 33.33% {
+	  opacity: 1;
+	}
+	41.66%, 100% {
+	  opacity: 0;
+	}
+  }
+  
+  /* Adjust the animation duration, delays, and keyframe percentages as needed */
+  .image:nth-child(1) {
+	animation-delay: 0s;
+  }
+  
+  .image:nth-child(2) {
+	animation-delay: 4s;
+  }
+  
+  .image:nth-child(3) {
+	animation-delay: 8s;
+  }
+  
+  .image:nth-child(4) {
+	animation-delay: 12s;
+  }
+  

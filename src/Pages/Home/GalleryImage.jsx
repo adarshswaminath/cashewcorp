@@ -10,9 +10,10 @@ function GalleryImage() {
             {language ? "Images" : "ചിത്രങ്ങൾ"}
           </h2>
           <div className="box ">
-          <img className="image object-cover" src="/images/gallery-1.jpg" />
-	            <img className="image object-cover" src="/images/gallery-2.jpg" />
-	            <img className="image object-cover" src="/images/gallery-3.jpg" />
+              <img className="image object-cover" src="/images/home/gallery/gallery-1.jpg" />
+	            <img className="image object-cover" src="/images/home/gallery/gallery-2.jpg" />
+	            <img className="image object-cover" src="/images/home/gallery/gallery-3.jpg" />
+	            <img className="image object-cover" src="/images/home/gallery/gallery-4.jpg" />
             </div>
           <Link to="/gallery">
             <button className="px-5 py-2 bg-red-500 text-white rounded-md mt-4 hover:bg-red-600 transition duration-300">

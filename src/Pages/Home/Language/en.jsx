@@ -89,7 +89,7 @@ const enAboutData = [
     para_one:
       "The Kerala State Cashew Development Corporation Limited (KSCDC) was incorporated in July 1969 and started Commercial activities in the year 1971 as a company fully owned by the Government of Kerala. From the modest beginning in 1969 Corporation has now grown into a large organization playing a pivotal role in Cashew industry.",
     para_two:
-      "KSCDC, an ISO 22000-2005 company, is running 30 cashew factories across Kerala State with an annual production capacity of 30,000 Metric Tonnes. More than 15000 workers and 500 staff members are working in these factories. KSCDC now have a turnover of Rs. 250 crore.",
+      "KSCDC, an ISO 22000-2005 company, is running 30 cashew factories across Kerala State with an annual production capacity of 30,000 Metric Tonnes. More than 15000 workers and 500 staff members are working in these factories. KSCDC now have a turnover of  ₹ 250 crore.",
     para_three:
       "KSCDC acts as a model employer in the field of cashew industry mainly to protect the interest of its workers and to provide maximum employment to them ensuring their statutory benefits like minimum wages, bonus and etc. prevailing in the cashew industry.",
   },
