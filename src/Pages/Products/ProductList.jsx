@@ -24,7 +24,7 @@ const categories = [
       "premium",
       "flavoured-cashew",
       "cashew-vita",
-      "spread-delights",
+      "cashew-apple",
     ],
   },
   {
