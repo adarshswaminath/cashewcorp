@@ -45,10 +45,9 @@ function GetInTocuh() {
   return (
     <div>
       <div className="p-4 md:p-8 lg:p-12 bg-gray-100">
-      <h3 className="text-4xl font-bold mb-6 text-center text-red-500">Get In Touch.</h3>
+      <h3 className="text-4xl font-bold mb-6 text-center text-red-500">Get In Touch With Us.</h3>
       <p className="text-center max-w-3xl mx-auto text-gray-500 font-bold mb-10">
-        Problems trying to resolve the conflict between the two major realms of
-        Classical physics Newtonian mechanics.
+      For more details get in touch with us directly through the information furnished given below.
       </p>
      <div>
      <div className="grid grid-cols-1  lg:flex gap-2 place-items-center justify-items-center justify-center items-center">
