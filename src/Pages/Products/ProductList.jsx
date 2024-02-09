@@ -6,24 +6,48 @@ import ProductModal from "./Components/ProductModal";
 // Define main categories and their subcategories with labels
 const categories = [
   { main: null, label: "View All", sub: null },
-  { main: "plain", label: "Plain Cashews", sub: ["All", "premium", "popular","extra-premium"] },
-  { main: "roastedandsalted", label: "Roasted and Salted", sub: ["All", "premium", "popular"] },
-  { main: "valueAddedProducts", label: "Value Added ", sub: ["All", "flavoured-cashew",'premium', "cashew-vita","spread-delights"] },
-  { main: "giftboxpackets", label: "Gift Box Packets", sub: ["All",'gift-box','jute-bag'] },
+  {
+    main: "plain",
+    label: "Plain Cashew Products",
+    sub: ["All", "premium", "extra-premium", "popular"],
+  },
+  {
+    main: "roastedandsalted",
+    label: "Roasted and Salted Products",
+    sub: ["All", "premium", "popular"],
+  },
+  {
+    main: "valueAddedProducts",
+    label: "Value Added Products",
+    sub: [
+      "All",
+      "premium",
+      "flavoured-cashew",
+      "cashew-vita",
+      "spread-delights",
+    ],
+  },
+  {
+    main: "giftboxpackets",
+    label: "Gift Box Packets",
+    sub: ["All", "gift-box", "jute-bag"],
+  },
 ];
 
 // Reusable component for filter buttons
 function FilterButton({ label, isActive, onClick }) {
+  const formattedLabel =
+    label === "premium" || label === "popular" || label === "extra-premium"
+      ? `${label} Grade`
+      : label;
   return (
     <button
       onClick={onClick}
-      className={`btn capitalize hover:bg-red-300 outline-none ${isActive ? "bg-red-500 text-white btn-active" : ""}`}
+      className={`btn capitalize hover:bg-red-300 outline-none ${
+        isActive ? "bg-red-500 text-white btn-active" : ""
+      }`}
     >
-      {(label == "Gift Box Packets" || label == "jute-bag" || label == "gift-box") ? (
-        <span>{label}</span>
-      ) : (
-        <span>{label} Products</span>
-      ) } 
+      <span>{formattedLabel}</span>
     </button>
   );
 }
@@ -38,7 +62,10 @@ function ProductList() {
   const filteredProductData = productData.filter((product) => {
     return (
       (!filterType || product.type === filterType) &&
-      (!subCategory || (subCategory === "All" ? product.type === filterType : product.grade === subCategory))
+      (!subCategory ||
+        (subCategory === "All"
+          ? product.type === filterType
+          : product.grade === subCategory))
     );
   });
 
@@ -96,7 +123,9 @@ function ProductList() {
       </div>
 
       {/* Render product modal if showModal is true */}
-      {showModal ? <ProductModal selectedData={selectedData} setShowModal={setShowModal} /> : null}
+      {showModal ? (
+        <ProductModal selectedData={selectedData} setShowModal={setShowModal} />
+      ) : null}
     </div>
   );
 }
