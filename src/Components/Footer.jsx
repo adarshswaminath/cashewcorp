@@ -97,6 +97,9 @@ function FooterCopyRight() {
   return (
     <div className="flex flex-col lg:flex-row justify-between text-gray-500 ">
       <span className="text-sm mb-2 lg:mb-0">@ 2024 All Rights Reserved</span>
+      <div>
+        <a href="http://webmail.cashewcorporation.com/" target="_blank" className="hover:text-white">Staff Mail</a>
+      </div>
       <div className="text-sm grid grid-cols-2 gap-2 lg:grid-cols-5 text-white">
         <span>Privacy Policy</span>
         <span>Terms of Use</span>
