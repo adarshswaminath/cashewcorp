@@ -23,7 +23,7 @@ function GetInTocuhCard({icon,firstMail,secondMail,anime}) {
       <h1 className="text-5xl lg:text-6xl text-sky-600 group-hover:text-white">
         {icon}
       </h1>
-      <div className="text-center text-gray-600 group-hover:text-white m-3">
+      <div className="text-center text-gray-900 group-hover:text-white m-3 mb-4">
         <p className="text-sm">
           <a href="#">{firstMail}</a>
         </p>
@@ -32,7 +32,6 @@ function GetInTocuhCard({icon,firstMail,secondMail,anime}) {
           <a href="#">{secondMail}</a>
         </p>
       </div>
-      <h2 className="m-3 font-bold group-hover:text-white">Get Support</h2>
       <button className="btn border-red-500 text-red-500 px-[68px] bg-white group-hover:text-white group-hover:bg-transparent group-hover:border-white">
         Get Support
       </button>
