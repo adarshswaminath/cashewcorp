@@ -8,7 +8,7 @@ const categories = [
   { main: null, label: "View All", sub: null },
   {
     main: "plain",
-    label: "Plain Cashews Products",
+    label: "Plain Cashews",
     sub: [
       { filter: "All", label: "ALL" },
       { filter: "premium", label: "Premium Grade" },
@@ -18,7 +18,7 @@ const categories = [
   },
   {
     main: "roastedandsalted",
-    label: "Roasted and Salted Cashews Products",
+    label: "Roasted and Salted Cashews",
     sub: [
       {filter:"All",label: "ALL"}, 
       {filter:"premium",label: "Premeium Grade"}, 
@@ -27,7 +27,7 @@ const categories = [
   },
   {
     main: "valueAddedProducts",
-    label: "Value Added Products",
+    label: "Value Added Cashew Products",
     sub: [
       { filter: "All", label: "All" },
       { filter: "premium", label: "Premium Products" },
@@ -38,7 +38,7 @@ const categories = [
   },
   {
     main: "giftboxpackets",
-    label: "Gift Box Packets",
+    label: "Gift Packets",
     sub: [
       { filter: "All", label: "ALL" },
       { filter: "gift-box", label: "Gift Box" },
