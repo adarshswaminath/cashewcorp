@@ -1,7 +1,7 @@
 import { IoMdMail } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
 
-function DirectorCard({ image, title, caption, email }) {
+function DirectorCard({ image, title, caption, email,phone }) {
   return (
     <div className="w-full  h-[260px] object-cover p-5 border bg-white hover:bg-red-300 group  flex items-center gap-x-8 hover:shadow-xl">
       <img src={image} className="h-48 w-44 rounded-b-full " alt="" />
@@ -24,7 +24,7 @@ function DirectorCard({ image, title, caption, email }) {
               className="flex items-center gap-2 underline"
             >
               <FaPhoneAlt />
-              {email}
+              {phone}
             </a>
           </div>
         ) : (

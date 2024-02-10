@@ -9,7 +9,8 @@ const DirectorsData = [
     image: "/images/directors/chairman.png",
     title: "Shri. S. Jayamohan",
     caption: "Chairman",
-    email: "chairman@cashewcorporation.com"
+    email: "chairman@cashewcorporation.com",
+    phone: "+919447417711"
   },
   {
     image: "/images/directors/dir-1.png",
@@ -23,7 +24,7 @@ const DirectorsData = [
     title: "Shri. B. Pratheep Kumar",
     caption: "Director",
     email: "cmcashewcorporation@gmail.com",
-    phone: "+919847071750",
+    phone: "",
 
   },
   {
@@ -31,7 +32,7 @@ const DirectorsData = [
     title: "Shri. Siju Jacob",
     caption: "Director",
     email: "cmcashewcorporation@gmail.com",
-    phone: "+919847071750",
+    phone: "",
 
   },
   {
@@ -39,7 +40,7 @@ const DirectorsData = [
     title: "Dr. B S Suran",
     caption: "Director",
     email: "cmcashewcorporation@gmail.com",
-    phone: "+919847071750",
+    phone: "",
 
   },
   {
@@ -47,7 +48,7 @@ const DirectorsData = [
     title: "Shri. B Sujeendran",
     caption: "Director",
     email: "cmcashewcorporation@gmail.com",
-    phone: "+919847071750",
+    phone: "",
 
   },
   {
@@ -55,7 +56,7 @@ const DirectorsData = [
     title: "Shri. G. Babu",
     caption: "Director",
     email: "cmcashewcorporation@gmail.com",
-    phone: "+919847071750",
+    phone: "",
 
   },
   {
@@ -63,7 +64,7 @@ const DirectorsData = [
     title: "Shri. Saji D. Anand",
     caption: "Director",
     email: "cmcashewcorporation@gmail.com",
-    phone: "+919847071750",
+    phone: "",
 
   },
   {
@@ -71,7 +72,7 @@ const DirectorsData = [
     title: "Adv. Sooranadu S Sreekumar",
     caption: "Director",
     email: "cmcashewcorporation@gmail.com",
-    phone: "+919847071750",
+    phone: "",
 
   },
 ];
@@ -88,6 +89,7 @@ function DirectorBoardPage() {
           title={data.title}
           caption={data.caption}
           email={data.email}
+          phone={data.phone}
           image={data.image} />
         ))}
       </div>
