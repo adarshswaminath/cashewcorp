@@ -129,16 +129,11 @@ const accordion = [
   },
   {
     id: 3,
-    title: "Name of Assistant Factory Manager",
-    content: ""
-  },
-  {
-    id: 4,
     title: "Value Addition Unit Ayathil",
     content: ""
   },
   {
-    id: 5,
+    id: 4,
     title: "Cashew Plantation Kottiyam",
     content: ""
   },
@@ -200,6 +195,7 @@ function FactoryContactTable() {
             <tr>
               <th className="border p-2">Sl.No</th>
               <th className="border p-2">Location</th>
+              <th className="border p-2">Name.of.Factory Manager</th>
               <th className="border p-2">Phone Number</th>
               <th className="border p-2">Email</th>
               <th className="border p-2">Image</th>
@@ -223,6 +219,7 @@ function FactoryContactTable() {
                     <FaExternalLinkAlt className="text-base" />
                   </a>
                 </td>
+                <td>Name</td>
                 <td className="border p-2">{value.phoneNumber}</td>
                 <td className="border p-2">{value.email}</td>
                 <td className="border p-2">Open</td>
