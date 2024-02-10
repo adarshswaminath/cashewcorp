@@ -39,8 +39,8 @@ let enfooterData = [
     title: "Sitemap",
     values: [
       { path: "/", label: "Home" },
-      { path: "/tender", label: "Tender" },
-      { path: "/career", label: "Career" },
+      { path: "/tender", label: "Tenders" },
+      { path: "/career", label: "Careers" },
       { path: "/gallery", label: "Gallery" },
       { path: "/rti", label: "RTI" },
     ],
