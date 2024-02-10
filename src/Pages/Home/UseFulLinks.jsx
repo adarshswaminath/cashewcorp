@@ -52,7 +52,7 @@ function UseFulLinks() {
   return (
     <div className="container mx-auto mt-12 mb-2">
       <h2 className="text-sm lg:text-4xl font-bold text-center mb-6 text-red-500">
-        Useful Links
+        {language ? "Useful Links" : "ദ്രുത ലിങ്കുകൾ"}
       </h2>
       <p className="text-gray-700 text-center mb-8">
       {language ? "Collection of frequently used application pages by KSCDC" :
