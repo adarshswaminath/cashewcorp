@@ -68,7 +68,7 @@ const seniorExecutives = [
 const managingDirector = seniorExecutives.filter(
   (md) => md.contact[3] === "md@cashewcorporation.com"
 );
-console.log(managingDirector[0].name);
+
 function Management() {
   return (
     <div className="min-h-screen flex flex-col">
