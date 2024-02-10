@@ -31,7 +31,7 @@ function ProductCard({
   return (
     <div
       type="button"
-      onClick={handleUserClick}
+      // onClick={handleUserClick}
       className="w-full lg:w-72 max-w-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 cursor-pointer"
     >
       {/* Product Image */}
@@ -45,6 +45,7 @@ function ProductCard({
         )}
         {/* Actual product image */}
         <img
+        
           className={`object-contain w-full h-48 ${isImageLoaded ? "" : "hidden"}`}
           src={image}
           alt="product"
@@ -55,7 +56,7 @@ function ProductCard({
       {/* Product Details */}
       <div className="px-6 py-4">
         {/* Product Name */}
-        <a className=" block text-xl font-semibold text-gray-900 hover:underline">
+        <a   className=" block text-xl font-semibold text-gray-900 hover:underline">
           {name}
         </a>
         {/* Product Description */}
@@ -75,13 +76,23 @@ function ProductCard({
 
         {/* Buy Now Button */}
         <div className="mt-4 flex items-center justify-end">
-          <button
+          {name == "Premeium Product" ?(
+            <button
+            disabled={true}
+            className="text-white flex items-center gap-2 bg-red-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 transition duration-300 ease-in-out"
+          >
+            Not Available
+            <MdShoppingCart/>
+          </button>
+          )  : (
+            <button
             onClick={handleUserClick}
             className="text-white flex items-center gap-2  bg-red-600 hover:bg-red-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 transition duration-300 ease-in-out"
           >
             Buy Now
             <MdShoppingCart/>
           </button>
+          )}
         </div>
       </div>
     </div>

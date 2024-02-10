@@ -13,7 +13,7 @@ const leaderData = [
   },
   {
     name: "Shri. P.Rajeeve",
-    position: "Hon'ble Minister of Industries",
+    position: "Hon'ble Minister of Industries and Commerce",
     content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum inlabore laudantium deserunt fugiat numquam.",
     message: "Ex elit quis non qui tempor amet nisi laboris do cupidatat. Ea et excepteur consequat Lorem dolore occaecat velit in irure sunt do. Elit ea voluptate in et occaecat culpa officia et adipisicing excepteur mollit enim.",
     image:

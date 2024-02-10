@@ -51,7 +51,7 @@ const enleaderData = [
   },
   {
     name: "Shri. P. Rajeeve",
-    position: "Hon'ble Minister of Industries",
+    position: "Hon'ble Minister of Industries and Commerce",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum inlabore laudantium deserunt fugiat numquam.",
     message:

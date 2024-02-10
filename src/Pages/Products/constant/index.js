@@ -955,9 +955,43 @@ export const productData = [
   },
   {
     id: 29,
-    name: "Gift Box",
+    name: "Jute bag 1Kg",
     image: "/images/products/primaryImage/IMG_6856.JPG",
     second_image: "/images/products/secondaryImage/IMG_6861.JPG",
+    type: "giftboxpackets",
+    grade: "jute-bag", 
+    isOnline: false,
+    rating: 4,
+    description: "Elevate your snacking experience with our JUMBO Cashews – perfectly roasted, delicately salted, and irresistibly crunchy!",
+    packet_weights: [
+      {
+        weight: "1kg",
+        mrp: 1699,
+        selling_rate: 1190,
+      },
+      {
+        weight: "500gm",
+        mrp: 856,
+        selling_rate: 600
+      },
+      {
+        weight: "250gm",
+        mrp: 433,
+        selling_rate: 303,
+      },
+      {
+        weight: "100gm",
+        mrp: 180,
+        selling_rate: 126,
+      }
+    ],
+    percentage_discount: 30 
+  },
+  {
+    id: 30,
+    name: "Gift Box",
+    image: "/images/products/primaryImage/Gift Box 2 Kg.JPG",
+    second_image: "/images/products/secondaryImage/Gift box all.JPG",
     type: "giftboxpackets",
     grade: "gift-box", 
     isOnline: false,
@@ -988,12 +1022,12 @@ export const productData = [
     percentage_discount: 30 
   },
   {
-    id: 30,
-    name: "Jute bag 1Kg",
-    image: "/images/products/primaryImage/Gift Box 2 Kg.JPG",
+    id: 31,
+    name: "Premeium Product",
+    image: "/images/products/primaryImage/premium.jpg",
     second_image: "/images/products/secondaryImage/Gift box all.JPG",
     type: "giftboxpackets",
-    grade: "jute-bag", 
+    grade: "gift-box", 
     isOnline: false,
     rating: 4,
     description: "Elevate your snacking experience with our JUMBO Cashews – perfectly roasted, delicately salted, and irresistibly crunchy!",
