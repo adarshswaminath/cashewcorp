@@ -31,8 +31,8 @@ const categories = [
     sub: [
       { filter: "All", label: "All" },
       { filter: "premium", label: "Premium Products" },
-      { filter: "flavoured-cashew", label: "Flavoured Cashew Products" },
       { filter: "cashew-vita", label: "Cashew Vita" },
+      { filter: "flavoured-cashew", label: "Flavoured Cashew Products" },
       { filter: "cashew-apple", label: "Cashew Apple Products" },
     ],
   },
