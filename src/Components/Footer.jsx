@@ -19,9 +19,9 @@ let enfooterData = [
     title: "Products",
     values: [
       { path: "/product", label: "Plain Cashews" },
-      { path: "/product", label: "Roasted And Salted Cashews" },
+      { path: "/product", label: "Roasted And Salted" },
+      { path: "/product", label: "Premeium Products" },
       { path: "/product", label: "Value Added Products" },
-      { path: "/product", label: "Popular Products" },
       { path: "/product", label: "Online Shopping" },
     ],
   },
@@ -30,9 +30,9 @@ let enfooterData = [
     values: [
       { path: "/kscdc", label: "KSCDC" },
       { path: "/org", label: "Organization" },
-      { path: "/director-board", label: "Board Of Director" },
+      { path: "/director-board", label: "Board Of Directors" },
       { path: "/management", label: "Management" },
-      { path: "/franchisee", label: "Franchisee" },
+      { path: "/franchisee", label: "Franchisees" },
     ],
   },
   {

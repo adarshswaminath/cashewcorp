@@ -180,7 +180,7 @@ function EnNavbar() {
             path === "/career" ? "text-red-500" : ""
           } text-xs hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
         >
-          Career
+          Careers
         </Link>
         <Link
           to="/rti"
