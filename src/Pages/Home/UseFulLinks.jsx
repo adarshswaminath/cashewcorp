@@ -55,7 +55,7 @@ function UseFulLinks() {
         Useful Links
       </h2>
       <p className="text-gray-700 text-center mb-8">
-      {language ? "A collection of useful links to frequently used application pages by KSCDC" :
+      {language ? "Collection of frequently used application pages by KSCDC" :
       "കെ.എസ്.സി.ഡി.സി പതിവായി ഉപയോഗിക്കുന്ന ആപ്ലിക്കേഷൻ പേജുകളിലേക്കുള്ള ഉപയോഗപ്രദമായ ലിങ്കുകളുടെ ഒരു ശേഖരം"
       }
       </p>

@@ -1,12 +1,13 @@
 import { BsSend } from "react-icons/bs";
 import { FaLocationPin, FaLocationPinLock } from "react-icons/fa6";
 import { MdPhone } from "react-icons/md";
+import {useLanguage} from "../../contexts/LanguageContext"
 
 
 const CompanyAddress = () => {
   return(
     <address>
-       "THE KERALA STATE CASHEW DEVELOPMENT CORPORATION LTD CASHEW HOUSE, MUNDAKKAL, KOLLAM - 691001, KERALA,INDIA CIN: U15493KL1969SGC002234"
+       `THE KERALA STATE CASHEW DEVELOPMENT CORPORATION LTD CASHEW HOUSE, MUNDAKKAL, KOLLAM - 691001, KERALA,INDIA {<span className="font-bold">CIN: U15493KL1969SGC002234</span>}`
     </address>
   )
 }
@@ -28,7 +29,7 @@ function GetInTocuhCard({icon,firstMail,secondMail,anime}) {
           <a href="#">{firstMail[0]}</a>
           <a href="#">{firstMail[1]}</a>
         </p>
-        <p>
+        <p className="text-sm">
           {" "}
           <a href="#">{secondMail}</a>
         </p>
@@ -41,13 +42,14 @@ function GetInTocuhCard({icon,firstMail,secondMail,anime}) {
 }
 
 function GetInTocuh() {
+  const {language} = useLanguage()
   let aosanimation = ["fade-right","fade-up","fade-left"]
   return (
     <div>
       <div className="p-4 md:p-8 lg:p-12 bg-gray-100">
-      <h3 className="text-4xl font-bold mb-6 text-center text-red-500">Get In Touch With Us.</h3>
+      <h3 className="text-4xl font-bold mb-6 text-center text-red-500">{language ? "Get In Touch With Us" : "ഞങ്ങളുമായി ബന്ധപ്പെടുക."}</h3>
       <p className="text-center max-w-3xl mx-auto text-gray-500 font-bold mb-10">
-      For more details get in touch with us directly through the information furnished given below.
+      {language ? "For more details get in touch with us directly through the information furnished given below." : "കൂടുതൽ വിവരങ്ങൾക്ക് താഴെ നൽകിയിരിക്കുന്ന വിവരങ്ങൾ വഴി ഞങ്ങളെ നേരിട്ട് ബന്ധപ്പെടുക."}
       </p>
      <div>
      <div className="grid grid-cols-1  lg:flex gap-2 place-items-center justify-items-center justify-center items-center">

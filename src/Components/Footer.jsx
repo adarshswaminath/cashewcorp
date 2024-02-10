@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useLanguage } from "../contexts/LanguageContext";
 import {
   LuFacebook,
   LuGithub,
@@ -8,45 +9,71 @@ import {
   LuTwitter,
 } from "react-icons/lu";
 
-let footerData = [
+let enfooterData = [
   {
-    title: "Product",
+    title: "Products",
     values: [
-      { path: "/product",label: "Plain Cashews" },
-      { path: "/product",label: "Roasted And Salted"},
-      { path: "/product", label: "Value Added Products"},
-      { path: "/product",label: "Popular Products"},
-      { path: "/product",label: "Premeium Products"},
-      { path: "/product",label: "Online Shopping"},
-
+      { path: "/product", label: "Plain Cashews" },
+      { path: "/product", label: "Roasted And Salted Cashews" },
+      { path: "/product", label: "Value Added Products" },
+      { path: "/product", label: "Popular Products" },
+      { path: "/product", label: "Online Shopping" },
     ],
   },
   {
     title: "Quick Links",
     values: [
-      { path: '/kscdc', label: "KSCDC" },
-      { path: '/org',label: "Organization" },
-      { path: '/director-board', label: "Board Of Director"},
-      { path: '/management',label: "Management" },
-      { path: '/product-characteristics', label: "Product Characteristics" },
-      { path: '/franchisee', label: "Franchisee" },
+      { path: "/kscdc", label: "KSCDC" },
+      { path: "/org", label: "Organization" },
+      { path: "/director-board", label: "Board Of Director" },
+      { path: "/management", label: "Management" },
+      { path: "/franchisee", label: "Franchisee" },
     ],
   },
   {
     title: "Sitemap",
     values: [
-      { path: '/kscdc', label: "About Us" },
-      { path: '/product',label: "Product" },
-      { path: '/tender', label: "Tender"},
-      { path: '/career',label: "Career" },
-      { path: 'rti', label: "RTI" },
-      { path: '/gallery', label: "Gallery" },
-      { path: '/contact', label: "Contact" },
+      { path: "/", label: "Home" },
+      { path: "/tender", label: "Tender" },
+      { path: "/career", label: "Career" },
+      { path: "/gallery", label: "Gallery" },
+      { path: "/rti", label: "RTI" },
     ],
   },
-  
 ];
 
+let mlfooterData = [
+  {
+    title: "ഉൽപ്പന്നങ്ങൾ",
+    values: [
+      { path: "/product", label: "പ്ലെയിൻ കാഷ്യൂസ്" },
+      { path: "/product", label: "റോസ്റ്റഡ് ആൻഡ് സാൾട്ടഡ് കാഷ്യൂസ്" },
+      { path: "/product", label: "മൂല്യവർദ്ധിത ഉൽപ്പന്നങ്ങൾ" },
+      { path: "/product", label: "ജനപ്രിയ ഉൽപ്പന്നങ്ങൾ" },
+      { path: "/product", label: "ഓൺലൈൻ ഷോപ്പിംഗ്" },
+    ],
+  },
+  {
+    title: "ദ്രുത ലിങ്കുകൾ",
+    values: [
+      { path: "/kscdc", label: " കെ.എസ്.സി.ഡി.സി" },
+      { path: "/org", label: "ഓർഗനൈസേഷൻ" },
+      { path: "/director-board", label: "ഭരണസമിതി" },
+      { path: "/management", label: "മാനേജ്മെൻ്റ്" },
+      { path: "/franchisee", label: "ഫ്രാഞ്ചൈസി" },
+    ],
+  },
+  {
+    title: "സൈറ്റ്മാപ്പ്",
+    values: [
+      { path: "/", label: "ഹോം" },
+      { path: "/tender", label: "ടെൻഡർ" },
+      { path: "/career", label: "കരിയർ" },
+      { path: "/gallery", label: "ഗാലറി" },
+      { path: "/rti", label: "വിവരാവകാശം" },
+    ],
+  },
+];
 const backgroundImage =
   "https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?auto=compress&cs=tinysrgb&w=600";
 
@@ -98,14 +125,22 @@ function FooterCopyRight() {
     <div className="flex flex-col lg:flex-row justify-between text-gray-500 ">
       <span className="text-sm mb-2 lg:mb-0">@ 2024 All Rights Reserved</span>
       <div>
-        <a href="http://webmail.cashewcorporation.com/" target="_blank" className="hover:text-white">Staff Mail</a>
+        <a
+          href="http://webmail.cashewcorporation.com/"
+          target="_blank"
+          className="hover:text-white"
+        >
+          Staff Mail
+        </a>
       </div>
       <div className="text-sm grid grid-cols-2 gap-2 lg:grid-cols-5 text-white">
         <span>Privacy Policy</span>
-        <span>Terms of Use</span>
-        <span>Sales and Refunds</span>
-        <span>Legal</span>
-        <span>Site Map</span>
+        <span>Terms And Conditions</span>
+        <span>Sales and Refund Policy</span>
+        <span className="lg:ml-6">Legal</span>
+        <span>
+          <Link to="/contact">Contact Us</Link>
+        </span>
       </div>
     </div>
   );
@@ -113,6 +148,7 @@ function FooterCopyRight() {
 
 // main component
 function Footer() {
+  const { language } = useLanguage();
   return (
     <div
       className="relative bg-cover bg-center bg-no-repeat min-h-screen bg-gray-900"
@@ -122,14 +158,23 @@ function Footer() {
       <div className="absolute inset-0 bg-black opacity-75"></div>
 
       <div className="relative z-10 text-white p-4 mt-4">
-        <h2 data-aos="fade-right" className="text-center text-5xl font-bold">
-          KSCDC
-        </h2>
+        <div className="mb-4">
+          <h2
+            data-aos="fade-right"
+            className="text-center text-5xl font-bold mb-2"
+          >
+            {language ? "KSCDC" : "കെ.എസ്.സി.ഡി.സി"}
+          </h2>
+        </div>
         {/* footer links */}
         <div className="grid gap-3 lg:flex items-center justify-evenly mb-6">
-          {footerData.map((data) => (
-            <FooterLinks key={data.title} {...data} />
-          ))}
+          {language
+            ? enfooterData.map((data) => (
+                <FooterLinks key={data.title} {...data} />
+              ))
+            : mlfooterData.map((data) => (
+                <FooterLinks key={data.title} {...data} />
+              ))}
         </div>
         {/* social media pannel */}
         <FooterSocialMediaPannel />
@@ -167,21 +212,20 @@ function Footer() {
         </div>
         <div className="flex items-center justify-center">
           <div className="grid place-items-center justify-self-center lg:flex items-center justify-between lg:w-3/4">
-            
-          <img
+            <img
               data-aos="zoom-out-left"
               src="/images/CDC.png"
               className="object-contain h-44 w-44"
               alt="gov image"
             />
-           
+
             <img
               data-aos="fade-up"
               src="/images/fssai.png"
               className="object-contain h-44 w-44 rounded-xl"
               alt="gov image"
             />
-             <img
+            <img
               data-aos="zoom-out-right"
               src="/images/logo-2.png"
               className="object-contain h-72 w-72"
@@ -193,8 +237,16 @@ function Footer() {
         <FooterCopyRight />
         <hr className="border-gray-400 m-2" />
         <div className="flex justify-center">
-          <h1 className="font-bold text-xs text-gray-400">Designed And Developed By 
-             <a href="https://www.igoraza.com/" target="_blank" className="text-white underline"> IGORAZA</a>
+          <h1 className="font-bold text-xs text-gray-400">
+            Designed And Developed By
+            <a
+              href="https://www.igoraza.com/"
+              target="_blank"
+              className="text-white underline"
+            >
+              {" "}
+              IGORAZA
+            </a>
           </h1>
         </div>
       </div>

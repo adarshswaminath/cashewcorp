@@ -14,10 +14,11 @@ function Client() {
               Newsletter
             </h2>
             <div className="flex items-center relative">
-              <input type="email" placeholder="Your Email" className="input" />
-              <button className="btn absolute right-0 bg-red-500 hover:bg-red-600 text-white">
-                Search
+              <a href="https://wa.me/+917736886026?text=Hello%20there!" target="_blank" className="absolute right-0">
+              <button className="btn   bg-red-500 hover:bg-red-600 text-white">
+                Contact Now
               </button>
+              </a>
             </div>
           </div>
         </div>

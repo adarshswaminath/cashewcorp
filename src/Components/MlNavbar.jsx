@@ -48,37 +48,37 @@ function MlNavbar() {
         className="hover:bg-white p-2 border-0 hover:border hover:border-red-500"
         to="/kscdc"
       >
-        KSCDC
+        കെ.എസ്.സി.ഡി.സി
       </Link>
       <Link
         className="hover:bg-white p-2 border-0 hover:border hover:border-red-500"
         to="/org"
       >
-        Organization
+       ഓർഗനൈസേഷൻ
       </Link>
       <Link
         className="hover:bg-white p-2 border-0 hover:border hover:border-red-500"
         to="/director-board"
       >
-        Board Of Directors
+        ഭരണസമിതി
       </Link>
       <Link
         className="hover:bg-white p-2 border-0 hover:border hover:border-red-500"
         to="/management"
       >
-        Management
+        മാനേജ്മെൻ്റ്
       </Link>
       <Link
         className="hover:bg-white p-2 border-0 hover:border hover:border-red-500"
         to="/product-characteristic"
       >
-        Product Characteristics
+       ഉൽപ്പന്നങ്ങളുടെ സവിശേഷതകൾ
       </Link>
       <Link
         className="hover:bg-white p-2 border-0 hover:border hover:border-red-500"
         to="/franchisee"
       >
-        Franchisee
+         ഫ്രാഞ്ചൈസി
       </Link>
       <Link
         to="/blog"
