@@ -12,27 +12,28 @@ const CompanyAddress = () => {
 }
 
 const getInTouchData = [
-  { icon: <MdPhone />,firstMail: " +91 474 2742271, 2742172, 2742273, 2742954" },
-  { icon: <FaLocationPin />,firstMail: <CompanyAddress/> },
-  { icon: <BsSend />,firstMail: "ho@cashewcorporation.com",secondMail: "kscdc@kerala.gov.in" },
+  { icon: <MdPhone />,firstMail: [" +91 4742742271", "2742172,2742273", "2742954"] },
+  { icon: <FaLocationPin />,firstMail: [<CompanyAddress/> ]},
+  { icon: <BsSend />,firstMail: ["ho@cashewcorporation.com"],secondMail: "kscdc@kerala.gov.in" },
 ];
 
 function GetInTocuhCard({icon,firstMail,secondMail,anime}) {
   return (
-    <div data-aos={anime} className="p-6 flex flex-col items-center justify-center bg-white rounded-lg h-96 w-80 hover:scale-105 transition ease-in-out duration-200 hover:bg-sky-600 group">
+    <div data-aos={anime} className="relative p-6 flex flex-col items-center justify-center bg-white rounded-lg h-96 w-80 hover:scale-105 transition ease-in-out duration-200 hover:bg-sky-600 group">
       <h1 className="text-5xl lg:text-6xl text-sky-600 group-hover:text-white">
         {icon}
       </h1>
       <div className="text-center text-gray-900 group-hover:text-white m-3 mb-4">
-        <p className="text-sm">
-          <a href="#">{firstMail}</a>
+        <p className="text-sm grid">
+          <a href="#">{firstMail[0]}</a>
+          <a href="#">{firstMail[1]}</a>
         </p>
         <p>
           {" "}
           <a href="#">{secondMail}</a>
         </p>
       </div>
-      <button className="btn border-red-500 text-red-500 px-[68px] bg-white group-hover:text-white group-hover:bg-transparent group-hover:border-white">
+      <button className="absolute  bottom-4 btn border-red-500 text-red-500 px-[68px] bg-white group-hover:text-white group-hover:bg-transparent group-hover:border-white">
         Get Support
       </button>
     </div>
