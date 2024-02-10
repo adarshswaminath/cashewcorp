@@ -148,7 +148,7 @@ function EnNavbar() {
               path === "/product" ? "text-red-500" : ""
             } text-xs hover:text-red-500 decoration-wavy decoration-red-400 font-bold flex items-center`}
           >
-            Product
+            Products
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -172,7 +172,7 @@ function EnNavbar() {
             path === "/tender" ? "text-red-500" : ""
           } text-xs hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
         >
-          Tender
+          Tenders
         </Link>
         <Link
           to="/career"
