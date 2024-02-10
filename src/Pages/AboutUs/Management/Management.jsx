@@ -13,7 +13,7 @@ const seniorExecutives = [
       "8281114645(O)",
       "0474-2742271(Exn-35)(O)",
       "9495992008(M)",
-      "md@cashewcorporation.com",
+      "mm@cashewcorporation.com",
     ],
   },
   {
