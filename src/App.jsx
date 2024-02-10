@@ -21,9 +21,11 @@ import Message from './Pages/Messages/Message'
 function App() {
   // initialize aos animation
   useEffect(() => {
-    Aos.init();
-    Aos.refresh()
-  })
+    Aos.init({
+      startEvent: "DOMContentLoaded",
+      once: true,
+      });
+  },[])
   return (
     <main className='bg-gray-100 overflow-hidden '>
       {/* <AnimatedCursor 

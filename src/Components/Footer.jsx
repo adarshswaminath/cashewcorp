@@ -8,6 +8,11 @@ import {
   LuLinkedin,
   LuTwitter,
 } from "react-icons/lu";
+import Aos from 'aos'
+import "aos/dist/aos.css"
+import { useEffect } from "react";
+
+
 
 let enfooterData = [
   {
@@ -148,6 +153,7 @@ function FooterCopyRight() {
 
 // main component
 function Footer() {
+ 
   const { language } = useLanguage();
   return (
     <div
