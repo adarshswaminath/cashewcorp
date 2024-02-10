@@ -63,7 +63,9 @@ const upImage = () => {
         </div>
       </div>
       <div className="p-2 mt-3">
+        <div className="h-screen lg:h-auto">
         <HeroCards />
+        </div>
         <div>
           <LeaderTopImages />
         </div>
