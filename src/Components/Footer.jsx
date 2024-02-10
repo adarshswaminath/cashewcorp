@@ -133,7 +133,7 @@ function FooterCopyRight() {
         <a
           href="http://webmail.cashewcorporation.com/"
           target="_blank"
-          className="hover:text-white"
+          className="text-white"
         >
           Staff Mail
         </a>
