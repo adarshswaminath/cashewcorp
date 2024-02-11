@@ -114,7 +114,7 @@ const mlBoardOfDirectors = [
   {title: "ഭരണസമിതി അംഗങ്ങൾ",
   director: [
       { image: "/images/directors/chairman.png", title: "ശ്രീ. എസ്. ജയമോഹൻ", caption: "ചെയർമാൻ" },
-      { image: "/images/directors/dir-1.png", title: "ശ്രീ. സുനിൽ ജോൺ .കെ", caption: "മാനേജിംഗ് ഡയറക്ടർ" },
+      { image: "/images/directors/dir-1.png", title: "ശ്രീ. സുനിൽ ജോൺ. കെ", caption: "മാനേജിംഗ് ഡയറക്ടർ" },
       { image: "/images/directors/dir-9.png", title: "ശ്രീ. ബി. പ്രതീപ് കുമാർ", caption: "ഭരണസമിതി അംഗം" },
       { image: "/images/directors/dir-10.png", title: "ശ്രീ. സിജു ജേക്കബ്", caption: "ഭരണസമിതി അംഗം" },
       { image: "/images/directors/dir-8.png", title: "ഡോ. ബി.എസ്. സുരൻ", caption: "ഭരണസമിതി അംഗം" },

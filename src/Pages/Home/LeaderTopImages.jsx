@@ -13,6 +13,7 @@ function LeaderTopImages() {
          {data.map((value,index) => (
           <ProfileCard
             key={index}
+            id={index+1}
             name={value.name}
             image={value.image}
             position={value.position}

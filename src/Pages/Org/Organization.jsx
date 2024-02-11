@@ -203,65 +203,67 @@ function Organization() {
       {/* body  */}
       <div className="p-5 lg:flex gap-10 items-start justify-start w-full">
         <div className="w-full">
-          <h1 className="text-3xl font-bold">Organization</h1>
+          <h1 className="text-3xl font-bold">{language ? "Organization" : "ഓർഗനൈസേഷൻ"}</h1>
           <p className="mt-3 font-bold">
-            The Kerala State Cashew Development Corporation Ltd. Cashew House,
-            Mundakkal, Kollam, Kerala, India - 691001 Grams: Kasuvandi
+            {language ? 
+            `The Kerala State Cashew Development Corporation Ltd. Cashew House,
+            Mundakkal, Kollam, Kerala, India - 691001 Grams: Kasuvandi` : `കേരള സംസ്ഥാന കശുവണ്ടി വികസന കോർപ്പറേഷൻ ലിമിറ്റഡ്. കാഷ്യൂ ഹൗസ്, മുണ്ടക്കൽ, കൊല്ലം, കേരള, ഇന്ത്യ - 691001 ഗ്രാം: കശുവണ്ടി`}
           </p>
           {/* ------------------- */}
-          <h2 className="text-xl font-bold mt-3">Functions and Duties</h2>
+          <h2 className="text-xl font-bold mt-3">{language ? `Functions and Duties` : `പ്രവർത്തനങ്ങളും ചുമതലകളും`}</h2>
           <p className="mt-3 w-full text-justify">
-            Kerala State Cashew Development Corporation Ltd (KSCDC Ltd) is a
+           {language ? ` Kerala State Cashew Development Corporation Ltd (KSCDC Ltd) is a
             registered company under Indian Companies Act and was incorporated
             in July 1969. It started Commercial activities in the year 1971 as a
-            company fully owned by the Govt. of Kerala.
+            company fully owned by the Govt. of Kerala.` : `കേരള സംസ്ഥാന കശുവണ്ടി വികസന കോർപ്പറേഷൻ ലിമിറ്റഡ് (KSCDC ലിമിറ്റഡ്) ഇന്ത്യൻ കമ്പനീസ് ആക്ട് പ്രകാരം രജിസ്റ്റർ ചെയ്ത കമ്പനിയാണ്, 1969 ജൂലൈയിൽ സ്ഥാപിതമായി. 1971-ൽ സർക്കാരിൻ്റെ പൂർണ ഉടമസ്ഥതയിലുള്ള കമ്പനിയായി വാണിജ്യ പ്രവർത്തനങ്ങൾ ആരംഭിച്ചു.`}
           </p>
           <p className="mt-3 w-full text-justify">
-            It is governed by board of Directors consisting of Chairman,
+           {language ?` It is governed by board of Directors consisting of Chairman,
             Managing Director non official Directors and official Directors. The
             board is headed by the Chairman and the chief executive is the
-            Managing Director, who is appointed by the Govt.
+            Managing Director, who is appointed by the Govt.` : `ചെയർമാൻ, മാനേജിംഗ് ഡയറക്ടർ, ഔദ്യോഗിക ഡയറക്ടർമാർ, അനൗദ്യോഗിക ഡയറക്ടർമാർ എന്നിവരടങ്ങുന്ന ഡയറക്ടർ ബോർഡാണ് ഇത് നിയന്ത്രിക്കുന്നത്. ബോർഡിൻ്റെ അധ്യക്ഷൻ ചെയർമാനും ചീഫ് എക്സിക്യൂട്ടീവ് മാനേജിംഗ് ഡയറക്ടറുമാണ്, അദ്ദേഹത്തെ സർക്കാർ നിയമിക്കുന്നു.`}
           </p>
           <p className="mt-3 w-full text-justify">
-            All policy matters of the corporation are decided by the board that
+           {language ?  `All policy matters of the corporation are decided by the board that
             to under the instruction by the Govt. For assisting the Managing
             Director there are six departments headed by HOD as designated
-            below. Apart from this there is a company secretary.
+            below. Apart from this there is a company secretary.` : `കോർപ്പറേഷൻ്റെ എല്ലാ നയപരമായ കാര്യങ്ങളും സർക്കാരിൻ്റെ നിർദ്ദേശപ്രകാരം ബോർഡാണ് തീരുമാനിക്കുന്നത്. മാനേജിംഗ് ഡയറക്ടറെ സഹായിക്കുന്നതിന് താഴെ നിയുക്തമാക്കിയിരിക്കുന്ന പ്രകാരം HOD യുടെ നേതൃത്വത്തിൽ ആറ് വകുപ്പുകളുണ്ട്. ഇത് കൂടാതെ ഒരു കമ്പനി സെക്രട്ടറിയും ഉണ്ട്.`}
           </p>
         </div>
 
         {/* second section */}
         <div className="w-full">
           <p className="lg:mt-8 mt-3 text-justify">
-            From the modest beginning in 1969, corporation has now grown into a
+            {language ? `From the modest beginning in 1969, corporation has now grown into a
             large organization playing pivotal role in cashew industry. At
             present KSCDC have running 30 factories all over Kerala and nearly
-            15,000 workers, out of which 95% are women.
+            15,000 workers, out of which 95% are women.` : `
+            1969-ലെ  തുടക്കം മുതൽ, കശുവണ്ടി വ്യവസായത്തിലെ നിർണായകമായ പങ്ക് വഹിക്കുന്ന ഒരു വലിയ സ്ഥാപനമായി കാഷ്യൂ കോർപ്പറേഷൻ വളർന്നു. നിലവിൽ കെഎസ്‌സിഡിസിക്ക് കേരളത്തിലുടനീളം 30 ഫാക്ടറികളും ഏകദേശം 15,000 തൊഴിലാളികളും ഉണ്ട്, അതിൽ 95% സ്ത്രീകളാണ്.`}
           </p>
           {/* ------------------- */}
 
           <p className="mt-3 text-justify">
-            KSCDC factories are managed by Asst. Factory Managers and assisted
+            {language ? `KSCDC factories are managed by Asst. Factory Managers and assisted
             by factory clerks. For the inspection of cashew factories there are
-            officers designated as Inspectors.
+            officers designated as Inspectors.` : `KSCDC ഫാക്ടറികൾ നിയന്ത്രിക്കുന്നത് അസി. ഫാക്‌ടറി മാനേജർമാരും, അവരെ സഹായിക്കാൻ ഫാക്‌ടറി ക്ലാർക്കുമാരും ഉണ്ട്. കശുവണ്ടി ഫാക്ടറികളിലെ പരിശോധനയ്ക്ക് ഇൻസ്പെക്ടർമാരായി നിയോഗിക്കപ്പെട്ട ഉദ്യോഗസ്ഥരുമുണ്ട്.`}
           </p>
           <p className="mt-3 text-justify">
-            The KSCDC was set by the State Govt. with a view to grooming it as a
+           {language ? `The KSCDC was set by the State Govt. with a view to grooming it as a
             model employer in the field of cashew industry, benefiting thousands
-            of workers.
+            of workers.` : `ആയിരക്കണക്കിന് തൊഴിലാളികൾക്ക് പ്രയോജനപ്പെടുന്ന, കശുവണ്ടി വ്യവസായ മേഖലയിൽ ഒരു മാതൃകാ സ്ഥാപനമായി  വളർത്തിയെടുക്കുക എന്ന ലക്ഷ്യത്തോടെ സംസ്ഥാന സർക്കാരാണ് കെ.എസ്‌.സി.ഡി.സി സ്ഥാപിച്ചത്.`}
           </p>
           <p className="mt-3 text-justify">
-            KSCDC Ltd is enlarged in the processing of RCN (Raw Cashew Nuts) and
+            {language ? `KSCDC Ltd is enlarged in the processing of RCN (Raw Cashew Nuts) and
             marketing cashew kernels domestically and abroad. It also
-            manufactures value added cashew products.
+            manufactures value added cashew products.` : `കാഷ്യൂ കോർപ്പറേഷൻ ആർ.സി.എൻ (അസംസ്‌കൃത കശുവണ്ടി) സംസ്‌കരണവും, കശുവണ്ടി പരിപ്പുകൾ ആഭ്യന്തര അന്താരാഷ്ട്ര മാർക്കറ്റുകളിൽ  വിപണനം ചെയ്യുന്നതും വിപുലീകരിച്ചു. മൂല്യവർധിത ഉൽപ്പന്നങ്ങളും ഉൽപ്പാദിപ്പിച്ച് വിപണിയിൽ എത്തിക്കുന്നു.`}
           </p>
           <p className="mt-3 text-justify">
-            KSCDC function as a model employer in the industry giving all the
+           {language ? `KSCDC function as a model employer in the industry giving all the
             statutory benefits to the workers. This has positively impacted the
             work conditions of the other 3,00,000 workers in private sector as
             these units were also compelled to try to match the benefits offered
             by us with support from Govt. of Kerala, KSCDC has now transformed
-            into dependable employer to employees, a reliable supplier to buyer.
+            into dependable employer to employees, a reliable supplier to buyer.` : `കാഷ്യൂ കോർപ്പറേഷൻ കശുവണ്ടി വ്യവസായത്തിലെ ഒരു മോഡൽ തൊഴിൽ ദാദാവ് എന്ന നിലയിൽ തൊഴിലാളികൾക്ക് തൊഴിലും അതോടൊപ്പം എല്ലാവിധ ആനുകൂല്യങ്ങളും നൽകിവരുന്നു. ഇതിലൂടെ സ്വകാര്യമേഖലയിൽ പണിയെടുക്കുന്ന  3,00,000 തൊഴിലാളികളുടെ തൊഴിൽ സാഹചര്യങ്ങളെയും ഇത് ഗുണപരമായി ബാധിച്ചു. ഇതിലൂടെ കെ.എസ്.സി.ഡി.സി ഇപ്പോൾ ജീവനക്കാർക്ക് ആശ്രയിക്കാവുന്ന തൊഴിലുടമയും.  ഉൽപ്പന്നങ്ങൾ വാങ്ങുന്നവർക്ക് വിശ്വസനീയമായ വിതരണക്കാരനുമായി മാറിയിരിക്കുന്നു.`}
           </p>
         </div>
       </div>

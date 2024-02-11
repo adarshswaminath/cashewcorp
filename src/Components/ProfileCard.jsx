@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import "./style/profilecard.css";
 import { useLanguage } from "../contexts/LanguageContext";
+import { Link } from "react-router-dom";
 
-
-function ProfileCard({ name, image, position, content, link ,title}) {
+function ProfileCard({id, name, image, position, content, link ,title}) {
   const {language} = useLanguage()
   return (
     <section data-aos-duration="800" data-aos="zoom-in-right">
@@ -38,11 +38,11 @@ function ProfileCard({ name, image, position, content, link ,title}) {
             </li>
             <li className="bg-white">
               {link ? (
-                <a href={link}>
+                <Link to={`${link}/#${id}`}>
                   <button className="btn  bg-blue-500 text-white mt-2 border hover:border-blue-500 hover:bg-white hover:text-blue-500">
                    {language ? "Read More" : "കൂടുതൽ വായിക്കുക"}
                   </button>
-                </a>
+                </Link>
               ) : (
                 <button></button>
               )}

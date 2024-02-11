@@ -96,6 +96,7 @@ function FooterLinks({ title, values }) {
   );
 }
 function FooterSocialMediaPannel() {
+  const { language } = useLanguage();
   const socialMedis = [
     { icon: <LuFacebook />, link: "#" },
     { icon: <LuGitlab />, link: "#" },
@@ -107,7 +108,9 @@ function FooterSocialMediaPannel() {
   return (
     <div className="flex items-center justify-center ">
       <div className="p-4 bg-white mt-3 text-black lg:w-3/4 rounded-lg">
-        <h2 className="text-center font-extrabold tracking-wide">Follow us</h2>
+        <h2 className="text-center font-extrabold tracking-wide">
+          {language ? "Follow us" : "ഞങ്ങളെ പിന്തുടരുക"}
+        </h2>
         <div className="flex justify-evenly gap-3 m-2">
           {socialMedis.map((media) => (
             <a
@@ -214,7 +217,7 @@ function Footer() {
                 className="h-[75px] w-[75px] rounded-lg"
                 alt="Footer image"
               />
-              <p className="text-xs font-bold">On Time Delivery</p>
+              <p className="text-xs font-bold">{language ? "On Time Delivery" : "കൃത്യസമയത്ത് ഡെലിവറി"}</p>
             </div>
           </div>
         </div>

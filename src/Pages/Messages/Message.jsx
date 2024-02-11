@@ -45,7 +45,7 @@ const Message = () => {
         <div className="mt-4 min-h-screen flex items-center justify-center bg-gray-100">
           <div className="grid  gap-4 ">
             {leaderData.map((leader, index) => (
-              <div key={index} className={`bg-white rounded-lg shadow p-6 max-w-3xl ${index %2 ==0 ? "flex" : "flex flex-row-reverse"} items-center gap-4`}>
+              <div id={index+1} key={index} className={`bg-white rounded-lg shadow p-6 max-w-3xl ${index %2 ==0 ? "flex" : "flex flex-row-reverse"} items-center gap-4`}>
                 <img
                   src={leader.image}
                   alt={leader.name}
