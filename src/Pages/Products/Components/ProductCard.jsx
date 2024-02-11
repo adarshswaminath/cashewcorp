@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ProductModal from "./ProductModal";
 import { MdShoppingCart } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function ProductCard({
   setSelectedData,
@@ -77,13 +78,14 @@ function ProductCard({
         {/* Buy Now Button */}
         <div className="mt-4 flex items-center justify-end">
           {name == "Premium Product" ?(
+           <Link to="/franchisee">
             <button
-            disabled={true}
-            className="text-white flex items-center gap-2 bg-red-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 transition duration-300 ease-in-out"
+            className="text-white flex items-center gap-2 bg-red-600 hover:bg-red-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 transition duration-300 ease-in-out"
           >
-            Not Available
+            Find Franchisee
             <MdShoppingCart/>
           </button>
+           </Link>
           )  : (
             <button
             onClick={handleUserClick}

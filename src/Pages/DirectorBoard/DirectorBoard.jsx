@@ -3,6 +3,8 @@ import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import Banner from "../../Components/Banner";
 import DirectorCard from "./DirectorCard";
+import TranslateButton from "../../Components/TranslateButton";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const DirectorsData = [
   {
@@ -78,9 +80,16 @@ const DirectorsData = [
 ];
 
 function DirectorBoardPage() {
+  const {language,setLanguage} = useLanguage()
+  const toggleLanguage = () => {
+    setLanguage((prev) => !prev);
+  };
   return (
     <div>
       <Navbar />
+      <button onClick={toggleLanguage} className="fixed bottom-4 right-3 z-50">
+        <TranslateButton />
+      </button>
       <Banner image="directorboard1.jpg" />
       <h3 className="text-center text-3xl font-semibold text-red-400">Our Board Of Directors</h3>
       <div className="grid gap-3 grid-cols-1 lg:grid-cols-2 place-items-center justify-items-center p-5">

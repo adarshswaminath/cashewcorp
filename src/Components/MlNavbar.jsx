@@ -25,7 +25,7 @@ function MlNavbar() {
         className="hover:bg-white p-2 border-0 hover:border hover:border-red-500 text-base"
         to="/product"
       >
-        CDC Brand Products
+        CDC Brand  ഉൽപ്പന്നങ്ങൾ
       </Link>
       <Link
         className="bg-red-600 text-white rounded-lg hover:bg-red-400 border-red-500 btn"

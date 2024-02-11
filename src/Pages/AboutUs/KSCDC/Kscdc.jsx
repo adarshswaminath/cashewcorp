@@ -3,13 +3,22 @@ import DirectorBoard from "../../Home/DirectorBoard";
 import Navbar from "../../../Components/Navbar";
 import Footer from "../../../Components/Footer";
 import Banner from "../../../Components/Banner";
+import TranslateButton from "../../../Components/TranslateButton";
+import { useLanguage } from "../../../contexts/LanguageContext";
 
 function Kscdc() {
   useEffect(() =>{
     window.scrollTo(0,0)
   },[])
+  const {language,setLanguage} = useLanguage()
+  const toggleLanguage = () => {
+    setLanguage((prev) => !prev)
+  }
   return (
     <div>
+       <button onClick={toggleLanguage} className="fixed bottom-4 right-3 z-50">
+        <TranslateButton/>
+      </button>
       <Navbar />
       <Banner image="about.jpg" />
       {/* Body content */}

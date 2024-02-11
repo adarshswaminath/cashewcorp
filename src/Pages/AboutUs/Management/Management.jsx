@@ -2,6 +2,8 @@ import Navbar from "../../../Components/Navbar";
 import Footer from "../../../Components/Footer";
 import Banner from "../../../Components/Banner";
 import ManagementProfileCard from "./ManagementProfileCard";
+import { useLanguage } from "../../../contexts/LanguageContext";
+import TranslateButton from "../../../Components/TranslateButton";
 
 const seniorExecutives = [
   {
@@ -70,9 +72,16 @@ const managingDirector = seniorExecutives.filter(
 );
 
 function Management() {
+  const {language,setLanguage} = useLanguage()
+  const toggleLanguage = () => {
+    setLanguage((prev) => !prev);
+  };
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
+      <button onClick={toggleLanguage} className="fixed bottom-4 right-3 z-50">
+        <TranslateButton />
+      </button>
       <Banner image="executives.jpg" />
       {/* senior executives */}
       <div className="flex-grow bg-gray-100">

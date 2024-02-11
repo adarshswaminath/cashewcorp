@@ -4,6 +4,8 @@ import Footer from "../../Components/Footer";
 import { emailIdSection, factoriesData } from ".";
 import Banner from "../../Components/Banner";
 import Accordion from "../../Components/Accordion";
+import TranslateButton from "../../Components/TranslateButton";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const CashewKernels = () => (
   <div>
@@ -187,9 +189,16 @@ const EmailTable = () => {
 };
 
 function Organization() {
+  const { language, setLanguage } = useLanguage();
+  const toggleLanguage = () => {
+    setLanguage((prev) => !prev);
+  };
   return (
     <div className="min-h-screen bg-gray-100">
       <Navbar />
+      <button onClick={toggleLanguage} className="fixed bottom-4 right-3 z-50">
+        <TranslateButton />
+      </button>
       <Banner image="organization.jpg" />
       {/* body  */}
       <div className="p-5 lg:flex gap-10 items-start justify-start w-full">
@@ -220,7 +229,7 @@ function Organization() {
             below. Apart from this there is a company secretary.
           </p>
         </div>
-    
+
         {/* second section */}
         <div className="w-full">
           <p className="lg:mt-8 mt-3 text-justify">
@@ -257,18 +266,33 @@ function Organization() {
         </div>
       </div>
       <div className="flex items-center justify-center">
-          <pre className="mt-6 grid ">
-            <span className="p-2 bg-indigo-500 text-white">Materials Department  : HOD (Materials Manager)</span>
-            <span className="p-2 bg-indigo-300 text-white">Commerce Department   : HOD (Commercial Manager)</span>
-            <span className="p-2 bg-indigo-500 text-white">Finance Department    : HOD (Finance Manager)</span>
-            <span className="p-2 bg-indigo-300 text-white">Personnel Department  : HOD (Personnel Manager)</span>
-            <span className="p-2 bg-indigo-500 text-white">Production Department : HOD (Production Manager)</span>
-            <span className="p-2 bg-indigo-300 text-white">Internal Auditing     : HOD (Internal Audit Officer)</span>
-          </pre>
-          </div>
+        <pre className="mt-6 grid ">
+          <span className="p-2 bg-indigo-500 text-white">
+            Materials Department : HOD (Materials Manager)
+          </span>
+          <span className="p-2 bg-indigo-300 text-white">
+            Commerce Department : HOD (Commercial Manager)
+          </span>
+          <span className="p-2 bg-indigo-500 text-white">
+            Finance Department : HOD (Finance Manager)
+          </span>
+          <span className="p-2 bg-indigo-300 text-white">
+            Personnel Department : HOD (Personnel Manager)
+          </span>
+          <span className="p-2 bg-indigo-500 text-white">
+            Production Department : HOD (Production Manager)
+          </span>
+          <span className="p-2 bg-indigo-300 text-white">
+            Internal Auditing : HOD (Internal Audit Officer)
+          </span>
+        </pre>
+      </div>
       <div></div>
       <div className="p-5 w-full lg:w-2/3  mx-auto justify-center">
-        <Accordion title={'Organizational Structure'} content={<img src="/images/architecture.png"/>} />
+        <Accordion
+          title={"Organizational Structure"}
+          content={<img src="/images/architecture.png" />}
+        />
         <Accordion
           title={"Cashew Processing"}
           content={`Traditional Drum Roasting: Raw Cashew Nuts processing start with roasting. We
