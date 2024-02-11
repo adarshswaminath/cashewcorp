@@ -13,7 +13,7 @@ const categories = [
       { filter: "All", label: "ALL" },
       { filter: "premium", label: "Premium Grades" },
       { filter: "popular", label: "Popular Grades" },
-      { filter: "extra-premium", label: "Extra Premium" },
+      { filter: "extra-premium", label: "Extra Premium Grades" },
     ],
   },
   {
