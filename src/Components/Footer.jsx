@@ -169,13 +169,22 @@ function Footer() {
 
       <div className="relative z-10 text-white p-4 mt-4">
         <div className="mb-4">
+          { language ? 
           <h2
             data-aos="fade-right"
             data-aos-once="true"
             className="text-center text-5xl font-bold mb-2"
           >
-            {language ? "KSCDC" : "കെ.എസ്.സി.ഡി.സി"}
-          </h2>
+            KSCDC
+          </h2>:
+          <h2
+          // data-aos="fade-right"
+          data-aos-once="true"
+          className="text-center text-3xl font-bold mb-4"
+        >
+          കെ.എസ്.സി.ഡി.സി
+        </h2>
+          }
         </div>
         {/* footer links */}
         <div className="grid gap-3 lg:flex items-center justify-evenly mb-6">
