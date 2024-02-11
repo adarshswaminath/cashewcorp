@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import DirectorBoard from "../../Home/DirectorBoard";
 import Navbar from "../../../Components/Navbar";
 import Footer from "../../../Components/Footer";
 import Banner from "../../../Components/Banner";
