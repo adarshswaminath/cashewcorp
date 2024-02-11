@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import "./style/profilecard.css";
+import { useLanguage } from "../contexts/LanguageContext";
+
 
 function ProfileCard({ name, image, position, content, link ,title}) {
+  const {language} = useLanguage()
   return (
     <section data-aos-duration="800" data-aos="zoom-in-right">
       <div className="container group">
@@ -37,7 +40,7 @@ function ProfileCard({ name, image, position, content, link ,title}) {
               {link ? (
                 <a href={link}>
                   <button className="btn  bg-blue-500 text-white mt-2 border hover:border-blue-500 hover:bg-white hover:text-blue-500">
-                    Read More
+                   {language ? "Read More" : "കൂടുതൽ വായിക്കുക"}
                   </button>
                 </a>
               ) : (

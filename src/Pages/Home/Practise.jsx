@@ -8,9 +8,11 @@ let cardDetils = [
 import { enHomeBlog } from "./Language/en";
 import { mlHomeBlog } from "./Language/ml";
 import useLanguageData from "../../Hook/useLanguageData";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const PractiseCard = ({ image, title, caption,aosanimation,link }) => {
-    return (
+  const {language} = useLanguage()  
+  return (
       <div data-aos={aosanimation} data-aos-duration="500" className="w-80 overflow-hidden  flex flex-col items-start">
         <figure className="p-4">
           <img
@@ -23,7 +25,9 @@ const PractiseCard = ({ image, title, caption,aosanimation,link }) => {
           <h2 className="text-xl font-bold mb-2">{title}</h2>
           <p className="text-gray-600 ">{caption}</p>
           <Link to={link}>
-          <button className="mt-4 px-5 py-1 border border-black">Read More</button>
+          <button className="mt-4 px-5 py-1 border border-black">
+          {language ? "Read More" : "കൂടുതൽ വായിക്കുക"}
+          </button>
           </Link>
         </div>
       </div>
