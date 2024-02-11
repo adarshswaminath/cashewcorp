@@ -5,19 +5,25 @@ import Footer from "../../../Components/Footer";
 import Banner from "../../../Components/Banner";
 import TranslateButton from "../../../Components/TranslateButton";
 import { useLanguage } from "../../../contexts/LanguageContext";
+import mlKSCDC from "./mlKSCDC.json"
+import enKSCDC from "./enKSCDC.json"
+import useLanguageData from "../../../Hook/useLanguageData";
+
 
 function Kscdc() {
-  useEffect(() =>{
-    window.scrollTo(0,0)
-  },[])
-  const {language,setLanguage} = useLanguage()
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  const { language, setLanguage } = useLanguage();
   const toggleLanguage = () => {
-    setLanguage((prev) => !prev)
-  }
+    setLanguage((prev) => !prev);
+  };
+
+  const data = useLanguageData(enKSCDC,mlKSCDC)
   return (
     <div>
-       <button onClick={toggleLanguage} className="fixed bottom-4 right-3 z-50">
-        <TranslateButton/>
+      <button onClick={toggleLanguage} className="fixed bottom-4 right-3 z-50">
+        <TranslateButton />
       </button>
       <Navbar />
       <Banner image="about.jpg" />
@@ -25,7 +31,7 @@ function Kscdc() {
       <div className="p-6">
         <section data-aos="fade-up" className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">ABOUT KSCDC</h2>
-          <p  className="text-gray-700 leading-7 text-justify">
+          <p className="text-gray-700 leading-7 text-justify">
             The Kerala State Cashew Development Corporation Limited (KSCDC) was
             incorporated in July 1969 and started commercial activities in the
             year 1971 as a company fully owned by the Government of Kerala. From
@@ -68,41 +74,24 @@ function Kscdc() {
         </div>
         <div className="mt-4 flex flex-col items-start justify-center ">
           <h3 className="text-2xl font-bold">Kollam ‘The Cashew Capital’</h3>
-          <p className="text-balance tracking-wide text-justify">Situated in the southern coast of India. This ancient port town has hundred years of
-heritage to its credit. Remnants of that glorious past are seen even to this day. The
-major chunk of revenue brought into this town is by export of cashew kernels. With
-it, the KSCDC has put Kollam on the trade map on the Globe.</p>
+          <p className="text-balance tracking-wide text-justify">
+            Situated in the southern coast of India. This ancient port town has
+            hundred years of heritage to its credit. Remnants of that glorious
+            past are seen even to this day. The major chunk of revenue brought
+            into this town is by export of cashew kernels. With it, the KSCDC
+            has put Kollam on the trade map on the Globe.
+          </p>
         </div>
         <div>
           <div className="mt-8 grid lg:flex justify-center items-center gap-8">
             {/* Mission Card */}
-            <div
-              data-aos="fade-right"
-              className="w-full "
-            >
-              <h2 className="text-3xl font-bold mb-4">Mission</h2>
-              <p className="text-gray-700 leading-relaxed">
-                KSDC aims at backward integration of its product line and has
-                promoted Cashew Plantations in association with the Kerala State
-                Agency for Cashew Cultivation. We have cultivated Cashew
-                Plantation across 25 hectares in our facilities.
-              </p>
-              <p className="text-gray-700 leading-relaxed">
-                This strategic collaboration underscores our commitment to
-                self-sufficiency and quality control. By cultivating cashew
-                trees, we not only secure a reliable raw material source but
-                also promote environmental sustainability and support local
-                farmers. This 25-hectare Cashew Plantation stands as a testament
-                to our dedication to responsible business practices and
-                community development.
-              </p>
+            <div data-aos="fade-right" className="w-full ">
+              <h2 className="text-3xl font-bold mb-4">{data[0].mission}</h2>
+              <p className="text-gray-700 leading-relaxed">{data[0].mission_content}</p>
             </div>
 
             {/* Vision Card */}
-            <div
-              data-aos="fade-left"
-              className="w-full"
-            >
+            <div data-aos="fade-left" className="w-full">
               <h2 className="text-3xl font-bold mb-4">Vision</h2>
               <p className="text-gray-700 leading-relaxed">
                 The Vision of KSCDC is to be a World Class Organisation and a
