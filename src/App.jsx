@@ -23,7 +23,6 @@ function App() {
   useEffect(() => {
     Aos.init({
       startEvent: "DOMContentLoaded",
-      once: true,
       });
   },[])
   return (

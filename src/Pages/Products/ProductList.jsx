@@ -11,8 +11,8 @@ const categories = [
     label: "Plain Cashews",
     sub: [
       { filter: "All", label: "ALL" },
-      { filter: "premium", label: "Premium Grade" },
-      { filter: "popular", label: "Popular Grade" },
+      { filter: "premium", label: "Premium Grades" },
+      { filter: "popular", label: "Popular Grades" },
       { filter: "extra-premium", label: "Extra Premium" },
     ],
   },
@@ -21,8 +21,8 @@ const categories = [
     label: "Roasted and Salted Cashews",
     sub: [
       {filter:"All",label: "ALL"}, 
-      {filter:"premium",label: "Premeium Grade"}, 
-      {filter:"popular",label:"Popular Grade"}
+      {filter:"premium",label: "Premium Grades"}, 
+      {filter:"popular",label:"Popular Grades"}
     ]
   },
   {

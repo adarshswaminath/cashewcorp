@@ -1023,7 +1023,7 @@ export const productData = [
   },
   {
     id: 31,
-    name: "Premeium Product",
+    name: "Premium Product",
     image: "/images/products/primaryImage/premium.jpg",
     second_image: "/images/products/secondaryImage/Gift box all.JPG",
     type: "giftboxpackets",

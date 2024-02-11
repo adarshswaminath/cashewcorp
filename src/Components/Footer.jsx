@@ -20,7 +20,7 @@ let enfooterData = [
     values: [
       { path: "/product", label: "Plain Cashews" },
       { path: "/product", label: "Roasted And Salted" },
-      { path: "/product", label: "Premeium Products" },
+      { path: "/product", label: "Premium Products" },
       { path: "/product", label: "Value Added Products" },
       { path: "/product", label: "Online Shopping" },
     ],
@@ -85,7 +85,7 @@ const backgroundImage =
 function FooterLinks({ title, values }) {
   console.table(values);
   return (
-    <div data-aos="fade-up" className="flex flex-col items-start gap-3">
+    <div data-aos="fade-up" data-aos-once="true" className="flex flex-col items-start gap-3">
       <h3 className="font-bold">{title}</h3>
       {values.map((value, index) => (
         <Link key={value.path} to={value.path} className="capitalize">
@@ -112,6 +112,7 @@ function FooterSocialMediaPannel() {
           {socialMedis.map((media) => (
             <a
               data-aos="flip-up"
+              data-aos-once="true"
               href={media.link}
               key={media.icon}
               className="text-xl transform transition ease-in-out duration-300 hover:scale-150 hover:-translate-y-2"
@@ -167,6 +168,7 @@ function Footer() {
         <div className="mb-4">
           <h2
             data-aos="fade-right"
+            data-aos-once="true"
             className="text-center text-5xl font-bold mb-2"
           >
             {language ? "KSCDC" : "കെ.എസ്.സി.ഡി.സി"}
@@ -220,6 +222,7 @@ function Footer() {
           <div className="grid place-items-center justify-self-center lg:flex items-center justify-between lg:w-3/4">
             <img
               data-aos="zoom-out-left"
+              data-aos-once="true"
               src="/images/CDC.png"
               className="object-contain h-44 w-44"
               alt="gov image"
@@ -227,12 +230,14 @@ function Footer() {
 
             <img
               data-aos="fade-up"
+              data-aos-once="true"
               src="/images/fssai.png"
               className="object-contain h-44 w-44 rounded-xl"
               alt="gov image"
             />
             <img
               data-aos="zoom-out-right"
+              data-aos-once="true"
               src="/images/logo-2.png"
               className="object-contain h-72 w-72"
               alt="gov image"
