@@ -38,10 +38,7 @@ function DirectorCard({ image, title, caption, email,phone }) {
           </div>
         )}
 
-        {/* <a href={`mailto: ${email}`} className="flex items-center gap-2 underline">
-<IoMdMail/>
-{email}
-</a> */}
+        
       </div>
     </div>
   );
