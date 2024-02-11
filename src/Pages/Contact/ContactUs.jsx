@@ -105,7 +105,7 @@ export const ContactBox = () => {
           <p className='text-sm'>@Kottiyam</p>
         </div>
         <div>
-          <p className="font-semibold text-xs">Factory Offices:</p>
+          <p className="font-semibold text-xs">30 Factory Offices:</p>
           <p className='text-sm'>@All Over Kerala</p>
         </div>
 
