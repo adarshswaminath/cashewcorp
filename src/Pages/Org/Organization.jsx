@@ -204,10 +204,10 @@ function Organization() {
       <div className="p-5 lg:flex gap-10 items-start justify-start w-full">
         <div className="w-full">
           <h1 className="text-3xl font-bold">{language ? "Organization" : "ഓർഗനൈസേഷൻ"}</h1>
-          <p className="mt-3 font-bold">
+          <p className="mt-3 font-bold max-w-xl">
             {language ? 
             `The Kerala State Cashew Development Corporation Ltd. Cashew House,
-            Mundakkal, Kollam, Kerala, India - 691001 Grams: Kasuvandi` : `കേരള സംസ്ഥാന കശുവണ്ടി വികസന കോർപ്പറേഷൻ ലിമിറ്റഡ്. കാഷ്യൂ ഹൗസ്, മുണ്ടക്കൽ, കൊല്ലം, കേരള, ഇന്ത്യ - 691001 ഗ്രാം: കശുവണ്ടി`}
+            Mundakkal, Kollam, Kerala, India - 691001 Grams: Kasuvandi` : `കേരള സംസ്ഥാന കശുവണ്ടി വികസന കോർപ്പറേഷൻ ലിമിറ്റഡ്. കാഷ്യൂ ഹൗസ്, മുണ്ടക്കൽ, കൊല്ലം, കേരള, ഇന്ത്യ - 691001  ഗ്രാം: കശുവണ്ടി`}
           </p>
           {/* ------------------- */}
           <h2 className="text-xl font-bold mt-3">{language ? `Functions and Duties` : `പ്രവർത്തനങ്ങളും ചുമതലകളും`}</h2>
