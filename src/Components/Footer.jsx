@@ -52,9 +52,9 @@ let mlfooterData = [
     title: "ഉൽപ്പന്നങ്ങൾ",
     values: [
       { path: "/product", label: "പ്ലെയിൻ കാഷ്യൂസ്" },
-      { path: "/product", label: "റോസ്റ്റഡ് ആൻഡ് സാൾട്ടഡ് കാഷ്യൂസ്" },
+      { path: "/product", label: "റോസ്റ്റഡ് ആൻഡ് സാൾട്ടഡ്" },
+      { path: "/product", label: "പ്രീമിയം ഉൽപ്പന്നങ്ങൾ" },
       { path: "/product", label: "മൂല്യവർദ്ധിത ഉൽപ്പന്നങ്ങൾ" },
-      { path: "/product", label: "ജനപ്രിയ ഉൽപ്പന്നങ്ങൾ" },
       { path: "/product", label: "ഓൺലൈൻ ഷോപ്പിംഗ്" },
     ],
   },
