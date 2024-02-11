@@ -30,84 +30,51 @@ function Kscdc() {
       {/* Body content */}
       <div className="p-6">
         <section data-aos="fade-up" className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">ABOUT KSCDC</h2>
+          <h2 className="text-2xl font-semibold mb-4">{data[0].title}</h2>
           <p className="text-gray-700 leading-7 text-justify">
-            The Kerala State Cashew Development Corporation Limited (KSCDC) was
-            incorporated in July 1969 and started commercial activities in the
-            year 1971 as a company fully owned by the Government of Kerala. From
-            the modest beginning in 1969, the Corporation has now grown into a
-            large organization playing a pivotal role in the cashew industry.
+            {data[0].para_one}
           </p>
 
           <p className="text-gray-700 leading-7 mt-4 text-justify">
-            KSCDC, an ISO 22000-2005 company, is running 30 cashew factories
-            across Kerala State with an annual production capacity of 30,000
-            Metric Tonnes. More than 15,000 workers and 500 staff members are
-            working in these factories. KSCDC now has a turnover of Rs. 250
-            crores.
+            {data[0].para_two}
           </p>
 
           <p className="text-gray-700 leading-7 mt-4 text-justify">
-            KSCDC acts as a model employer in the field of the cashew industry
-            mainly to protect the interest of its workers and to provide maximum
-            employment to them, ensuring their statutory benefits like minimum
-            wages, bonus, etc., prevailing in the cashew industry.
+          {data[0].para_three}
           </p>
 
           <p className="text-gray-700 leading-7 mt-4 text-justify">
-            With an objective to promote Cashew-based Value Added Products,
-            KSCDC has over these years developed a variety of Value Added
-            Products from Cashew Apple and Cashew Kernels. These products are
-            being widely appreciated in the domestic market and in the
-            international market.
+          {data[0].para_four}
           </p>
 
           <p className="text-gray-700 leading-7 mt-4 text-justify">
-            KSDC also aims at backward integration of its product line and has
-            promoted Cashew Plantations in association with the Kerala State
-            Agency for Cashew Cultivation and has cultivated Cashew Plantation
-            across 25 hectares in its facilities.
+          {data[0].para_five}
           </p>
         </section>
         <div data-aos="zoom-in-down">
           <img src="/images/company.jpeg" alt="Company Image" />
         </div>
         <div className="mt-4 flex flex-col items-start justify-center ">
-          <h3 className="text-2xl font-bold">Kollam ‘The Cashew Capital’</h3>
-          <p className="text-balance tracking-wide text-justify">
-            Situated in the southern coast of India. This ancient port town has
-            hundred years of heritage to its credit. Remnants of that glorious
-            past are seen even to this day. The major chunk of revenue brought
-            into this town is by export of cashew kernels. With it, the KSCDC
-            has put Kollam on the trade map on the Globe.
+          <h3 className="text-2xl font-bold">{data[1].kollam}</h3>
+          <p className="w-full">
+            {data[1].kollam_content}
           </p>
         </div>
         <div>
           <div className="mt-8 grid lg:flex justify-center items-center gap-8">
             {/* Mission Card */}
             <div data-aos="fade-right" className="w-full ">
-              <h2 className="text-3xl font-bold mb-4">{data[0].mission}</h2>
-              <p className="text-gray-700 leading-relaxed">{data[0].mission_content}</p>
+              <h2 className="text-3xl font-bold mb-4">{data[2].mission}</h2>
+              <p className="text-gray-700 leading-relaxed">{data[2].mission_content}</p>
             </div>
 
             {/* Vision Card */}
             <div data-aos="fade-left" className="w-full">
-              <h2 className="text-3xl font-bold mb-4">Vision</h2>
+              <h2 className="text-3xl font-bold mb-4">{data[2].vision}</h2>
               <p className="text-gray-700 leading-relaxed">
-                The Vision of KSCDC is to be a World Class Organisation and a
-                Leader in the Cashew Industry by providing 300 days of
-                employment per year and achieve an Annual turnover of Rs. 1000
-                Crore by the year 2025.
+                {data[2].vision_content}
               </p>
-              <p className="text-gray-700 leading-relaxed">
-                This strategic collaboration underscores our commitment to
-                self-sufficiency and quality control. By cultivating cashew
-                trees, we not only secure a reliable raw material source but
-                also promote environmental sustainability and support local
-                farmers. This 25-hectare Cashew Plantation stands as a testament
-                to our dedication to responsible business practices and
-                community development.
-              </p>
+             
             </div>
           </div>
         </div>
