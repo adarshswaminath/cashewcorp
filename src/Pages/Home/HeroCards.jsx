@@ -11,7 +11,7 @@ function HeroCards() {
   const data = useLanguageData(enHeroCards, mlHeroCards);
 
   return (
-    <div className="p-2 h-72 grid grid-cols-1 gap-3 md:flex justify-evenly lg:grid-cols-3 place-items-center justify-items-center ">
+    <div className="p-2 h-72 grid grid-cols-1  gap-3  justify-evenly lg:grid-cols-3 place-items-center justify-items-center ">
       {data.map((value) => (
         <Link to={value.link} key={value.title}>
           <div

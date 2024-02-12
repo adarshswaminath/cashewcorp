@@ -239,121 +239,71 @@ function EnNavbar() {
       </div>
       {/* mobile view */}
       <AnimatePresence>
-        {menuOpen && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.5 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden absolute top-0 left-0 w-full h-full bg-white text-black flex flex-col items-center justify-center z-50"
-          >
-            <button
-              onClick={toggleMenu}
-              className="text-2xl absolute top-2 right-3 focus:outline-none"
-              aria-label="Close Menu"
+          {menuOpen && (
+            <motion.div
+              initial={{ x: -300 }}
+              animate={{ x: 0 }}
+              exit={{ x: -300 }}
+              transition={{ duration: 0.3 }}
+              className="lg:hidden fixed top-0 left-0 w-3/4 h-full bg-white text-black z-50 shadow-lg"
             >
-              <RxCross2 />
-            </button>
-            <img src="/images/CDC.png" className="h-16" alt="CDC Logo" />
-
-            <Link
-              to="/"
-              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
-            >
-              Home
-            </Link>
-            <Link
-              to="/kscdc"
-              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
-            >
-              About us
-            </Link>
-            <Link
-              to="/management"
-              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
-            >
-              Management
-            </Link>
-            <Link
-              to="/org"
-              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
-            >
-              Organization
-            </Link>
-            <Link
-              to="/product-characteristic"
-              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
-            >
-              Product Characteristic
-            </Link>
-            <Link
-              to="/franchisee"
-              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
-            >
-              Franchisee
-            </Link>
-            <Link
-              to="/product"
-              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
-            >
-              Product
-            </Link>
-            <Link
-              to="/director-board"
-              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
-            >
-              Board Of Directors
-            </Link>
-            <Link
-              to="/tender"
-              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
-            >
-              Tender
-            </Link>
-            <Link
-              to="/career"
-              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
-            >
-              Career
-            </Link>
-            <Link
-              to="/rti"
-              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
-            >
-              RTI
-            </Link>
-            <Link
-              to="/gallery"
-              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
-            >
-              Gallery
-            </Link>
-            <Link
-              to="/contact"
-              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
-            >
-              Contact
-            </Link>
-            <Link
-              to="/blog"
-              className="text-xl font-bold mt-3 hover:text-red-500 decoration-wavy decoration-red-400"
-            >
-              What's New
-            </Link>
-            <Link to="/product">
-              <button className="flex items-center text-sm btn m-3 rounded-lg bg-red-500 hover:bg-red-400 text-white">
-                Shop Now
-                <FaShoppingCart />
+              <button
+                onClick={toggleMenu}
+                className="text-2xl absolute top-2 right-3 focus:outline-none"
+                aria-label="Close Menu"
+              >
+                <RxCross2 />
               </button>
-            </Link>
-            <button
-              onClick={toggleMenu}
-              className="mt-3 rounded-full bg-red-500 text-white p-3"
-            >
-              <RxCross2 />
-            </button>
-          </motion.div>
-        )}
+              {/* menu list content */}
+              <div className="flex flex-col items-center justify-center h-full">
+                <img src="/images/CDC.png" className="h-24 mr-12" alt="CDC Logo" />
+               <div className="flex flex-col items-start">
+               <Link to="/" className="text-xl font-bold mt-3 hover:text-red-500">
+                  Home
+                </Link>
+                <div className="dropdown">
+                  <div tabIndex={0} role="button" className="text-xl font-bold mt-3 hover:text-red-500">About Us</div>
+                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 text-base rounded-box w-52 ">
+                      <li><Link to="/kscdc" className="hover:bg-red-500 hover:text-white">KSCDC</Link></li>
+                      <li><Link to="/org" className="hover:bg-red-500 hover:text-white">Organization</Link></li>
+                      <li><Link to="/director-board" className="hover:bg-red-500 hover:text-white">Board Of Directors</Link></li>
+                      <li><Link to="/management" className="hover:bg-red-500 hover:text-white">Management</Link></li>
+                      <li><Link to="/product-characteristic" className="hover:bg-red-500 hover:text-white">Product Characteristics</Link></li>
+                      <li><Link to="/franchisee" className="hover:bg-red-500 hover:text-white">Franchisees</Link></li>
+                      <li><Link to="/kscdc" className="bg-red-500 hover:bg-red-600 text-white">Whats New</Link></li>
+                    </ul>
+                  </div>
+                  <div className="dropdown">
+                  <div tabIndex={0} role="button" className="text-xl font-bold mt-3 hover:text-red-500">Products</div>
+                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 text-base rounded-box w-52 ">
+                      <li><Link to="/product" className="hover:bg-red-500 hover:text-white">CDC Brand Products</Link></li>
+                      <li><Link to="/kscdc" className="bg-red-500 hover:bg-red-600 text-white mt-2">Whats New</Link></li>
+                    </ul>
+                  </div>
+                
+                <Link to="/tender" className="text-xl font-bold mt-3 hover:text-red-500">
+                  Tender
+                </Link>
+                <Link to="/career" className="text-xl font-bold mt-3 hover:text-red-500">
+                  Career
+                </Link>
+                <Link to="/rti" className="text-xl font-bold mt-3 hover:text-red-500">
+                  RTI
+                </Link>
+                <Link to="/gallery" className="text-xl font-bold mt-3 hover:text-red-500">
+                  Gallery
+                </Link>
+                <Link to="/contact" className="text-xl font-bold mt-3 hover:text-red-500">
+                  Contact
+                </Link>
+                <Link to="/product" className="text-xl font-bold mt-3 hover:text-red-500">
+                  Shop Now
+                </Link>
+               </div>
+              </div>
+            </motion.div>
+          )}
+          
       </AnimatePresence>
     </nav>
   );
