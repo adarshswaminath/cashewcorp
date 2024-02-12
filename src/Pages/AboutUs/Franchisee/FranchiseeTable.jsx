@@ -67,7 +67,7 @@ function FranchiseeTable() {
 
     <div className="overflow-x-auto h-screen">
       <table className="table">
-        <thead className="sticky top-0 z-50 bg-red-500/10 bg:blur backdrop-blur">
+        <thead className="lg:sticky top-0 z-50 bg-red-500/10 bg:blur backdrop-blur">
           <tr className="text-gray-800">
             <th></th>
             <th>Name</th>
