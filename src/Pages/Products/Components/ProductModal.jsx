@@ -3,6 +3,8 @@ import { productData } from "../constant";
 import { MdRateReview } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { IoMdClose } from "react-icons/io";
+import "./ProductModal.css"
+
 
 // ProductBoard component displays product details, prices, and allows selecting different packet weights
 const ProductBoard = ({ data,closeModal }) => {
@@ -80,11 +82,13 @@ const ProductBoard = ({ data,closeModal }) => {
     <div className="lg:flex p-4 border rounded-md shadow-md bg-white">
       {/* Product Image */}
       <div className="flex flex-col items-center justify-center mr-8">
+        <div className="zoom">
         <img
           src={productImage}
           alt="Product Image"
-          className="h-96 w-96 object-contain rounded-md shadow-md"
+          className="h-96 w-96 object-contain rounded-md shadow-md "
         />
+        </div>
         {/* Other images */}
         <div className="flex mt-2">
           <button onClick={() => setProductImage(image)} className="p-2">
