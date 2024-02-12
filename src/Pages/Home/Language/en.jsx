@@ -70,7 +70,7 @@ const enleaderData = [
     title: "Chairman's Message",
   },
   {
-    name: "Shri. Sunil John. K",
+    name: "SHRI. SUNIL JOHN K.",
     position: "Managing Director",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum inlabore laudantium deserunt fugiat numquam.",
@@ -112,7 +112,7 @@ const enBoardOfDirectors = [
   {title: "Board Of Directors",
   director: [
       { image: "/images/directors/chairman.png", title: "Shri. S. Jayamohan", caption: "Chairman" },
-      { image: "/images/directors/dir-1.png", title: "Shri. Sunil John. K", caption: "Managing Director" },
+      { image: "/images/directors/dir-1.png", title: "SHRI. SUNIL JOHN K.", caption: "Managing Director" },
       { image: "/images/directors/dir-9.png", title: "Shri. B. Pratheep Kumar", caption: "Director" },
       { image: "/images/directors/dir-10.png", title: "Shri. Siju Jacob", caption: "Director" },
       { image: "/images/directors/dir-8.png", title: "Dr. B. S. Suran", caption: "Director" },
