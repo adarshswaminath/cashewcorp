@@ -4,8 +4,12 @@ import Banner from "../../../Components/Banner";
 import FranchiseeTable from "./FranchiseeTable";
 import TranslateButton from "../../../Components/TranslateButton";
 import { useLanguage } from "../../../contexts/LanguageContext";
+import { useEffect } from "react";
 
 function Franchisee() {
+  useEffect(() => {
+    window.scrollTo(0,0)
+  },[])
 const { language, setLanguage } = useLanguage();
   const toggleLanguage = () => {
     setLanguage((prev) => !prev);
