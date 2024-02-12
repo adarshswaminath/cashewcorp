@@ -180,7 +180,7 @@ function MlNavbar() {
             path === "/career" ? "text-red-500" : ""
           } text-xs hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
         >
-          തൊഴിൽ
+          കരിയർ
         </Link>
         <Link
           to="/rti"

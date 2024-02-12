@@ -16,7 +16,7 @@ function Practise() {
   const aosEffect = ["zoom-in","fade-up","zoom-in"]
   return (
     <div className="p-3">
-      <h3 data-aos="fade-right" className="text-3xl font-bold m-4 text-center text-red-500">
+      <h3 data-aos="fade-right" className="text-2xl font-bold m-4 text-center text-red-500">
         {data[0].title}
       </h3>
       <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 place-items-center justify-items-center">

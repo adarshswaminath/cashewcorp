@@ -8,7 +8,7 @@ function Gallery() {
   const {language} = useLanguage()
   return (
     <div className="text-center p-4 ">
-      <h1 className="text-4xl text-red-500 font-bold my-8">
+      <h1 className="text-3xl text-red-500 font-bold my-8">
         {language ? "Gallery" : "ഗാലറി"}
       </h1>
 

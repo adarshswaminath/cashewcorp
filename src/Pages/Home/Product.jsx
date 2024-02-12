@@ -26,7 +26,7 @@ const Product = () => {
  const data = useLanguageData(enHomeProduct,mlHomeProduct)
   return (
     <div className="marquee w-full">
-      <h2 className="text-3xl font-bold m-4 text-center text-red-500">
+      <h2 className="text-2xl font-bold m-4 text-center text-red-500">
         {data[0].title}
       </h2>
       <ul className="marquee-content">

@@ -47,7 +47,7 @@ function GetInTocuh() {
   return (
     <div>
       <div className="p-4 md:p-8 lg:p-12 bg-gray-100">
-      <h3 className="text-4xl font-bold mb-6 text-center text-red-500">{language ? "Get In Touch With Us" : "ഞങ്ങളുമായി ബന്ധപ്പെടുക."}</h3>
+      <h3 className="text-3xl font-bold mb-6 text-center text-red-500">{language ? "Get In Touch With Us" : "ഞങ്ങളുമായി ബന്ധപ്പെടുക"}</h3>
       <p className="text-center max-w-3xl mx-auto text-gray-500 font-bold mb-10">
       {language ? "For more details get in touch with us directly through the information furnished given below." : "കൂടുതൽ വിവരങ്ങൾക്ക് താഴെ നൽകിയിരിക്കുന്ന വിവരങ്ങൾ വഴി ഞങ്ങളെ നേരിട്ട് ബന്ധപ്പെടുക."}
       </p>

@@ -2,6 +2,8 @@ import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { useLanguage } from "../../contexts/LanguageContext";
+import TranslateButton from "../../Components/TranslateButton";
 
 let blogDetils = [
   {
@@ -33,10 +35,16 @@ const BlogAndNews = () => {
   }, []);
   //   const {state} = props.location
   //   const { index } = state;
-
+  const {language,setLanguage} = useLanguage()
+  const toggleLanguage = () => {
+    setLanguage((prev) => !prev)
+  }
   return (
     <div>
       <Navbar />
+      <button onClick={toggleLanguage} className="fixed bottom-4 right-3 z-50">
+        <TranslateButton/>
+      </button>
       <div className="min-h-screen flex flex-col items-center p-2">
         <img src={blogDetils[0].image} alt="" />
         <h3 className="text-3xl font-bold mt-4">{blogDetils[0].title}</h3>
