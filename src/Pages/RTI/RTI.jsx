@@ -4,6 +4,8 @@ import Footer from "../../Components/Footer";
 import Banner from "../../Components/Banner";
 import Accordion from "../../Components/Accordion";
 import RITCard from "./RITCard";
+import TranslateButton from "../../Components/TranslateButton";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 const RTI = () => {
   const data = [
@@ -19,9 +21,16 @@ const RTI = () => {
     { title: "PAY SCALE",content:<RITCard /> },
     { title: "MINIMUM WAGE NOTIFICATION – 2011",content:<RITCard /> },
   ];
+  const { language, setLanguage } = useLanguage();
+  const toggleLanguage = () => {
+    setLanguage((prev) => !prev);
+  };
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
+      <button onClick={toggleLanguage} className="fixed bottom-4 right-3 z-50">
+        <TranslateButton />
+      </button>
       <div className="flex-grow p-6 bg-gray-100">
         <Banner image="rit.jpg" />
       </div>

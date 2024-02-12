@@ -94,8 +94,8 @@ function EnNavbar() {
       {/* image logo */}
       <div className="logo flex items-center">
         <img src="/images/logo.png" className="h-12 lg:h-36" alt="Logo" />
-        {heading.map((navdata) => (
-          <div>
+        {heading.map((navdata,index) => (
+          <div key={index}>
           <h3 className="font-bold max-w-sm">
           THE KERALA STATE CASHEW DEVELOPEMENT CORPORATION LTD
           </h3>

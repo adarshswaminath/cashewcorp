@@ -3,6 +3,8 @@ import Footer from "../../Components/Footer";
 import Banner from "../../Components/Banner";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { useState } from "react";
+import TranslateButton from "../../Components/TranslateButton";
+import { useLanguage } from "../../contexts/LanguageContext";
 const careerData = [
   {
     title: "ജീവനക്കാരുടെ സ്ഥലം മാറ്റത്തിനുള്ള ഓൺലൈൻ അപേക്ഷ",
@@ -183,9 +185,17 @@ function Career() {
   const startIdx = (currentPage - 1) * itemsPerPage;
   const endIdx = startIdx + itemsPerPage;
 
+
+  const { language, setLanguage } = useLanguage();
+  const toggleLanguage = () => {
+    setLanguage((prev) => !prev);
+  };
   return (
     <div className="min-h-screen">
       <Navbar />
+      <button onClick={toggleLanguage} className="fixed bottom-4 right-3 z-50">
+        <TranslateButton />
+      </button>
       <Banner image="career.jpg" />
       <h2 className="p-3 text-2xl font-bold">Career</h2>
      <div className="p-5">

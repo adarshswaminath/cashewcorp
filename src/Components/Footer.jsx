@@ -88,7 +88,7 @@ function FooterLinks({ title, values }) {
     <div data-aos="fade-up" data-aos-once="true" className="flex flex-col items-start gap-3">
       <h3 className="font-bold">{title}</h3>
       {values.map((value, index) => (
-        <Link key={value.path} to={value.path} className="capitalize">
+        <Link key={index} to={value.path} className="capitalize">
           {value.label}
         </Link>
       ))}
@@ -98,12 +98,12 @@ function FooterLinks({ title, values }) {
 function FooterSocialMediaPannel() {
   const { language } = useLanguage();
   const socialMedis = [
-    { icon: <LuFacebook />, link: "#" },
-    { icon: <LuGitlab />, link: "#" },
-    { icon: <LuGithub />, link: "#" },
-    { icon: <LuTwitter />, link: "#" },
-    { icon: <LuInstagram />, link: "#" },
-    { icon: <LuLinkedin />, link: "#" },
+    { icon: <LuFacebook />, link: "1" },
+    { icon: <LuGitlab />, link: "2" },
+    { icon: <LuGithub />, link: "3" },
+    { icon: <LuTwitter />, link: "4" },
+    { icon: <LuInstagram />, link: "5" },
+    { icon: <LuLinkedin />, link: "6" },
   ];
   return (
     <div className="flex items-center justify-center ">
@@ -112,12 +112,12 @@ function FooterSocialMediaPannel() {
           {language ? "Follow us" : "ഞങ്ങളെ പിന്തുടരുക"}
         </h2>
         <div className="flex justify-evenly gap-3 m-2">
-          {socialMedis.map((media) => (
+          {socialMedis.map((media,index) => (
             <a
+              key={index}
               data-aos="flip-up"
               data-aos-once="true"
               href={media.link}
-              key={media.icon}
               className="text-xl transform transition ease-in-out duration-300 hover:scale-150 hover:-translate-y-2"
             >
               {media.icon}
@@ -189,11 +189,11 @@ function Footer() {
         {/* footer links */}
         <div className="grid gap-3 lg:flex items-center justify-evenly mb-6">
           {language
-            ? enfooterData.map((data) => (
-                <FooterLinks key={data.title} {...data} />
+            ? enfooterData.map((data,index) => (
+                <FooterLinks key={index} {...data} />
               ))
-            : mlfooterData.map((data) => (
-                <FooterLinks key={data.title} {...data} />
+            : mlfooterData.map((data,index) => (
+                <FooterLinks key={index} {...data} />
               ))}
         </div>
         {/* social media pannel */}

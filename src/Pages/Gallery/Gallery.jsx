@@ -7,6 +7,8 @@ import FunctionImage from './FunctionImage'
 import Banner from "../../Components/Banner"
 import Videos from './Videos';
 import DownloadMedia from './DownloadMedia';
+import TranslateButton from '../../Components/TranslateButton';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 
 function Gallery() {
@@ -41,10 +43,16 @@ function Gallery() {
         );
     }
   };
-
+  const { language, setLanguage } = useLanguage();
+  const toggleLanguage = () => {
+    setLanguage((prev) => !prev);
+  };
   return (
     <div>
-      <Navbar />        
+      <Navbar /> 
+      <button onClick={toggleLanguage} className="fixed bottom-4 right-3 z-50">
+        <TranslateButton />
+      </button>       
       <div className=" min-h-screen">
         <Banner image="gallery.jpg"/>
         <div className="grid grid-cols-3  gap-3 lg:flex items-center justify-center space-x-3 mt-4 mb-4 p-3">
