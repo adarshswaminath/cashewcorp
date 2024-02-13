@@ -53,7 +53,7 @@ const upImage = () => {
             <FaAngleRight />
           </button>
         </div>
-        <div className="relative top-2/3 lg:top-3/4 flex items-center justify-center gap-2">
+        <div className="relative top-[45%] lg:top-3/4 flex items-center justify-center gap-2">
           {images.map((_,index) => (
             <span key={index} onClick={() => setImageIndex(index)} className={`${imageIndex === index ? "bg-blue-500" : ""} px-1 border border-blue-500 py-1 rounded-full`}></span>
          
