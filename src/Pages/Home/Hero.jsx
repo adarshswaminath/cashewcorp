@@ -35,7 +35,7 @@ const upImage = () => {
   return (
     <div className="hero-container relative ">
       <div
-        className="hero-background h-screen w-full bg-center bg-cover bg-current bg-no-repeat relative"
+        className="hero-background h-96 bg-center lg:h-screen bg-cover bg-no-repeat relative"
         style={{
           backgroundImage: `url(${images[imageIndex]})`,
         }}
@@ -54,12 +54,10 @@ const upImage = () => {
           </button>
         </div>
         <div className="relative top-2/3 lg:top-3/4 flex items-center justify-center gap-2">
-          <span onClick={() => setImageIndex(0)} className={`${imageIndex === 0 ? "bg-blue-500" : ""} px-1 border border-blue-500 py-1 rounded-full`}></span>
-          <span onClick={() => setImageIndex(1)} className={`${imageIndex === 1 ? "bg-blue-500" : ""} px-1 border border-blue-500 py-1 rounded-full`}></span>
-          <span onClick={() => setImageIndex(2)} className={`${imageIndex === 2 ? "bg-blue-500" : ""} px-1 border border-blue-500 py-1 rounded-full`}></span>
-          <span onClick={() => setImageIndex(3)} className={`${imageIndex === 3 ? "bg-blue-500" : ""} px-1 border border-blue-500 py-1 rounded-full`}></span>
-          <span onClick={() => setImageIndex(4)} className={`${imageIndex === 4 ? "bg-blue-500" : ""} px-1 border border-blue-500 py-1 rounded-full`}></span>
-
+          {images.map((_,index) => (
+            <span key={index} onClick={() => setImageIndex(index)} className={`${imageIndex === index ? "bg-blue-500" : ""} px-1 border border-blue-500 py-1 rounded-full`}></span>
+         
+          ))}
         </div>
       </div>
       <div className="p-2 mt-3">
