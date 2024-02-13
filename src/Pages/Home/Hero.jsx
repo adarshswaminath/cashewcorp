@@ -34,6 +34,9 @@ const upImage = () => {
 
   return (
     <div className="hero-container relative ">
+       <div className="lg:hidden w-full lg:p-3">
+          <Navbar />
+        </div>
       <div
         className="hero-background h-96 bg-center lg:h-screen bg-cover bg-no-repeat relative"
         style={{
@@ -41,11 +44,11 @@ const upImage = () => {
         }}
       >
         <div className="lg:absolute bg-black bg-opacity-10 inset-0"></div>
-        <div className="lg:absolute w-full lg:p-3">
+        <div className="lg:absolute hidden lg:block w-full lg:p-3">
           <Navbar />
         </div>
 
-        <div className="relative top-1/2 flex justify-between p-3">
+        <div className="relative top-3/4 flex justify-between p-3">
           <button onClick={downImage} className="text-2xl p-3 text-white/100 rounded-full shadow-lg ">
             <FaAngleLeft />
           </button>
@@ -53,7 +56,7 @@ const upImage = () => {
             <FaAngleRight />
           </button>
         </div>
-        <div className="relative top-[45%] lg:top-3/4 flex items-center justify-center gap-2">
+        <div className="relative top-3/4 lg:top-3/4 flex items-center justify-center gap-2">
           {images.map((_,index) => (
             <span key={index} onClick={() => setImageIndex(index)} className={`${imageIndex === index ? "bg-blue-500" : ""} px-1 border border-blue-500 py-1 rounded-full`}></span>
          
