@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { CiMenuFries } from "react-icons/ci";
+import { CiMenuBurger} from "react-icons/ci";
 import { RxCross2 } from "react-icons/rx";
-import { FaShoppingCart } from "react-icons/fa";
+import { FaShoppingCart,FaAngleDown } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { mlNavHeading } from "../Pages/Home/Language/ml";
@@ -213,7 +213,7 @@ function EnNavbar() {
           className="text-xl focus:outline-none"
           aria-label="Toggle Menu"
         >
-          <CiMenuFries className="text-black m-3 text-2xl" />
+          <CiMenuBurger className="text-black m-3 text-2xl" />
         </button>
       </div>
       {/* shop Now Button */}
@@ -249,10 +249,10 @@ function EnNavbar() {
             >
               <button
                 onClick={toggleMenu}
-                className="text-2xl absolute top-2 right-3 focus:outline-none"
+                className="text-2xl flex items-center absolute top-3 right-4 focus:outline-none p-2 bg-red-500 text-white rounded-full font-bold"
                 aria-label="Close Menu"
               >
-                <RxCross2 />
+                <RxCross2 className="text-3xl" />Close
               </button>
               {/* menu list content */}
               <div className="flex flex-col items-center justify-center h-full">
@@ -262,7 +262,9 @@ function EnNavbar() {
                   Home
                 </Link>
                 <div className="dropdown">
-                  <div tabIndex={0} role="button" className="text-xl font-bold mt-3 hover:text-red-500">About Us</div>
+                  <div tabIndex={0} role="button" className="text-xl font-bold mt-3 hover:text-red-500">
+                    <h2 className="flex items-center gap-3">About Us <FaAngleDown/></h2>
+                  </div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 text-base rounded-box w-52 ">
                       <li><Link to="/kscdc" className="hover:bg-red-500 hover:text-white">KSCDC</Link></li>
                       <li><Link to="/org" className="hover:bg-red-500 hover:text-white">Organization</Link></li>
@@ -274,7 +276,8 @@ function EnNavbar() {
                     </ul>
                   </div>
                   <div className="dropdown">
-                  <div tabIndex={0} role="button" className="text-xl font-bold mt-3 hover:text-red-500">Products</div>
+                  <div tabIndex={0} role="button" className="text-xl font-bold mt-3 hover:text-red-500">
+                    <h2 className="flex items-center gap-2"> Products <FaAngleDown/></h2></div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 text-base rounded-box w-52 ">
                       <li><Link to="/product" className="hover:bg-red-500 hover:text-white">CDC Brand Products</Link></li>
                       <li><Link to="/kscdc" className="bg-red-500 hover:bg-red-600 text-white mt-2">Whats New</Link></li>

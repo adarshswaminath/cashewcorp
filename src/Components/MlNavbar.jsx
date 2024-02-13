@@ -249,10 +249,10 @@ function MlNavbar() {
             >
               <button
                 onClick={toggleMenu}
-                className="text-2xl absolute top-2 right-3 focus:outline-none"
+                className="text-2xl flex items-center absolute top-3 right-4 focus:outline-none p-2 bg-red-500 text-white rounded-full font-bold"
                 aria-label="Close Menu"
               >
-                <RxCross2 />
+                <RxCross2 className="text-3xl" />Close
               </button>
               {/* menu list content */}
               <div className="flex flex-col items-center justify-center h-full">
