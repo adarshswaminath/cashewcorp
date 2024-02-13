@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { RxCross2 } from "react-icons/rx";
-import { FaShoppingCart } from "react-icons/fa";
+import { FaShoppingCart,FaAngleDown } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { mlNavHeading } from "../Pages/Home/Language/ml";
@@ -262,7 +262,9 @@ function MlNavbar() {
                ഹോം
                 </Link>
                 <div className="dropdown">
-                  <div tabIndex={0} role="button" className="text-xl font-bold mt-3 hover:text-red-500">ഞങ്ങളെക്കുറിച്ച് </div>
+                  <div tabIndex={0} role="button" className="text-xl font-bold mt-3 hover:text-red-500">
+                   <h2 className="flex items-center gap-2"> ഞങ്ങളെക്കുറിച്ച്  <FaAngleDown/></h2> 
+                    </div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 text-base rounded-box w-52 ">
                       <li><Link to="/kscdc" className="hover:bg-red-500 hover:text-white">കെ.എസ്.സി.ഡി.സി</Link></li>
                       <li><Link to="/org" className="hover:bg-red-500 hover:text-white">ഓർഗനൈസേഷൻ</Link></li>
@@ -274,7 +276,9 @@ function MlNavbar() {
                     </ul>
                   </div>
                   <div className="dropdown">
-                  <div tabIndex={0} role="button" className="text-xl font-bold mt-3 hover:text-red-500"> ഉൽപ്പന്നങ്ങൾ</div>
+                  <div tabIndex={0} role="button" className="text-xl font-bold mt-3 hover:text-red-500"> 
+                  <h1 className="flex items-center gap-2">ഉൽപ്പന്നങ്ങൾ<FaAngleDown/></h1>
+                  </div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 text-base rounded-box w-52 ">
                       <li><Link to="/product" className="hover:bg-red-500 hover:text-white">CDC Brand  ഉൽപ്പന്നങ്ങൾ</Link></li>
                       <li><Link to="/kscdc" className="bg-red-500 hover:bg-red-600 text-white mt-2">Online Shopping</Link></li>
