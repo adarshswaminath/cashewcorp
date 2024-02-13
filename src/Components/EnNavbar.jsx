@@ -296,7 +296,7 @@ function EnNavbar() {
                 <Link to="/contact" className="text-xl font-bold mt-3 hover:text-red-500">
                   Contact
                 </Link>
-                <Link to="/product" className="text-xl font-bold mt-3 hover:text-red-500">
+                <Link to="/product" className="text-xl font-bold mt-3 btn text-white bg-red-500 hover:text-red-500">
                   Shop Now
                 </Link>
                </div>

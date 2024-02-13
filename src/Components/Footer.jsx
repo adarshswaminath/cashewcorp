@@ -86,7 +86,7 @@ function FooterLinks({ title, values }) {
   console.table(values);
   return (
     <div data-aos="fade-up" data-aos-once="true" className="flex flex-col items-start gap-3">
-      <h3 className="font-bold">{title}</h3>
+      <h3 className="font-bold underline underline-offset-4">{title}</h3>
       {values.map((value, index) => (
         <Link key={index} to={value.path} className="capitalize">
           {value.label}
@@ -107,7 +107,7 @@ function FooterSocialMediaPannel() {
   ];
   return (
     <div className="flex items-center justify-center ">
-      <div className="p-4 bg-white mt-3 text-black lg:w-3/4 rounded-lg">
+      <div className="p-4 bg-white mt-3 text-black lg:w-3/4 w-full rounded-lg">
         <h2 className="text-center font-extrabold tracking-wide">
           {language ? "Follow us" : "ഞങ്ങളെ പിന്തുടരുക"}
         </h2>
@@ -187,7 +187,7 @@ function Footer() {
           }
         </div>
         {/* footer links */}
-        <div className="grid gap-3 lg:flex items-center justify-evenly mb-6">
+        <div className="grid grid-cols-2 justify-items-stretch gap-y-5 lg:flex items-center justify-evenly mb-6">
           {language
             ? enfooterData.map((data,index) => (
                 <FooterLinks key={index} {...data} />
@@ -220,13 +220,13 @@ function Footer() {
               className="h-28 w-28 rounded-lg"
               alt="Footer image"
             />
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center ">
               <img
                 src="/images/footer5.png"
-                className="h-[75px] w-[75px] rounded-lg"
+                className="h-[75px] w-[75px] rounded-lg object-contain "
                 alt="Footer image"
               />
-              <p className="text-xs font-bold">{language ? "On Time Delivery" : "കൃത്യസമയത്ത് ഡെലിവറി"}</p>
+              <p className="text-xs font-bold -mt-2 lg:-mt-1">{language ? "On Time Delivery" : "കൃത്യസമയത്ത് ഡെലിവറി"}</p>
             </div>
           </div>
         </div>
