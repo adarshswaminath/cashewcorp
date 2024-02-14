@@ -9,7 +9,7 @@
 
 html {
   --cursor-color: #333;
-  ::-webkit-scrollbar {display:none;}
+  /* ::-webkit-scrollbar {display:none;} */
 }
 
 html.dark-mode {
