@@ -131,7 +131,7 @@ function FooterSocialMediaPannel() {
 
 function FooterCopyRight() {
   return (
-    <div className="flex flex-col lg:flex-row justify-between text-gray-500 ">
+    <div className="flex flex-col md:flex-row lg:flex-row justify-between text-gray-500 ">
       <span className="text-sm mb-2 lg:mb-0">@ 2024 All Rights Reserved</span>
       <div>
         <a
@@ -187,7 +187,7 @@ function Footer() {
           }
         </div>
         {/* footer links */}
-        <div className="grid grid-cols-2 justify-items-stretch gap-y-5 lg:flex items-center justify-evenly mb-6">
+        <div className="grid grid-cols-2 md:flex justify-items-stretch gap-y-5 lg:flex items-center justify-evenly mb-6">
           {language
             ? enfooterData.map((data,index) => (
                 <FooterLinks key={index} {...data} />

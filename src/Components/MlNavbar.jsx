@@ -286,7 +286,7 @@ function MlNavbar() {
                   </div>
                 
                 <Link to="/tender" className="text-xl font-bold mt-3 hover:text-red-500">
-                ടെണ്ടർ
+                ടെൻഡർ
                 </Link>
                 <Link to="/career" className="text-xl font-bold mt-3 hover:text-red-500">
                 കരിയർ

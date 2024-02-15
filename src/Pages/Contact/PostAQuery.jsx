@@ -24,7 +24,7 @@ const PostAQuery = () => {
             <div className="mt-6 mb-6 max-w-md">
               <p className="text-xl">
                 (A Government of Kerala Undertaking), Cashew House, Mundakkal,
-                Kollam, Kerala, India - 691 001
+                Kollam, Kerala, India - 691001
               </p>
             </div>
             <div className="mt-6 flex flex-col items-center text-lg">
@@ -101,7 +101,7 @@ export default PostAQuery;
         <div className="mt-6 mb-6 max-w-md">
           <p className="text-xl">
             (A Government of Kerala Undertaking), Cashew House, Mundakkal,
-            Kollam, Kerala, India - 691 001
+            Kollam, Kerala, India - 691001
           </p>
         </div>
         <hr className="border border-red-400 w-full"/>

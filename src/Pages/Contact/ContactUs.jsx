@@ -75,7 +75,7 @@ export const ContactBox = () => {
       <h1 className="text-3xl font-bold mb-6">Contact Details</h1>
       <p className="text-xl font-semibold">The Kerala State Cashew Development Corporation Limited</p>
       <p className="mb-4 font-bold">A Government of Kerala Undertaking</p>
-      <p className="mb-4">Cashew House, Mundakkal, Kollam, Kerala, India - 691 001</p>
+      <p className="mb-4">Cashew House, Mundakkal, Kollam, Kerala, India - 691001</p>
 
       <div className="mb-4">
         <p><span className='font-semibold'>Phone:</span> +91 474 2742271, 2742172, 2742273, 2742954</p>
