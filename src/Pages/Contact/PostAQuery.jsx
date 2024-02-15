@@ -53,7 +53,7 @@ const PostAQuery = () => {
               />
               <input
                 type="text"
-                placeholder="Vendor / Buyer / Seller / Supplier Name"
+                placeholder="Vendor/Buyer/Seller/Supplier Name"
                 className="input bg-gray-200 w-full"
               />
             </div>

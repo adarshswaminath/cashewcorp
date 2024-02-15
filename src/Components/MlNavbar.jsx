@@ -20,7 +20,7 @@ function MlNavbar() {
   };
 
   const subProduct = () => (
-    <div className="capitalize text-xs absolute hidden bg-white/10 bg:blur backdrop-blur text-black py-2 space-y-2 w-40 p-3 top-full left-0 group-hover:grid transition transform ease-in-out duration-300">
+    <div className="capitalize text-[11px] absolute hidden bg-white/10 bg:blur backdrop-blur text-black py-2 space-y-2 w-40 p-3 top-full left-0 group-hover:grid transition transform ease-in-out duration-300">
       <Link
         className="hover:bg-white p-2 border-0 hover:border hover:border-red-500 text-base"
         to="/product"
@@ -42,7 +42,7 @@ function MlNavbar() {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.3 }}
-      className="capitalize text-xs absolute hidden bg-white/10 bg:blur backdrop-blur text-black py-2 space-y-2 w-40 p-3 top-full left-0 group-hover:grid transition transform ease-in-out duration-300"
+      className="capitalize text-[11px] absolute hidden bg-white/10 bg:blur backdrop-blur text-black py-2 space-y-2 w-40 p-3 top-full left-0 group-hover:grid transition transform ease-in-out duration-300"
     >
       <Link
         className="hover:bg-white p-2 border-0 hover:border hover:border-red-500"
@@ -99,10 +99,10 @@ function MlNavbar() {
           <h3 className="font-bold max-w-sm">
           കേരള സംസ്ഥാന കശുവണ്ടി വികസന കോർപ്പറേഷൻ ലിമിറ്റഡ്
           </h3>
-          <p className="text-xs text-gray-800 font-semibold">
+          <p className="text-[11px] text-gray-800 font-semibold">
             ഒരു കേരള സർക്കാർ സ്ഥാപനം
           </p>
-          <p className="text-xs text-gray-800 font-extrabold">
+          <p className="text-[11px] text-gray-800 font-extrabold">
           (AN ISO 22000-2005 CERTIFIED COMPANY)
           </p>
         </div>
@@ -114,14 +114,14 @@ function MlNavbar() {
           to="/"
           className={`${
             path === "/" ? "text-red-500" : ""
-          } text-xs hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
+          } text-[11px] hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
         >
         ഹോം
         </Link>
         <div className="relative group">
           <Link
             to="/kscdc"
-            className=" text-xs cursor-pointer flex items-center space-x-2 font-bold"
+            className=" text-[11px] cursor-pointer flex items-center space-x-2 font-bold"
           >
             ഞങ്ങളെക്കുറിച്ച്  
             {/* down sv */}
@@ -146,7 +146,7 @@ function MlNavbar() {
           <Link
             className={`${
               path === "/product" ? "text-red-500" : ""
-            } text-xs hover:text-red-500 decoration-wavy decoration-red-400 font-bold flex items-center`}
+            } text-[11px] hover:text-red-500 decoration-wavy decoration-red-400 font-bold flex items-center`}
           >
             ഉൽപ്പന്നങ്ങൾ
             <svg
@@ -170,7 +170,7 @@ function MlNavbar() {
           to="/tender"
           className={`${
             path === "/tender" ? "text-red-500" : ""
-          } text-xs hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
+          } text-[11px] hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
         >
            ടെണ്ടർ
         </Link>
@@ -178,7 +178,7 @@ function MlNavbar() {
           to="/career"
           className={`${
             path === "/career" ? "text-red-500" : ""
-          } text-xs hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
+          } text-[11px] hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
         >
           കരിയർ
         </Link>
@@ -186,7 +186,7 @@ function MlNavbar() {
           to="/rti"
           className={`${
             path === "/rti" ? "text-red-500" : ""
-          } text-xs hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
+          } text-[11px] hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
         >
          വിവരാവകാശം
         </Link>
@@ -194,7 +194,7 @@ function MlNavbar() {
           to="/gallery"
           className={`${
             path === "/gallery" ? "text-red-500" : ""
-          } text-xs hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
+          } text-[11px] hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
         >
           ഗാലറി 
         </Link>
@@ -202,7 +202,7 @@ function MlNavbar() {
           to="/contact"
           className={`${
             path === "/contact" ? "text-red-500" : ""
-          } text-xs hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
+          } text-[11px] hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
         >
           ബന്ധപ്പെടുക
         </Link>
@@ -223,7 +223,7 @@ function MlNavbar() {
             to="/product"
             className=" rounded flex items-center justify-center  top-0 right-2 relative"
           >
-            <button className="flex text-xs items-center gap-2 font-bold bg-red-500 hover:bg-red-400 p-2 rounded-lg text-white">
+            <button className="flex text-[11px] items-center gap-2 font-bold bg-red-500 hover:bg-red-400 p-2 rounded-lg text-white">
               Shop Now
               <FaShoppingCart className="" />
             </button>

@@ -20,7 +20,7 @@ function EnNavbar() {
   };
 
   const subProduct = () => (
-    <div className="capitalize text-xs absolute hidden bg-white/10 bg:blur backdrop-blur text-black py-2 space-y-2 w-40 p-3 top-full left-0 group-hover:grid transition transform ease-in-out duration-300">
+    <div className="capitalize text-[11px] absolute hidden bg-white/10 bg:blur backdrop-blur text-black py-2 space-y-2 w-40 p-3 top-full left-0 group-hover:grid transition transform ease-in-out duration-300">
       <Link
         className="hover:bg-white p-2 border-0 hover:border hover:border-red-500 text-base"
         to="/product"
@@ -42,7 +42,7 @@ function EnNavbar() {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.3 }}
-      className="capitalize text-xs absolute hidden bg-white/10 bg:blur backdrop-blur text-black py-2 space-y-2 w-40 p-3 top-full left-0 group-hover:grid transition transform ease-in-out duration-300"
+      className="capitalize text-[11px] absolute hidden bg-white/10 bg:blur backdrop-blur text-black py-2 space-y-2 w-40 p-3 top-full left-0 group-hover:grid transition transform ease-in-out duration-300"
     >
       <Link
         className="hover:bg-white p-2 border-0 hover:border hover:border-red-500"
@@ -99,10 +99,10 @@ function EnNavbar() {
           <h3 className="font-bold max-w-sm">
           THE KERALA STATE CASHEW DEVELOPEMENT CORPORATION LTD
           </h3>
-          <p className="text-xs text-gray-800 font-semibold">
+          <p className="text-[11px] text-gray-800 font-semibold">
           A Government of Kerala Undertaking
           </p>
-          <p className="text-xs text-gray-800 font-extrabold">
+          <p className="text-[11px] text-gray-800 font-extrabold">
           (AN ISO 22000-2005 CERTIFIED COMPANY)
           </p>
         </div>
@@ -114,14 +114,14 @@ function EnNavbar() {
           to="/"
           className={`${
             path === "/" ? "text-red-500" : ""
-          } text-xs hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
+          } text-[11px] hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
         >
           Home
         </Link>
         <div className="relative group">
           <Link
             to="/kscdc"
-            className=" text-xs cursor-pointer flex items-center space-x-2 font-bold"
+            className=" text-[11px] cursor-pointer flex items-center space-x-2 font-bold"
           >
             About Us
             {/* down sv */}
@@ -146,7 +146,7 @@ function EnNavbar() {
           <Link
             className={`${
               path === "/product" ? "text-red-500" : ""
-            } text-xs hover:text-red-500 decoration-wavy decoration-red-400 font-bold flex items-center`}
+            } text-[11px] hover:text-red-500 decoration-wavy decoration-red-400 font-bold flex items-center`}
           >
             Products
             <svg
@@ -170,7 +170,7 @@ function EnNavbar() {
           to="/tender"
           className={`${
             path === "/tender" ? "text-red-500" : ""
-          } text-xs hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
+          } text-[11px] hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
         >
           Tenders
         </Link>
@@ -178,7 +178,7 @@ function EnNavbar() {
           to="/career"
           className={`${
             path === "/career" ? "text-red-500" : ""
-          } text-xs hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
+          } text-[11px] hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
         >
           Careers
         </Link>
@@ -186,7 +186,7 @@ function EnNavbar() {
           to="/rti"
           className={`${
             path === "/rti" ? "text-red-500" : ""
-          } text-xs hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
+          } text-[11px] hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
         >
           RTI
         </Link>
@@ -194,7 +194,7 @@ function EnNavbar() {
           to="/gallery"
           className={`${
             path === "/gallery" ? "text-red-500" : ""
-          } text-xs hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
+          } text-[11px] hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
         >
           Gallery
         </Link>
@@ -202,7 +202,7 @@ function EnNavbar() {
           to="/contact"
           className={`${
             path === "/contact" ? "text-red-500" : ""
-          } text-xs hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
+          } text-[11px] hover:text-red-500 decoration-wavy decoration-red-400 font-bold`}
         >
           Contact
         </Link>
