@@ -187,7 +187,7 @@ function Footer() {
           }
         </div>
         {/* footer links */}
-        <div className="grid grid-cols-2 md:flex justify-items-stretch gap-y-5 lg:flex items-center justify-evenly mb-6">
+        <div className="flex justify-items-stretch gap-y-5 lg:flex items-center justify-evenly mb-6">
           {language
             ? enfooterData.map((data,index) => (
                 <FooterLinks key={index} {...data} />
