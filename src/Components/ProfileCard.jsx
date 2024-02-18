@@ -33,7 +33,7 @@ function ProfileCard({id, name, image, position, content, link ,title}) {
 
                 </>
               ) : (
-                <p className="text-center">{content}</p>
+                <p className="text-center">{content.slice(0,119)}....</p>
               )}
             </li>
             <li className="bg-white">
