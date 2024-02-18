@@ -22,7 +22,7 @@ function LeaderTopImages() {
             id={index+1}
             name={value.name}
             image={BACKEND_DOMAIN+value.image}
-            position={value.position}
+            position={value.designation}
             content={value.description}
             title={value.title}
             link="/message"
