@@ -2,6 +2,7 @@ import React from "react";
 import "./style/usefullinks.css";
 import { FaLink } from "react-icons/fa6";
 import {useLanguage} from "../../contexts/LanguageContext"
+import useGetApi from "../../Hook/useGetApi";
 
 const linksArray = [
   { name: "India Government", link: "https://India.gov.in" },
@@ -48,6 +49,10 @@ const Card = ({ link }) => {
 };
 
 function UseFulLinks() {
+  const {response} = useGetApi("home")
+  if(!response || !response.useful_links){
+    return "No Data Found"
+  }
   const { language } = useLanguage()
   return (
     <div className="container mx-auto mt-12 mb-2">
@@ -63,8 +68,8 @@ function UseFulLinks() {
       <div className="grid gap-4 p-3">
         <div className="marquee">
           <ul className="flex gap-3">
-            {linksArray.map((value, index) => (
-                <Card link={value.link} />
+            {response.useful_links.map((value, index) => (
+                <Card link={value.name} />
             ))}
           </ul>
         </div>
