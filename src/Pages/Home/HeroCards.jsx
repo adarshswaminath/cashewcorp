@@ -1,18 +1,31 @@
 import React from "react";
-import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaBookOpen, FaExternalLinkAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 import { enHeroCards } from "./Language/en";
 import { mlHeroCards } from "./Language/ml";
 import useLanguageData from "../../Hook/useLanguageData";
+import useGetApi from "../../Hook/useGetApi";
+import { MdProductionQuantityLimits } from "react-icons/md";
+import { AiOutlineShopping } from "react-icons/ai";
 
+// Define a mapping between title card ids and icons
+const iconMap = {
+  1: <MdProductionQuantityLimits />,
+  2: <AiOutlineShopping />,
+  3: <FaBookOpen />
+};
 
 function HeroCards() {
+  const { response } = useGetApi("home");
+  if (!response || !response.title_cards) {
+    return "Data not found";
+  }
   const data = useLanguageData(enHeroCards, mlHeroCards);
 
   return (
     <div className="p-2 h-72 grid grid-cols-1  gap-3  justify-evenly lg:grid-cols-3 place-items-center justify-items-center ">
-      {data.map((value) => (
+      {response.title_cards.map((value) => (
         <Link to={value.link} key={value.title}>
           <div
             data-aos-duration="600"
@@ -22,7 +35,8 @@ function HeroCards() {
           >
             <div className="card-body">
               <div className="flex items-center justify-between">
-                <h1 className="card-title text-4xl text-blue-500 group-hover:text-white">{value.icon}</h1>
+                {/* Use icon based on the id */}
+                <h1 className="card-title text-4xl text-blue-500 group-hover:text-white">{iconMap[value.id]}</h1>
                 <h1 className="card-title text-xl text-blue-500 group-hover:text-white"><FaExternalLinkAlt /></h1>
               </div>
               <h2 className="text-indigo-600 text-lg font-bold group-hover:text-white">{value.title}</h2>
@@ -30,7 +44,7 @@ function HeroCards() {
                 className="text text-gray-500 group-hover:text-white "
                 // Check if body contains "1969" using regular expression
                 dangerouslySetInnerHTML={{
-                  __html: value.body.replace(
+                  __html: value.description.replace(
                     /(?<!\d)\b1969\b(?!\d)/g,
                     `<strong>1969</strong>` // Wrap "1969" in strong tags
                   ),
