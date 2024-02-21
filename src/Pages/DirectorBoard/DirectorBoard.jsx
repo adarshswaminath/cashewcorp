@@ -8,14 +8,21 @@ import { useLanguage } from "../../contexts/LanguageContext";
 import enDirectorBoard from "./enDirectorBoard.json"
 import mlDirectorBoard from "./mlDirectorBoard.json"
 import useLanguageData from "../../Hook/useLanguageData";
+import useGetApi from "../../Hook/useGetApi"
+import Loading from "../../Components/Loading"
 
 function DirectorBoardPage() {
   const {language,setLanguage} = useLanguage()
   const toggleLanguage = () => {
     setLanguage((prev) => !prev);
   };
-  const data = useLanguageData(enDirectorBoard,mlDirectorBoard)
-  console.table(data)
+  // const data = useLanguageData(enDirectorBoard,mlDirectorBoard)
+  const {response} = useGetApi("home")
+  console.table(response)
+  if(!response || !response.board_of_organisation){
+    return <Loading/>
+  }
+  
   return (
     <div>
       <Navbar />
@@ -27,12 +34,12 @@ function DirectorBoardPage() {
         { language ? "Board Of Directors" : "ഭരണസമിതി അംഗങ്ങൾ"}
       </h3>
       <div className="grid gap-3 grid-cols-1 lg:grid-cols-2 place-items-center justify-items-center p-5">
-        {data.map((data) => (
+        {response.board_of_organisation.map((data) => (
           <DirectorCard 
-          title={data.title}
-          caption={data.caption}
+          title={data.name}
+          caption={data.designation}
           email={data.email}
-          phone={data.phone}
+          phone={data.phone_number}
           image={data.image} />
         ))}
       </div>
