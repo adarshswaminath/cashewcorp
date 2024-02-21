@@ -18,7 +18,6 @@ function DirectorBoardPage() {
   };
   // const data = useLanguageData(enDirectorBoard,mlDirectorBoard)
   const {response} = useGetApi("home")
-  console.table(response)
   if(!response || !response.board_of_organisation){
     return <Loading/>
   }

@@ -7,13 +7,16 @@ import TranslateButton from "../../../Components/TranslateButton";
 import enManagement from "./enManagement.json";
 import mlManagement from "./mlManagement.json";
 import useLanguageData from "../../../Hook/useLanguageData";
-
+import useGetApi from "../../../Hook/useGetApi"
+import Loading from "../../../Components/Loading"
 function Management() {
+  const {response} = useGetApi("management")
+  if(!response){
+    return <Loading/>
+  }
   const data = useLanguageData(enManagement, mlManagement);
   const { language, setLanguage } = useLanguage();
-  const managingDirector = data.filter(
-    (md) => md.contact[3] === "mm@cashewcorporation.com"
-  );
+  const managingDirector = response.filter((md) => md.designation === "Managing Director")
   const toggleLanguage = () => {
     setLanguage((prev) => !prev);
   };
@@ -55,8 +58,8 @@ function Management() {
                 />
                 <h2 className="text-2xl font-bold text-white ">{value.name}</h2>
                 <p>{language ? "Managing Director" : "മാനേജിംഗ് ഡയറക്ടർ"}</p>
-                <a href={`mailto: ${value.contact[3]}`} className="underline">
-                  {value.contact[3]}
+                <a href={`mailto:md@cashewcorporation`} className="underline">
+                md@cashewcorporation
                 </a>
               </div>
             ))}
@@ -64,7 +67,7 @@ function Management() {
         </div>
         {/* md special section close */}
         <div className="p-8  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mt-12">
-          {data.map((management) => (
+          {response.map((management) => (
             <ManagementProfileCard key={management.id} {...management} />
           ))}
         </div>

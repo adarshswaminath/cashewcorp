@@ -46,7 +46,7 @@ function UseFulLinks() {
         <div className="marquee">
           <ul className="flex gap-3">
             {response.useful_links.map((value, index) => (
-                <Card link={value.name} />
+                <Card key={value.id} link={value.name} />
             ))}
           </ul>
         </div>
