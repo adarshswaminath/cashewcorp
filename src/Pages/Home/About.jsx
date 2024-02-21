@@ -9,6 +9,7 @@ import useLanguageData from "../../Hook/useLanguageData";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../../contexts/LanguageContext";
 import useGetApi from "../../Hook/useGetApi"
+import Loading from "../../Components/Loading";
 
 function About() {
   const {language} = useLanguage()
@@ -16,7 +17,7 @@ function About() {
   const missionData = useLanguageData(enMissionAndVision,mlMissionAndVision)
   const {response} = useGetApi("home")
   if(!response){
-    return "No Data Found"
+    return <Loading/>
   }
   return (
     <div>

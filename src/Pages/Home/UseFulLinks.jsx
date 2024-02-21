@@ -3,6 +3,7 @@ import "./style/usefullinks.css";
 import { FaLink } from "react-icons/fa6";
 import {useLanguage} from "../../contexts/LanguageContext"
 import useGetApi from "../../Hook/useGetApi";
+import Loading from "../../Components/Loading";
 
 
 const Card = ({ link }) => {
@@ -27,7 +28,7 @@ const Card = ({ link }) => {
 function UseFulLinks() {
   const {response} = useGetApi("home")
   if(!response || !response.useful_links){
-    return "No Data Found"
+    return <Loading/>
   }
   const { language } = useLanguage()
   return (

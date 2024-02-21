@@ -19,7 +19,6 @@ const iconMap = {
 
 function HeroCards() {
   const { response } = useGetApi("home");
-  console.log(response);
   if (!response || !response.title_cards) {
     return <Loading/>
   }
