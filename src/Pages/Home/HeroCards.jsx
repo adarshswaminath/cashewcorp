@@ -8,6 +8,7 @@ import useLanguageData from "../../Hook/useLanguageData";
 import useGetApi from "../../Hook/useGetApi";
 import { MdProductionQuantityLimits } from "react-icons/md";
 import { AiOutlineShopping } from "react-icons/ai";
+import Loading from "../../Components/Loading";
 
 // Define a mapping between title card ids and icons
 const iconMap = {
@@ -18,8 +19,9 @@ const iconMap = {
 
 function HeroCards() {
   const { response } = useGetApi("home");
+  console.log(response);
   if (!response || !response.title_cards) {
-    return "Data not found";
+    return <Loading/>
   }
   const data = useLanguageData(enHeroCards, mlHeroCards);
 

@@ -6,11 +6,12 @@ import useGetApi from "../../Hook/useGetApi"
 import { enleaderData } from "./Language/en";
 import { mlleaderData } from "./Language/ml";
 import { BACKEND_DOMAIN } from "../../utils";
+import Loading from "../../Components/Loading";
 
 function LeaderTopImages() {
   const {response} = useGetApi("home")
   if(!response || !response.person_cards){
-    return "Data Not Found"
+    return <Loading/>
   }
 
  const data = useLanguageData(enleaderData,mlleaderData)
