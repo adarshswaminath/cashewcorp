@@ -143,9 +143,9 @@ function FooterCopyRight() {
         </a>
       </div>
       <div className="text-sm grid grid-cols-2 gap-2 lg:grid-cols-5 text-white">
-        <span>Privacy Policy</span>
-        <span>Terms And Conditions</span>
-        <span>Sales and Refund Policy</span>
+        <span><Link to={"/policies"}>Privacy Policy</Link></span>
+        <span><Link to={"/terms-and-conditions"}>Terms And Conditions</Link></span>
+        <span><Link to={"/policies"}>Sales and Refund Policy</Link></span>
         <span>
           <Link to="/contact">Contact Us</Link>
         </span>

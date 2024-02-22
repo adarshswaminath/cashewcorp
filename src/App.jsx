@@ -19,6 +19,8 @@ import ProductCharacteristic from './Pages/ProductCharacteristic/ProductCharacte
 import Management from './Pages/AboutUs/Management/Management'
 import Message from './Pages/Messages/Message'
 import BlogAndNews from './Pages/BlogAndNews/BlogAndNews'
+import Policies from './Pages/Policies/Policies'
+import TermsAndConditions from './Pages/TermsAndConditions'
 function App() {
   // initialize aos animation
   useEffect(() => {
@@ -59,6 +61,8 @@ function App() {
           <Route path='/management' element={<Management/>}/>
           <Route path='/org' element={<Organization/>}/>
           <Route path="/director-board" element={<DirectorBoardPage/>}/>
+          <Route path="/policies" element={<Policies/>}/>
+          <Route path="/terms-and-conditions" element={<TermsAndConditions/>}/>
           <Route path="/product-characteristic" element={<ProductCharacteristic/>}/>
         </Routes>
       </BrowserRouter>
