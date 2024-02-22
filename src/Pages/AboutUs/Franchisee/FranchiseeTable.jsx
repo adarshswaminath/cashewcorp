@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-import { franchiseeData } from ".";
+// import { response } from ".";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaImage } from "react-icons/fa6";
+import useGetApi from "../../../Hook/useGetApi"
+import Loading from "../../../Components/Loading"
+import { BACKEND_DOMAIN } from "../../../utils";
 
 function FranchiseeTable() {
   const [selectedDistrict, setSelectedDistrict] = useState("");
@@ -9,11 +12,16 @@ function FranchiseeTable() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const {response} = useGetApi("franchisee")
+  if(!response) {
+    return <Loading/>
+  }
+
   const allDistricts = [
-    ...new Set(franchiseeData.map((franchisee) => franchisee.district)),
+    ...new Set(response.map((franchisee) => franchisee.district)),
   ];
 
-  const filteredFranchisees = franchiseeData.filter((franchisee) =>
+  const filteredFranchisees = response.filter((franchisee) =>
     franchisee.district.toLowerCase().includes(searchDistrict.toLowerCase())
   );
 
@@ -89,17 +97,20 @@ function FranchiseeTable() {
                 <>
                 <tr key={value.id} className={index % 2 === 0 ? "bg-red-100" : "bg-red-200"}>
                   <td>{index + 1}</td>
-                  <td>{value.name}</td>
+                  <td>{value.enterprise_name}</td>
                   <td>{value.district}</td>
                   <td>{value.address}</td>
                   <td>
                     <a href="https://www.google.com" target="_blank" className="flex items-center gap-2">Open <FaExternalLinkAlt/></a>
                   </td>
                   <td>{value.contact_name ? value.contact_name : "Null"}</td>
-                  <td>{value.mob}</td>
+                  <td>{value.phone_number}</td>
                   <td>
                     <button
-                      onClick={handleImageClick}
+                      onClick={() => {
+                        setSelectedImage(value.image);
+                        setIsModalOpen(true);
+                      }}
                       className="bg-red-500 text-white p-2 rounded-md hover:bg-blue-600 text-2xl"
                     >
                       <FaImage/>
@@ -117,9 +128,10 @@ function FranchiseeTable() {
     {/* Modal for displaying the hardcoded image */}
     {isModalOpen && (
       <Modal closeModal={closeModal}>
+
         <img
           src={selectedImage}
-          alt="Selected Image"
+          alt={selectedImage}
           className="w-full h-full object-cover"
         />
       </Modal>
