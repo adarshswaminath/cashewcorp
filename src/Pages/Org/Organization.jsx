@@ -120,37 +120,44 @@ const DeptTable = () => {
             <td></td>
             <td>personnel@cashewcorporation.com</td>
           </tr>
-          {/* row 8 */}
-          <tr>
+           {/* row 8 */}
+           <tr>
             <th>8</th>
+            <td>computer cell</td>
             <td></td>
-            <td></td>
-            <td>esi@cashewcorporation.com</td>
+            <td>computercell@cashewcorporation.com</td>
           </tr>
           {/* row 9 */}
           <tr>
             <th>9</th>
             <td></td>
             <td></td>
-            <td>epf@cashewcorporation.com</td>
+            <td>esi@cashewcorporation.com</td>
           </tr>
           {/* row 10 */}
           <tr>
             <th>10</th>
             <td></td>
             <td></td>
-            <td>welfare@cashewcorporation.com</td>
+            <td>epf@cashewcorporation.com</td>
           </tr>
           {/* row 11 */}
           <tr>
             <th>11</th>
-            <td>production</td>
             <td></td>
-            <td>production@cashewcorporation.com</td>
+            <td></td>
+            <td>welfare@cashewcorporation.com</td>
           </tr>
           {/* row 12 */}
           <tr>
             <th>12</th>
+            <td>production</td>
+            <td></td>
+            <td>production@cashewcorporation.com</td>
+          </tr>
+          {/* row 13 */}
+          <tr>
+            <th>13</th>
             <td>Internal Audit</td>
             <td></td>
             <td>Audit@cashewcorporation.com</td>
@@ -269,23 +276,23 @@ function Organization() {
       </div>
       <div className="flex items-center justify-center">
         <pre className="mt-6 grid ">
-          <span className="p-2 bg-indigo-500 text-white">
-            Materials Department : HOD (Materials Manager)
+          <span className="p-2 bg-indigo-500 text-white ">
+            Materials Department      : HOD (Materials Manager)
           </span>
           <span className="p-2 bg-indigo-300 text-white">
-            Commerce Department : HOD (Commercial Manager)
+            Commerce Department       : HOD (Commercial Manager)
           </span>
           <span className="p-2 bg-indigo-500 text-white">
-            Finance Department : HOD (Finance Manager)
+            Finance Department        : HOD (Finance Manager)
           </span>
           <span className="p-2 bg-indigo-300 text-white">
-            Personnel Department : HOD (Personnel Manager)
+            Personnel Department      : HOD (Personnel Manager)
           </span>
           <span className="p-2 bg-indigo-500 text-white">
-            Production Department : HOD (Production Manager)
+            Production Department     : HOD (Production Manager)
           </span>
           <span className="p-2 bg-indigo-300 text-white">
-            Internal Auditing : HOD (Internal Audit Officer)
+            Internal Auditing         : HOD (Internal Audit Officer)
           </span>
         </pre>
       </div>

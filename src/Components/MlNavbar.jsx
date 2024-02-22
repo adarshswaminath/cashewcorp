@@ -84,7 +84,7 @@ function MlNavbar() {
         to="/blog"
         className="bg-red-600 text-white rounded-lg hover:bg-red-400 border-red-500 btn"
       >
-        What's New
+        പുതിയത്
       </Link>
     </motion.div>
   );
@@ -224,7 +224,7 @@ function MlNavbar() {
             className=" rounded flex items-center justify-center  top-0 right-2 relative"
           >
             <button className="flex text-[11px] items-center gap-2 font-bold bg-red-500 hover:bg-red-400 p-2 rounded-lg text-white">
-              Shop Now
+            ഇപ്പോൾ വാങ്ങുക
               <FaShoppingCart className="" />
             </button>
           </Link>
@@ -272,7 +272,7 @@ function MlNavbar() {
                       <li><Link to="/management" className="hover:bg-red-500 hover:text-white"> മാനേജ്മെൻ്റ്</Link></li>
                       <li><Link to="/product-characteristic" className="hover:bg-red-500 hover:text-white">ഉൽപ്പന്നങ്ങളുടെ സവിശേഷതകൾ</Link></li>
                       <li><Link to="/franchisee" className="hover:bg-red-500 hover:text-white"> ഫ്രാഞ്ചൈസി</Link></li>
-                      <li><Link to="/kscdc" className="bg-red-500 hover:bg-red-600 text-white">Whats New</Link></li>
+                      <li><Link to="/kscdc" className="bg-red-500 hover:bg-red-600 text-white">പുതിയത്</Link></li>
                     </ul>
                   </div>
                   <div className="dropdown">

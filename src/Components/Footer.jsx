@@ -146,7 +146,6 @@ function FooterCopyRight() {
         <span>Privacy Policy</span>
         <span>Terms And Conditions</span>
         <span>Sales and Refund Policy</span>
-        <span className="lg:ml-6">Legal</span>
         <span>
           <Link to="/contact">Contact Us</Link>
         </span>
