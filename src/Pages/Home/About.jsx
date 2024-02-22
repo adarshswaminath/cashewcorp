@@ -8,11 +8,17 @@ import { mlMissionAndVision } from "./Language/ml";
 import useLanguageData from "../../Hook/useLanguageData";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../../contexts/LanguageContext";
+import useGetApi from "../../Hook/useGetApi"
+import Loading from "../../Components/Loading";
 
 function About() {
   const {language} = useLanguage()
   const data = useLanguageData(enAboutData,mlAboutData)
   const missionData = useLanguageData(enMissionAndVision,mlMissionAndVision)
+  const {response} = useGetApi("home")
+  if(!response){
+    return <Loading/>
+  }
   return (
     <div>
       <div className="">
@@ -98,18 +104,27 @@ function About() {
               <div>
                 <div className="grid lg:flex justify-center items-center gap-8">
                   {/* Mission Card */}
-                  {missionData.map((value) => (
+              
                     <div
-                    key={value.id}
-                    data-aos={value.id %2 ==0 ? "fade-right" : "fade-left"}
+                    data-aos="fade-right"
                     className="p-6 h-72 bg-white w-full lg:max-w-md flex flex-col items-start rounded-lg shadow-md border-l-4 border-red-500 transform transition ease-in-out duration-300 hover:scale-105 hover:-translate-y-3"
                   >
-                    <h2 className="text-3xl font-bold mb-4">{value.title}</h2>
-                    <p className={`text-gray-700 leading-relaxed ${language && "text-justify"}`}>
-                      {value.body}
+                    <h2 className="text-3xl font-bold mb-4">Mission</h2>
+                    <p className={`text-gray-700 leading-relaxed`}>
+                      {response.mission}
                     </p>
                   </div>
-                  ))}
+
+                  <div
+                    data-aos="fade-left"
+                    className="p-6 h-72 bg-white w-full lg:max-w-md flex flex-col items-start rounded-lg shadow-md border-l-4 border-red-500 transform transition ease-in-out duration-300 hover:scale-105 hover:-translate-y-3"
+                  >
+                    <h2 className="text-3xl font-bold mb-4">Vision</h2>
+                    <p className={`text-gray-700 leading-relaxed`}>
+                      {response.vision}
+                    </p>
+                  </div>
+               
                 </div>
               </div>
             </div>

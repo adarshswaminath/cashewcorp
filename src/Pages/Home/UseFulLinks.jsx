@@ -2,32 +2,10 @@ import React from "react";
 import "./style/usefullinks.css";
 import { FaLink } from "react-icons/fa6";
 import {useLanguage} from "../../contexts/LanguageContext"
+import useGetApi from "../../Hook/useGetApi";
+import Loading from "../../Components/Loading";
 
-const linksArray = [
-  { name: "India Government", link: "https://India.gov.in" },
-  { name: "ESIC India", link: "https://esic.gov.in/" },
-  { name: "EPF India", link: "https://epfindia.gov.in/site_en/index.php" },
-  { name: "Kerala Government", link: "https://kerala.gov.in" },
-  {
-    name: "Local Self Government Department",
-    link: "https://lc.kerala.gov.in",
-  },
-  { name: "Chief Minister Office Kerala", link: "https://cmo.kerala.gov.in" },
-  { name: "Kerala Chief Minister", link: "https://keralacm.gov.in/" },
-  { name: "Cashew India", link: "http://cashewindia.org/" },
-  { name: "Kerala Industry", link: "https://keralaindustry.org/" },
-  {
-    name: "Kerala Industry Department",
-    link: "https://industry.kerala.gov.in/",
-  },
-  { name: "Cashew Capex", link: "https://cashewcapex.com/" },
-  {
-    name: "Economic Statistics Kerala",
-    link: "https://ecostat.kerala.gov.in/",
-  },
-  { name: "Apprenticeship India", link: "https://apprenticeshipindia.gov.in/" },
-  { name: "Kerala Cashew Board", link: "https://keralacashewboard.com/" },
-];
+
 const Card = ({ link }) => {
 
   const hostname = new URL(link).hostname;
@@ -48,6 +26,10 @@ const Card = ({ link }) => {
 };
 
 function UseFulLinks() {
+  const {response} = useGetApi("home")
+  if(!response || !response.useful_links){
+    return <Loading/>
+  }
   const { language } = useLanguage()
   return (
     <div className="container mx-auto mt-12 mb-2">
@@ -63,8 +45,8 @@ function UseFulLinks() {
       <div className="grid gap-4 p-3">
         <div className="marquee">
           <ul className="flex gap-3">
-            {linksArray.map((value, index) => (
-                <Card link={value.link} />
+            {response.useful_links.map((value, index) => (
+                <Card key={value.id} link={value.name} />
             ))}
           </ul>
         </div>

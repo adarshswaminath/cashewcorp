@@ -83,7 +83,7 @@ const backgroundImage =
   "https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?auto=compress&cs=tinysrgb&w=600";
 
 function FooterLinks({ title, values }) {
-  console.table(values);
+  // console.table(values);
   return (
     <div data-aos="fade-up" data-aos-once="true" className="flex flex-col items-start gap-3">
       <h3 className="font-bold underline underline-offset-4">{title}</h3>

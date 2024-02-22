@@ -1,39 +1,19 @@
 import React from 'react';
-
-const awardData = [
-  {
-    id: 1,
-    imageSrc: '/images/gallery/awards/1.jpg',
-    title: 'Award Title 1',
-    description: 'Minim pariatur irure nostrud consequat nulla proident.',
-  },
-  {
-    id: 2,
-    imageSrc: '/images/gallery/awards/2.jpg',
-    title: 'Award Title 2',
-    description: 'Minim pariatur irure nostrud consequat nulla proident.',
-  },
-  {
-    id: 3,
-    imageSrc: '/images/gallery/awards/3.jpg',
-    title: 'Award Title 3',
-    description: 'Minim pariatur irure nostrud consequat nulla proident.',
-  },
-  {
-    id: 4,
-    imageSrc: '/images/gallery/awards/4.jpg',
-    title: 'Award Title 4',
-    description: 'Minim pariatur irure nostrud consequat nulla proident.',
-  },
-];
-
+import useGetApi from "../../Hook/useGetApi"
+import Loading from '../../Components/Loading';
 function AwardImages() {
+  const {response} = useGetApi("gallery")
+  if(!response) {
+    return <Loading/>
+  }
+  
+  const awardData = response.filter((data) => data.category === "awards")
   return (
-    <div  className="grid gap-4 grid-cols-1 lg:grid-cols-4 p-3">
+    <div className="grid gap-4 grid-cols-1 lg:grid-cols-4 p-3 ">
       {awardData.map((award) => (
-        <div data-aos="flip-up" key={award.id}>
-          <img src={award.imageSrc} alt={`Award ${award.id}`} />
-          <div>
+        <div data-aos="flip-up" key={award.id} className="flex flex-col items-center justify-center">
+          <img src={award.images[0].image} alt={`Award ${award.id}`} className="mb-4" />
+          <div className="text-center">
             <h3 className="text-lg font-bold">{award.title}</h3>
             <p>{award.description}</p>
           </div>

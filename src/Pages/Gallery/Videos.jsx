@@ -1,25 +1,47 @@
-import React from 'react'
-
-const videoLinks = [
-    'https://www.youtube.com/embed/Dpd9niaYGLA?si=RTpPzW-2k3qcSVXC',
-    'https://www.youtube.com/embed/xAfJ_pCJObM?si=enw53IEdT1Y9_Uoo',
-    'https://www.youtube.com/embed/wxY7QP_F9UY?si=vxMuP45YSN8HIefu"',
-    'https://www.youtube.com/embed/IW2jsY8_wCo?si=S4HFylFq5kTBHyE4"',
-    'https://www.youtube.com/embed/P0_Ur86QHJ8?si=Ktt68USX9Y8JNbX-',
-
-]
-
+import React from 'react';
+import useGetApi from "../../Hook/useGetApi";
+import Loading from "../../Components/Loading";
 
 function Videos() {
+  const { response } = useGetApi("ytlinks");
+
+  if (!response) {
+    return <Loading />;
+  }
+
+  // Function to extract video ID from YouTube URL
+  const extractVideoId = (url) => {
+    const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:[^\/]*[\u200C\u200B]\/\u200C\u200B[^\/]*\/|[^\/]+\?v=))([^"&?\/\s]{11})/);
+    return match && match[1];
+  };
+
   return (
     <div>
-        <div className="grid grid-cols-1 gap-2 lg:grid-cols-2 p-3">
-      {videoLinks.map((_,index) => (
-          <iframe key={index} width="560" height="315" src={videoLinks[index]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      ))}
-        </div>
+      <div className="grid grid-cols-1 gap-2 lg:grid-cols-2 p-3">
+        {response.map((video, index) => {
+          const videoId = extractVideoId(video.name);
+          const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}` : null;
+
+          return (
+            <div key={index}>
+              {embedUrl && (
+                <iframe
+                  key={index} // Ensure each iframe has a unique key
+                  width="560"
+                  height="315"
+                  src={embedUrl}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              )}
+            </div>
+          );
+        })}
+      </div>
     </div>
-  )
+  );
 }
 
-export default Videos
+export default Videos;

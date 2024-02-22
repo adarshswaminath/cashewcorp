@@ -1,95 +1,36 @@
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { useState } from "react";
-
-const tenderData = [
-  {
-    name: "Re-Tender for Medical Insurance Policy",
-    link: "#",
-    date: "30/01/2024",
-  },
-  {
-    name: "Tender no. 19 - “Re-Tender for Cashew Kernels ” - Guinea Bissau Origin Tender Id: 2024_KSCDC_639483_2 (with revised BOQ)",
-    link: "#",
-    date: "15/02/2024",
-  },
-  {
-    name: "Quotation Notice for Empty Gunnies",
-    link: "#",
-    date: "01/03/2024",
-  },
-  {
-    name: "Tender no. 19 - “Tender for Cashew Kernels ” - Guinea Bissau Origin - Tender Id: 2024_KSCDC_639483_1",
-    link: "#",
-    date: "15/03/2024",
-  },
-  {
-    name: "Tender no. 18 - “Tender for Cashew Kernels ” - Guinea Bissau Origin - Tender Id: 2024_KSCDC_639447_1",
-    link: "#",
-    type: "previous",
-    subType: "tenders", // subType for "previous" tenders
-    date: "01/04/2024",
-  },
-  {
-    name: "Tender for Indian Grade",
-    link: "#",
-    type: "live",
-    subType: "tenders",
-    date: "15/04/2024",
-  },
-  {
-    name: "Re-Tender for Medical Insurance Policy",
-    link: "#",
-    type: "live",
-    subType: "e-tenders",
-    date: "01/05/2024",
-  },
-  {
-    name: "Quotation for Cashew Skin",
-    link: "#",
-    type: "previous",
-    subType: "e-tender",
-    date: "15/05/2024",
-  }, // subType for "previous" quotations
-  {
-    name: "Quotation for Roasted Shell & Cutting Shell",
-    link: "#",
-    type: "live",
-    subType: "tenders",
-    date: "01/06/2024",
-  },
-  {
-    name: "Tender no. 17 - “Tender for Cashew Kernels ” - Guinea Bissau Origin Tender Id: 2023_KSCDC_632543_1",
-    link: "#",
-    type: "previous",
-    subType: "tenders", // subType for "previous" tenders
-    date: "15/06/2024",
-  },
-  {
-    name: "Tender for Empty Gunny",
-    link: "#",
-    type: "previous",
-    subType: "tenders",
-    date: "01/07/2024",
-  }, // subType for "previous" tenders
-];
+import useGetApi from "../../Hook/useGetApi";
+import Loading from "../../Components/Loading";
 
 const TenderTable = () => {
-  const [filter, setFilter] = useState("all"); // Initial filter value
-  const [subFilter, setSubFilter] = useState("all"); // Initial sub-filter value for Live Tenders
+  const { response } = useGetApi("tenders");
 
-  const filteredData = tenderData.filter((item) => {
+  // Move the hook calls to the top of the component function
+  const [filter, setFilter] = useState("all");
+  const [subFilter, setSubFilter] = useState("all");
+
+  if (!response) {
+    return <Loading />;
+  }
+
+  const filteredData = response.filter((item) => {
     if (filter === "all") return true;
     if (filter === "live") {
-      if (subFilter === "all") return item.type === "live";
-      return item.type === "live" && item.subType === subFilter;
+      if (subFilter === "all") return item.category === "live";
+      if (subFilter === "Tenders") return item.category === "live" && !item.is_e_tender;
+      if (subFilter === "E-Tenders") return item.category === "live" && item.is_e_tender;
     }
-    if (filter === "previous") return item.type === "previous";
+    if (filter === "previous") {
+      // Include tenders with expiry dates for "Previous Tenders" filter
+      return item.category === "previous" && item.expiry_date;
+    }
     return false;
   });
 
   const handleFilterChange = (newFilter) => {
     setFilter(newFilter);
-    setSubFilter("all"); // Reset sub-filter when main filter changes
+    setSubFilter("all");
   };
 
   const handleSubFilterChange = (newSubFilter) => {
@@ -98,58 +39,44 @@ const TenderTable = () => {
 
   return (
     <div>
-      {/* btn grp */}
       <div className="flex items-center justify-center space-x-4 mb-4">
         <button
-          className={`btn  ${
-            filter === "all" && "btn-active bg-red-500 text-white"
-          }`}
+          className={`btn ${filter === "all" && "btn-active bg-red-500 text-white"}`}
           onClick={() => handleFilterChange("all")}
         >
           All
         </button>
         <button
-          className={`btn ${
-            filter === "live" && "btn-active bg-red-500 text-white"
-          }`}
+          className={`btn ${filter === "live" && "btn-active bg-red-500 text-white"}`}
           onClick={() => handleFilterChange("live")}
         >
           Live Tenders
         </button>
         <button
-          className={`btn ${
-            filter === "previous" && "btn-active bg-red-500 text-white"
-          }`}
+          className={`btn ${filter === "previous" && "btn-active bg-red-500 text-white"}`}
           onClick={() => handleFilterChange("previous")}
         >
           Previous Tenders
         </button>
       </div>
-      {/* sub list */}
       <div className="flex items-center justify-center">
         {filter === "live" && (
           <div className="flex items-center space-x-2">
             <button
-              className={`btn ${
-                subFilter === "all" && "btn-active bg-red-500 text-white"
-              }`}
+              className={`btn ${subFilter === "all" && "btn-active bg-red-500 text-white"}`}
               onClick={() => handleSubFilterChange("all")}
             >
               All
             </button>
             <button
-              className={`btn ${
-                subFilter === "tenders" && "btn-active bg-red-500 text-white"
-              }`}
-              onClick={() => handleSubFilterChange("tenders")}
+              className={`btn ${subFilter === "Tenders" && "btn-active bg-red-500 text-white"}`}
+              onClick={() => handleSubFilterChange("Tenders")}
             >
               Tenders
             </button>
             <button
-              className={`btn ${
-                subFilter === "e-tenders" && "btn-active bg-red-500 text-white"
-              }`}
-              onClick={() => handleSubFilterChange("e-tenders")}
+              className={`btn ${subFilter === "E-Tenders" && "btn-active bg-red-500 text-white"}`}
+              onClick={() => handleSubFilterChange("E-Tenders")}
             >
               E-Tenders
             </button>
@@ -168,29 +95,31 @@ const TenderTable = () => {
       </div>
       <div className="overflow-x-auto">
         <table className="table">
-          {/* head */}
           <thead>
             <tr className="text-black bg-red-400">
               <th></th>
               <th>Tender Title</th>
               <th>Date</th>
+              {filter === "previous" && <th>Expiry Date</th>}
             </tr>
           </thead>
           <tbody>
-            {/* row  */}
             {filteredData.map((value, index) => (
-              <tr
-                className={`${index % 2 === 0 ? "bg-red-100" : "bg-red-50"}`}
-                key={index}
-              >
+              <tr className={`${index % 2 === 0 ? "bg-red-100" : "bg-red-50"}`} key={index}>
                 <th>{index + 1}</th>
                 <td className="font-bold flex items-center space-x-5">
-                  <a href={value.link} target="_blank">
-                    {value.name}
+                  <a href={value.files[0].file} target="_blank" rel="noopener noreferrer">
+                    {value.title}
                   </a>
-                  <span className={`${value.subType === "tenders" ? "bg-green-500 " : "bg-red-500 " }badge badge-xs`}></span>
+                  {value.is_e_tender && (
+                    <span className="badge badge-xs bg-red-500 p-2">E-Tender</span>
+                  )}
+                  {!value.is_e_tender && (
+                    <span className="badge badge-xs bg-green-500 p-2">Tender</span>
+                  )}
                 </td>
-                <td>{value.date}</td>
+                <td>{value.published_date}</td>
+                {filter === "previous" && <td>{value.expiry_date}</td>}
               </tr>
             ))}
           </tbody>
