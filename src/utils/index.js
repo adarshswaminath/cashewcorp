@@ -1,1 +1,1 @@
-export const BACKEND_DOMAIN = "https://backend.cashewcart.com"
+export const BACKEND_DOMAIN = "http://localhost:8000"
